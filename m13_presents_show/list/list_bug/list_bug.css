@@ -1,0 +1,14 @@
+/*把*/
+.aj-is-can-use a span{}
+/*的样式删掉并给*/
+.aj-is-can-use a .scoreTotal{
+	display:inline-block!important;
+	margin-left:20px;
+	background-color:whtie!important;
+}
+.aj-is-can-use a .scoreTotal{
+	background-color:white!important;
+}
+.aj-is-can-use{
+	min-width:74px;
+}

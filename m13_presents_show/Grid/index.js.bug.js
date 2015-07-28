@@ -57,9 +57,9 @@ $(function () {
 			});
 			$(this.div).on('click', '.aj-favor', function () {
 				if ($(this).hasClass('aj-have-favor')) {
-					haitaocoupon_shoucang(this, true);
+					faxianzdm_shoucang(this, true);
 				}else{
-					haitaocoupon_shoucang(this, false);
+					faxianzdm_shoucang(this, false);
 				}
 				$(this).toggleClass('aj-have-favor');
 				$(this).removeAttr('title');
@@ -98,50 +98,67 @@ $(function () {
 	if (div) {
 		Stamp(div);
 	}
-	function haitaocoupon_shoucang(obj, isSc) {
-		if (!Youhui.common.user.checklogin()) return false;
-		var $this = $(obj),
-			id = $this.attr(cid),
-			shoucangCookie = Youhui.tools.cookie(cookieName);
-		if (isSc) {
-			Youhui.tools.cookie(cookieName, shoucangCookie.replace("," + id, ""), {
-				path: '/',
-				domain: '',
-				expires: 864000
-			});
-			$.ajax({
-				url: "/ajax/haitaocouponvote.ashx",
-				data: { 'id': id, "type": "cancel_shoucang" },
-				type: "POST",
-				success: function (json, textStatus) {
-					if (json.code > 0) {
-						floatTips(obj, "取消收藏成功！");
-					} else {
-						floatTips(obj, json.msg);
-					}
-				},
-				error: function (XMLHttpRequest, textStatus, errorThrown) { alert(errorThrown); }
-			});
-			return;
-		} else {
-			Youhui.tools.cookie(cookieName, shoucangCookie + "," + id, {
-				path: '/',
-				domain: '',
-				expires: 864000
-			});
-			$.ajax({
-				url: "/ajax/haitaocouponvote.ashx",
-				data: { 'id': id, "type": "shoucang" },
-				type: "POST",
-				success: function (json, textStatus) {
-					if (json.code > 0) {
-						floatTips(obj, "已经收藏成功，在您账号中心可以查到！");
-					} else {
-						floatTips(obj, json.msg);
-					}
-				},
-				error: function (XMLHttpRequest, textStatus, errorThrown) { alert(errorThrown); }
-			});			
-		}
-	}
+
+    function faxianzdm_shoucang(obj, isSc) {
+
+        if (!Youhui.common.user.checklogin()) return false;
+
+        var $this = $(obj),
+			id = $this.attr('cid');
+
+        if (isSc) {
+            //获取当前post的标题
+            var title = $this.attr('posttilte');
+            var shoucangCookie = Youhui.tools.cookie("faxianzdm_shoucang");
+            if (shoucangCookie.indexOf("," + id) != -1) {
+                floatTips(obj, "您已收藏");
+                return;
+            }
+            else {
+                Youhui.tools.cookie("faxianzdm_shoucang", shoucangCookie + "," + article_id, {
+                    path: '/',
+                    domain: Youhui.CookieDomain,
+                    expires: 864000
+                });
+            }
+
+            $.ajax({
+                url: "/ajax/PostUserAction.ashx",
+                data: { 'id': id, "type": 100, "title": title },
+                type: "POST",
+                success: function (json, textStatus) {
+                    if (json.code > 0) {
+                        floatTips(obj, "已经收藏成功！");
+                    } else {
+                        floatTips(obj, json.msg);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { alert(errorThrown); }
+            });
+            return;
+        } else {
+            var shoucangCookie = Youhui.tools.cookie("faxianzdm_shoucang");
+
+            if (shoucangCookie.indexOf("," + id) != -1) {
+                Youhui.tools.cookie("faxianzdm_shoucang", shoucangCookie.replace("," + id, ""), {
+                path: '/',
+                domain: Youhui.CookieDomain,
+                expires: 864000
+            });
+
+            $.ajax({
+                url: "/ajax/PostUserAction.ashx",
+                data: { 'id': id, "type": 101},
+                type: "POST",
+                success: function (json, textStatus) {
+                    if (json.code > 0) {
+                        floatTips(obj, "取消收藏成功！");
+                    } else {
+                        floatTips(obj, json.msg);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { alert(errorThrown); }
+            });
+        }
+    }
 });
