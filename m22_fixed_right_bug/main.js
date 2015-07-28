@@ -560,7 +560,7 @@ Youhui.common = {
         //Ware waretrade end
 
         //礼品卡领取接口
-        lipinka_addToCart: function (obj) {
+       lipinka_addToCart: function (obj) {
 
             var thisobj = $(obj);
             var id = thisobj.attr('i');
@@ -587,30 +587,30 @@ Youhui.common = {
                 }
             }
             var buycount = $("#buycount").val();
-
-            var fee = parseFloat(thisobj.attr("fee")) * buycount;
+            
+            var fee = parseFloat(thisobj.attr("fee"))*buycount;
 
             var d = dialog({
-                title: '购买礼品卡确认',
-                content: "<div style='padding:15px 30px;'><font color='#ff6600'>确定购买礼品卡吗？<br/>需要支付" + fee + "元购买选择的礼品卡<br/></font></div>",
-                okValue: '确定',
-                ok: function () {
+                    title: '购买礼品卡确认',
+                    content: "<div style='padding:15px 30px;'><font color='#ff6600'>确定购买礼品卡吗？<br/>需要支付" + fee + "元购买选择的礼品卡<br/></font></div>",
+                    okValue: '确定',
+                    ok: function () {
+                        
+                         $('.lipinkaform').submit();
 
-                    $('.lipinkaform').submit();
-
-                    return true;
-                },
-                cancelValue: '取消',
-                cancel: function () {
-                }
-            });
+                        return true;
+                    },
+                    cancelValue: '取消',
+                    cancel: function () { 
+                    }
+                });
             d.showModal();
 
-            return false;
-        },
+             return false;
+        }, 
 
-        //礼品卡订单接口
-        submit_lipinka_order: function (obj) {
+         //礼品卡订单接口
+       submit_lipinka_order: function (obj) {
 
             var thisobj = $(obj);
             var id = thisobj.attr('i');
@@ -639,7 +639,7 @@ Youhui.common = {
 
             var buycount = parseInt($("#buycount").val());
 
-            //领取优惠券
+             //领取优惠券
             var drawing_dialog = dialog({
                 title: '券妈妈正在为您提交订单....',
                 content: "亲,请耐心等待,券妈妈正在为您提交订单..."
@@ -657,7 +657,7 @@ Youhui.common = {
 
                 drawing_dialog.close().remove();
                 if (json.code >= 1) {
-                    window.location.href = "/order/pay?orderid=" + json.result;
+                     window.location.href="/order/pay?orderid="+json.result;
                 } else {
                     var d = dialog({
                         title: '礼品卡订单提交失败提示',
@@ -672,7 +672,7 @@ Youhui.common = {
             });
 
             return false;
-        },
+        }, 
 
 
 
@@ -1423,7 +1423,7 @@ $(function () {
             }
             //bug2
             if (obj = ajIsParentPoptipInfo(target)) {
-                $(obj).addClass("hover");
+                $(obj).addClass("hover")
                 $(obj).find('.homedetail em').html('官网');
             }
         }).on("mouseout", function (ev) {
@@ -2351,11 +2351,11 @@ slidingFunction = function () {
 
 
 
-function fixed_right(prop) {		//换掉原有的fixed_right函数
-
+function fixed_right( prop ) {
+	
     if ($("#pagefooter").length > 0 && $(".rightPanel").length > 0) {
         var footer = document.getElementById('pagefooter'),
-			headerHeight = 181, 	//??
+			headerHeight = 181,		//??
 			footerHeight = $("#pagefooter").height(),
 			windowHeight = $(window).height(),
 			bodyHeight = windowHeight - headerHeight - footerHeight,
@@ -2363,77 +2363,83 @@ function fixed_right(prop) {		//换掉原有的fixed_right函数
 			rightHeight = $(".right_side").height(),
 			rightOffsetTop = $('.right_side').offset().top,
 			fixedTop = 40;
-
-        setInterval(function () {
-            if ($('.right_side').height() > rightHeight) {
-                rightHeight = $('.right_side').height();
-            }
-        }, 1000 / 12);
-
-        var isShow = false,
+		
+		var fixed_height_timer = setInterval(function(){
+			if( $('.right_side').height() > rightHeight ){
+				rightHeight = $('.right_side').height();
+			}
+			if ($('.left_side').height() > leftHeight) {
+				leftHeight = $('.left_side').height();
+			}
+		},1000/12);
+		setTimeout(function () {
+			clearInterval(fixed_height_timer);
+		}, 10 * 1000);
+		
+		var isShow = false,
 			isBuchong = false,
 			fixedOffsetFromFooter = 0,
 			fixedTotalHeight = 0,
 			scrollHeight,
 			footerTop;
+		
 
-
-
-        $(window).on('resize', function () {
-            for (var i = 0; i < prop.arr.length; i++) {
-                $(prop.arr[i]).css({
-                    'left': $('.right_side')[0].getBoundingClientRect().left
-                });
-            }
-        });
-
+		
+		$(window).on( 'resize', function(){
+			for( var i = 0; i < prop.arr.length; i++ ){
+				$( prop.arr[i] ).css({
+					'left' : $('.right_side')[0].getBoundingClientRect().left
+				});
+			}
+		});
+		
         $(window).scroll(function () {
-            if (prop.arr.length === 0) { return false; }
-            fixedTotalHeight = 0;
-            prop.arr.forEach(function (obj) {
-                fixedTotalHeight += $(obj).height() + parseInt($(obj).css('margin-bottom'));
-            });
-
-            if (scrollHeight === $(window).scrollTop()) {//scroll x
-                for (var i = 0; i < prop.arr.length; i++) {
-                    $(prop.arr[i]).css({
-                        'left': $('.right_side')[0].getBoundingClientRect().left
-                    });
-                }
-                return true;
-            }
-            scrollHeight = $(window).scrollTop(),
+			if( prop.arr.length === 0 ){ return false; }
+			fixedTotalHeight = 0;
+			prop.arr.forEach(function( obj ){
+				fixedTotalHeight += $( obj ).height() + parseInt( $( obj ).css('margin-bottom') );
+			});
+		
+			if( scrollHeight === $( window ).scrollTop() ){//scroll x
+				for( var i = 0; i < prop.arr.length; i++ ){
+					$( prop.arr[i] ).css({
+						'left' : $('.right_side')[0].getBoundingClientRect().left
+					});
+				}
+				return true;
+			}
+			scrollHeight = $( window ).scrollTop(),
 			footerTop = footer.getBoundingClientRect().top;
-            fixedBottom = prop.arr[prop.arr.length - 1].getBoundingClientRect().bottom;
-            // var p = $(".g_g");
-            if (leftHeight > rightHeight) {
-
-                if (scrollHeight > (rightHeight + rightOffsetTop)) {
-
-                    fixedOffsetFromFooter = footerTop - (fixedTop + fixedTotalHeight);
-                    if (fixedOffsetFromFooter >= 0) {
-                        fixedOffsetFromFooter = 0;
-                    } else {
-                        isShow = false;
-                    }
-                    var previousSiblingTotalHeight = 0;
-                    for (var i = 0; i < prop.arr.length; i++) {
-
-                        $(prop.arr[i]).css({
-                            'position': 'fixed',
-                            'top': fixedTop + previousSiblingTotalHeight + fixedOffsetFromFooter,
-                            'left': $('.right_side')[0].getBoundingClientRect().left
-                        });
-                        previousSiblingTotalHeight = $(prop.arr[i]).height() + parseInt($(prop.arr[i]).css('margin-bottom'));
-
-                    }
+			fixedBottom = prop.arr[prop.arr.length-1].getBoundingClientRect().bottom;
+			// var p = $(".g_g");
+            if ( leftHeight > rightHeight ) {
+				
+                if ( scrollHeight > (rightHeight + rightOffsetTop) ) {
+					
+					fixedOffsetFromFooter = footerTop - ( fixedTop + fixedTotalHeight );
+					if( fixedOffsetFromFooter >= 0 ){
+						fixedOffsetFromFooter = 0;
+					}else{
+						isShow = false;
+					}
+					var previousSiblingTotalHeight = 0;
+					for( var i = 0; i < prop.arr.length; i++ ){
+						
+						$( prop.arr[i] ).css({
+							'position' : 'fixed',
+							'top' : fixedTop + previousSiblingTotalHeight + fixedOffsetFromFooter,
+							'left' : $('.right_side')[0].getBoundingClientRect().left
+						});
+						previousSiblingTotalHeight = $( prop.arr[i] ).height() + parseInt($( prop.arr[i] ).css('margin-bottom'));
+						
+					}
                 } else {
-                    for (var i = 0; i < prop.arr.length; i++) {
-                        $(prop.arr[i]).css({
-                            'position': 'static',
-                            'top': '0px'
-                        });
-                    }
+					for( var i = 0; i < prop.arr.length; i++ ){
+						$( prop.arr[i] ).css({
+							'position' : 'static',
+							'top' : '0px'
+						});
+					}
                 }
             }
         });
@@ -2493,30 +2499,29 @@ function banner_pages() {
 }
 
 $(function () {
+	
+	
+var prop = {};
+prop.arr = [];
+prop.divs = $( '.rightPanel.floatFixed' );
 
-    //fixed_right(1);
+for( var i = 0; i < prop.divs.length; i++ ){
+	prop.arr.push( prop.divs[i] );
+	$( prop.divs[i] ).addClass('aj-have-push');
+}
+fixed_right(prop);
 
-
-    var prop = {};
-    prop.arr = [];
-    prop.divs = $('.rightPanel.floatFixed');
-    for (var i = 0; i < prop.divs.length; i++) {
-        prop.arr.push(prop.divs[i]);
-        $(prop.divs[i]).addClass('aj-have-push');
-    }
-    fixed_right(prop);
-
-    var ajTimer = setInterval(function () {
-        var divs = $('.rightPanel.floatFixed');
-        if (divs.length !== prop.divs.length) {
-            for (var i = 0; i < divs.length; i++) {
-                if (!$(divs[i]).hasClass('aj-have-push')) {
-                    prop.arr.push(divs[i]);
-                    $(divs[i]).addClass('aj-have-push');
-                }
-            }
-        }
-    }, 1000 / 12);
+var ajTimer = setInterval(function(){
+	var divs = $( '.rightPanel.floatFixed' );
+	if( divs.length !== prop.arr.length ){
+		for( var i = 0; i < divs.length; i++ ){
+			if( !$(divs[i]).hasClass('aj-have-push') ){
+				prop.arr.push( divs[i] );
+				$( divs[i] ).addClass('aj-have-push');
+			}
+		}
+	}
+},1000/12);
 
     slidingFunction();
 
@@ -2925,7 +2930,7 @@ function youhuiListLoad() {
 
     $.ajax({
         type: "get",
-        url: "/myajax/youhuipage?page=" + (current_page + 1) + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&area=" + area + "&status=" + status + "&pagesize=" + pagesize,
+        url: "/myajax/youhuipage?page=" + (current_page + 1) + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&area=" + area + "&status=" + status+"&pagesize="+pagesize,
         dataType: "html",
         success: function (html) {
             current_page = current_page + 1;
@@ -2971,7 +2976,7 @@ function faxianListLoad() {
 
     $.ajax({
         type: "get",
-        url: "/myajax/faxianpage?page=" + (current_page + 1) + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&area=" + area + "&status=" + status + "&pagesize=" + pagesize,
+        url: "/myajax/faxianpage?page=" + (current_page + 1) + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&area=" + area + "&status=" + status+"&pagesize="+pagesize,
         dataType: "html",
         success: function (html) {
             current_page = current_page + 1;
@@ -3020,7 +3025,7 @@ function haitaoListLoad() {
 
     $.ajax({
         type: "get",
-        url: "/myajax/haitaopage?page=" + (current_page + 1) + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&status=" + status + "&pagesize=" + pagesize,
+        url: "/myajax/haitaopage?page=" + (current_page + 1) + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&status=" + status+"&pagesize="+pagesize,
         dataType: "html",
         success: function (html) {
             current_page = current_page + 1;
@@ -3095,217 +3100,26 @@ _gaq.push(['_trackPageview']);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
-(function () {
-    seajs.config({
-        vars: {
-            'locale': 'zh-cn'
-        },
-        base: '/js/seajs/module/',
-        charset: 'utf-8'
-    });
-    $(document).ready(function () {
-        var divs, name;
-        divs = $("div[sea_module_name]");
-        divs.each(function () {
-            if (!$(this).attr('sea_module_name_loaded') && $(this).attr('sea_module_name_loaded') != '1') {
-
-                name = $.trim($(this).attr('sea_module_name'));
-                name.split(' ').forEach(function (module_name) {
-                    seajs.use(sea_module_name[module_name]);
-                });
-                $(this).attr('sea_module_name_loaded', 1);
-            }
-        });
-    });
-})();
-
-$(function () {
-    var div = $('#aj-qmm-weixin-dinyue'),
-		key = 'aj-close-dinyue';
-    if (Youhui.tools.cookie(key) == '1' || $(window).width() < 1050) {
-        $(div).hide();
-    }
-    $(div).find('.aj-close').on('click', function () {
-        $(div).fadeOut();
-        Youhui.tools.cookie(key, "1", {
-            path: '/',
-            domain: Youhui.CookieDomain,
-            expires: 1
-        });
-    });
+(function(){
+seajs.config({
+	vars: {
+		'locale': 'zh-cn'
+	},
+    base: '/js/seajs/module/',
+	charset: 'utf-8'
 });
-
-$(function () {
-    var cid = 'cid',
-    cookieName = 'faxianzdm_shoucang';
-    function Stamp(div) {
-        if (this instanceof Stamp) {
-            this.div = div;
-            this.initial();
-            this.hover();
-            this.event();
-        } else {
-            return new Stamp(div);
-        }
-    }
-    Stamp.prototype = {
-        initial: function () {
-            this.calculateMaxleft();
-        },
-        event: function () {
-            var that = this;
-            $(window).on('resize',
-            function () {
-                that.calculateMaxleft();
-            });
-        },
-        hover: function () {
-            var html, that = this;
-            $(this.div).on("mouseenter mouseleave", '.list',
-            function (event) {
-                if (event.type === 'mouseenter') {
-                    if (!$(this).attr('aj-has-hover')) {
-                        html = $(this).find('.aj-desc').html() + "<div class='aj-stamps aj-stamps-y'>" + $(this).find('.aj-stamps').html() + "</div>";
-                        var target = event.target;
-                        $(this).find('.aj-desc').html(html);
-                        $(this).attr('aj-has-hover', '1');
-                    }
-                    that.setStyleOfFavor(this);
-                    if (that.isLastInline(this)) {
-                        $(this).find('.aj-list-inside-wrap').css({
-                            'float': 'right'
-                        });
-                    }
-                } else if (event.type === 'mouseleave') {
-                    $(this).find('.aj-favor').css('display', 'none');
-                }
-            });
-            $(this.div).on('mouseover', '.itemName .black',
-            function () {
-                if (!$(this).attr('title')) {
-                    $(this).attr('title', $.trim($(this).html()));
-                }
-            });
-            $(this.div).on('mouseover', '.aj-favor',
-            function () {
-                if (!$(this).attr('title') && !$(this).hasClass('aj-have-favor')) {
-                    $(this).attr('title', '添加到收藏');
-                } else if ($(this).hasClass('aj-have-favor')) {
-                    $(this).attr('title', '取消收藏');
-                }
-            });
-            $(this.div).on('click', '.aj-favor',
-            function () {
-                if ($(this).hasClass('aj-have-favor')) {
-                    faxianzdm_shoucang(this, true);
-                } else {
-                    faxianzdm_shoucang(this, false);
-                }
-                $(this).toggleClass('aj-have-favor');
-                $(this).removeAttr('title');
-            });
-        },
-        setStyleOfFavor: function (obj) {
-            var aTag = $(obj).find('.aj-favor')[0],
-            id = $(aTag).attr(cid);
-            if (Youhui.tools.cookie(cookieName).indexOf("," + id) !== -1) {
-                $(aTag).addClass('aj-have-favor');
-            }
-            $(aTag).css('display', 'block');
-        },
-        calculateMaxleft: function () {
-            var divs = $(this.div).find('.list'),
-            left = 0,
-            i;
-            if (divs.length < 4) {
-                return false;
-            }
-            for (i = 0; i <= 5; i++) {
-                if ($(divs[i]).offset().left >= left) {
-                    left = $(divs[i]).offset().left;
-                } else {
-                    break;
-                }
-            }
-            this.maxLeft = left;
-        },
-        isLastInline: function (div) {
-            return (Math.abs($(div).offset().left - this.maxLeft) < 10) ? true : false;
-        }
-    };
-    var div = $('.discovery_list')[0];
-    if (div) {
-        Stamp(div);
-    }
-    function faxianzdm_shoucang(obj, isSc) {
-
-        if (!Youhui.common.user.checklogin()) return false;
-
-        var $this = $(obj),
-        id = $this.attr('cid');
-
-        if (!isSc) {
-            var title = $this.attr('posttilte');
-
-            var shoucangCookie = Youhui.tools.cookie("faxianzdm_shoucang");
-
-            if (shoucangCookie.indexOf("," + id) != -1) {
-                floatTips(obj, "您已收藏");
-                return;
-            } else {
-                Youhui.tools.cookie("faxianzdm_shoucang", shoucangCookie + "," + id, {
-                    path: '/',
-                    domain: Youhui.CookieDomain,
-                    expires: 864000
-                });
-            }
-
-            $.ajax({
-                url: "/ajax/PostUserAction.ashx",
-                data: {
-                    'id': id,
-                    "type": 100,
-                    "title": title
-                },
-                type: "POST",
-                success: function (json, textStatus) {
-                    if (json.code > 0) {
-                        floatTips(obj, "已经收藏成功！");
-                    } else {
-                        floatTips(obj, json.msg);
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                }
-            });
-        } else {
-            var shoucangCookie = Youhui.tools.cookie("faxianzdm_shoucang");
-
-            if (shoucangCookie.indexOf("," + id) != -1) {
-                Youhui.tools.cookie("faxianzdm_shoucang", shoucangCookie.replace("," + id, ""), {
-                    path: '/',
-                    domain: Youhui.CookieDomain,
-                    expires: 864000
-                });
-
-                $.ajax({
-                    url: "/ajax/PostUserAction.ashx",
-                    data: {
-                        'id': id,
-                        "type": 101
-                    },
-                    type: "POST",
-                    success: function (json, textStatus) {
-                        if (json.code > 0) {
-                            floatTips(obj, "取消收藏成功！");
-                        } else {
-                            floatTips(obj, json.msg);
-                        }
-                    },
-                    error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    }
-                });
-            }
-        }
-    }
+$( document ).ready(function(){
+	var divs,name;
+	divs = $( "div[sea_module_name]" );
+	divs.each(function(){
+		if( !$(this).attr( 'sea_module_name_loaded' ) && $(this).attr( 'sea_module_name_loaded' ) != '1' ){
+			
+			name = $.trim( $(this).attr('sea_module_name') );
+			name.split(' ').forEach(function( module_name ){
+				seajs.use( sea_module_name[ module_name ] );
+			});
+			$( this ).attr( 'sea_module_name_loaded', 1 );
+		}
+	});
 });
+})()

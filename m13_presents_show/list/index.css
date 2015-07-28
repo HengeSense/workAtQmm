@@ -357,3 +357,7 @@ a.fav{
 a.fav i{
 	margin-right:0px!important;
 }
+
+#J_zhide_list .aj-is-can-use .aj-use-ok,#J_zhide_list .aj-is-can-use .aj-use-fail{
+	position:relative;
+}

@@ -1,4 +1,4 @@
-$(function () {
+	$(function () {
 	var cid = 'cid',
 		cookieName = 'faxianzdm_shoucang';
 	function Stamp(div) {

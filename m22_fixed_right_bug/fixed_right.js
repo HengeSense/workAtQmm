@@ -1,27 +1,3 @@
-define(function( require, exports, module ){
-
-
-var prop = {};
-prop.arr = [];
-prop.divs = $( '.rightPanel.floatFixed' );
-for( var i = 0; i < prop.divs.length; i++ ){
-	prop.arr.push( prop.divs[i] );
-	$( prop.divs[i] ).addClass('aj-have-push');
-}
-fixed_right( prop );
-
-var ajTimer = setInterval(function(){
-	var divs = $( '.rightPanel.floatFixed' );
-	if( divs.length !== prop.arr.length ){
-		for( var i = 0; i < divs.length; i++ ){
-			if( !$(divs[i]).hasClass('aj-have-push') ){
-				$( divs[i] ).addClass('aj-have-push');
-				prop.arr.push( divs[i] );
-			}
-		}
-	}
-}, 1000);
-
 function fixed_right( prop ) {
 	
     if ($("#pagefooter").length > 0 && $(".rightPanel").length > 0) {
@@ -39,8 +15,11 @@ function fixed_right( prop ) {
 			if( $('.right_side').height() > rightHeight ){
 				rightHeight = $('.right_side').height();
 			}
+			if ($('.left_side').height() > leftHeight) {
+				leftHeight = $('.left_side').height();
+			}
 		},1000/12);
-		setTimeout(function(){
+		setTimeout(function () {
 			clearInterval(fixed_height_timer);
 		}, 10 * 1000);
 		
@@ -50,7 +29,9 @@ function fixed_right( prop ) {
 			fixedTotalHeight = 0,
 			scrollHeight,
 			footerTop;
-			
+		
+
+		
 		$(window).on( 'resize', function(){
 			for( var i = 0; i < prop.arr.length; i++ ){
 				$( prop.arr[i] ).css({
@@ -111,5 +92,3 @@ function fixed_right( prop ) {
         });
     }
 }
-
-});
