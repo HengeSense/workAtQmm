@@ -1,0 +1,73 @@
+
+/*buy count css*/
+.aj-i-want-buy-num{
+	height:26px;line-height:26px;
+	margin:10px 0 5px;
+	color:#333;
+}
+.aj-i-want-buy-num .aj-clear{
+	clear:both;
+}
+.aj-i-want-buy-num .aj-float{
+	float:left;
+}
+.aj-i-want-buy-num .aj-num-control{
+	border:1px solid #ddd;
+	border-radius:2px;
+}
+.aj-i-want-buy-num .aj-num-control .aj-hover{
+	transition:all 0.3s;
+	-webkit-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+}
+.aj-i-want-buy-num .aj-num-control .aj-hover:hover{
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.aj-i-want-buy-num .aj-num-control .aj-disabled{
+	opacity:0.6!important;
+	filter:alpha(opacity=60)!important;
+	color:#aaa!important;
+}
+.aj-i-want-buy-num .aj-num-control .aj-block{
+	background-color:#e9e9e9;
+	width:30px;height:26px;
+	display:inline-block;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+	font-size:20px;font-weight:bold;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+}
+.aj-i-want-buy-num .aj-num-control .aj-num{
+	width:44px;
+	background-color:white;
+	font-size:14px;font-weight:normal;
+	border:none;
+	height:16px;margin-top:5px;
+}
+.aj-i-want-buy-num .aj-danwei{
+	margin-left:10px;
+}
+
+/* li pin img*/
+.box_detail_img .aj-img{
+	position:absolute;
+	top:0;left:0;
+	height:180px;width:200px;
+	font-size:0;
+}
+.box_detail_img .aj-img:before{
+	content:'';
+	display:inline-block;
+	width:0;height:100%;
+	vertical-align:middle;
+}
+.box_detail_img .aj-img img{
+	max-width:100%;max-height:100%;
+	vertical-align:middle;
+}
+/*------------*/

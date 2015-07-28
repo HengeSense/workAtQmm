@@ -1,0 +1,47 @@
+
+
+
+
+规定  路由选择包括  page，pagenum，类别（kinds，user_id，is_delete....）
+
+从数据库  获取数据，需要提供 query 的写法
+
+wrap  数据（自己写）
+
+导航 自动生成
+
+
+class module{
+	
+	function __construct( $arr ){
+	
+	}
+	public function initial( $config ){
+		$config = array(
+			'from' => array(
+				'type' => 'mysql'
+			),
+			columns => array(
+				array(
+					'name' 		=> 	'user_id',
+					'type' 		=> 	'',			//int varchar TIMESTAMP
+					'length' 	=> 	'null',
+					'default' 	=> 	'null', 	// 数字，字符串或者CURRENT_TIMESTAMP
+					'attribute' => 	'unsigned',	// unsigned OR null
+					'isnull' 	=>	'false',
+					'index'		=>	'Primary'
+				),
+			),
+			
+		);
+	}
+	
+	
+	
+	
+}
+
+
+
+
+

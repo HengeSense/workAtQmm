@@ -1,0 +1,47 @@
+.searchbox_tabs {
+	position:absolute;
+	top:0;
+	left:0;
+	height:30px;
+	overflow:hidden;
+	border-right:1px solid #DDD;
+	background:#FFF;
+	z-index:9
+}
+.searchbox_tab {
+	padding:3px 16px 3px 10px;
+	line-height:24px;
+	font-size:14px;
+	cursor:pointer	background-color:#fafafa;
+	background-color:#fafafa;
+	cursor:pointer;
+}
+.g-toggle{
+	background-image:url(http://image1.quanmama.com/AdminImageUpload/2014212224451355.jpg) !important;
+	top:5px!important;
+}
+.aj-tri{
+	border:3px solid;
+	border-color:transparent;
+	border-top-color:black;
+}
+.autocomplete li{
+	height:22px!important;
+	line-height:22px!important;
+	position:relative;z-index:2;
+}
+.autocomplete .selected .keyname{
+	color:white;
+}
+.search_suggest .hot-icon-index{
+	width:20px!important;
+	height:16px!important;
+}
+.search_suggest .list-hook{
+	overflow:hidden;
+}
+.aj-arrow-down{
+	top:11px!important;
+	border-top-color:transparent!important;
+	border-bottom-color:#666!important;
+}

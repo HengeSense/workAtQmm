@@ -1,0 +1,62 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M1024 579.584c0 132.301-109.773 239.616-245.094 239.616h-593.715c-102.298 0-185.19-81.101-185.19-181.094 0-99.891 82.893-180.992 185.19-180.992 7.475 0 14.746 0.614 21.965 1.382-1.894-12.595-2.918-25.498-2.918-38.707 0-146.995 121.907-266.189 272.384-266.189 123.238 0 227.277 79.974 260.915 189.798 13.466-2.202 27.238-3.379 41.421-3.379 135.27 0 245.043 107.162 245.043 239.565z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"cloud"
+				],
+				"grid": 20
+			},
+			"attrs": [],
+			"properties": {
+				"id": 49,
+				"order": 1,
+				"prevSize": 20,
+				"code": 58880,
+				"name": "cloud"
+			},
+			"setIdx": 0,
+			"setId": 0,
+			"iconIdx": 49
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "test"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "test",
+				"majorVersion": 1,
+				"minorVersion": 0
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false,
+			"ie7": true
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 4473924,
+			"bgColor": 16777215
+		},
+		"historySize": 100
+	}
+}

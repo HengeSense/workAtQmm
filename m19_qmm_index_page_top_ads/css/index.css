@@ -1,0 +1,98 @@
+#J_nav_site{
+  width:1050px;
+  margin-top:40px;
+  border-top:solid 1px rgb(209, 209, 209)!important;
+}
+.box-nav-site .con{
+  float:none!important;
+  padding:0px!important;
+  width:100%!important;
+}
+
+.brands-bd .list-main.list-main-adj li{
+  margin:0!important;
+}
+.box-nav-site{
+  background-image:none!important;
+}
+.brands-bd .list-main.list-main-adj li{
+  width:97px!important;
+}
+.list-mall{
+  margin:0!important;
+}
+.box-nav-site .tit{
+  position:absolute;
+  left:-1px;
+  height: 35px!important;
+  position: absolute!important;
+  top: -37px!important;
+  width:auto!important;
+  border-right:none!important;
+  border-left:1px solid rgb(215, 225, 232);
+  border-top:1px solid rgb(215, 225, 232);
+}
+.box-nav-site .tit li{
+  float:left;
+  border-right:1px solid rgb(209, 209, 209)!important;
+  margin:0!important;padding:0!important;
+  height:34px!important;
+  border-top:1px solid white!important;
+  background-color:white!important;
+  border-bottom:solid 1px rgb(209, 209, 209)!important;
+}
+.box-nav-site .tit li i{
+  left:10px!important;
+  top:11px!important;
+}
+.box-nav-site .tit li a{
+  position:relative;
+  top:-1px;
+  height:35px!important;
+  padding-left:35px!important;
+  padding-right:15px;
+  font-size:12px;
+  line-height:35px!important;
+  border-top:3px solid white;
+}
+.box-nav-site .tit li.cur{
+  border-bottom:1px solid white!important;
+  
+}
+.box-nav-site .tit li i{
+	color:rgb(223, 33, 105)!important;
+}
+.box-nav-site .tit li.cur a{
+  border-top:3px solid rgb(78, 188, 128)!important;
+}
+
+#J_nav_site .aj-tit-more{
+  position:absolute;
+  top:-27px;right:-1px;
+}
+#J_nav_site .aj-tit-more .aj-one{
+  display:none;
+}
+#J_nav_site .aj-tit-more .aj-one .aj-ul{
+  height:25px;
+  border-top:solid 1px rgb(209, 209, 209);
+  border-left:solid 1px rgb(209, 209, 209);
+}
+#J_nav_site .aj-tit-more .aj-one .aj-ul li{
+  float:left;
+  height:25px;
+  padding:0 5px;
+  border-right:1px solid rgb(215, 225, 232);
+  line-height:25px;
+  font-size:12px;
+}
+
+#J_nav_site .aj-tit-more .aj-one .aj-ul li.aj-select{
+  background-color:#00a0ed;
+}
+#J_nav_site .aj-tit-more .aj-one .aj-ul li.aj-select a{
+  color:white;
+}
+
+
+

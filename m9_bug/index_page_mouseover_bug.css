@@ -1,0 +1,28 @@
+.list-shop-word .item h4{
+	width:40px;
+	white-space:no-wrap;
+	padding:4px 0 0!important;
+}
+.list-shop-word .item ul li a.mall{
+	border-bottom:1px solid #EEEEEE;
+	width:70px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.poptip-info a.mall{
+	padding:0 2px;
+}
+.list-shop-word .item ul li{
+	border-bottom:none!important;
+	margin:0 40px 0 0!important;
+	padding:3px 0!important;
+}
+.poptip-info{
+	width:66px;
+}
+.list-shop-word .item ul{
+	margin:7px -50px 0 50px!important;
+}
+.poptip-info{
+	width:70px!important;
+}

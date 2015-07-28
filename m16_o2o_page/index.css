@@ -1,0 +1,143 @@
+.aj-first-class{
+	width:1050px;
+	margin:0 auto;
+}
+.aj-first-class .aj-header{
+	height:37px;line-height:37px;
+}
+.aj-first-class .aj-header .aj-h-title{
+	position:relative;
+	padding-left:40px;
+	font-size:20px;
+	float:left;
+	color:rgb(51, 51, 51);
+	font-weight:normal;
+}
+.aj-first-class .aj-header .aj-h-title span{
+	position:absolute;
+	top:2px;left:6px;
+	font-size:14px;color:white;
+	font-weight:bold;
+}
+.aj-first-class .aj-header h2:before{
+	position:absolute;
+	top:0;left:0;
+	content:'';
+	display:block;
+	top:7px;
+	width:30px;height:30px;
+	background-image:url(home_icon.png);
+	background-position: 0 -315px;
+}
+.aj-first-class .aj-header .aj-h-ul{
+	position:relative;
+	top:1px;
+	margin-left:20px;
+	float:left;
+	height:35px;
+	border:solid 1px rgb(237, 237, 237);
+	border-bottom:1px solid #00a0ed;
+}
+.aj-first-class .aj-header .aj-h-ul .aj-li{
+	position:relative;
+	float:left;
+}
+.aj-first-class .aj-header .aj-h-ul .aj-select{
+	
+}
+.aj-first-class .aj-header .aj-h-ul .aj-select a{
+	border-top:solid 3px #00a0ed!important;
+	border-left:solid 1px #00a0ed!important;
+	border-right:solid 1px #00a0ed!important;
+	border-bottom:1px solid white;
+	position:relative;
+	z-index:5;
+}
+.aj-first-class .aj-header .aj-h-ul .aj-li a{
+	display:inline-block;
+	padding:0 16px;
+	border-left:solid 1px rgb(255, 255, 255);
+	border-right:solid 1px rgb(255, 255, 255);
+	border-top:solid 3px rgb(255, 255, 255);
+	line-height:32px;height:32px;
+
+}
+.aj-first-class .aj-header .aj-h-ul .aj-select:after{
+	border-left-color:transparent!important;
+}
+.aj-first-class .aj-header .aj-h-ul .aj-li:after{
+	position:absolute;
+	z-index:3;
+	top:7px;left:-1px;
+	display:inline-block;
+	content:'';
+	width:0;height:21px;
+	border-left:1px solid #ccc;
+}
+.aj-first-class .aj-header .aj-h-ul .aj-li:first-child:after{
+	border-left:none;
+}
+.aj-first-class .aj-header .aj-more{
+	display:inline-block;
+	width:40px;height:37px;
+	line-height:37px;
+	text-align:center;
+	float:right;
+}
+.aj-first-class .aj-header .aj-more:hover{
+	text-decoration:underline;
+}
+
+
+.aj-first-class .aj-content{
+	border-top:solid 1px #00a0ed;
+}
+.aj-first-class .aj-content .aj-c-wrap{
+	min-height:300px;
+	display:none;
+}
+
+
+.aj-first-class .aj-footer{}
+.aj-first-class .aj-footer .aj-line{
+	position:relative;
+	width:100%;min-height:60px;
+	background-color:rgb(247, 247, 247);
+	margin-top:10px;
+}
+.aj-first-class .aj-footer .aj-ul{}
+.aj-first-class .aj-footer .aj-ul:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.aj-first-class .aj-footer .aj-ul li{
+	float:left;
+	width:10%;
+	text-align:center;
+	font-size:0;
+}
+.aj-first-class .aj-footer .aj-ul li a{
+	display:inline-block;
+	border-right:1px dotted rgb(204, 204, 204);
+	width:104px;height:40px;
+	margin:10px 0;
+	text-align:center;
+	overflow:hidden;
+}
+.aj-first-class .aj-footer .aj-ul li:last-child a{
+	border-right:none!important;
+}
+.aj-first-class .aj-footer .aj-ul li a:before{
+	content:'';
+	display:inline-block;
+	width:0;height:100%;
+	font-size:0;
+	vertical-align:middle;
+}
+.aj-first-class .aj-footer .aj-ul li img{
+	max-width:100px;max-height:40px;
+	vertical-align:middle;
+}
+.aj-first-class .aj-footer .aj-brands{}
+.aj-first-class .aj-footer .aj-shops{}

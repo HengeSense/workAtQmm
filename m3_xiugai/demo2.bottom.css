@@ -1,0 +1,36 @@
+.aj-bottom-pagefooter-wrap{
+    width: 100%;
+    min-width: 1200px;
+    background-color: #333;
+    color: #ccc;
+}
+#pagefooter{
+	margin-bottom:0!important;
+}
+#footerTab .bordiv{
+	border:none!important;
+}
+#footerTab .footer_txt,#footerTab p,#footerTab .footer_txt span.on{
+	background:none!important;
+}
+#footerTab .footer_txt{
+	height:30px;line-height:30px;
+	color:white;
+	font-size:16px;font-weight:bold;
+}
+#footerTab .footer_txt span{
+	border:none;
+	height:30px;
+	padding:0 4px;
+	margin:0 16px;
+}
+#footerTab .footer_txt span.on{
+	border-bottom:3px solid #df2169!important;
+}
+#footerTab p{
+	padding:5px 8px;
+	margin:20px;
+}
+#footerTab p.on{
+	border-left:3px solid #ccc;
+}

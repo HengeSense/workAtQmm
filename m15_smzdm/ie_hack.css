@@ -1,0 +1,216 @@
+@charset "utf-8";
+	*html body {
+	padding:0
+}
+*html .more_moreNav li {
+	height:28px;
+	overflow:hidden
+}
+.moreNavHover i {
+	border-color:transparent transparent #333 transparent;
+	border-style:dashed dashed solid dashed
+}
+.submissionHover i {
+	border-color:transparent transparent #333 transparent;
+	border-style:dashed dashed solid dashed
+}
+.login_InfoHover i {
+	border-color:transparent transparent #333 transparent;
+	border-style:dashed dashed solid dashed
+}
+*+html .signScore {
+	width:120px
+}
+.moreNav,.btn_search,.share_app_icon span.dot,.ninePicBox li,.overseaCommon a,.topicProgressWrap .btn_vote,.discovery_list li,.discovery_list .zan_fav_com a {
+	_display:inline
+}
+*html .btn_search,*+html .btn_search {
+	width:20px;
+	font-family:arial
+}
+.text_search {
+	height:34px;
+	line-height:34px;
+	width:250px
+}
+.cateCurrent {
+	_width:280px
+}
+*+html ul.hotCate li,*+html dl.more_cateMenu dd {
+	display:block;
+	float:left;
+	line-height:22px
+}
+*html a.fav,*html a.comment,*html a.zan {
+	line-height:22px
+}
+*html a.fav i,*html a.comment i,*html a.zan i {
+	vertical-align:0
+}
+*+html a.fav,*+html a.comment,*+html a.zan {
+	line-height:22px
+}
+*+html a.fav i,*+html a.comment i,*+html a.zan i {
+	vertical-align:0
+}
+*html i,*+html i {
+	font-size:12px!important
+}
+*html .listTitle .itemName,*html .discovery_list .itemName,*html .signIn_title,*html .show_list .itemName {
+	font-family:"Microsoft YaHei"
+}
+*+html .listTitle .itemName,*+html .discovery_list .itemName,*+html .signIn_title,*+html .show_list .itemName {
+	font-family:"Microsoft YaHei"
+}
+*html .sina,*html .weixin,*html .rss,*+html .sina,*+html .weixin,*+html .rss {
+	width:auto!important
+}
+*html .sina i,*html .weixin i,*html .rss i,*+html .sina i,*+html .weixin i,*+html .rss i {
+	display:inline;
+	font-size:12px
+}
+*html .app,*+html .app {
+	line-height:32px
+}
+*html .more_share,*+html .more_share {
+	top:32px
+}
+*html .score_rateBox i,*+html .score_rateBox i {
+	display:block;
+	line-height:52px;
+	font-size:22px!important;
+	width:52px;
+	height:52px;
+	background-color:#f35a5a;
+	color:#fff!important
+}
+*html .score_rateBox .rFloat i,*+html .score_rateBox .rFloat i {
+	background-color:#ddd
+}
+*html .operate_icon a,*+html .operate_icon a {
+	padding-left:5px;
+	display:inline;
+	line-height:16px
+}
+*html .show_exp_zan a i,*+html .show_exp_zan a i {
+	font-size:36px!important
+}
+*html .comment_operate .comment_smileBox,*+html .comment_operate .comment_smileBox {
+	width:360px
+}
+*html .comment_operate .comment_share,*+html .comment_operate .comment_share {
+	width:280px
+}
+*html .quickReply .comment_share,*+html .quickReply .comment_share {
+	width:190px
+}
+*+html .bdsharebuttonbox .more_share a {
+	line-height:16px;
+	font-size:12px
+}
+*html .operateShare .more_share a,*html .operateShare_fx .more_share a {
+	width:26px;
+	padding:2px 6px 0
+}
+*+html .operateShare .more_share a,*+html .operateShare_fx .more_share a {
+	width:26px;
+	padding:2px 6px 0
+}
+*html .signIn_rank .rankTitle {
+	margin-top:-32px
+}
+*+html .signIn_rank .rankTitle {
+	margin-top:-32px
+}
+.discovery_list li:hover {
+	border:1px solid #ccc
+}
+*+html .bannerWrap .slick-dots {
+	padding-left:30px;
+	width:320px
+}
+*+html .bannerWrap .slick-dots li {
+	float:left;
+	display:block
+}
+*+html .bannerWrap .slick-dots a {
+	display:block
+}
+.comment_sendPart {
+	_padding-left:76px
+}
+*html .comment_share i.check,*+html .comment_share i.check {
+	text-indent:-9999em;
+	vertical-align:middle
+}
+*html .comment_share i.icon-rightframe {
+	border:1px solid #f35a5a;
+	text-indent:0;
+	color:#f35a5a;
+	text-align:center
+}
+*+html .comment_share i.icon-rightframe {
+	border:1px solid #f35a5a;
+	text-indent:0;
+	color:#f35a5a;
+	text-align:center
+}
+*html #success_1 i,*+html #success_1 i {
+	display:none
+}
+*html .rank,*+html .rank {
+	color:#999
+}
+.pop,#cover,.leftLayer,.rightLayer {
+	_position:absolute
+}
+#cover {
+	_height:750px
+}
+.captchaBox .form-item {
+	_margin-right:9px
+}
+.error i {
+	_font-size:14px!important
+}
+*html .leftLayer,*+html .leftLayer {
+	height:152px
+}
+*html .leftLayer a,*html .rightLayer a,*+html .leftLayer a,*+html .rightLayer a {
+	height:38px;
+	padding-top:12px
+}
+*html .leftLayer a i,*html .rightLayer a i,*+html .leftLayer a i,*+html .rightLayer a i {
+	line-height:16px
+}
+*html .topicOnExp li i,*+html .topicOnExp li i {
+	text-indent:-9999em
+}
+*html .voteForm .topicOnExp li i.icon-rightframe {
+	border:1px solid #f35a5a;
+	text-indent:0;
+	color:#f35a5a;
+	right:0;
+	text-align:center
+}
+*+html .voteForm .topicOnExp li i.icon-rightframe {
+	border:1px solid #f35a5a;
+	text-indent:0;
+	color:#f35a5a;
+	right:0;
+	text-align:center
+}
+*html .pop_no_title .pop-content i {
+	float:left;
+	margin-left:40px;
+	display:inline;
+	margin-right:10px
+}
+*+html .pop_no_title .pop-content i {
+	float:left;
+	margin-left:40px;
+	margin-right:10px
+}
+*html .pop_jubao,*+html .pop_jubao {
+	padding-right:18px
+}

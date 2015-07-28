@@ -1,0 +1,16 @@
+.aj-block .aj-body .aj-product .aj-img img{
+	max-width:249px;
+	max-height:249px;
+	vertical-align:middle;
+}
+.aj-block .aj-body .aj-product .aj-img:before{
+	content:'';
+	display:inline-block;
+	width:1px;height:100%;
+	vertical-align:middle;
+}
+.aj-block .aj-body .aj-product .aj-img{
+	font-size:0;
+	-webkit-text-size-adjust:none;
+	overflow:hidden;
+}
