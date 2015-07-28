@@ -23,6 +23,9 @@
 .discovery_list .list_last_of_line .aj-desc{
 	top:0;left:0!important;
 }
+.discovery_list .list_last_of_line .aj-desc p{
+	height:auto!important;
+}
 .discovery_list .mall, .discovery_list .mall_time{
 	max-width:85px;height:20px;overflow:hidden;
 }
@@ -359,5 +362,8 @@ a.fav i{
 }
 
 #J_zhide_list .aj-is-can-use .aj-use-ok,#J_zhide_list .aj-is-can-use .aj-use-fail{
+	position:relative;
+}
+.discovery_list .aj-is-can-use .aj-use-ok,.discovery_list .aj-is-can-use .aj-use-fail{
 	position:relative;
 }
