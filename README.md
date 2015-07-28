@@ -1,2 +1,4 @@
 # workAtQmm
-Welcome to our website quanmama.com,this is my front end project here.
+This is my front end project here.
+Welcome to our website http://www.quanmama.com
+I appreciate it if you can provide some advice.Thank you.
