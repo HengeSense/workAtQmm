@@ -1,0 +1,18 @@
+/*before*/
+/* .aj-first-class{
+	width:1050px;
+	margin:0 auto;
+} */
+/*after*/
+.aj-first-class{
+	width:1050px;
+	margin:0 auto 25px;
+}
+.aj-first-class .discovery_list li.list{
+	width:256px!important;
+}
+
+.aj-nav-first-class{
+  position:fixed;
+  top:;
+}
