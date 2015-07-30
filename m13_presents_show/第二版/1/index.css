@@ -1,6 +1,28 @@
-.aj-grid-list .aj-desc{
-	height:40px;line-height:20px;
+.aj-grid-list{
+	height:430px!important;
+}
+.aj-grid-list .aj-mall-left{
+	left:15px;right:auto;
+}
+.aj-grid-list .itemUserInfo{
+	margin-bottom:5px!important;overflow:visible!important;
+	display:inline-block!important;
+}
+.aj-grid-list .itemUserInfo .rankTitle{
+	padding-left:5px;color:#999;text-decoration:none;
+}
+.aj-grid-list .itemUserInfo .rankTitle .aj-hour{
+	color:#7bb12f;padding:0 2px;width:120px;
+}
+.aj-grid-list .aj-desc-wrap{
+	height:60px;margin-bottom:5px;position:relative;
+}
+.aj-grid-list .aj-desc-wrap .aj-desc{
+	height:60px;line-height:20px;
 	margin-bottom:0!important;
+}
+.aj-grid-list .picBox{
+	margin-bottom:5px!important;
 }
 .aj-grid-list .haitao-coupons-list{
 	height:30px!important;
@@ -35,7 +57,7 @@
 	opacity:1;
 	filter:alpha(opacity=100);
 }
-.aj-grid-list .aj-s-yan-only .aj-zhishi{
+.aj-grid-list .aj-zhishi{
 	position:absolute;
 	display:block;
 	top:-36px;left:-7px;
@@ -52,7 +74,7 @@
 	filter:alpha(opacity=0);
 	white-space:nowrap;
 }
-.aj-grid-list .aj-s-yan-only .aj-zhishi:before{
+.aj-grid-list .aj-zhishi:before{
 	border-right:7px solid rgba(0, 0, 0, 0);
 	border-bottom:7px solid rgba(0, 0, 0, 0);
 	border-top:7px solid rgb(217, 217, 214);
@@ -62,7 +84,7 @@
 	position:absolute;
 	content:'';
 }
-.aj-grid-list .aj-s-yan-only .aj-zhishi:after{
+.aj-grid-list  .aj-zhishi:after{
 	border-right:6px solid rgba(0, 0, 0, 0);
 	border-bottom:6px solid rgba(0, 0, 0, 0);
 	border-top:6px solid rgb(255, 255, 255);
@@ -72,6 +94,12 @@
 	position:absolute;
 	content:'';	
 }
+.aj-grid-list .aj-roll-wrap{
+	height:20px;line-height:20px;position:absolute;top:3px;right:0;
+}
+.aj-grid-list .aj-roll-wrap .aj-percent{
+	color:#444;float:left;
+}
 .aj-grid-list .aj-roll{
 	position:relative;
 	display:inline-block;
@@ -79,6 +107,12 @@
 	margin:2px 4px 0 0;
 	background-color:#ccc;
 	overflow:hidden;
+	float:left;border:1px solid #ccc;border-radius:2px;
+}
+.aj-grid-list .aj-roll-wrap:hover .aj-zhishi{
+	display:block;
+	opacity:1;
+	filter:alpha(opacity=100);
 }
 .aj-grid-list .aj-inside{
 	position:absolute;
@@ -86,3 +120,19 @@
 	display:block;
 	width:100%;height:15px;
 }
+.aj-grid-list .zan_fav_com .icon-cai2{
+	display:inline-block;
+	width:20px;height:16px;
+	background-image:url(http://www.quanmama.com/AdminImageUpload/5257485home_icon.png);
+	background-position:-209px -219px;
+	position:relative;top:2px;
+}
+.aj-grid-list .item_buy_mall{
+	position:relative;
+}
+.aj-grid-list .item_buy_mall .directLink{
+	position:absolute;top:3px;right:0;
+}
+
+
+/*----------*/
