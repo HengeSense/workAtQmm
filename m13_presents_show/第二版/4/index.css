@@ -1,10 +1,16 @@
 .aj-grid-list{
 	position:relative;
-	height:430px!important;
+	height:450px!important;
+}
+.aj-grid-list .aj-header{
+	position:relative;
+	width:100%;height:29px;
+	border-bottom:1px dashed rgb(232, 232, 232);
+	margin-bottom:4px;margin-top:5px;
 }
 .aj-grid-list .aj-logo{
 	position:absolute;
-	top:0;left:0;
+	bottom:0;left:0;
 }
 .aj-grid-list .aj-mall-left{
 	left:15px;right:auto;
@@ -28,6 +34,7 @@
 }
 .aj-grid-list .picBox{
 	margin-bottom:5px!important;
+	margin-top:0px!important;
 }
 .aj-grid-list .haitao-coupons-list{
 	height:30px!important;
@@ -100,11 +107,7 @@
 	content:'';	
 }
 .aj-grid-list .aj-roll-wrap{
-	height:20px;line-height:20px;
-	position:absolute;top:3px;right:0;
-}
-.aj-grid-list .aj-roll-wrap:hover{
-	z-index:999;
+	height:20px;line-height:20px;position:absolute;top:3px;right:0;
 }
 .aj-grid-list .aj-roll-wrap .aj-percent{
 	position:absolute;
@@ -186,10 +189,10 @@
 }
 
 .aj-grid-list .aj-stamps{
-	position:absolute;
-	top:5px;right:15px;
-	display:inline-block;
+	float:right;
+	display:block;
 	width:auto!important;
+	margin:5px 15px 0 0;
 }
 .aj-grid-list .aj-stamps.aj-none{
 	opacity:0;

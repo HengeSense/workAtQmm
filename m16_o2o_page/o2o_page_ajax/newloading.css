@@ -1,0 +1,8 @@
+.newLoading {
+    background: url("/AdminImageUpload/20148150838532.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 48px;
+    left: 50%;
+    position: absolute;
+    top: 176px;
+    width: 48px;
+}
