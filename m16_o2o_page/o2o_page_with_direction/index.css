@@ -1,0 +1,62 @@
+
+
+#aj-first-class-direction{
+	position:fixed;
+	z-index:999;
+	top:50%;left:10px;
+}
+#aj-first-class-direction .aj-one{
+	position:relative;
+	width:40px;height:23px;line-height:23px;
+	border-bottom:1px dotted #ccc;
+}
+#aj-first-class-direction .aj-one a{
+	position:absolute;
+	top:0;left:0;
+	display:block;
+	width:100%;height:100%;
+}
+#aj-first-class-direction .aj-one .aj-floor{
+	position:absolute;top:0;left:0;
+	display:inline-block;
+	width:20px;
+	text-align:center;
+}
+#aj-first-class-direction .aj-one .aj-icon{
+	position:absolute;top:3px;right:0;
+	width:20px;
+	text-align:center;
+	display:inline-block;vertical-align:middle;
+	font-size:17px;
+}
+#aj-first-class-direction .aj-one .aj-desc{
+	display:block;
+	position:absolute;
+	width:100%;height:100%;
+	top:0;left:0;
+	text-align:center;
+	line-height:23px;
+	background-color:#c81623;
+	color:white;font-size:12px;
+	display:none;
+	cursor:pointer;
+}
+#aj-first-class-direction .aj-one.aj-select .aj-desc{
+	display:block;
+	color:#c81623;
+	background-color:white;
+}
+#aj-first-class-direction .aj-one:hover .aj-desc{
+	display:block;
+}
+#aj-first-class-direction.aj-no-icon .aj-one, #aj-first-class-direction .aj-no-icon .aj-one{
+	width:30px!important;
+}
+#aj-first-class-direction.aj-no-icon .aj-one .aj-floor,#aj-first-class-direction .aj-no-icon .aj-one .aj-floor{
+	width:30px!important;
+}
+#aj-first-class-direction.aj-no-icon .aj-one .aj-icon, #aj-first-class-direction.aj-no-icon .aj-one .aj-icon{
+	display:none;
+}
+
+/**/
