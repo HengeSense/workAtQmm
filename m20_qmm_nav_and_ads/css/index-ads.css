@@ -65,14 +65,18 @@
 }
 .box-nav-site .tit li i[class*="qmm-icon-local_taxi"]{
 	color:#fe9500!important;
-	font-size:18px!important;
+	font-size:19px!important;
 }
 .box-nav-site .tit li i[class*="qmm-icon-clock"]{
 	color:#4ebc80!important;
 }
-.box-nav-site .tit li i[class*="qmm-icon-iconfont-coin2"]{
-	color:#ffca02!important;
+.box-nav-site .tit li i[class*="qmm-icon-coin-yen"]{
+	color:#636550!important;
 	font-size:19px!important;
+}
+.box-nav-site .tit li i[class*="qmm-icon-happy2"]{
+	color:#ff6600!important;
+	font-size:18px!important;
 }
 
 
