@@ -141,3 +141,13 @@
 }
 .aj-first-class .aj-footer .aj-brands{}
 .aj-first-class .aj-footer .aj-shops{}
+.aj-first-class .zan_fav_com a{
+	margin-right:2px!important;
+}
+.aj-first-class i.icon-zan2, .aj-first-class i.icon-cai2, .aj-first-class i.icon-comment{
+	display:inline-block;
+	width:18px!important;
+}
+.aj-first-class .aj-c-wrap{
+	position:relative;
+}
