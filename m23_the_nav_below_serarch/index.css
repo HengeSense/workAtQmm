@@ -1,0 +1,17 @@
+.aj-nav-below-search{}
+.aj-nav-below-search li .aj-li-inside{
+	padding:10px;
+}
+.aj-nav-below-search li .aj-li-inside .aj-ul{
+	overflow:auto;
+}
+.aj-nav-below-search li .aj-li-inside .aj-ul:after{
+	content:'';
+	clear:both;
+	display:block;
+}
+.aj-nav-below-search li .aj-li-inside .aj-ul .aj-li{
+	width:100px;height:20px;
+	line-height:20px;
+	float:left;
+}

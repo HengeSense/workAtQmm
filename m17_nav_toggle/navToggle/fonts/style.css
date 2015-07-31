@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'qmm';
-	src:url('qmm.eot?-6lbucw');
-	src:url('qmm.eot?#iefix-6lbucw') format('embedded-opentype'),
-		url('qmm.ttf?-6lbucw') format('truetype'),
-		url('qmm.woff?-6lbucw') format('woff'),
-		url('qmm.svg?-6lbucw#qmm') format('svg');
+	src:url('qmm.eot?-ngiu9z');
+	src:url('qmm.eot?#iefix-ngiu9z') format('embedded-opentype'),
+		url('qmm.ttf?-ngiu9z') format('truetype'),
+		url('qmm.woff?-ngiu9z') format('woff'),
+		url('qmm.svg?-ngiu9z#qmm') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,51 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.qmm-icon-iconfont-badaxilietubiao01:before {
+	content: "\e614";
+}
+.qmm-icon-iconfont-diannao:before {
+	content: "\e615";
+}
+.qmm-icon-iconfont-fushi:before {
+	content: "\e616";
+}
+.qmm-icon-iconfont-fuyiyaofei:before {
+	content: "\e617";
+}
+.qmm-icon-iconfont-jiadian:before {
+	content: "\e618";
+}
+.qmm-icon-iconfont-jiazhuangicon:before {
+	content: "\e619";
+}
+.qmm-icon-iconfont-location:before {
+	content: "\e61a";
+}
+.qmm-icon-iconfont-muying:before {
+	content: "\e61b";
+}
+.qmm-icon-iconfont-qiche:before {
+	content: "\e61c";
+}
+.qmm-icon-iconfont-qita:before {
+	content: "\e61d";
+}
+.qmm-icon-iconfont-shipin:before {
+	content: "\e61e";
+}
+.qmm-icon-iconfont-shouji:before {
+	content: "\e61f";
+}
+.qmm-icon-iconfont-tubiao:before {
+	content: "\e620";
+}
+.qmm-icon-iconfont-newnew:before {
+	content: "\e612";
+}
+.qmm-icon-iconfont-check:before {
+	content: "\e613";
+}
 .qmm-icon-local_see:before {
 	content: "\e1ef";
 }

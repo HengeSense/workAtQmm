@@ -1,5 +1,6 @@
 #J_nav_site  i[class^="qmm-icon-"], #J_nav_site  i[class*=" qmm-icon-"] {
-	font-size:14px;
+	font-size:18px;
+	margin-top:-2px;
 }
 #J_nav_site{
   width:1050px;
@@ -47,6 +48,7 @@
 .box-nav-site .tit li i{
   left:10px!important;
   top:11px!important;
+  color:rgb(223, 33, 105);
 }
 .box-nav-site .tit li a{
   position:relative;
@@ -60,14 +62,20 @@
 }
 .box-nav-site .tit li.cur{
   border-bottom:1px solid white!important;
-  
-}
-.box-nav-site .tit li i{
-	color:rgb(223, 33, 105)!important;
 }
 .box-nav-site .tit li i[class*="qmm-icon-local_taxi"]{
-	font-size:18px!important;top:9px!important;
+	color:#fe9500!important;
+	font-size:18px!important;
 }
+.box-nav-site .tit li i[class*="qmm-icon-clock"]{
+	color:#4ebc80!important;
+}
+.box-nav-site .tit li i[class*="qmm-icon-iconfont-coin2"]{
+	color:#ffca02!important;
+	font-size:19px!important;
+}
+
+
 .box-nav-site .tit li.cur a{
   border-top:3px solid rgb(78, 188, 128)!important;
 }
