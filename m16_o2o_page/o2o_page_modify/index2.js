@@ -5,31 +5,6 @@ $(function () {
 		$(this).parents('.aj-first-class').find('.aj-content .aj-c-wrap').eq($(this).index()).show().siblings().hide();
 	});
 });
-$(function () {
-	var direction = $('#aj-first-class-direction'),
-		container = $('#pagecontent').children('.clear'),
-		blocks,
-		lastTop = 0,
-		nowTop,
-		i;
-	show(0);
-	$(window).on('scroll', function () {
-		nowTop = $(document.body).scrollTop();
-		if (Math.abs(nowTop - lastTop) > 100) {
-			lastTop = nowTop;
-			blocks = container.find('.aj-first-class');
-			for (i = 0; i < blocks.length; i++) {
-				if ($(blocks[i]).offset().top - $(document.body).scrollTop() > 0 && $(blocks[i]).offset().top - $(document.body).scrollTop() < 300) {
-					show(i);
-					break;
-				}
-			}
-		}
-	});
-	function show(index){
-		direction.find('.aj-one').eq(index).addClass('aj-select').siblings().removeClass('aj-select');
-	}
-});
 $(function () {	//楼层从0开始
 	var response = $('#aj-ajax-load').val(),
 		container = $('#pagecontent').children('.clear'),
@@ -41,78 +16,94 @@ $(function () {	//楼层从0开始
 		cid,
 		url,
 		blocks;
-	$(window).on('scroll', function () {
-		distance = $(container).offset().top + $(container).height() - $(document.body).scrollTop() - $(window).height();
-		if (distance < 150) {
-			loadNextFloor();
+	initialDiv();
+	blocks = container.find('.aj-first-class');
+	
+	(function () {
+		var scrollTop,
+			top,
+			height,
+			windowHeight,
+			lastScrollTop = $(document.body).scrollTop();
+		$(window).on('scroll', function () {
+			windowHeight = $(window).height();
+			scrollTop = $(document.body).scrollTop();
+			if (scrollTop - lastScrollTop > 100) { // 往下滚
+				lastScrollTop = scrollTop;
+				for(var i = 0; i < blocks.length; i++) {
+					(function (obj) {
+						obj.index = i;
+						top = $(obj).offset().top;
+						height = $(obj).height();
+						if (scrollTop + windowHeight + 100 > top && (scrollTop + windowHeight + 1000 < top + height)) {
+							console.log(top + '===>' + obj.index);
+						}
+					})(blocks[i]);
+				}
+			} else if (lastScrollTop - scrollTop > 100) {	//往下滚
+				
+			}
+		});
+	}());
+	function initialDiv() {
+		var ones = direction.find('.aj-one'),
+			i,
+			first = container.find('.aj-first-class').eq(0);
+		first.attr('aj-has-ajax', '1');
+		for (i = 1; i < ones.length; i++) {
+			console.log(i);
+			(function (obj) {
+				obj.index = i;
+				first.clone().html(obj.index + 1 + 'lou').attr('id', $(obj).attr('cid')).attr('floor-index', obj.index).css({'width':'1050px','height':'1100px','position':'relative'}).appendTo(container);
+			})(ones[i]);
 		}
-	});
-	direction.on('click', '.aj-one', function () {
-		console.log($(this).index());
-		if (!isFloorLoaded($(this).index())) {
-			moniAjax($(this).index(), true);
-		}
-	});
-	function loadNextFloor() {
-		lastFloor = parseInt(container.find('.aj-first-class').last().attr(stamp));
-		if (!isLoading() && (lastFloor + 1 < direction.find(".aj-one").length) && !isFloorLoaded(lastFloor + 1)) {
-			moniAjax(lastFloor + 1);
-		}
-	}
-	function isFloorLoaded(floor) {
-		return container.find(".aj-first-class[" + stamp + "='" + floor + "']").length > 0 ? true : false;
-	}
-	function isLoading(bool) {
-		if (bool !== undefined) {
-			bool ? container.attr('aj-is-loading', '1') : container.removeAttr('aj-is-loading');
-		} else {
-			return container.attr('aj-is-loading') ? true : false;
-		}
+		direction.find('.aj-one a').on('click', function (e) {
+			var hash;
+			e.preventDefault();
+			hash = $(this).attr('href');
+			$(document.body).animate({
+				'scrollTop' : $(hash).offset().top - 100
+			});
+		});
+		direction.find('.aj-one').on('click', function () {
+			moniAjax($(this).index());			
+		});
 	}
 	function moniAjax(floor, needLocate) {
-		isLoading(true);
-		wait(false);
-		wait();
+		var obj = blocks.eq(floor);
+		console.log("now load " + (floor + 1));
+		if (obj.attr('aj-has-ajax') || floor === 0) {	//已经ajax过了
+			return true;
+		}
+		wait(obj);
+		obj.attr('aj-has-ajax', 1);
 		console.log("I am loading....");
 		div = document.createElement('div');
 		cid = direction.find(".aj-one").eq(floor).attr("cid");
-
-		console.log(cid);
 		url = "http://www.quanmama.com:8080/ajax/ajaxBestDealForCategoryPage.aspx?cid=" + cid + "&index=" + floor;
-		$.get(url, "", function (back, status, xhr) {
-			var bool = false;
-			response = back;
-			$(div).html(response);
-			$(div).find('.aj-first-class .aj-content .aj-c-wrap').each(function () {
-				if ($(this).find('li').length === 0) { //empty
-					$(this).hide();
-					$(this).parents('.aj-first-class').find('.aj-header .aj-h-ul .aj-li').eq($(this).index()).hide();
-				}
-			});
-			$(div).find('.aj-first-class').attr(stamp, floor);
-			wait(false);
-			blocks = container.find('.aj-first-class');
-			for (var i = 0; i < blocks.length; i++) {
-				if (parseInt($(blocks[i]).attr(stamp)) < floor && (blocks.eq(i + 1).length > 0) && (parseInt(blocks.eq(i + 1).attr(stamp)) > floor)) {
-					$(div).insertAfter(blocks[i]);
-					bool = true;
-				}
-			}
-			if (!bool) {
-				$(div).appendTo(container);
-			}
-			if (needLocate) {
-				location.href = '#' + cid;
-			}
-			isLoading(false);
-			console.log("loading ok...");
-		});
-	}
-	function wait(bool) {
-		if (bool !== undefined) {
-			container.find('.aj-ajax-delay-tishi').remove();
+		if (location.href.indexOf('localhost') === -1) {
+			$.get(url, "", function (back, status, xhr) {
+				response = back;
+				$(div).html(response);
+				$(div).find('.aj-first-class .aj-content .aj-c-wrap').each(function () {
+					if ($(this).find('li').length === 0) { //empty
+						$(this).hide();
+						$(this).parents('.aj-first-class').find('.aj-header .aj-h-ul .aj-li').eq($(this).index()).hide();
+					}
+				});
+				$('#' + cid).html($(div).find('.aj-first-class').html());
+				console.log("loading ok...");
+			});			
 		} else {
-			container.append("<div class='aj-ajax-delay-tishi' style='width:100%;height:200px;position:relative;'><div style='top:50%;' class='newLoading'></div></div>");
+			setTimeout(function () {
+				console.log('#' + cid);
+				$('#' + cid).html("Hello World");
+				console.log('loading ok...');
+			}, 2000);
 		}
 	}
+	function wait(obj) {
+		$(obj).append("<div class='aj-ajax-delay-tishi' style='width:100%;height:200px;position:relative;'><div style='top:50%;' class='newLoading'></div></div>");
+	}
+
 });
