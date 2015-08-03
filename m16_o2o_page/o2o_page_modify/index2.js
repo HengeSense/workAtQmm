@@ -36,12 +36,23 @@ $(function () {	//楼层从0开始
 						top = $(obj).offset().top;
 						height = $(obj).height();
 						if (scrollTop + windowHeight + 100 > top && (scrollTop + windowHeight + 1000 < top + height)) {
-							console.log(top + '===>' + obj.index);
+							// console.log(top + '===>' + obj.index);
+							moniAjax(obj.index);
 						}
 					})(blocks[i]);
 				}
 			} else if (lastScrollTop - scrollTop > 100) {	//往下滚
-				
+				for(var i = 0; i < blocks.length; i++) {
+					(function (obj) {
+						obj.index = i;
+						top = $(obj).offset().top;
+						height = $(obj).height();
+						if (scrollTop < top + height && scrollTop > top) {
+							// console.log(top + '===>' + obj.index);
+							moniAjax(obj.index);
+						}
+					})(blocks[i]);
+				}				
 			}
 		});
 	}());
@@ -51,7 +62,6 @@ $(function () {	//楼层从0开始
 			first = container.find('.aj-first-class').eq(0);
 		first.attr('aj-has-ajax', '1');
 		for (i = 1; i < ones.length; i++) {
-			console.log(i);
 			(function (obj) {
 				obj.index = i;
 				first.clone().html(obj.index + 1 + 'lou').attr('id', $(obj).attr('cid')).attr('floor-index', obj.index).css({'width':'1050px','height':'1100px','position':'relative'}).appendTo(container);
@@ -105,5 +115,4 @@ $(function () {	//楼层从0开始
 	function wait(obj) {
 		$(obj).append("<div class='aj-ajax-delay-tishi' style='width:100%;height:200px;position:relative;'><div style='top:50%;' class='newLoading'></div></div>");
 	}
-
 });
