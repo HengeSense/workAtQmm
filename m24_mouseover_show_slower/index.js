@@ -12,12 +12,13 @@
 			}
 		});
         g.find(".JCategoryChange li").mouseover(function () {
-            setTimeout(function () {
-				if ($(this).attr(attr)) {	//如果300ms之后还有attr这个属性，说明悬停该元素超过300ms
+            var that = this;
+			setTimeout(function () {
+				if ($(that).attr(attr)) {	//如果300ms之后还有attr这个属性，说明悬停该元素超过300ms
 					console.log("hover");
 					g.find(".JCategoryChange li").removeClass("cur");
 					
-					$(this).addClass("cur");
+					$(that).addClass("cur");
 			   
 					// $('.newLoading').hide();
 
