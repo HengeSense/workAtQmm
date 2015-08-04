@@ -86,6 +86,9 @@
 	filter:alpha(opacity=0);
 	white-space:nowrap;
 }
+.aj-grid-list .aj-zhishi.aj-pian-left{
+	left:-37px;
+}
 .aj-grid-list .aj-zhishi:before{
 	border-right:7px solid rgba(0, 0, 0, 0);
 	border-bottom:7px solid rgba(0, 0, 0, 0);
