@@ -1,4 +1,3 @@
-
 .aj-zhide-list .list{
 	padding-bottom:5px!important;
 }
@@ -22,7 +21,6 @@
 .aj-zhide-list .listRight{
 	position:relative;
 }
-
 .aj-zhide-list a.fav{
 	margin-right:5px!important;
 }
@@ -43,8 +41,6 @@
 .aj_discovery_list .aj-is-can-use .aj-use-ok,.aj_discovery_list .aj-is-can-use .aj-use-fail{
 	position:relative;
 }
-
-
 .aj-zhide-list .listRight{
 	position:relative;
 }
@@ -206,7 +202,6 @@
 	background-color:rgb(102, 200, 5);
 	right:0;
 }
-
 .aj-zhide-list .aj-zhishi{
 	position:absolute;
 	display:block;
@@ -245,3 +240,12 @@
 	content:'';	
 }
 /**/
+.aj-zhide-list a .scoreTotal{
+	display:block!important;
+}
+.aj-zhide-list a  .scoreTotal em{
+	display:block!important;
+}
+.aj-zhide-list a .scoredInfo{
+	display:none!important;
+}
