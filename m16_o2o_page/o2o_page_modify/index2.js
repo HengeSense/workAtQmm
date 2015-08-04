@@ -10,6 +10,7 @@ $(function () {		//楼层从0开始
 		cid,
 		url,
 		blocks,
+		block_height = 980,
 		closeAjax = false;		//当点击锚标记滚动页面时，关闭滚动ajax监测
 	initialDiv();	//初始化填充direction中显示有多少个楼层
 	blocks = container.find('.aj-first-class');
@@ -21,7 +22,7 @@ $(function () {		//楼层从0开始
 		for (i = 1; i < ones.length; i++) {
 			(function (obj) {
 				obj.index = i;
-				first.clone().removeAttr('aj-has-ajax').html(obj.index + 1 + 'lou').attr('id', $(obj).attr('cid')).attr('floor-index', obj.index).css({'width':'1050px','height':'1100px','position':'relative'}).appendTo(container);
+				first.clone().removeAttr('aj-has-ajax').html('').attr('id', $(obj).attr('cid')).attr('floor-index', obj.index).css({'width':'1050px','height':block_height + 'px','position':'relative'}).appendTo(container);
 			})(ones[i]);
 		}
 		direction.find('.aj-one a').on('click', function (e) {
@@ -68,7 +69,7 @@ $(function () {		//楼层从0开始
 					height = $(obj).height();
 					if (closeAjax) return false;
 					if (isDown) {
-						if (scrollTop + windowHeight + 100 > top && (scrollTop + windowHeight + 1000 < top + height) && !closeAjax) {
+						if (scrollTop + windowHeight + 100 > top && (scrollTop + windowHeight - top < block_height) && !closeAjax) {
 							moniAjax(obj.index);
 						}						
 					} else {
@@ -117,9 +118,7 @@ $(function () {		//楼层从0开始
 				}
 			});
 			$(div).find('.aj-header .aj-h-title span').html(floor + 1);
-			setTimeout(function () {
 				$(obj).html($(div).find('.aj-first-class').html());
-			}, 2000);
 		});
 	}
 	function wait(obj) {
