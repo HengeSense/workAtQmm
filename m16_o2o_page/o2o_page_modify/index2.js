@@ -1,61 +1,18 @@
-$(function () {
+$(function () {		//楼层从0开始
 	$('#pagecontent').on('mouseenter', '.aj-first-class .aj-header .aj-h-ul .aj-li', function (e) {
 		$(this).siblings().removeClass('aj-select');
 		$(this).addClass('aj-select');
 		$(this).parents('.aj-first-class').find('.aj-content .aj-c-wrap').eq($(this).index()).show().siblings().hide();
 	});
-});
-$(function () {	//楼层从0开始
-	var response = $('#aj-ajax-load').val(),
-		container = $('#pagecontent').children('.clear'),
+	var container = $('#pagecontent').children('.clear'),
 		direction = $('#aj-first-class-direction'),
-		div;
-	var distance,
-		stamp = 'floor-index',
-		lastFloor,
+		stamp = 'floor-index',		//标记 div.aj-first-class 的楼层
 		cid,
 		url,
-		blocks;
-	initialDiv();
+		blocks,
+		closeAjax = false;		//当点击锚标记滚动页面时，关闭滚动ajax监测
+	initialDiv();	//初始化填充direction中显示有多少个楼层
 	blocks = container.find('.aj-first-class');
-	
-	(function () {
-		var scrollTop,
-			top,
-			height,
-			windowHeight,
-			lastScrollTop = $(document.body).scrollTop();
-		$(window).on('scroll', function () {
-			windowHeight = $(window).height();
-			scrollTop = $(document.body).scrollTop();
-			if (scrollTop - lastScrollTop > 100) { // 往下滚
-				lastScrollTop = scrollTop;
-				for(var i = 0; i < blocks.length; i++) {
-					(function (obj) {
-						obj.index = i;
-						top = $(obj).offset().top;
-						height = $(obj).height();
-						if (scrollTop + windowHeight + 100 > top && (scrollTop + windowHeight + 1000 < top + height)) {
-							// console.log(top + '===>' + obj.index);
-							moniAjax(obj.index);
-						}
-					})(blocks[i]);
-				}
-			} else if (lastScrollTop - scrollTop > 100) {	//往下滚
-				for(var i = 0; i < blocks.length; i++) {
-					(function (obj) {
-						obj.index = i;
-						top = $(obj).offset().top;
-						height = $(obj).height();
-						if (scrollTop < top + height && scrollTop > top) {
-							// console.log(top + '===>' + obj.index);
-							moniAjax(obj.index);
-						}
-					})(blocks[i]);
-				}				
-			}
-		});
-	}());
 	function initialDiv() {
 		var ones = direction.find('.aj-one'),
 			i,
@@ -64,53 +21,106 @@ $(function () {	//楼层从0开始
 		for (i = 1; i < ones.length; i++) {
 			(function (obj) {
 				obj.index = i;
-				first.clone().html(obj.index + 1 + 'lou').attr('id', $(obj).attr('cid')).attr('floor-index', obj.index).css({'width':'1050px','height':'1100px','position':'relative'}).appendTo(container);
+				first.clone().removeAttr('aj-has-ajax').html(obj.index + 1 + 'lou').attr('id', $(obj).attr('cid')).attr('floor-index', obj.index).css({'width':'1050px','height':'1100px','position':'relative'}).appendTo(container);
 			})(ones[i]);
 		}
 		direction.find('.aj-one a').on('click', function (e) {
 			var hash;
 			e.preventDefault();
 			hash = $(this).attr('href');
+			closeAjax = true;
 			$(document.body).animate({
 				'scrollTop' : $(hash).offset().top - 100
+			}, function () {
+				closeAjax = false;
 			});
 		});
 		direction.find('.aj-one').on('click', function () {
 			moniAjax($(this).index());			
 		});
 	}
+	(function () {
+		var scrollTop,
+			top,
+			height,
+			windowHeight,
+			isDown,			//是否往下
+			lastScrollTop = $(document.body).scrollTop();
+		$(window).on('scroll', function () {
+			windowHeight = $(window).height();
+			scrollTop = $(document.body).scrollTop();
+			if (scrollTop - lastScrollTop > 100) { // 往下滚
+				isDown = true;
+				whichWillScrollIntoView();
+				whichIsShowing();
+			} else if (lastScrollTop - scrollTop > 100) {	//往上滚
+				isDown = false;
+				whichWillScrollIntoView();
+				whichIsShowing();
+			}
+		});
+		function whichWillScrollIntoView() {
+			lastScrollTop = scrollTop;
+			for(var i = 0; i < blocks.length; i++) {
+				(function (obj) {
+					obj.index = i;
+					top = $(obj).offset().top;
+					height = $(obj).height();
+					if (closeAjax) return false;
+					if (isDown) {
+						if (scrollTop + windowHeight + 100 > top && (scrollTop + windowHeight + 1000 < top + height) && !closeAjax) {
+							moniAjax(obj.index);
+						}						
+					} else {
+						if (scrollTop < top + height && scrollTop > top && !closeAjax) {
+							moniAjax(obj.index);
+						}
+					}
+				})(blocks[i]);
+			}
+		}
+		function whichIsShowing() {
+			for(var i = 0; i < blocks.length; i++) {
+				if (blocks.eq(i).offset().top > scrollTop || (blocks.eq(i).offset().top + blocks.eq(i).height() > scrollTop + windowHeight*3/4)) {
+					biaojiFloor(i);
+					// moniAjax(i);
+					break;
+				}
+			}			
+		}
+		function biaojiFloor(index) {
+			direction.find('.aj-one').eq(index).addClass('aj-select').siblings().removeClass('aj-select');
+		}
+	}());
 	function moniAjax(floor, needLocate) {
-		var obj = blocks.eq(floor);
-		console.log("now load " + (floor + 1));
+		var obj = blocks.eq(floor),
+			div = document.createElement('div');
 		if (obj.attr('aj-has-ajax') || floor === 0) {	//已经ajax过了
 			return true;
 		}
-		wait(obj);
 		obj.attr('aj-has-ajax', 1);
-		console.log("I am loading....");
+		wait(obj);
+		console.log("now load" + (floor + 1));
 		div = document.createElement('div');
 		cid = direction.find(".aj-one").eq(floor).attr("cid");
-		url = "http://www.quanmama.com:8080/ajax/ajaxBestDealForCategoryPage.aspx?cid=" + cid + "&index=" + floor;
 		if (location.href.indexOf('localhost') === -1) {
-			$.get(url, "", function (back, status, xhr) {
-				response = back;
-				$(div).html(response);
-				$(div).find('.aj-first-class .aj-content .aj-c-wrap').each(function () {
-					if ($(this).find('li').length === 0) { //empty
-						$(this).hide();
-						$(this).parents('.aj-first-class').find('.aj-header .aj-h-ul .aj-li').eq($(this).index()).hide();
-					}
-				});
-				$('#' + cid).html($(div).find('.aj-first-class').html());
-				console.log("loading ok...");
-			});			
+			url = "http://www.quanmama.com:8080/ajax/ajaxBestDealForCategoryPage.aspx?cid=" + cid + "&index=" + floor;
 		} else {
-			setTimeout(function () {
-				console.log('#' + cid);
-				$('#' + cid).html("Hello World");
-				console.log('loading ok...');
-			}, 2000);
+			url = "http://localhost/Github/workAtQmm/m16_o2o_page/o2o_page_modify/response.html";
 		}
+		$.get(url, "", function (back, status, xhr) {
+			$(div).html(back);
+			$(div).find('.aj-first-class .aj-content .aj-c-wrap').each(function () {
+				if ($(this).find('li').length === 0) { //empty
+					$(this).hide();
+					$(this).parents('.aj-first-class').find('.aj-header .aj-h-ul .aj-li').eq($(this).index()).hide();
+				}
+			});
+			$(div).find('.aj-header .aj-h-title span').html(floor + 1);
+			setTimeout(function () {
+				$(obj).html($(div).find('.aj-first-class').html());
+			}, 2000);
+		});
 	}
 	function wait(obj) {
 		$(obj).append("<div class='aj-ajax-delay-tishi' style='width:100%;height:200px;position:relative;'><div style='top:50%;' class='newLoading'></div></div>");
