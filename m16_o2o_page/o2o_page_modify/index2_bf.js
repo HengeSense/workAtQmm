@@ -93,7 +93,7 @@ $(function () {		//楼层从0开始
 			direction.find('.aj-one').eq(index).addClass('aj-select').siblings().removeClass('aj-select');
 		}
 	}());
-	function moniAjax(floor) {
+	function moniAjax(floor, needLocate) {
 		var obj = blocks.eq(floor),
 			div = document.createElement('div');
 		if (obj.attr('aj-has-ajax') || floor === 0) {	//已经ajax过了
@@ -107,7 +107,7 @@ $(function () {		//楼层从0开始
 		if (location.href.indexOf('localhost') === -1) {
 			url = "http://www.quanmama.com:8080/ajax/ajaxBestDealForCategoryPage.aspx?cid=" + cid + "&index=" + floor;
 		} else {
-			url = "http://localhost/Github/workAtQmm/m16_o2o_page/o2o_page_modify/back/response" + cid + ".html";
+			url = "http://localhost/Github/workAtQmm/m16_o2o_page/o2o_page_modify/response.html";
 		}
 		$.get(url, "", function (back, status, xhr) {
 			$(div).html(back);
@@ -119,7 +119,6 @@ $(function () {		//楼层从0开始
 			});
 			$(div).find('.aj-header .aj-h-title span').html(floor + 1);
 			$(obj).html($(div).find('.aj-first-class').html());
-			$(obj).css('height','auto');
 		});
 	}
 	function wait(obj) {
