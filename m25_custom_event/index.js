@@ -1,9 +1,9 @@
 /*jslint browser : true*/
 /*global $,console*/
 (function () {
-	"use strict";
+    "use strict";
 	function A() {
-		var obj = [];
+        var obj = [];
 		obj.name = 'AJ';
 		obj.say = function () {
 			console.log("Hello World");
@@ -15,7 +15,6 @@
 		console.log(this.name);
 	}
 	window.xx = new A();
-	
 	function loop() {
 		var i,
 			arr = [4, 6, 2, 6, 2, 63, 5, 6, 3, 5, 6, 6, 74, 4],
@@ -27,5 +26,9 @@
 		}
 		console.log(prop);
 	}
+	function fWith() {
+		var source = 'nihao';
+	}
+	fWith();
 	loop();
 }());

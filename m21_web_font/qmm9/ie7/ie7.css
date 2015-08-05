@@ -1,11 +1,74 @@
-.qmm-icon-local_see {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe1ef;');
+.qmm-icon-iconfont-check2 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe625;');
+}
+.qmm-icon-iconfont-jiajudianqibaihuo {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe621;');
+}
+.qmm-icon-iconfont-shouji {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61f;');
+}
+.qmm-icon-iconfont-diannao {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe615;');
+}
+.qmm-icon-iconfont-jiazhuangicon {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe619;');
+}
+.qmm-icon-iconfont-fushi {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe616;');
+}
+.qmm-icon-iconfont-muying {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61b;');
+}
+.qmm-icon-iconfont-badaxilietubiao01 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe614;');
+}
+.qmm-icon-iconfont-shipin {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61e;');
+}
+.qmm-icon-iconfont-qiche {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61c;');
+}
+.qmm-icon-iconfont-tubiao {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe620;');
+}
+.qmm-icon-iconfont-location {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61a;');
+}
+.qmm-icon-iconfont-fuyiyaofei {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe617;');
+}
+.qmm-icon-iconfont-qita {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61d;');
+}
+.qmm-icon-iconfont-jiadian {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe618;');
+}
+.qmm-icon-iconfont-comment {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe622;');
+}
+.qmm-icon-iconfont-coin2 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe623;');
+}
+.qmm-icon-iconfont-coin {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe624;');
+}
+.qmm-icon-iconfont-newnew {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe612;');
+}
+.qmm-icon-iconfont-check {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe613;');
 }
 .qmm-icon-local_taxi {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe1f1;');
 }
+.qmm-icon-local_see {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe1ef;');
+}
 .qmm-icon-more {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe21f;');
+}
+.qmm-icon-loyalty {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe2ae;');
 }
 .qmm-icon-notifications {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe24a;');
@@ -18,9 +81,6 @@
 }
 .qmm-icon-history {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe29d;');
-}
-.qmm-icon-loyalty {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe2ae;');
 }
 .qmm-icon-view_list {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe301;');

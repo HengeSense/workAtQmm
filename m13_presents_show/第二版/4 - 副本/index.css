@@ -2,6 +2,10 @@
 	position:relative;
 	height:450px!important;
 }
+.aj-grid-list .aj-overflow-hide{
+    max-width:100px;
+    height:20px;overflow:hidden;
+}
 .aj-grid-list .aj-header{
 	position:relative;
 	width:100%;height:29px;
@@ -32,10 +36,6 @@
 	height:60px;line-height:20px;
 	margin-bottom:0!important;
 }
-.aj-grid-list .picBox{
-	margin-bottom:5px!important;
-	margin-top:0px!important;
-}
 .aj-grid-list .haitao-coupons-list{
 	height:30px!important;
 	position:absolute;
@@ -53,14 +53,6 @@
 .aj-grid-list .zan_fav_com a{
 	margin-right:0!important;
 }
-/* .aj-grid-list .aj-s-yan-only{
-	background-image:url(http://www.quanmama.com/AdminImageUpload/5257485home_icon.png);
-	background-position:0 -203px;
-	width:20px;height:20px;
-	position:relative;
-	top:3px;
-	float:left;
-} */
 .aj-grid-list .aj-s-yan-only{
  	width:20px;height:20px;
 	position:relative;
@@ -227,7 +219,6 @@
 .aj-grid-list .item_buy_mall .directLink{
 	position:absolute;top:3px;right:0;
 }
-
 .aj-grid-list .aj-stamps{
 	float:right;
 	display:block;
