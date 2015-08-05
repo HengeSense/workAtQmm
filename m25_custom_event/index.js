@@ -2,33 +2,28 @@
 /*global $,console*/
 (function () {
     "use strict";
-	function A() {
-        var obj = [];
-		obj.name = 'AJ';
-		obj.say = function () {
-			console.log("Hello World");
-		};
-		obj.B = B;
-		return obj;
-	}
-	function B() {
-		console.log(this.name);
-	}
-	window.xx = new A();
-	function loop() {
-		var i,
-			arr = [4, 6, 2, 6, 2, 63, 5, 6, 3, 5, 6, 6, 74, 4],
-			prop = [];
-		for (i = 0; i < 10; i++) {
-			(function () {
-				prop.push(arr[i]);
-			})();
-		}
-		console.log(prop);
-	}
-	function fWith() {
-		var source = 'nihao';
-	}
-	fWith();
-	loop();
+    // window.onbeforeunload = function (){
+       // return "Are you sure to leave this page ?";
+    // }
+    navigator.geolocation.getCurrentPosition(function(position){
+        console.log(position.coords.latitude);
+    }, function (error) {
+        console.log(error.code);
+        console.log(error.message);
+    });
+    
+    function A(){
+        this.name = 'Yoko';
+    }
+    A.prototype = {
+        hide : function () {
+            this.div.style.display = 'none';
+        }
+    };
+    function B(id){
+        this.div = document.getElementById(id);
+        A.call(this);
+        return this.div;
+    }
+    window.B = B;
 }());
