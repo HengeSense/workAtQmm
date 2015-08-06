@@ -1,9 +1,36 @@
 $(function () {		//楼层从0开始
-	$('#pagecontent').on('mouseenter', '.aj-first-class .aj-header .aj-h-ul .aj-li', function (e) {
-		$(this).siblings().removeClass('aj-select');
-		$(this).addClass('aj-select');
-		$(this).parents('.aj-first-class').find('.aj-content .aj-c-wrap').eq($(this).index()).show().siblings().hide();
-	});
+    function delayMouseover(jQueryDom, fn, time, selector) {
+        time = time || 200;
+        selector = selector || null;
+        jQueryDom.on("aj-delay-mouseover", {
+            'attr': 'aj-mouseenter-timestamp'
+        }, function (e, fn) {
+            var attr = e.data.attr;
+            $(this).on('mouseenter mouseleave', selector, function (e) {
+                if (e.type === 'mouseenter') {
+                    $(this).attr(attr, +new Date());
+                } else if (e.type === 'mouseleave') {
+                    $(this).removeAttr(attr);
+                }
+            });
+            $(this).on('mouseover', selector, function () {
+                var that = this;
+                setTimeout(function () {
+                    if ($(that).attr(attr)) {
+                        fn(that);
+                    }
+                }, time);
+            });
+        });
+        jQueryDom.trigger("aj-delay-mouseover", fn);
+    }
+    delayMouseover($('#pagecontent'), deal, 200, '.aj-first-class .aj-header .aj-h-ul .aj-li');
+    function deal(obj) {
+		$(obj).siblings().removeClass('aj-select');
+		$(obj).addClass('aj-select');
+		$(obj).parents('.aj-first-class').find('.aj-content .aj-c-wrap').eq($(obj).index()).show().siblings().hide();
+        $(obj).parents('.aj-first-class').find('a.aj-more').attr('href', $(obj).find('a').attr('href'));
+	}
 	var container = $('#pagecontent').children('.clear'),
 		direction = $('#aj-first-class-direction'),
 		stamp = 'floor-index',		//标记 div.aj-first-class 的楼层
@@ -107,7 +134,7 @@ $(function () {		//楼层从0开始
 		if (location.href.indexOf('localhost') === -1) {
 			url = "http://www.quanmama.com:8080/ajax/ajaxBestDealForCategoryPage.aspx?cid=" + cid + "&index=" + floor;
 		} else {
-			url = "http://localhost/Github/workAtQmm/m16_o2o_page/o2o_page_modify/back/response" + cid + ".html";
+			url = "http://localhost/m16_o2o_page/o2o_page_modify/back/response" + cid + ".html";
 		}
 		$.get(url, "", function (back, status, xhr) {
 			$(div).html(back);
