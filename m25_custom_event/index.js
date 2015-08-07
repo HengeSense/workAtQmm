@@ -2,28 +2,35 @@
 /*global $,console*/
 (function () {
     "use strict";
-    // window.onbeforeunload = function (){
-       // return "Are you sure to leave this page ?";
+    // function A(){
+        // this.name = 'Yoko';
+        // this.age = 'Yoko';
     // }
-    navigator.geolocation.getCurrentPosition(function(position){
-        console.log(position.coords.latitude);
-    }, function (error) {
-        console.log(error.code);
-        console.log(error.message);
-    });
-    
-    function A(){
-        this.name = 'Yoko';
-    }
-    A.prototype = {
-        hide : function () {
-            this.div.style.display = 'none';
+    // A.prototype = {
+        // hide : function () {
+            // this.arr.forEach(function (obj) {
+                // obj.style.display = 'none';
+            // });
+        // }
+    // };
+    // function B(id){
+        // this.arr = [];
+        // this.div = document.getElementById(id);
+        // this.arr.push(this.div);
+        // A.call(this);
+        // return this.arr;
+    // }
+    // window.B = B;
+    function loop() {
+        var result = [],
+            i;
+        for (i = 0; i < 10; i++) {
+            result[i] = (function () {
+                var xx = i;
+                return xx;
+            })();
         }
-    };
-    function B(id){
-        this.div = document.getElementById(id);
-        A.call(this);
-        return this.div;
+        return result;
     }
-    window.B = B;
+    window.xx = loop();
 }());
