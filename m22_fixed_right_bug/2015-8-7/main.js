@@ -2539,7 +2539,9 @@ function banner_pages() {
 $(function () {
 
     //fixed_right(1);
-    var prop = {};
+    var prop = {},
+        i,
+        divs;
     prop.arr = [];
     prop.divs = $('.rightPanel.floatFixed');
 
@@ -2550,9 +2552,9 @@ $(function () {
     fixed_right(prop);
 
     var ajTimer = setInterval(function () {
-        var divs = $('.rightPanel.floatFixed');
+        divs = $('.rightPanel.floatFixed');
         if (divs.length !== prop.arr.length) {
-            for (var i = 0; i < divs.length; i++) {
+            for (i = 0; i < divs.length; i++) {
                 if (!$(divs[i]).hasClass('aj-have-push')) {
                     prop.arr.push(divs[i]);
                     $(divs[i]).addClass('aj-have-push');

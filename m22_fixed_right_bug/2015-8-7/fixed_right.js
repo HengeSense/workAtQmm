@@ -1,45 +1,87 @@
+/*jslint browser : true*/
+/*global $, jQuery, console*/
+/*jslint plusplus : true*/
 function fixed_right(prop) {
-
-    if ($("#pagefooter").length > 0 && $(".rightPanel").length > 0) {
-        var footer = document.getElementById('pagefooter'),
-			headerHeight = 181, 	//??
-			footerHeight = $("#pagefooter").height(),
-			windowHeight = $(window).height(),
-			bodyHeight = windowHeight - headerHeight - footerHeight,
-			leftHeight = $(".left_side").height(),
-			rightHeight = $(".right_side").height(),
-			rightOffsetTop = $('.right_side').offset().top,
-			fixedTop = 40;
-
-        var fixed_height_timer = setInterval(function () {
-            if ($('.right_side').height() > rightHeight) {
-                rightHeight = $('.right_side').height();
+    "use strict";
+    var w = window,
+        footer = $('#pagefooter'),
+        left_side_dom = $('.left_side'),
+        right_side_dom = $('.right_side'),
+        leftHeight = left_side_dom.height(),
+        rightHeight = right_side_dom.height(),
+        rightOffsetTop = right_side_dom.offset().top,
+        fixedTop = 40,
+        fixed_height_timer,
+        isShow = false,
+        fixedOffsetFromFooter = 0,
+        fixedTotalHeight = 0,
+        scrollHeight,
+        footerTop,
+        timer = 0,
+        i;
+    function doScroll() {
+        if (prop.arr.length === 0) { return false; }
+        fixedTotalHeight = 0;
+        prop.arr.forEach(function (obj) {
+            fixedTotalHeight += $(obj).height() + parseInt($(obj).css('margin-bottom'), 10);
+        });
+        if (scrollHeight === $(w).scrollTop()) {       //scroll x
+            for (i = 0; i < prop.arr.length; i++) {
+                $(prop.arr[i]).css({
+                    'left': right_side_dom.offset().left
+                });
             }
-            if ($('.left_side').height() > leftHeight) {
-                leftHeight = $('.left_side').height();
+            return true;
+        }
+        scrollHeight = $(w).scrollTop();
+        footerTop = footer.offset().top;
+        if (leftHeight < rightHeight) { return false; }
+        if (scrollHeight > (rightHeight + rightOffsetTop)) {
+            fixedOffsetFromFooter = footerTop - (fixedTop + fixedTotalHeight);
+            if (fixedOffsetFromFooter >= 0) {
+                fixedOffsetFromFooter = 0;
+            } else {
+                isShow = false;
             }
-        }, 1000 / 12);
+            var previousSiblingTotalHeight = 0;
+            for (i = 0; i < prop.arr.length; i++) {
+                $(prop.arr[i]).css({
+                    'position': 'fixed',
+                    'top': fixedTop + previousSiblingTotalHeight + fixedOffsetFromFooter,
+                    'left': $('.right_side')[0].getBoundingClientRect().left
+                });
+                previousSiblingTotalHeight = $(prop.arr[i]).height() + parseInt($(prop.arr[i]).css('margin-bottom'), 10);
+            }
+        } else {
+            for (i = 0; i < prop.arr.length; i++) {
+                $(prop.arr[i]).css({
+                    'position': 'static',
+                    'top': '0px'
+                });
+            }
+        }
+    }
+    if (footer.length > 0 && $(".rightPanel").length > 0) {
+        fixed_height_timer = setInterval(function () {
+            if (right_side_dom.height() > rightHeight) {
+                rightHeight = right_side_dom.height();
+            }
+            if (left_side_dom.height() > leftHeight) {
+                leftHeight = left_side_dom.height();
+            }
+        }, 1000 / 5);
         setTimeout(function () {
             clearInterval(fixed_height_timer);
         }, 10 * 1000);
 
-        var isShow = false,
-			isBuchong = false,
-			fixedOffsetFromFooter = 0,
-			fixedTotalHeight = 0,
-			scrollHeight,
-			footerTop,
-            timer = 0;
-
-        $(window).on('resize', function () {
-            for (var i = 0; i < prop.arr.length; i++) {
+        $(w).on('resize', function () {
+            for (i = 0; i < prop.arr.length; i++) {
                 $(prop.arr[i]).css({
-                    'left': $('.right_side')[0].getBoundingClientRect().left
+                    'left': right_side_dom.offset().left
                 });
             }
         });
-
-        $(window).scroll(function () {
+        $(w).on('scroll', function () {
             if (!timer) {
                 timer = setTimeout(function () {
                     doScroll();
@@ -47,55 +89,5 @@ function fixed_right(prop) {
                 }, 200);
             }
         });
-        function doScroll() {
-            if (prop.arr.length === 0) { return false; }
-            fixedTotalHeight = 0;
-            prop.arr.forEach(function (obj) {
-                fixedTotalHeight += $(obj).height() + parseInt($(obj).css('margin-bottom'));
-            });
-
-            if (scrollHeight === $(window).scrollTop()) {//scroll x
-                for (var i = 0; i < prop.arr.length; i++) {
-                    $(prop.arr[i]).css({
-                        'left': $('.right_side')[0].getBoundingClientRect().left
-                    });
-                }
-                return true;
-            }
-            scrollHeight = $(window).scrollTop(),
-			footerTop = footer.getBoundingClientRect().top;
-            fixedBottom = prop.arr[prop.arr.length - 1].getBoundingClientRect().bottom;
-            // var p = $(".g_g");
-            if (leftHeight > rightHeight) {
-
-                if (scrollHeight > (rightHeight + rightOffsetTop)) {
-
-                    fixedOffsetFromFooter = footerTop - (fixedTop + fixedTotalHeight);
-                    if (fixedOffsetFromFooter >= 0) {
-                        fixedOffsetFromFooter = 0;
-                    } else {
-                        isShow = false;
-                    }
-                    var previousSiblingTotalHeight = 0;
-                    for (var i = 0; i < prop.arr.length; i++) {
-
-                        $(prop.arr[i]).css({
-                            'position': 'fixed',
-                            'top': fixedTop + previousSiblingTotalHeight + fixedOffsetFromFooter,
-                            'left': $('.right_side')[0].getBoundingClientRect().left
-                        });
-                        previousSiblingTotalHeight = $(prop.arr[i]).height() + parseInt($(prop.arr[i]).css('margin-bottom'));
-
-                    }
-                } else {
-                    for (var i = 0; i < prop.arr.length; i++) {
-                        $(prop.arr[i]).css({
-                            'position': 'static',
-                            'top': '0px'
-                        });
-                    }
-                }
-            }            
-        }
     }
 }
