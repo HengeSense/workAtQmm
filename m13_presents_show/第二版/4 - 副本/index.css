@@ -53,6 +53,15 @@
 .aj-grid-list .zan_fav_com a{
 	margin-right:0!important;
 }
+.aj-grid-list .zan_fav_com .comment{
+    margin-left:8px;
+}
+.aj-grid-list .aj-color-gray{
+    color:#aaa;
+}
+.aj-grid-list .aj-color-red{
+    color:#d62222;
+}
 .aj-grid-list .aj-s-yan-only{
  	width:20px;height:20px;
 	position:relative;
