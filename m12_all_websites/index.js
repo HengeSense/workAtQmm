@@ -1,5 +1,6 @@
 (function(){
-	
+/*
+
 $(document).ready(function(){
 	var divs = $('.aj-website-fenlei .aj-websites-wrap');
 	divs.each(function(){
@@ -10,6 +11,8 @@ $(document).ready(function(){
 			$( web[0] ).before( $(web[0]).clone() );
 		}
 	});
-});	
-	
+});
+*/
+
+
 })();
