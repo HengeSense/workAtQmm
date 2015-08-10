@@ -179,6 +179,7 @@
 .aj-line-ceil{
 	position:fixed;
 	top:50%;left:100px;
+	margin-top:-150px;
 }
 .aj-line-ceil .aj-n-inside{}
 .aj-line-ceil .aj-n-inside .aj-ul{}
@@ -186,9 +187,12 @@
 	height:25px;line-height:25px;
 	font-size:14px;
 }
+.aj-line-ceil .aj-n-inside .aj-ul .aj-li.aj-select i, .aj-line-ceil .aj-n-inside .aj-ul .aj-li.aj-select .aj-nav-a{
+	color:rgb(223, 33, 105)!important;
+}
 .aj-line-ceil .aj-n-inside .aj-ul .aj-li i{
 	color:#5188A6;
-	font-size:20px!important;
+	font-size:18px!important;
 }
 .aj-line-ceil .aj-n-inside .aj-ul .aj-li .aj-nav-a{
 	display:inline-block;
