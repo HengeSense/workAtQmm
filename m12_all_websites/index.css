@@ -4,20 +4,49 @@
 	margin-top:50px;
 	border:1px solid #d9d9d9;
 }
-.aj-website-fenlei .aj-wrap-title{
+.aj-website-fenlei .aj-wrap-head{
 	position:absolute;
 	top:-35px;left:0px;
-	background-color:rgb(0, 160, 237);
-	background-position: 0 -163px;
-	width:192px;height:35px;
+	width:100%;height:35px;
+}
+.aj-website-fenlei .aj-wrap-title{
+	padding-left:40px;
+	line-height:35px;
 }
 .aj-website-fenlei .aj-wrap-title p{
-	color:white;
 	font-size:18px;font-weight:bold;
-	line-height:40px;
-	margin-left:15px;
-	font-style:italic;
+	line-height:35px;
 	width:110px;overflow:hidden;
+	color:#666;
+}
+.aj-website-fenlei .aj-wrap-title .aj-icon-title{
+	position:absolute;
+	top:2px;left:0;
+	font-size:30px;
+	color:#0098ff;
+}
+.aj-website-fenlei .aj-wrap-title[rank="1"] .aj-icon-title, .aj-website-fenlei .aj-wrap-title[rank="1"] p{
+	color:#0098ff;
+}
+.aj-website-fenlei .aj-wrap-title[rank="2"] .aj-icon-title, .aj-website-fenlei .aj-wrap-title[rank="2"] p{
+	color:#ff6c94;
+}
+.aj-website-fenlei .aj-wrap-title[rank="3"] .aj-icon-title, .aj-website-fenlei .aj-wrap-title[rank="3"] p{
+	color:#00cbb1;
+}
+.aj-website-fenlei .aj-wrap-title[rank="4"] .aj-icon-title, .aj-website-fenlei .aj-wrap-title[rank="4"] p{
+	color:#ff6f1a;
+}
+.aj-website-fenlei .aj-wrap-title[rank="5"] .aj-icon-title, .aj-website-fenlei .aj-wrap-title[rank="5"] p{
+	color:#a286ff;
+}
+.aj-website-fenlei .aj-wrap-title .aj-icon-inside-txt{
+	position:absolute;
+	top:0;left:0;
+	width:30px;height:35px;
+	line-height:35px;text-align:center;
+	color:white;
+	font-size:14px;font-weight:bold;
 }
 .aj-websites-wrap{
 	box-shadow:#eee 0 0 2px;
@@ -138,13 +167,35 @@
 	text-align:center;
 }
 
-.aj-f-w{}
+/* .aj-f-w{}
 .aj-f-w .aj-logo{}
 .aj-f-w .aj-rows-wrap{}
 .aj-f-w .aj-rows-wrap .aj-row{}
 .aj-f-w .aj-rows-wrap .aj-row .aj-title{}
 .aj-f-w .aj-rows-wrap .aj-row .aj-right{}
 .aj-f-w .aj-rows-wrap .aj-row .aj-right .aj-one{}
-
+ */
+ 
+.aj-line-ceil{
+	position:fixed;
+	top:50%;left:100px;
+}
+.aj-line-ceil .aj-n-inside{}
+.aj-line-ceil .aj-n-inside .aj-ul{}
+.aj-line-ceil .aj-n-inside .aj-ul .aj-li{
+	height:25px;line-height:25px;
+	font-size:14px;
+}
+.aj-line-ceil .aj-n-inside .aj-ul .aj-li i{
+	color:#5188A6;
+	font-size:20px!important;
+}
+.aj-line-ceil .aj-n-inside .aj-ul .aj-li .aj-nav-a{
+	display:inline-block;
+	width:60px;height:20px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
 
 /*--------------------*/
