@@ -44,14 +44,21 @@
     clear:both;
     width:100%;
     border-bottom:1px dashed #00a0ed;
+    padding-top:8px;
+}
+.aj-nav-2015 .aj-cui-ul .aj-cui-li.aj-title:first-child{
+    padding-top:0!important;
 }
 .aj-nav-2015 .aj-cui-ul .aj-cui-li.aj-title[class*="qmm-icon"]{
     padding-left:15px;
 }
 .aj-nav-2015 .aj-cui-ul .aj-cui-li.aj-title[class*="qmm-icon"]:before{
     position:absolute;
-    top:1px;left:0;
+    top:11px;left:0;
     font-size:12px;
+}
+.aj-nav-2015 .aj-cui-ul .aj-cui-li.aj-title:first-child:before{
+    top:1px;
 }
 .aj-nav-2015 .aj-cui-ul .aj-cui-li.aj-title a{
     color:#white;
