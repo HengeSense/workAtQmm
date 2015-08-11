@@ -12,12 +12,19 @@
     font-size: 16px; font-weight: bold; text-align: center; line-height: 30px;
 }
 #aj-qrcode .aj-wrap{
-    width:500px;margin:0 auto;
-    border: 1px solid #ccc; padding: 10px 20px; box-shadow: 0 2px 5px 0px rgba(0,0,0,0.25);
+    width:700px;margin:0 auto;
+
 }
 #aj-qrcode .aj-block{
-    width:50%;float:left;
+    width:200px;float:left;
     overflow: hidden;
+}
+#aj-qrcode .aj-mid-block{
+    width:300px;
+}
+#aj-qrcode .aj-block .aj-mid-img{
+    width:300px;
+    margin-top:20px;
 }
 #aj-qrcode .aj-left{}
 #aj-qrcode .aj-right{}
