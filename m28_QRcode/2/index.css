@@ -1,0 +1,36 @@
+#aj-qrcode{
+    position:relative;
+    margin-bottom:30px;
+}
+#aj-qrcode .aj-bg{
+    position: absolute;
+    top:-52px;left:30px;
+    opacity:0.7;
+    width:700px;
+}
+#aj-qrcode .aj-head{
+    font-size: 16px; font-weight: bold; text-align: center; line-height: 30px;
+}
+#aj-qrcode .aj-wrap{
+    width:500px;margin:0 auto;
+    border: 1px solid #ccc; padding: 10px 20px; box-shadow: 0 2px 5px 0px rgba(0,0,0,0.25);
+}
+#aj-qrcode .aj-block{
+    width:50%;float:left;
+    overflow: hidden;
+}
+#aj-qrcode .aj-left{}
+#aj-qrcode .aj-right{}
+#aj-qrcode .aj-block .aj-container{
+    width:180px;height:180px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    overflow:hidden;
+}
+#aj-qrcode .aj-block .aj-title{
+    text-align:center;
+    font-size:13px;
+    color:#b8b8b8;
+    height:30px;line-height:30px;
+    overflow: hidden;
+}
