@@ -8,8 +8,7 @@ $(function () {
                 height: $(obj).height()
             });
             qr_maker.clear();
-            qr_maker.makeCode($(this).attr('aj-url'));
+            qr_maker.makeCode($(this).attr('aj-url'));  // 获取链接<div class='aj-container' aj-url='http://www.quanmama.com'></div>
         });
     }
-
 });

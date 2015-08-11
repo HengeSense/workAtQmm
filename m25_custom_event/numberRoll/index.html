@@ -6,12 +6,45 @@
             width:100px;height:20px;
             line-height:20px;
             text-align:center;
+            border:1px solid #ccc;
+            overflow: hidden;
+        }
+        .number .one{
+            position: relative;
+            top:0px;
+            float:left;
+            display: inline-block;
+            width:10px;height:20px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .number .one .old{
+            position: absolute;
+            display: inline-block;
+            width:100%;height:20px;
+            top:0;left:0;
+            opacity: 0;
+        }
+        .number .one .new{
+            position: absolute;
+            top:20px;left:0;
+        }
+        .number .one .new.fot{
+            top:20px;
+        }
+        .number .one .new.top{
+            top:-20px;
         }
     </style>
 </head>
 <body>
 
-<div class="number" value="621"></div>
+<div id="wrap">
+    <div class="number" value="998"></div>
+    <button class="minus">-</button>
+    <button class="plus">+</button>
+</div>
+
 
 <script src="jquery.js"></script>
 <script src="index.js"></script>
