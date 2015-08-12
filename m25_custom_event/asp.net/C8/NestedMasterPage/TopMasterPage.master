@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TopMasterPage.master.cs" Inherits="TopMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>嵌套母版页中的顶层母版页</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="layout">
+       <div id="top">
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+       </div>
+       <div id="bottom">
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+           </asp:ContentPlaceHolder>
+       </div>
+    </div>
+    </form>
+</body>
+</html>

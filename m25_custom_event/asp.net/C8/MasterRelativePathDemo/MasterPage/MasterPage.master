@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>母版页示例</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="content">
+       <div id="top">
+       <img src='<%=Page.ResolveUrl("~/MasterPage/MsLogo.jpg") %>' width="600" height="50" alt="picture"/>
+       <asp:Label ID="Label1" runat="server" Text="这是母版页一"></asp:Label>       
+        <asp:ContentPlaceHolder id="TopContent" runat="server">           
+        </asp:ContentPlaceHolder>
+        </div>
+     <div id="leftColumn">
+         <asp:ContentPlaceHolder ID="LeftContent" runat="server">
+         </asp:ContentPlaceHolder>
+     </div>
+     <div id="rightColumn">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+     </div>
+    </div>
+    </form>
+</body>
+</html>

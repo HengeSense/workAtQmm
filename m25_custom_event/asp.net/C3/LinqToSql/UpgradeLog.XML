@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LinqToSql">
+</Property><Property Name="解决方案文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\LinqToSql.sln">
+</Property><Property Name="用户选项文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\LinqToSql.suo">
+</Property><Property Name="Date" Value="2010年9月20日">
+</Property><Property Name="Time" Value="16:01">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="LinqToSql.sln" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql.sln">
+</Event><Event ErrorLevel="0" Project="" Source="LinqToSql.suo" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql.suo">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\LinqToSql.csproj" Description="项目文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\LinqToSql.csproj">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\LinqToSql.csproj.user" Description="项目用户文件成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\LinqToSql.csproj.user">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Form1.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Form1.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Form1.Designer.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Program.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Program.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Properties\AssemblyInfo.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Properties\Resources.Designer.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Properties\Settings.Designer.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Pubs.designer.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Pubs.designer.cs">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\app.config" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\app.config">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Pubs.dbml.layout" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Pubs.dbml.layout">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Properties\Settings.settings" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Pubs.dbml" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Pubs.dbml">
+</Event><Event ErrorLevel="2" Project="LinqToSql" Source="LinqToSql\PUBS.MDF" Description="未能将文件备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\PUBS.MDF">
+</Event><Event ErrorLevel="2" Project="LinqToSql" Source="LinqToSql\PUBS_log.ldf" Description="未能将文件备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\PUBS_log.ldf">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Form1.resx" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Form1.resx">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\Properties\Resources.resx" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\Backup\LinqToSql\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\LinqToSql.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="LinqToSql" Source="LinqToSql\LinqToSql.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LinqToSql.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="LinqToSql.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="LinqToSql" Source="LinqToSql\LinqToSql.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

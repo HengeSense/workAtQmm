@@ -1,0 +1,7 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\PartialMethod\PartialMethod\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\PartialMethod\PartialMethod\bin\Debug\PartialMethod.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\PartialMethod\PartialMethod\bin\Debug\PartialMethod.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\PartialMethod\PartialMethod\obj\Debug\PartialMethod.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\PartialMethod\PartialMethod\obj\Debug\PartialMethod.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\PartialMethod\PartialMethod\obj\Debug\PartialMethod.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\PartialMethod\PartialMethod\obj\Debug\PartialMethod.pdb

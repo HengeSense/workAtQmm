@@ -1,0 +1,38 @@
+﻿
+/*布局容器，用于实现自适应高度和具中显示*/
+#content
+{
+	background-color: #E8E8FF;
+	width: 600px;
+	height: 100%;
+	margin:0px auto;
+	top:0px;
+}
+/*要实现自适应高度，需要将height设为100%，margin表示与页面边界的距离*/
+body
+{
+	margin: 0px;
+	height: 100%;
+}
+/*logo栏宽度自适应，高度为100px*/
+#top
+{
+	top: 0px;
+	width: 100%;
+	height: 100px;
+	background-color: #E3FDE4;
+}
+/*左边栏为浮动显示，宽度200px，高度100%*/
+#leftColumn
+{
+	background-color: #CCCC00;
+	float: left;
+	width: 200px;
+	height:100%;
+}
+/*右边栏高度100%*/
+#rightColumn
+{
+	height: 100%;
+	background-color: #FFCCCC;
+}

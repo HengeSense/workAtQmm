@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="HelloWorld">
+</Property><Property Name="解决方案文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\HelloWorld.sln">
+</Property><Property Name="用户选项文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\HelloWorld.suo">
+</Property><Property Name="Date" Value="2010年9月20日">
+</Property><Property Name="Time" Value="14:06">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="HelloWorld.sln" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\Backup\HelloWorld.sln">
+</Event><Event ErrorLevel="0" Project="" Source="HelloWorld.suo" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\Backup\HelloWorld.suo">
+</Event><Event ErrorLevel="0" Project="HelloWorld" Source="HelloWorld\HelloWorld.csproj" Description="项目文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\Backup\HelloWorld\HelloWorld.csproj">
+</Event><Event ErrorLevel="0" Project="HelloWorld" Source="HelloWorld\HelloWorld.csproj.user" Description="项目用户文件成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\Backup\HelloWorld\HelloWorld.csproj.user">
+</Event><Event ErrorLevel="0" Project="HelloWorld" Source="HelloWorld\Program.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\Backup\HelloWorld\Program.cs">
+</Event><Event ErrorLevel="0" Project="HelloWorld" Source="HelloWorld\Properties\AssemblyInfo.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\Backup\HelloWorld\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="HelloWorld" Source="HelloWorld\HelloWorld.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="HelloWorld" Source="HelloWorld\HelloWorld.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="HelloWorld.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="HelloWorld.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="HelloWorld" Source="HelloWorld\HelloWorld.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

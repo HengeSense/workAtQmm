@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Books title="软硬件书籍区">
+  <Category id="category1" title="软件书籍区">
+    <book id="book1" title="ASP.NET程序设计"></book>
+    <book id="book2" title="C#程序设计"></book>
+    <book id="book3" title="DELPHI2009程序设计"></book>
+    <book id="book4" title="C++程序设计"></book>
+    <book id="book5" title="JAVA程序设计"></book>
+  </Category>
+  <Category id="category2" title="硬件书籍区">
+    <book id="book1" title="PC升级与维护大全"></book>
+    <book id="book2" title="TCP/IP路由技术"></book>
+    <book id="book3" title="思科教程"></book>
+    <book id="book4" title="汇编语言程序设计"></book>
+    <book id="book5" title="单片机程序设计"></book>
+  </Category>  
+</Books>

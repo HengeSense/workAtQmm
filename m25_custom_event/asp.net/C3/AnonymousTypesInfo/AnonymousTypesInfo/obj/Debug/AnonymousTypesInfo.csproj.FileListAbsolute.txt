@@ -1,0 +1,10 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesInfo\AnonymousTypesInfo\bin\Debug\AnonymousTypesInfo.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesInfo\AnonymousTypesInfo\bin\Debug\AnonymousTypesInfo.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesInfo\AnonymousTypesInfo\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesInfo\AnonymousTypesInfo\obj\Debug\AnonymousTypesInfo.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesInfo\AnonymousTypesInfo\obj\Debug\AnonymousTypesInfo.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesInfo\AnonymousTypesInfo\obj\Debug\AnonymousTypesInfo.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesInfo\AnonymousTypesInfo\obj\Debug\AnonymousTypesInfo.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesInfo\AnonymousTypesInfo\bin\Debug\AnonymousTypesInfo.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesInfo\AnonymousTypesInfo\bin\Debug\AnonymousTypesInfo.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesInfo\AnonymousTypesInfo\obj\Debug\ResolveAssemblyReference.cache

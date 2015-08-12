@@ -1,0 +1,7 @@
+E:\ASP.NET 3.5\SourceCode\C3\InvokeExtensionMethods\InvokeExtensionMethods\bin\Debug\InvokeExtensionMethods.exe
+E:\ASP.NET 3.5\SourceCode\C3\InvokeExtensionMethods\InvokeExtensionMethods\bin\Debug\InvokeExtensionMethods.pdb
+E:\ASP.NET 3.5\SourceCode\C3\InvokeExtensionMethods\InvokeExtensionMethods\obj\Debug\ResolveAssemblyReference.cache
+E:\ASP.NET 3.5\SourceCode\C3\InvokeExtensionMethods\InvokeExtensionMethods\obj\Debug\InvokeExtensionMethods.exe
+E:\ASP.NET 3.5\SourceCode\C3\InvokeExtensionMethods\InvokeExtensionMethods\obj\Debug\InvokeExtensionMethods.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\InvokeExtensionMethods\InvokeExtensionMethods\obj\Debug\InvokeExtensionMethods.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\InvokeExtensionMethods\InvokeExtensionMethods\obj\Debug\InvokeExtensionMethods.pdb

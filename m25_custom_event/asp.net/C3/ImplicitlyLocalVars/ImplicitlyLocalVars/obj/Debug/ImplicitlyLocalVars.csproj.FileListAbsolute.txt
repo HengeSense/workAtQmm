@@ -1,0 +1,7 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\bin\Debug\ImplicitlyLocalVars.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\bin\Debug\ImplicitlyLocalVars.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\obj\Debug\ImplicitlyLocalVars.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\obj\Debug\ImplicitlyLocalVars.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\obj\Debug\ImplicitlyLocalVars.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ImplicitlyLocalVars\ImplicitlyLocalVars\obj\Debug\ImplicitlyLocalVars.pdb

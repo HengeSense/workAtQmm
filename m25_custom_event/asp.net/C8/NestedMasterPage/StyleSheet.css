@@ -1,0 +1,40 @@
+﻿body
+{
+	background-color: #eeeeff;
+	height: 100%;
+	margin:0px;
+}
+#layout
+{
+	font-family: verdana;
+	font-size: 9pt;
+	background-color: #eeefff;
+	margin:0px auto;
+	width:700px;
+	height:100%;
+}
+#top
+{
+	background-color: #00CC66;
+	margin: 0px;
+	height: 80px;
+}
+#bottom
+{
+	background-color: #CCFFCC;
+	height: 100%;
+}
+
+#left
+{
+	background-color: #33CCFF;
+	height: 100%;
+	width: 200px;
+	float: left;
+}
+
+#right
+{
+	background-color: #FFFF99;
+	height: 100%;
+}

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode
+  url="~/Default.aspx"
+  title="首页"
+  description="网站首页">
+    <!--这是产品分类节点 -->
+    <siteMapNode
+    title="产品分类"
+    description="企业经营的产品">
+      <siteMapNode
+      url="~/Products/HardwareProduct.aspx"
+      title="硬件产品"
+      description="包括主机、显示器、网络终端、收银机、ATM等设备" />
+      <siteMapNode
+      url="~/Products/SoftwareProduct.aspx"
+      title="软件产品"
+      description="包括ERP、CRM等Windows或者是Web系统" />
+  </siteMapNode>
+  <!--售后服务 -->
+    <siteMapNode title="Services" description="软硬件的售后服务">
+      <siteMapNode
+      url="~/Services/ServicesCenter.aspx"
+      title="服务中心"
+      description="直接进入本公司服务中心登记服务" />
+      <siteMapNode
+      url="~/Services/ServicesNote.aspx"
+      title="服务须知"
+      description="在开始使用服务前，先阅读这里的条款" />
+  </siteMapNode>
+  </siteMapNode>
+</siteMap>

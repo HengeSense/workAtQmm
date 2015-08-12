@@ -1,0 +1,10 @@
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\obj\Debug\ResolveAssemblyReference.cache
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\bin\Debug\ExtensionInterfaceMethod.exe
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\bin\Debug\ExtensionInterfaceMethod.pdb
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\obj\Debug\ExtensionInterfaceMethod.exe
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\obj\Debug\ExtensionInterfaceMethod.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\obj\Debug\ExtensionInterfaceMethod.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\bin\Debug\ExtensionInterfaceMethod.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\bin\Debug\ExtensionInterfaceMethod.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\obj\Debug\ResolveAssemblyReference.cache
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionInterfaceMethod\ExtensionInterfaceMethod\obj\Debug\ExtensionInterfaceMethod.pdb

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Books  Title="图书展示区">
+  <Category id="software" text="软件编程类">
+    <book id="book1" Text="ASP.NET程序设计"/>
+    <book id="book2" Text="C# 2008 网络技术详解"/>
+  </Category>
+  <Category id="Hardware" text="硬件开发类">
+    <book id="book1" Text="8051单片机程序设计"/>
+    <book id="book2" Text="Linux设备驱动程序开发"/>
+  </Category>
+</Books>
+

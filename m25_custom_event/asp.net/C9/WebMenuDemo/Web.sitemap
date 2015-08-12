@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode title="首页">
+    <siteMapNode title="产品">
+      <siteMapNode title="硬件" url="Default.aspx?node=hardware">
+        <siteMapNode title="硬件"/>
+        <siteMapNode title="键盘"/>
+        <siteMapNode title="网卡"/>
+        <siteMapNode title="显示器"/>
+        <siteMapNode title="整机"/>
+      </siteMapNode>
+      <siteMapNode title="软件" url="Default.aspx?node=software">
+        <siteMapNode title="电子表格"/>
+        <siteMapNode title="文档处理器"/>
+        <siteMapNode title="图像处理"/>
+        <siteMapNode title="电子邮件"/>
+        <siteMapNode title="游戏软件"/>
+      </siteMapNode>
+      <siteMapNode title="书籍" url="Default.aspx?node=books">
+        <siteMapNode title="编程"/>
+        <siteMapNode title="调试"/>
+        <siteMapNode title="测试"/>
+        <siteMapNode title="Web应用程序"/>
+        <siteMapNode title="WinForm应用程序"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="服务">
+      <siteMapNode title="咨询" url="Default.aspx?node=consulting">
+        <siteMapNode title="流程"/>
+        <siteMapNode title="管理"/>
+        <siteMapNode title="招聘"/>
+      </siteMapNode>
+      <siteMapNode title="开发" url="Default.aspx?node=development">
+        <siteMapNode title="Web应用程序"/>
+        <siteMapNode title="企业级应用程序"/>
+        <siteMapNode title="数据库应用程序"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="支持">
+      <siteMapNode title="驱动" url="Default.aspx?node=drivers">
+        <siteMapNode title="声卡"/>
+        <siteMapNode title="网络"/>
+        <siteMapNode title="打印机"/>
+        <siteMapNode title="Modem"/>
+      </siteMapNode>
+      <siteMapNode title="手册" url="Default.aspx?node=manuals">
+        <siteMapNode title="应用程序"/>
+        <siteMapNode title="故障诊断"/>
+        <siteMapNode title="安装"/>
+        <siteMapNode title="Internet"/>
+      </siteMapNode>
+      <siteMapNode title="更新" url="Default.aspx?node=updates">
+        <siteMapNode title="发行版"/>
+        <siteMapNode title="游戏包"/>
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

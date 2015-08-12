@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="layout">
+      <div id="top">
+      <h2>站点导航示例</h2>
+        </div>
+      <div id="bottom">
+       <div id="nav">
+           <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathDirection="CurrentToRoot" 
+               PathSeparator="=&gt;" RenderCurrentNodeAsLink="True">
+               <NodeTemplate>
+                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("Url")%>' ToolTip='<%# Eval("Description")%>'><%# Eval("Title")%></asp:HyperLink>                   
+                [<%# Eval("ChildNodes.Count") %>]
+               </NodeTemplate>
+               <CurrentNodeTemplate>
+                <%# Eval("Title") %> <br />
+                <small><i><%# Eval("Description") %></i></small>
+               </CurrentNodeTemplate>
+           </asp:SiteMapPath>
+           <br />
+           <asp:Label ID="lblTree" runat="server" Text="Label"></asp:Label>
+          </div>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder> 
+      </div>
+    </div>
+    </form>
+</body>
+</html>

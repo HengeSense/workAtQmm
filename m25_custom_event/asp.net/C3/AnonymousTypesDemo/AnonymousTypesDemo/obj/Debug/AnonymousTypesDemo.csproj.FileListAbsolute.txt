@@ -1,0 +1,7 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesDemo\AnonymousTypesDemo\bin\Debug\AnonymousTypesDemo.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesDemo\AnonymousTypesDemo\bin\Debug\AnonymousTypesDemo.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesDemo\AnonymousTypesDemo\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesDemo\AnonymousTypesDemo\obj\Debug\AnonymousTypesDemo.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesDemo\AnonymousTypesDemo\obj\Debug\AnonymousTypesDemo.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesDemo\AnonymousTypesDemo\obj\Debug\AnonymousTypesDemo.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesDemo\AnonymousTypesDemo\obj\Debug\AnonymousTypesDemo.pdb

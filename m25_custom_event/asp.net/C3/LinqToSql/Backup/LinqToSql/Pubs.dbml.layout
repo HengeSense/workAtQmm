@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Pubs">
+  <DataContextMoniker Name="/PubsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2b8fab79-cb94-4f18-9989-1f061c0a4f08" absoluteBounds="2.25, 1.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/PubsDataContext/stores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae43b03d-ac2d-4858-945b-e6a4544c83e7" absoluteBounds="2.265, 2.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f954fc8-a2ec-4080-962e-e058c9127c46" absoluteBounds="4.625, 1.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/PubsDataContext/sales" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77106a9f-7e06-4ec0-a8f3-c97205e140fc" absoluteBounds="4.64, 2.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 2.62677124023438); (4.625 : 2.62677124023438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PubsDataContext/stores/stores_sales" />
+      <nodes>
+        <classShapeMoniker Id="2b8fab79-cb94-4f18-9989-1f061c0a4f08" />
+        <classShapeMoniker Id="2f954fc8-a2ec-4080-962e-e058c9127c46" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="86443bd3-bd74-4de6-aabe-b0f0974cc414" absoluteBounds="4.5, 4.25, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/PubsDataContext/titles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5e38700-ec94-40b8-b0a3-f86e7e2786ab" absoluteBounds="4.5150000000000006, 4.71, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5625 : 4.25); (5.5625 : 3.50354248046875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PubsDataContext/titles/titles_sales" />
+      <nodes>
+        <classShapeMoniker Id="86443bd3-bd74-4de6-aabe-b0f0974cc414" />
+        <classShapeMoniker Id="2f954fc8-a2ec-4080-962e-e058c9127c46" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

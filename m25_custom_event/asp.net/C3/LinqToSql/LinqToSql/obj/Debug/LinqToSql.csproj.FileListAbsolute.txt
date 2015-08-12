@@ -1,0 +1,25 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\obj\Debug\LinqToSql.Form1.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\obj\Debug\LinqToSql.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\obj\Debug\LinqToSql.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\bin\Debug\PUBS.MDF
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\bin\Debug\PUBS_log.ldf
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\bin\Debug\LinqToSql.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\obj\Debug\LinqToSql.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LinqToSql\LinqToSql\obj\Debug\LinqToSql.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe.config
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\bin\Debug\PUBS.MDF
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\bin\Debug\PUBS_log.ldf
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\bin\Debug\LinqToSql.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.Form1.resources
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.Properties.Resources.resources
+G:\ASP.NET3.5\Book\SourceCode\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.csproj.GenerateResource.Cache
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe.config
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LinqToSql\LinqToSql\obj\Debug\LinqToSql.pdb

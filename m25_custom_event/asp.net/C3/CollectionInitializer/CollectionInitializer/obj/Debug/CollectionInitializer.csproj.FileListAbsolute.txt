@@ -1,0 +1,10 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\CollectionInitializer\CollectionInitializer\bin\Debug\CollectionInitializer.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\CollectionInitializer\CollectionInitializer\bin\Debug\CollectionInitializer.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\CollectionInitializer\CollectionInitializer\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\CollectionInitializer\CollectionInitializer\obj\Debug\CollectionInitializer.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\CollectionInitializer\CollectionInitializer\obj\Debug\CollectionInitializer.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\CollectionInitializer\CollectionInitializer\obj\Debug\CollectionInitializer.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\CollectionInitializer\CollectionInitializer\obj\Debug\CollectionInitializer.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\CollectionInitializer\CollectionInitializer\bin\Debug\CollectionInitializer.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\CollectionInitializer\CollectionInitializer\bin\Debug\CollectionInitializer.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\CollectionInitializer\CollectionInitializer\obj\Debug\ResolveAssemblyReference.cache

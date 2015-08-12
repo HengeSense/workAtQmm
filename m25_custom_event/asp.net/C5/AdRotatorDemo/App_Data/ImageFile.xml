@@ -1,0 +1,20 @@
+﻿<Advertisements>
+  <Ad>
+    <ImageUrl>../Image/010.jpg</ImageUrl>
+    <NavigateUrl>../Image/010.jpg</NavigateUrl>
+    <AlternateText>同事的小子1</AlternateText>
+    <Height>200</Height>
+    <Width>200</Width>
+    <Impressions>1</Impressions>
+    <Keyword>Baby</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>../Image/014.jpg</ImageUrl>
+    <NavigateUrl>../Image/014.jpg</NavigateUrl>
+    <AlternateText>同事的小子2</AlternateText>
+    <Height>200</Height>
+    <Width>200</Width>
+    <Impressions>1</Impressions>
+    <Keyword>Baby</Keyword>
+  </Ad>
+</Advertisements>

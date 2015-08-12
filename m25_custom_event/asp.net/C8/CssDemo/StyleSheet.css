@@ -1,0 +1,20 @@
+﻿#left
+{
+	font-family: Verdana;
+	font-size: 9pt;
+	background-color: #99CCFF;
+	border-style: solid;
+	border-width: 1px;
+	width: 100px;
+	height: 300px;
+	float: left;
+}
+#right
+{
+	font-family: verdana;
+	font-size: 9pt;
+	background-color: #FFFFCC;
+	border-style: solid;
+	border-width: 1px;
+	height: 300px;
+}

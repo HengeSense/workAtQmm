@@ -1,0 +1,10 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesEquals\AnonymousTypesEquals\bin\Debug\AnonymousTypesEquals.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesEquals\AnonymousTypesEquals\bin\Debug\AnonymousTypesEquals.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesEquals\AnonymousTypesEquals\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesEquals\AnonymousTypesEquals\obj\Debug\AnonymousTypesEquals.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AnonymousTypesEquals\AnonymousTypesEquals\obj\Debug\AnonymousTypesEquals.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesEquals\AnonymousTypesEquals\obj\Debug\AnonymousTypesEquals.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesEquals\AnonymousTypesEquals\obj\Debug\AnonymousTypesEquals.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesEquals\AnonymousTypesEquals\bin\Debug\AnonymousTypesEquals.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesEquals\AnonymousTypesEquals\bin\Debug\AnonymousTypesEquals.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AnonymousTypesEquals\AnonymousTypesEquals\obj\Debug\ResolveAssemblyReference.cache

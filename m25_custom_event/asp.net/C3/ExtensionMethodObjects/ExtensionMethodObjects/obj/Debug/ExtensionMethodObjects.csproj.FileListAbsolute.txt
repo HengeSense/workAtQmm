@@ -1,0 +1,7 @@
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionMethodObjects\ExtensionMethodObjects\obj\Debug\ResolveAssemblyReference.cache
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionMethodObjects\ExtensionMethodObjects\bin\Debug\ExtensionMethodObjects.exe
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionMethodObjects\ExtensionMethodObjects\bin\Debug\ExtensionMethodObjects.pdb
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionMethodObjects\ExtensionMethodObjects\obj\Debug\ExtensionMethodObjects.exe
+E:\ASP.NET 3.5\SourceCode\C3\ExtensionMethodObjects\ExtensionMethodObjects\obj\Debug\ExtensionMethodObjects.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\ExtensionMethodObjects\obj\Debug\ExtensionMethodObjects.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\ExtensionMethodObjects\obj\Debug\ExtensionMethodObjects.pdb

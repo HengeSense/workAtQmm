@@ -1,0 +1,15 @@
+E:\ASP.NET 3.5\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\bin\Debug\AutoPropertyDemo1.exe
+E:\ASP.NET 3.5\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\bin\Debug\AutoPropertyDemo1.pdb
+E:\ASP.NET 3.5\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\ResolveAssemblyReference.cache
+E:\ASP.NET 3.5\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\AutoPropertyDemo1.exe
+E:\ASP.NET 3.5\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\AutoPropertyDemo1.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\AutoPropertyDemo1.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\bin\Debug\AutoPropertyDemo1.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\bin\Debug\AutoPropertyDemo1.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\AutoPropertyDemo1.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\AutoPropertyDemo1.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\AutoPropertyDemo1.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1\bin\Debug\AutoPropertyDemo1.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1\bin\Debug\AutoPropertyDemo1.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1\obj\Debug\ResolveAssemblyReference.cache

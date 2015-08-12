@@ -1,0 +1,7 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\LambdaDemo\LambdaDemo\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\LambdaDemo\LambdaDemo\bin\Debug\LambdaDemo.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\LambdaDemo\LambdaDemo\bin\Debug\LambdaDemo.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\LambdaDemo\LambdaDemo\obj\Debug\LambdaDemo.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\LambdaDemo\LambdaDemo\obj\Debug\LambdaDemo.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LambdaDemo\LambdaDemo\obj\Debug\LambdaDemo.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\LambdaDemo\LambdaDemo\obj\Debug\LambdaDemo.pdb

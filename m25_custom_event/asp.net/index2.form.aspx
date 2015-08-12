@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<%=
+    if(IsPost){
+        string companyname = Request["CompanyName"];
+        string contactname = Request["ContactName"];
+        <p>You entered: <br>
+        Company Name: @companyname <br>
+        Contact Name: @contactname </p>
+    }
+%>
+    <form method="post" action="">
+       Company Name:<br>
+       <input type="text" name="CompanyName" value=""><br>
+       Contact Name:<br><br>
+       <input type="text" name="ContactName" value=""><br><br>
+       <input type="submit" value="Submit" class="submit">
+    </form>
+</body>
+</html>

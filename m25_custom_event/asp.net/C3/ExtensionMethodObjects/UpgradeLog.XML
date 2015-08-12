@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExtensionMethodObjects">
+</Property><Property Name="解决方案文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\ExtensionMethodObjects.sln">
+</Property><Property Name="用户选项文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\ExtensionMethodObjects.suo">
+</Property><Property Name="Date" Value="2010年9月20日">
+</Property><Property Name="Time" Value="15:37">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExtensionMethodObjects.sln" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\Backup\ExtensionMethodObjects.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExtensionMethodObjects.suo" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\Backup\ExtensionMethodObjects.suo">
+</Event><Event ErrorLevel="0" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\ExtensionMethodObjects.csproj" Description="项目文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\Backup\ExtensionMethodObjects\ExtensionMethodObjects.csproj">
+</Event><Event ErrorLevel="0" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\ExtensionMethods.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\Backup\ExtensionMethodObjects\ExtensionMethods.cs">
+</Event><Event ErrorLevel="0" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\Program.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\Backup\ExtensionMethodObjects\Program.cs">
+</Event><Event ErrorLevel="0" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\Properties\AssemblyInfo.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ExtensionMethodObjects\Backup\ExtensionMethodObjects\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\ExtensionMethodObjects.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\ExtensionMethodObjects.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExtensionMethodObjects.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="ExtensionMethodObjects.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ExtensionMethodObjects" Source="ExtensionMethodObjects\ExtensionMethodObjects.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

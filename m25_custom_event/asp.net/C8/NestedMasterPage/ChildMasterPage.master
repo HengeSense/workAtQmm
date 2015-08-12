@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/TopMasterPage.master" AutoEventWireup="false" CodeFile="ChildMasterPage.master.cs" Inherits="ChildMasterPage" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<h2>顶部Logo栏，在这里可以添加Logo和导航效果</h2>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+<div id="left">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</div>
+<div id="right">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</div>
+</asp:Content>
+

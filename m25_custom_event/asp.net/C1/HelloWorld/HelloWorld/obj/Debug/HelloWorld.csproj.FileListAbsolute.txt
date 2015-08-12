@@ -1,0 +1,7 @@
+E:\ASP.NET 3.5\SourceCode\C1\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+E:\ASP.NET 3.5\SourceCode\C1\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+E:\ASP.NET 3.5\SourceCode\C1\HelloWorld\HelloWorld\obj\Debug\ResolveAssemblyReference.cache
+E:\ASP.NET 3.5\SourceCode\C1\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+E:\ASP.NET 3.5\SourceCode\C1\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C1\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

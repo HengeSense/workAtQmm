@@ -1,0 +1,44 @@
+﻿body
+{
+	margin: 0px;
+	background-color: #eeeeef;
+	font-family: verdana;
+	font-size: 9pt;
+	color: #008000;
+	height: 100%;
+}
+#layout
+{
+	background-color: #eeefff;
+	height: 100%;
+	margin:0px auto;
+	width:600px;
+}
+
+#top
+{
+	margin-top: 0px;
+	height: 40px;
+	background-color: #CCFFCC;
+}
+
+#bottom
+{
+	background-color: #E8EDFD;
+	height: 100%;
+	margin-bottom:0px;
+}
+
+#nav
+{
+	background-color: #99CCFF;
+	margin-top:0px;
+	height:20px;
+}
+#nav span
+{
+  float:left;
+}
+
+
+

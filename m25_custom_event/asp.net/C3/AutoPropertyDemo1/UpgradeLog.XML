@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AutoPropertyDemo1">
+</Property><Property Name="解决方案文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1.sln">
+</Property><Property Name="用户选项文件" Value="K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\AutoPropertyDemo1.suo">
+</Property><Property Name="Date" Value="2010年9月20日">
+</Property><Property Name="Time" Value="15:11">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AutoPropertyDemo1.sln" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\Backup\AutoPropertyDemo1.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AutoPropertyDemo1.suo" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\Backup\AutoPropertyDemo1.suo">
+</Event><Event ErrorLevel="0" Project="AutoPropertyDemo1" Source="AutoPropertyDemo1\AutoPropertyDemo1.csproj" Description="项目文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\Backup\AutoPropertyDemo1\AutoPropertyDemo1.csproj">
+</Event><Event ErrorLevel="0" Project="AutoPropertyDemo1" Source="AutoPropertyDemo1\Program.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\Backup\AutoPropertyDemo1\Program.cs">
+</Event><Event ErrorLevel="0" Project="AutoPropertyDemo1" Source="AutoPropertyDemo1\Properties\AssemblyInfo.cs" Description="文件已成功备份为 K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\AutoPropertyDemo1\Backup\AutoPropertyDemo1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoPropertyDemo1" Source="AutoPropertyDemo1\AutoPropertyDemo1.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="AutoPropertyDemo1" Source="AutoPropertyDemo1\AutoPropertyDemo1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AutoPropertyDemo1.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="AutoPropertyDemo1.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoPropertyDemo1" Source="AutoPropertyDemo1\AutoPropertyDemo1.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

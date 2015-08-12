@@ -1,0 +1,10 @@
+G:\ASP.NET3.5\Book\SourceCode\C3\ObjectInitializer\ObjectInitializer\bin\Debug\ObjectInitializer.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\ObjectInitializer\ObjectInitializer\bin\Debug\ObjectInitializer.pdb
+G:\ASP.NET3.5\Book\SourceCode\C3\ObjectInitializer\ObjectInitializer\obj\Debug\ResolveAssemblyReference.cache
+G:\ASP.NET3.5\Book\SourceCode\C3\ObjectInitializer\ObjectInitializer\obj\Debug\ObjectInitializer.exe
+G:\ASP.NET3.5\Book\SourceCode\C3\ObjectInitializer\ObjectInitializer\obj\Debug\ObjectInitializer.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ObjectInitializer\ObjectInitializer\obj\Debug\ObjectInitializer.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ObjectInitializer\ObjectInitializer\obj\Debug\ObjectInitializer.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ObjectInitializer\ObjectInitializer\bin\Debug\ObjectInitializer.exe
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ObjectInitializer\ObjectInitializer\bin\Debug\ObjectInitializer.pdb
+K:\机械从入门到精通\ASP.NET从入门到精通\光盘\源代码\C3\ObjectInitializer\ObjectInitializer\obj\Debug\ResolveAssemblyReference.cache
