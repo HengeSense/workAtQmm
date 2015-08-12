@@ -13,6 +13,16 @@
 		el.innerHTML = '<span style="font-family: \'qmm\'">' + entity + '</span>' + html;
 	}
 	var icons = {
+		'qmm-icon-iconfont-close': '&#xe62c;',
+		'qmm-icon-iconfont-quan1': '&#xe62d;',
+		'qmm-icon-iconfont-quan': '&#xe62e;',
+		'qmm-icon-iconfont-zuoceyouhuiquan': '&#xe62f;',
+		'qmm-icon-iconfont-phone': '&#xe62b;',
+		'qmm-icon-iconfont-gaogenxie': '&#xe627;',
+		'qmm-icon-iconfont-jipiao': '&#xe628;',
+		'qmm-icon-iconfont-lvxing': '&#xe629;',
+		'qmm-icon-iconfont-xiexiangbao': '&#xe62a;',
+		'qmm-icon-iconfont-page': '&#xe626;',
 		'qmm-icon-iconfont-check2': '&#xe625;',
 		'qmm-icon-iconfont-jiajudianqibaihuo': '&#xe621;',
 		'qmm-icon-iconfont-shouji': '&#xe61f;',

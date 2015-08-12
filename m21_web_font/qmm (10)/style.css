@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'qmm';
-	src:url('fonts/qmm.eot?-fminlu');
-	src:url('fonts/qmm.eot?#iefix-fminlu') format('embedded-opentype'),
-		url('fonts/qmm.ttf?-fminlu') format('truetype'),
-		url('fonts/qmm.woff?-fminlu') format('woff'),
-		url('fonts/qmm.svg?-fminlu#qmm') format('svg');
+	src:url('fonts/qmm.eot?-86q78n');
+	src:url('fonts/qmm.eot?#iefix-86q78n') format('embedded-opentype'),
+		url('fonts/qmm.ttf?-86q78n') format('truetype'),
+		url('fonts/qmm.woff?-86q78n') format('woff'),
+		url('fonts/qmm.svg?-86q78n#qmm') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,33 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.qmm-icon-iconfont-close:before {
+	content: "\e62c";
+}
+.qmm-icon-iconfont-quan1:before {
+	content: "\e62d";
+}
+.qmm-icon-iconfont-quan:before {
+	content: "\e62e";
+}
+.qmm-icon-iconfont-zuoceyouhuiquan:before {
+	content: "\e62f";
+}
+.qmm-icon-iconfont-phone:before {
+	content: "\e62b";
+}
+.qmm-icon-iconfont-gaogenxie:before {
+	content: "\e627";
+}
+.qmm-icon-iconfont-jipiao:before {
+	content: "\e628";
+}
+.qmm-icon-iconfont-lvxing:before {
+	content: "\e629";
+}
+.qmm-icon-iconfont-xiexiangbao:before {
+	content: "\e62a";
+}
 .qmm-icon-iconfont-page:before {
 	content: "\e626";
 }
