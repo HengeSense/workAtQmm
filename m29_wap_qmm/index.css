@@ -1,0 +1,94 @@
+#aj-mobile-wrap{
+	width:100%;position:relative;
+	background-color:#eeeeee;
+}
+#aj-mobile-wrap .aj-mobile-module{
+	background-color:white;
+}
+#aj-four-icons-line{
+	position:relative;
+	width:100%;height:140px;
+	margin: 10px 0;
+}
+#aj-four-icons-line .aj-ul{
+	display:none;
+}
+#aj-four-icons-line .aj-ul .aj-li{
+	float:left;
+	width:25%;height:70px;
+	overflow:hidden;
+}
+#aj-four-icons-line .aj-ul .aj-li .aj-a{
+	display:block;
+	width:40px;height:40px;
+	margin:5px auto 5px;
+}
+#aj-four-icons-line .aj-ul .aj-li .aj-a .aj-a-bg{
+	display:inline-block;
+	width:40px;height:40px;
+	border-radius:50%;
+	text-align:center;
+	line-height:40px;
+	color:white;
+	font-size:30px;
+}
+#aj-four-icons-line .aj-ul .aj-li .aj-p{
+	width:100%;height:20px;line-height:20px;
+	text-align:center;
+	font-size:13px;
+	overflow:hidden;
+}
+/*----------------*/
+#aj-top-types{}
+#aj-top-types .aj-one-type{
+	position:relative;
+	margin:10px 0;
+	width:100%;
+	height:180px;
+	overflow:hidden;
+}
+#aj-top-types .aj-one-type .aj-header{
+	width:100%;height:40px;
+	overflow:hidden;
+	position:relative;
+}
+#aj-top-types .aj-one-type .aj-header .aj-color-border{
+	position:absolute;
+	width:8px;height:40px;
+	top:0;left:0;
+	background-color:lightblue;
+}
+#aj-top-types .aj-one-type .aj-header .aj-color-title{
+	padding-left:10px;
+	line-height:40px;
+	font-size:14px;
+	color:#666;
+}
+#aj-top-types .aj-one-type .aj-content{}
+#aj-top-types .aj-one-type .aj-content .aj-ul{
+	
+}
+#aj-top-types .aj-one-type .aj-content .aj-ul .aj-li{
+	float:left;
+	width:25%;height:70px;
+	overflow:hidden;	
+}
+#aj-top-types .aj-one-type .aj-content .aj-ul .aj-li .aj-a{
+	display:block;
+	width:80px;height:40px;
+	margin:5px auto 5px;	
+}
+#aj-top-types .aj-one-type .aj-content .aj-ul .aj-li .aj-a .aj-a-img{
+	display:inline-block;
+	width:80px;height:40px;
+	text-align:center;
+}
+#aj-top-types .aj-one-type .aj-content .aj-ul .aj-li .aj-p{
+	width:100%;height:20px;line-height:20px;
+	text-align:center;
+	font-size:13px;
+	overflow:hidden;	
+}
+
+
+/*----------------*/
