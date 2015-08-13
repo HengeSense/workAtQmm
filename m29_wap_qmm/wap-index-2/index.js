@@ -43,6 +43,7 @@ $(function () {
 	var div = $('#aj-four-icons-line');
 	var icl = new IconLine(div);
 	
+	// touch slide
 	$('#aj-top-types').find('.aj-one-type .aj-content').slidesjs({
 		width: 940,
 		height: 528,
@@ -57,6 +58,16 @@ $(function () {
 				speed: 400
 			}
 		}
+	});
+	var good_colors = [
+		'#ffb700', '#ff68b9', '#56b2ff', '#ff67b9',
+		'#a8dd99', '#f61d4b', '#31bd80', '#3ea3ff',
+		'#ff7d00', '#ffb30f', '#e4000f'
+	];
+	// index page module 10px border color
+	var mobile_wrap = $('#aj-mobile-wrap');
+	mobile_wrap.find('.aj-one-type .aj-color-border').each(function (index) {
+		$(this).css('backgroundColor', good_colors[index % (good_colors.length -1)]);
 	});
 });
 

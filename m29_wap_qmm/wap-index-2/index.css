@@ -1,6 +1,7 @@
 #aj-mobile-wrap{
 	width:100%;position:relative;
 	background-color:#eeeeee;
+	padding-bottom:10px;
 }
 #aj-mobile-wrap .aj-mobile-module{
 	background-color:white;
