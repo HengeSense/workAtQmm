@@ -11,7 +11,8 @@
 #aj-four-icons-line{
 	position:relative;
 	width:100%;height:140px;
-	margin: 10px 0;
+	margin: 10px 0 20px;
+	overflow:visible!important;
 }
 #aj-four-icons-line .aj-ul{
 	display:none;
@@ -80,7 +81,8 @@
 #aj-top-types .aj-one-type .aj-content .aj-ul .aj-li .aj-a{
 	display:block;
 	width:80px;height:40px;
-	margin:5px auto 5px;	
+	margin:5px auto 5px;
+	overflow:hidden;
 }
 #aj-top-types .aj-one-type .aj-content .aj-ul .aj-li .aj-a .aj-a-img{
 	display:inline-block;
@@ -93,6 +95,32 @@
 	font-size:13px;
 	overflow:hidden;	
 }
-
-
+/*----*/
+#aj-mobile-wrap  .slidesjs-pagination{
+	position:absolute;
+	top:15px;right:10px;
+}
+#aj-mobile-wrap .slidesjs-navigation{
+	display:none;
+}
+#aj-mobile-wrap  .slidesjs-pagination .slidesjs-pagination-item{
+	float:left;
+	width:10px;height:10px;
+	overflow:hidden;
+	box-shadow:#555 0 0 2px;
+	border-radius:50%;
+	margin:0 5px;
+	font-size:0;
+}
+#aj-mobile-wrap  .slidesjs-pagination .slidesjs-pagination-item a{
+	display:inline-block;
+	width:100%;height:10px;
+}
+#aj-mobile-wrap  .slidesjs-pagination .slidesjs-pagination-item a.active{
+	background-color:lightblue;
+}
+#aj-four-icons-line .slidesjs-pagination{
+	position:absolute;
+	top:147px;left:45%;
+}
 /*----------------*/
