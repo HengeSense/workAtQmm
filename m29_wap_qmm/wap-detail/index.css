@@ -1,0 +1,98 @@
+body{
+	padding-bottom:40px;
+}
+.aj-zhidemai-detail{}
+.aj-zhidemai-detail .aj-top-img{
+	position:relative;
+	width:100%;height:160px;
+	font-size:0;
+	text-align:center;
+	background-color:#eee;
+}
+.aj-zhidemai-detail .aj-top-img:before{
+	content:'';
+	display:inline-block;
+	width:0;height:100%;
+	vertical-align:middle;
+}
+.aj-zhidemai-detail .aj-top-img .aj-img{
+	max-width:100%;max-height:160px;
+	vertical-align:middle;
+	box-shadow:#666 0 0 4px;
+}
+.aj-zhidemai-detail .aj-title{
+	border-bottom:1px solid #DcD7Cf;
+	border-top:1px solid #DcD7Cf;
+}
+.aj-zhidemai-detail .aj-sub-title{
+	height:40px;line-height:40px;
+	border-bottom:1px solid #DcD7Cf;
+}
+/*--------------*/
+.aj-zhidemai-detail .aj-shop-info-line{
+	padding:10px;
+	height:30px;line-height:30px;
+	border-bottom:1px solid #DcD7Cf;
+}
+.aj-zhidemai-detail .aj-shop-info-line .aj-f-left{
+	float:left;
+}
+.aj-zhidemai-detail .aj-shop-info-line .aj-s-title{
+	width:40px;height:30px;
+	display:inline-block;
+}
+.aj-zhidemai-detail .aj-shop-info-line .aj-s-icon{
+	height:30px;
+	display:inline-block;
+}
+.aj-zhidemai-detail .aj-shop-info-line .aj-s-icon img{
+	height:30px;
+}
+.aj-zhidemai-detail .aj-shop-info-line .aj-s-name{
+	margin-left:5px;
+	max-width:120px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.aj-zhidemai-detail .aj-shop-info-line .aj-s-go-icon{
+    float: right;
+    line-height: 30px;
+    font-size: 25px;
+    color: #aaa;
+}
+/*-------------*/
+.aj-bottom-fixed{
+	position:fixed;
+	bottom:0;left:0;
+	z-index:999;
+	width:100%;height:40px;
+	background-color:white;
+	overflow:hidden;
+	border-top:1px solid #ccc;
+}
+.aj-bottom-fixed .aj-zan-cai-pin{
+	position:relative;
+}
+.aj-bottom-fixed .aj-zan-cai-pin .aj-three-one{
+	width:33%;height:40px;
+	text-align:center;
+	line-height:40px;
+	float:left;
+	font-size:20px;
+}
+.aj-bottom-fixed .aj-zan-cai-pin .aj-three-one.aj-t-comment{
+	font-size:24px;
+	border-left:1px solid #ccc;
+}
+.aj-bottom-fixed .aj-shoucang{
+	text-align:center;
+	line-height:40px;
+	color:white;
+	background-color:#ff9402;
+}
+.aj-bottom-fixed .btn-goshop{
+	
+}
+.aj-bottom-fixed .aj-one{
+	width:33.3%;height:40px;float:left;
+}
