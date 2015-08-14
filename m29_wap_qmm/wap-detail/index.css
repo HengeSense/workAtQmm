@@ -34,6 +34,10 @@ body{
 	height:30px;line-height:30px;
 	border-bottom:1px solid #DcD7Cf;
 }
+.aj-zhidemai-detail .aj-shop-info-line .aj-a-shop-link{
+    display:inline-block;
+    width:100%;height:30px;
+}
 .aj-zhidemai-detail .aj-shop-info-line .aj-f-left{
 	float:left;
 }
@@ -68,7 +72,7 @@ body{
 	width:100%;height:40px;
 	background-color:white;
 	overflow:hidden;
-	border-top:1px solid #ccc;
+	border-top:1px solid #ddd;
 }
 .aj-bottom-fixed .aj-zan-cai-pin{
 	position:relative;
@@ -95,4 +99,21 @@ body{
 }
 .aj-bottom-fixed .aj-one{
 	width:33.3%;height:40px;float:left;
+}
+.aj-bottom-fixed .aj-one .aj-o-line{
+    width:100%;height:20px;float:left;
+    font-size:12px;
+    line-height:20px;
+    overflow:hidden;white-space:nowrap;
+}
+.aj-bottom-fixed .aj-one .aj-o-line .aj-wrap{
+    display:block;
+    padding-left:10px;
+}
+.aj-bottom-fixed .aj-direction-line{}
+.aj-bottom-fixed .aj-direction-line .btn-goshop{
+    height:30px;width:80%;
+    margin:5px auto 0;
+    line-height:30px;
+    border-radius:2px;
 }

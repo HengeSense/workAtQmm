@@ -215,3 +215,17 @@
 	display:none;
 }
 /*----------------*/
+.aj-new-top{
+    background-color:#fe4684;
+    border-bottom:1px solid #eee;
+}
+.aj-new-top .home-wrapper{
+    top:9px;
+}
+.aj-new-top .login-wrapper{
+    top:11px;
+}
+.aj-new-top .aj-qmm-banner-bg{
+    height:50px;
+}
+/*----------------*/

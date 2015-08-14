@@ -91,7 +91,7 @@ $(function () {
 			interval: 3000,
 			auto: true,
 			swap: false,
-			pauseOnHover: false,
+			pauseOnHover: true,
 			restartDelay: 2500
 		}		
 	});
@@ -111,19 +111,19 @@ $(function () {
 });
 
 // for yan shi 
-$(function () {
-	var div = $('#aj-top-types'),
-		arr = ['jpg', 'png', 'gif'],
-		jpg = [2, 6, 9 , 10, 11],
-		gif = [3, 4],
-		png = [5, 7, 8];
-	div.find('.aj-one-type').each(function () {
-		$(this).find('.aj-a img').each(function () {
-			var type = rand(arr);
-			$(this).attr('src', 'imgs/' + rand(eval(type)) + '.' + type);
-		});
-	});
-	function rand(arr){
-		return arr[Math.floor(Math.random() * arr.length)];
-	}
-});
+// $(function () {
+	// var div = $('#aj-top-types'),
+		// arr = ['jpg', 'png', 'gif'],
+		// jpg = [2, 6, 9 , 10, 11],
+		// gif = [3, 4],
+		// png = [5, 7, 8];
+	// div.find('.aj-one-type').each(function () {
+		// $(this).find('.aj-a img').each(function () {
+			// var type = rand(arr);
+			// $(this).attr('src', 'imgs/' + rand(eval(type)) + '.' + type);
+		// });
+	// });
+	// function rand(arr){
+		// return arr[Math.floor(Math.random() * arr.length)];
+	// }
+// });
