@@ -2,6 +2,14 @@
     margin-top:50px;
     min-height:400px;
 }
+#aj-all-types .newLoading{
+    position:absolute;
+    top:20px;left:50%;
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    width:48px;height:48px;
+    background-image:url(loading.gif);
+}
 #aj-all-types .aj-left{
     position:fixed;
     top:50px; 
@@ -38,4 +46,9 @@
 }
 #aj-all-types .aj-right .aj-r-inside-wrap{
     padding-left:90px;
+}
+#aj-all-types .aj-right .aj-r-inside-wrap .aj-block{
+    position:relative;
+    width:100%;min-height:400px;
+    display:none;
 }
