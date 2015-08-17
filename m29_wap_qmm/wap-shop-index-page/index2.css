@@ -1,0 +1,80 @@
+#aj-shop-index-page{
+    position:relative;
+    margin-top:50px;
+}
+#aj-shop-index-page .aj-s-top-wrap{
+    position:relative;z-index:9;
+    height:200px;
+}
+#aj-shop-index-page .aj-s-top{
+    position:relative;
+    width:100%;height:200px;
+    overflow:hidden;
+}
+#aj-shop-index-page .aj-s-top .aj-bg{
+    position:absolute;
+}
+#aj-shop-index-page .aj-s-top .aj-logo{
+    position:absolute;
+    width:90px;height:90px;
+    border-radius:50%;
+    overflow:hidden;
+    top:20px;left:50%;
+    border:2px solid rgba(255,255,255,0.4);
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+}
+#aj-shop-index-page .aj-s-top .aj-logo img{
+    position:absolute;
+    width:70px;height:70px;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    border-radius:50%;
+    overflow:hidden;
+    padding:5px;
+    border:1px solid rgba(255,255,255,0.6);
+}
+#aj-shop-index-page .aj-s-top .aj-logo-desc{
+    position:absolute;top:120px;
+    left:0;
+    text-align:center;
+    width:100%;height:20px;
+    line-height:20px;
+    color:white;
+}
+#aj-shop-index-page .aj-s-top .aj-nav{
+    position:absolute;
+    bottom:0;left:0;
+    width:100%;height:40px;
+    line-height:40px;
+    background-color:rgba(0,0,0,.3);
+    border-top:1px solid rgba(0,0,0,.1);
+}
+#aj-shop-index-page .aj-s-top .aj-nav-ul{}
+#aj-shop-index-page .aj-s-top .aj-nav-ul .aj-li{
+    width:50%;height:37px;
+    text-align:center;
+    line-height:37px;
+    color:white;
+    float:left;
+    border-bottom:3px solid transparent;
+}
+#aj-shop-index-page .aj-s-top .aj-nav-ul .aj-li.aj-select{
+    border-bottom:3px solid #fe4684;
+    color:#fe4684;
+}
+#aj-shop-index-page .aj-s-mid{
+    min-height:200px;
+}
+#aj-shop-index-page .aj-s-mid .aj-block{
+    position:relative;
+}
+#aj-shop-index-page .newLoading{
+    position:absolute;
+    top:20px;left:50%;
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    width:48px;height:48px;
+    background-image:url(loading.gif);
+}

@@ -3,7 +3,7 @@ $(function () {
         right = $('#aj-all-types .aj-right-side'),
         top = $('#top'),
         scrollTop = -1;
-    console.log($(window).height() - top.height());
+    if (left.length === 0) return false;
     left.css({'height' : $(window).height() - top.height() + 'px'});
     left.css({top : top.height() + 'px'});
     left.find('.aj-li').on('click', function () {
