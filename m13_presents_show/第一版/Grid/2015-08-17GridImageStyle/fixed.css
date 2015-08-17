@@ -1,0 +1,11 @@
+.aj-grid-list .picBox:before{
+    width: 0;
+    height: 80%;
+    vertical-align: middle;
+    content: '';
+    display: inline-block;
+    font-size:0;
+}
+.aj-grid-list .picBox img {
+    vertical-align: middle;
+}
