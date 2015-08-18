@@ -2,46 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bded1a7-2141-4e19-8f2f-07595849f228" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\3.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\4.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\5.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\7.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\8.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\index.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\index.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\jd.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\jquery.slides.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\qmm_banner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\qmm_banner2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\t_l.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\t_r_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\t_r_t.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\vip.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\wait.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\wap.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/2-1.gif" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/2-1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="workAtQmm.iws" />
@@ -64,7 +29,48 @@
     <favorites_list name="workAtQmm" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.172414" vertical-offset="958" max-vertical-offset="14340">
+              <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.12" vertical-offset="732" max-vertical-offset="1380">
+              <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+              <folding>
+                <element signature="e#19#94#0" expanded="false" />
+                <element signature="e#326#352#0" expanded="false" />
+                <element signature="e#391#630#0" expanded="false" />
+                <element signature="e#673#934#0" expanded="false" />
+                <element signature="e#978#1116#0" expanded="false" />
+                <element signature="e#1459#1607#0" expanded="false" />
+                <element signature="e#1930#1955#0" expanded="false" />
+                <element signature="e#1995#2075#0" expanded="false" />
+                <element signature="e#2107#2297#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51993066" vertical-offset="180" max-vertical-offset="1080">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -97,16 +103,18 @@
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index2.css" />
         <option value="$PROJECT_DIR$/m25_custom_event/vertical-align/index.html" />
         <option value="$PROJECT_DIR$/m25_custom_event/vertical-align/index.css" />
-        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index2.css" />
-        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js" />
       </list>
     </option>
   </component>
@@ -115,8 +123,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="338" />
-    <option name="y" value="113" />
+    <option name="x" value="233" />
+    <option name="y" value="101" />
     <option name="width" value="1353" />
     <option name="height" value="727" />
   </component>
@@ -191,6 +199,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="m29_wap_qmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m29_wap_qmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap-shop-index-page-modify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m29_wap_qmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap-detail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,14 +336,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="338" y="113" width="1353" height="727" extended-state="0" />
-    <editor active="false" />
+    <frame x="233" y="101" width="1353" height="727" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25056097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25056097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -335,13 +379,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/m12_all_websites/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m12_all_websites/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -735,35 +772,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.344828" vertical-offset="940" max-vertical-offset="14180">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="1000">
+          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding>
+            <element signature="e#87#350#0" expanded="false" />
+            <element signature="e#380#1703#0" expanded="false" />
+            <element signature="e#1830#2518#0" expanded="false" />
+            <element signature="e#2589#3170#0" expanded="false" />
+            <element signature="e#3221#4272#0" expanded="false" />
+            <element signature="e#3297#4264#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="840">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.46715328" vertical-offset="3324" max-vertical-offset="7720">
+          <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
           <folding>
-            <element signature="e#19#94#0" expanded="false" />
-            <element signature="e#129#183#0" expanded="false" />
-            <element signature="e#326#352#0" expanded="false" />
-            <element signature="e#391#630#0" expanded="false" />
-            <element signature="e#673#934#0" expanded="false" />
-            <element signature="e#978#1116#0" expanded="false" />
-            <element signature="e#1641#1700#0" expanded="false" />
-            <element signature="e#1730#1755#0" expanded="false" />
-            <element signature="e#1907#2097#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#2;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#1;tag#div#1;tag#div#2;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07079646" vertical-offset="0" max-vertical-offset="1840">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding>
+            <element signature="e#145#335#0" expanded="false" />
+            <element signature="e#417#534#0" expanded="false" />
+            <element signature="e#561#579#0" expanded="false" />
+            <element signature="e#613#686#0" expanded="false" />
+            <element signature="e#726#792#0" expanded="false" />
+            <element signature="e#841#982#0" expanded="false" />
+            <element signature="e#1022#1122#0" expanded="false" />
+            <element signature="e#1188#1295#0" expanded="false" />
+            <element signature="e#1333#1433#0" expanded="false" />
+            <element signature="e#1635#1707#0" expanded="false" />
+            <element signature="e#1770#1805#0" expanded="false" />
+            <element signature="e#1870#1920#0" expanded="false" />
+            <element signature="e#2077#2082#0" expanded="false" />
+            <element signature="e#2135#2194#0" expanded="false" />
+            <element signature="e#2253#2337#0" expanded="false" />
+            <element signature="e#2406#2477#0" expanded="false" />
+            <element signature="e#2536#2637#0" expanded="false" />
+            <element signature="e#2684#2742#0" expanded="false" />
+            <element signature="e#2779#2797#0" expanded="false" />
+            <element signature="e#2861#2993#0" expanded="false" />
+            <element signature="e#3059#3110#0" expanded="false" />
+            <element signature="e#3183#3215#0" expanded="false" />
+            <element signature="e#3256#3300#0" expanded="false" />
+            <element signature="e#3351#3388#0" expanded="false" />
+            <element signature="e#3430#3453#0" expanded="false" />
+            <element signature="e#3492#3504#0" expanded="false" />
+            <element signature="e#3556#3607#0" expanded="false" />
+            <element signature="e#3647#3660#0" expanded="false" />
+            <element signature="e#3710#3761#0" expanded="false" />
+            <element signature="e#3853#3925#0" expanded="false" />
+            <element signature="e#3969#3997#0" expanded="false" />
+            <element signature="e#4054#4151#0" expanded="false" />
+            <element signature="e#4196#4230#0" expanded="false" />
+            <element signature="e#4279#4336#0" expanded="false" />
+            <element signature="e#4478#4526#0" expanded="false" />
+            <element signature="e#4579#4709#0" expanded="false" />
+            <element signature="e#4772#4805#0" expanded="false" />
+            <element signature="e#4859#4871#0" expanded="false" />
+            <element signature="e#4926#4939#0" expanded="false" />
+            <element signature="e#5212#5228#0" expanded="false" />
+            <element signature="e#5255#5272#0" expanded="false" />
+            <element signature="e#5302#5322#0" expanded="false" />
+            <element signature="e#5383#5626#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10325048" vertical-offset="66" max-vertical-offset="700">
+        <state vertical-scroll-proportion="0.2189781" vertical-offset="0" max-vertical-offset="700">
           <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
           <folding>
             <element signature="tag#head#0;tag#html#0" expanded="false" />
@@ -911,10 +1003,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03539823" vertical-offset="0" max-vertical-offset="840">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.33274338" vertical-offset="52" max-vertical-offset="960">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="25" />
           <folding>
-            <element signature="e#166#273#0" expanded="false" />
             <element signature="e#312#397#0" expanded="false" />
             <element signature="e#437#524#0" expanded="false" />
             <element signature="e#554#622#0" expanded="false" />
@@ -940,96 +1031,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.46902654" vertical-offset="4115" max-vertical-offset="4980">
+          <caret line="219" column="35" selection-start-line="219" selection-start-column="35" selection-end-line="219" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="1000">
-          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+        <state vertical-scroll-proportion="-17.12" vertical-offset="732" max-vertical-offset="1380">
+          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
           <folding>
-            <element signature="e#87#350#0" expanded="false" />
-            <element signature="e#380#1703#0" expanded="false" />
-            <element signature="e#1830#2518#0" expanded="false" />
-            <element signature="e#2589#3170#0" expanded="false" />
-            <element signature="e#3221#4272#0" expanded="false" />
-            <element signature="e#3297#4264#0" expanded="false" />
+            <element signature="e#19#94#0" expanded="false" />
+            <element signature="e#326#352#0" expanded="false" />
+            <element signature="e#391#630#0" expanded="false" />
+            <element signature="e#673#934#0" expanded="false" />
+            <element signature="e#978#1116#0" expanded="false" />
+            <element signature="e#1459#1607#0" expanded="false" />
+            <element signature="e#1930#1955#0" expanded="false" />
+            <element signature="e#1995#2075#0" expanded="false" />
+            <element signature="e#2107#2297#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.460177" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding>
-            <element signature="e#15#117#0" expanded="false" />
-            <element signature="e#145#335#0" expanded="false" />
-            <element signature="e#417#534#0" expanded="false" />
-            <element signature="e#561#579#0" expanded="false" />
-            <element signature="e#613#686#0" expanded="false" />
-            <element signature="e#726#792#0" expanded="false" />
-            <element signature="e#841#982#0" expanded="false" />
-            <element signature="e#1022#1122#0" expanded="false" />
-            <element signature="e#1188#1295#0" expanded="false" />
-            <element signature="e#1333#1433#0" expanded="false" />
-            <element signature="e#1635#1707#0" expanded="false" />
-            <element signature="e#1770#1805#0" expanded="false" />
-            <element signature="e#1870#1920#0" expanded="false" />
-            <element signature="e#2077#2082#0" expanded="false" />
-            <element signature="e#2135#2194#0" expanded="false" />
-            <element signature="e#2253#2337#0" expanded="false" />
-            <element signature="e#2406#2477#0" expanded="false" />
-            <element signature="e#2536#2637#0" expanded="false" />
-            <element signature="e#2684#2742#0" expanded="false" />
-            <element signature="e#2779#2797#0" expanded="false" />
-            <element signature="e#2861#2993#0" expanded="false" />
-            <element signature="e#3059#3110#0" expanded="false" />
-            <element signature="e#3183#3215#0" expanded="false" />
-            <element signature="e#3256#3300#0" expanded="false" />
-            <element signature="e#3351#3388#0" expanded="false" />
-            <element signature="e#3430#3453#0" expanded="false" />
-            <element signature="e#3492#3504#0" expanded="false" />
-            <element signature="e#3556#3607#0" expanded="false" />
-            <element signature="e#3647#3660#0" expanded="false" />
-            <element signature="e#3710#3761#0" expanded="false" />
-            <element signature="e#3853#3925#0" expanded="false" />
-            <element signature="e#3969#3997#0" expanded="false" />
-            <element signature="e#4054#4151#0" expanded="false" />
-            <element signature="e#4196#4230#0" expanded="false" />
-            <element signature="e#4279#4336#0" expanded="false" />
-            <element signature="e#4478#4526#0" expanded="false" />
-            <element signature="e#4579#4709#0" expanded="false" />
-            <element signature="e#4772#4805#0" expanded="false" />
-            <element signature="e#4859#4871#0" expanded="false" />
-            <element signature="e#4926#4939#0" expanded="false" />
-            <element signature="e#5119#5186#0" expanded="false" />
-            <element signature="e#5212#5228#0" expanded="false" />
-            <element signature="e#5255#5272#0" expanded="false" />
-            <element signature="e#5302#5322#0" expanded="false" />
-            <element signature="e#5383#5626#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-13.172414" vertical-offset="958" max-vertical-offset="14340">
+          <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33941606" vertical-offset="3394" max-vertical-offset="7720">
-          <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
-          <folding>
-            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#ul#0;tag#div#1;tag#div#2;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#ul#1;tag#div#1;tag#div#2;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#div#0;tag#div#1;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.51993066" vertical-offset="180" max-vertical-offset="1080">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

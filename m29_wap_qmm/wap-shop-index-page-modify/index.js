@@ -20,6 +20,12 @@ $(function () {
         $(this).addClass('aj-select').siblings().removeClass('aj-select');
         blocks.eq($(this).index()).show().siblings().hide();
     });
+    // sort line
+    (function () {
+        shopIndex.find('.aj-sort .aj-li-js ').on('click', function () {
+            $(this).addClass('aj-select').siblings().removeClass('aj-select');
+        });
+    })();
 });
 
 
