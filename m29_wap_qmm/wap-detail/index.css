@@ -1,5 +1,8 @@
-body{
-	padding-bottom:40px;
+
+.aj-detail-body{
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+    padding-bottom: 40px;
 }
 .aj-zhidemai-detail{}
 .aj-zhidemai-detail .aj-top-img{
@@ -51,6 +54,7 @@ body{
 }
 .aj-zhidemai-detail .aj-shop-info-line .aj-s-icon img{
 	height:30px;
+    overflow: hidden;
 }
 .aj-zhidemai-detail .aj-shop-info-line .aj-s-name{
 	margin-left:5px;

@@ -2,7 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bded1a7-2141-4e19-8f2f-07595849f228" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index2.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index2.css" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.eot" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.svg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\fonts\qmm.woff" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\3.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\4.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\5.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\7.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\8.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\imgs\9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\index.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\jd.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\jquery.slides.min.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\qmm_banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\qmm_banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\2.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\roll\4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\style.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\t_l.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\t_r_b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\t_r_t.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\vip.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\wait.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3 - 副本\wap.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/2-1.gif" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/2-1.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="workAtQmm.iws" />
@@ -25,28 +64,7 @@
     <favorites_list name="workAtQmm" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/m25_custom_event/vertical-align/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="480">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/m25_custom_event/vertical-align/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5423729" vertical-offset="0" max-vertical-offset="590">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -79,6 +97,16 @@
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index2.css" />
         <option value="$PROJECT_DIR$/m25_custom_event/vertical-align/index.html" />
         <option value="$PROJECT_DIR$/m25_custom_event/vertical-align/index.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index2.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css" />
+        <option value="$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css" />
       </list>
     </option>
   </component>
@@ -87,8 +115,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="243" />
-    <option name="y" value="67" />
+    <option name="x" value="338" />
+    <option name="y" value="113" />
     <option name="width" value="1353" />
     <option name="height" value="727" />
   </component>
@@ -142,6 +170,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workAtQmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m29_wap_qmm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -163,6 +215,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm\wap-index-3" />
+      <recent name="E:\AJ\wamp\www\Github\workAtQmm\m29_wap_qmm" />
       <recent name="D:\xampp\htdocs\github\workAtQmm\m25_custom_event\numberRoll" />
     </key>
   </component>
@@ -238,7 +292,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="243" y="67" width="1353" height="727" extended-state="1" />
+    <frame x="338" y="113" width="1353" height="727" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -281,93 +335,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/Swipe-master/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1420">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/Swipe-master/swipe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="11520">
-          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/Swipe-master/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="640">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/m27_angularjs/medemo/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/m27_angularjs/medemo/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/m27_angularjs/medemo/ng.repeat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="440">
-          <caret line="9" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/m27_angularjs/medemo/ng.controller.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="700">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/numberRoll/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/numberRoll/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1552" max-vertical-offset="2140">
-          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/numberRoll/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/numberRoll/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="589">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m12_all_websites/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m12_all_websites/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -666,13 +633,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1060">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m25_custom_event/vertical-align/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5423729" vertical-offset="0" max-vertical-offset="590">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m25_custom_event/vertical-align/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35650623" vertical-offset="0" max-vertical-offset="561">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9191919" vertical-offset="3305" max-vertical-offset="23940">
+          <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#2;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.23728813" vertical-offset="0" max-vertical-offset="590">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding>
             <element signature="e#13#59#0" expanded="false" />
-            <element signature="e#85#275#0" expanded="false" />
             <element signature="e#474#482#0" expanded="false" />
             <element signature="e#521#774#0" expanded="false" />
             <element signature="e#823#903#0" expanded="false" />
@@ -683,27 +698,338 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-separate-types/index.js">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1060">
+        <state vertical-scroll-proportion="-6.4" vertical-offset="0" max-vertical-offset="960">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30508474" vertical-offset="0" max-vertical-offset="590">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="e#19#66#0" expanded="false" />
+            <element signature="e#101#155#0" expanded="false" />
+            <element signature="e#185#261#0" expanded="false" />
+            <element signature="e#298#324#0" expanded="false" />
+            <element signature="e#363#602#0" expanded="false" />
+            <element signature="e#645#906#0" expanded="false" />
+            <element signature="e#950#1088#0" expanded="false" />
+            <element signature="e#1392#1541#0" expanded="false" />
+            <element signature="e#1599#1658#0" expanded="false" />
+            <element signature="e#1688#1713#0" expanded="false" />
+            <element signature="e#1753#1779#0" expanded="false" />
+            <element signature="e#1811#2001#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.332696" vertical-offset="866" max-vertical-offset="14140">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.344828" vertical-offset="940" max-vertical-offset="14180">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="840">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#19#94#0" expanded="false" />
+            <element signature="e#129#183#0" expanded="false" />
+            <element signature="e#326#352#0" expanded="false" />
+            <element signature="e#391#630#0" expanded="false" />
+            <element signature="e#673#934#0" expanded="false" />
+            <element signature="e#978#1116#0" expanded="false" />
+            <element signature="e#1641#1700#0" expanded="false" />
+            <element signature="e#1730#1755#0" expanded="false" />
+            <element signature="e#1907#2097#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10325048" vertical-offset="66" max-vertical-offset="700">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#p#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#p#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#p#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#p#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#p#0;tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#p#0;tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#article#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#header#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#header#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#h1#0;tag#header#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#header#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#div#1;tag#header#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#header#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#4;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="e#5414#5449#0" expanded="false" />
+            <element signature="e#5477#5608#0" expanded="false" />
+            <element signature="e#5624#5899#0" expanded="false" />
+            <element signature="e#5663#5892#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#h4#0;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#h4#0;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#a#0;tag#h4#0;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#1;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#div#2;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#1;tag#a#0;tag#div#2;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#3;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#h5#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#2;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#3;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#3;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#3;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#4;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#5;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#5;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#5;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#5;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#5;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#6;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#6;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#6;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#6;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#6;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#7;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#7;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#7;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#div#0;tag#div#0;tag#div#7;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#7;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#7;tag#div#0;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#4;tag#article#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="e#15526#17146#0" expanded="false" />
+            <element signature="e#15652#15943#0" expanded="false" />
+            <element signature="e#15803#15882#0" expanded="false" />
+            <element signature="e#16056#16129#0" expanded="false" />
+            <element signature="e#16184#17126#0" expanded="false" />
+            <element signature="e#16437#17102#0" expanded="false" />
+            <element signature="e#16623#16712#0" expanded="false" />
+            <element signature="e#16829#16918#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#2;tag#div#1;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#span#0;tag#a#2;tag#div#1;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#3;tag#div#1;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#p#0;tag#div#3;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#p#1;tag#div#3;tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#dl#0;tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#dd#0;tag#dl#0;tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#dt#0;tag#dl#0;tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#dt#0;tag#dl#0;tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#dt#1;tag#dl#0;tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#dt#1;tag#dl#0;tag#div#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#6;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="e#19913#20081#0" expanded="false" />
+            <element signature="e#19955#19997#0" expanded="false" />
+            <element signature="e#20003#20045#0" expanded="false" />
+            <element signature="e#20119#20153#0" expanded="false" />
+            <element signature="e#20191#20227#0" expanded="false" />
+            <element signature="e#20260#20302#0" expanded="false" />
+            <element signature="e#20350#20550#0" expanded="false" />
+            <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#0;tag#div#6;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#a#1;tag#div#6;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-detail/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03539823" vertical-offset="0" max-vertical-offset="840">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="e#166#273#0" expanded="false" />
+            <element signature="e#312#397#0" expanded="false" />
+            <element signature="e#437#524#0" expanded="false" />
+            <element signature="e#554#622#0" expanded="false" />
+            <element signature="e#656#724#0" expanded="false" />
+            <element signature="e#782#865#0" expanded="false" />
+            <element signature="e#920#977#0" expanded="false" />
+            <element signature="e#1027#1043#0" expanded="false" />
+            <element signature="e#1094#1145#0" expanded="false" />
+            <element signature="e#1289#1328#0" expanded="false" />
+            <element signature="e#1378#1460#0" expanded="false" />
+            <element signature="e#1513#1595#0" expanded="false" />
+            <element signature="e#1630#1778#0" expanded="false" />
+            <element signature="e#1811#1834#0" expanded="false" />
+            <element signature="e#1881#1977#0" expanded="false" />
+            <element signature="e#2037#2086#0" expanded="false" />
+            <element signature="e#2116#2199#0" expanded="false" />
+            <element signature="e#2228#2233#0" expanded="false" />
+            <element signature="e#2258#2298#0" expanded="false" />
+            <element signature="e#2334#2458#0" expanded="false" />
+            <element signature="e#2503#2548#0" expanded="false" />
+            <element signature="e#2634#2732#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/vertical-align/index.html">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="480">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="1000">
+          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding>
+            <element signature="e#87#350#0" expanded="false" />
+            <element signature="e#380#1703#0" expanded="false" />
+            <element signature="e#1830#2518#0" expanded="false" />
+            <element signature="e#2589#3170#0" expanded="false" />
+            <element signature="e#3221#4272#0" expanded="false" />
+            <element signature="e#3297#4264#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/vertical-align/index.css">
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5423729" vertical-offset="0" max-vertical-offset="590">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.460177" vertical-offset="0" max-vertical-offset="1680">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding>
+            <element signature="e#15#117#0" expanded="false" />
+            <element signature="e#145#335#0" expanded="false" />
+            <element signature="e#417#534#0" expanded="false" />
+            <element signature="e#561#579#0" expanded="false" />
+            <element signature="e#613#686#0" expanded="false" />
+            <element signature="e#726#792#0" expanded="false" />
+            <element signature="e#841#982#0" expanded="false" />
+            <element signature="e#1022#1122#0" expanded="false" />
+            <element signature="e#1188#1295#0" expanded="false" />
+            <element signature="e#1333#1433#0" expanded="false" />
+            <element signature="e#1635#1707#0" expanded="false" />
+            <element signature="e#1770#1805#0" expanded="false" />
+            <element signature="e#1870#1920#0" expanded="false" />
+            <element signature="e#2077#2082#0" expanded="false" />
+            <element signature="e#2135#2194#0" expanded="false" />
+            <element signature="e#2253#2337#0" expanded="false" />
+            <element signature="e#2406#2477#0" expanded="false" />
+            <element signature="e#2536#2637#0" expanded="false" />
+            <element signature="e#2684#2742#0" expanded="false" />
+            <element signature="e#2779#2797#0" expanded="false" />
+            <element signature="e#2861#2993#0" expanded="false" />
+            <element signature="e#3059#3110#0" expanded="false" />
+            <element signature="e#3183#3215#0" expanded="false" />
+            <element signature="e#3256#3300#0" expanded="false" />
+            <element signature="e#3351#3388#0" expanded="false" />
+            <element signature="e#3430#3453#0" expanded="false" />
+            <element signature="e#3492#3504#0" expanded="false" />
+            <element signature="e#3556#3607#0" expanded="false" />
+            <element signature="e#3647#3660#0" expanded="false" />
+            <element signature="e#3710#3761#0" expanded="false" />
+            <element signature="e#3853#3925#0" expanded="false" />
+            <element signature="e#3969#3997#0" expanded="false" />
+            <element signature="e#4054#4151#0" expanded="false" />
+            <element signature="e#4196#4230#0" expanded="false" />
+            <element signature="e#4279#4336#0" expanded="false" />
+            <element signature="e#4478#4526#0" expanded="false" />
+            <element signature="e#4579#4709#0" expanded="false" />
+            <element signature="e#4772#4805#0" expanded="false" />
+            <element signature="e#4859#4871#0" expanded="false" />
+            <element signature="e#4926#4939#0" expanded="false" />
+            <element signature="e#5119#5186#0" expanded="false" />
+            <element signature="e#5212#5228#0" expanded="false" />
+            <element signature="e#5255#5272#0" expanded="false" />
+            <element signature="e#5302#5322#0" expanded="false" />
+            <element signature="e#5383#5626#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-index-3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33941606" vertical-offset="3394" max-vertical-offset="7720">
+          <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
+          <folding>
+            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#2;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#1;tag#div#1;tag#div#2;tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#0;tag#div#1;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
