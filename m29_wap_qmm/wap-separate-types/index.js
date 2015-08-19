@@ -45,4 +45,11 @@ $(function () {
             $($this).attr('src', 'http://www.juanlaoda.com/AdminImageUpload/282030xintup.jpg').removeAttr('drc');
         }
     });
+    var typesWrap = $('#aj-all-types .aj-types-wrap'),
+        typesOne = typesWrap.find('.aj-type-one').eq(0),
+        i,
+        clone;
+    for (i = 0; i < 5; i++) {
+        typesWrap.append(typesOne.clone().find('.aj-img img').attr('src', 'types_imgs/' + (i % 3)+ '.jpg').end());
+    }
 });

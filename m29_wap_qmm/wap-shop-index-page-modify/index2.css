@@ -141,5 +141,6 @@
     line-height: 35px;text-align: center;
     color:#555;
     border-bottom:1px dashed #ccc;
+    overflow: hidden;
 }
 /*--------------------*/
