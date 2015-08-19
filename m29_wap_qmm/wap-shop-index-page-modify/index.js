@@ -25,14 +25,21 @@ $(function () {
         var showTypes,
             sortBtn;
         sortBtn = shopIndex.find('.aj-li-sort-type');
-        sortBtn.on('click', '.aj-s-t-wrap', function () {
+        sortBtn.on('click', function (e) {
+            e.stopPropagation();
+        });
+        sortBtn.on('click', '.aj-s-t-wrap', function (e) {
             sortBtn.toggleClass('aj-hover');
         });
-        sortBtn.on('click', '.aj-l-s-t-i-u-li', function () {
+        sortBtn.on('click', '.aj-l-s-t-i-u-li', function (e) {
+            e.stopPropagation();
             sortBtn.find('.aj-s-t-wrap').html($(this).html());
             sortBtn.removeClass('aj-hover');
         });
-        shopIndex.find('.aj-sort .aj-li-js ').on('click', function () {
+        $(document.body).on('click', function () {
+            sortBtn.removeClass('aj-hover');
+        });
+        shopIndex.find('.aj-sort .aj-li-js').on('click', function () {
             $(this).addClass('aj-select').siblings().removeClass('aj-select');
         });
         showTypes = ['qmm-icon-view_list', 'qmm-icon-iconfont-qita'];
@@ -43,8 +50,11 @@ $(function () {
             if (index !== -1) {
                 span.removeClass(className).addClass(showTypes[(index + 1) % showTypes.length]);
             }
+            toggleShowStyle();
         });
-
+        function toggleShowStyle(){
+            shopIndex.find('.aj-s-mid').toggleClass('aj-show-style-grid');
+        }
     })();
 });
 
