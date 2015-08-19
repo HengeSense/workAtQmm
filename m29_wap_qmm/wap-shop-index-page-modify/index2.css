@@ -23,10 +23,10 @@
     width:120px;height:60px;
     border-radius: 3px;
     background-color: white;
-    overflow:hidden;
     top:30px;left:50%;
     transform:translate(-50%,0);
     -webkit-transform:translate(-50%,0);
+    box-shadow: white 0 0 7px;
 }
 #aj-shop-index-page .aj-s-top .aj-logo img{
     position:absolute;
@@ -34,6 +34,23 @@
     max-width: 90%;max-height: 90%;
     transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
+}
+#aj-shop-index-page .aj-s-top .aj-logo .aj-collect{
+    position: absolute;
+    display: block;
+    bottom:0;right: 0;
+    transform:translate(50%, 50%);
+    width: 28px;height: 28px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;line-height: 28px;
+    border:1px solid #F3F3F3;
+}
+#aj-shop-index-page .aj-s-top .aj-logo .aj-collect:before{
+    display: inline-block;
+    margin-top: 1px;
+    font-size: 22px;
+    color: #fe4684;
 }
 #aj-shop-index-page .aj-s-top .aj-logo-desc{
     position:absolute;

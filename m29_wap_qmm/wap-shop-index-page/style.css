@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'qmm';
-	src:url('fonts/qmm.eot?klhe9r');
-	src:url('fonts/qmm.eot?#iefixklhe9r') format('embedded-opentype'),
-		url('fonts/qmm.ttf?klhe9r') format('truetype'),
-		url('fonts/qmm.woff?klhe9r') format('woff'),
-		url('fonts/qmm.svg?klhe9r#qmm') format('svg');
+	src:url('fonts/qmm.eot?-k32gth');
+	src:url('fonts/qmm.eot?#iefix-k32gth') format('embedded-opentype'),
+		url('fonts/qmm.ttf?-k32gth') format('truetype'),
+		url('fonts/qmm.woff?-k32gth') format('woff'),
+		url('fonts/qmm.svg?-k32gth#qmm') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,15 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.qmm-icon-iconfont-iconlove1:before {
+	content: "\e639";
+}
+.qmm-icon-iconfont-love1:before {
+	content: "\e63a";
+}
+.qmm-icon-iconfont-sort:before {
+	content: "\e638";
+}
 .qmm-icon-iconfont-zan1:before {
 	content: "\e636";
 }

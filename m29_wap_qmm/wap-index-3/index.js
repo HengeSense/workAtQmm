@@ -1,4 +1,5 @@
 $(function () {
+    var mobile_wrap = $('#aj-mobile-wrap');
     // 顶部两行八个icons 滚动
     (function () {
         function IconLine(div){
@@ -82,7 +83,7 @@ $(function () {
             '#ff7d00', '#e4000f', '#ff68b9'
         ];
         // index page module 10px border color
-        var mobile_wrap = $('#aj-mobile-wrap');
+
         mobile_wrap.find('.aj-one-type .aj-color-border').each(function (index) {
             var color = good_colors[index % (good_colors.length -1)];
             $(this).css('backgroundColor', color);
@@ -91,7 +92,7 @@ $(function () {
     })();
 	// index page top imgs roll
     (function () {
-        $('#aj-mobile-wrap').find('.aj-index-imgs-roll').each(function () {
+        mobile_wrap.find('.aj-index-imgs-roll').each(function () {
             var links = $(this).find('.aj-link');
             if (links.length > 1) {
                 $(this).slidesjs({
@@ -132,6 +133,19 @@ $(function () {
         });
         div.find('.aj-mid-content .loadMore').click(function () {
             $(this).addClass('aj-is-loading');
+        });
+    })();
+    //imgs rol resize
+    (function () {
+        var imgsRoll = mobile_wrap.find('.aj-index-imgs-roll');
+        resize();
+        function resize() {
+            // 图片的width : height = 2.6
+            var height = parseFloat(imgsRoll.css('width')) / 2.6;
+            imgsRoll.css('height', height + 'px');
+        }
+        $(window).on('resize', function () {
+            resize();
         });
     })();
 });
