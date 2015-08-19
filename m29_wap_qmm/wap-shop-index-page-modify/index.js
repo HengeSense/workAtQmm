@@ -22,9 +22,29 @@ $(function () {
     });
     // sort line
     (function () {
+        var showTypes,
+            sortBtn;
+        sortBtn = shopIndex.find('.aj-li-sort-type');
+        sortBtn.on('click', '.aj-s-t-wrap', function () {
+            sortBtn.toggleClass('aj-hover');
+        });
+        sortBtn.on('click', '.aj-l-s-t-i-u-li', function () {
+            sortBtn.find('.aj-s-t-wrap').html($(this).html());
+            sortBtn.removeClass('aj-hover');
+        });
         shopIndex.find('.aj-sort .aj-li-js ').on('click', function () {
             $(this).addClass('aj-select').siblings().removeClass('aj-select');
         });
+        showTypes = ['qmm-icon-view_list', 'qmm-icon-iconfont-qita'];
+        shopIndex.find('.aj-sort .aj-li-show-type').on('click', function () {
+            var span = $(this).find('span[class^="qmm-icon"]'),
+                className = span.attr('class'),
+                index = $.inArray(className, showTypes);
+            if (index !== -1) {
+                span.removeClass(className).addClass(showTypes[(index + 1) % showTypes.length]);
+            }
+        });
+
     })();
 });
 
