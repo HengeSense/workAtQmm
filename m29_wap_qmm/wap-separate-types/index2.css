@@ -91,6 +91,10 @@
     width:33%;height:90px;
     float:left;
 }
+#aj-all-types .aj-right .aj-block .aj-types-wrap .aj-type-one .aj-t-o-content .aj-content-inside-one a{
+    display: block;
+    width:100%;height:100%;
+}
 #aj-all-types .aj-right .aj-block .aj-types-wrap .aj-type-one .aj-t-o-content .aj-img{
     position: relative;
     width:100%;height:70px;
@@ -109,4 +113,5 @@
     overflow: hidden;
     text-overflow: ellipsis;white-space: nowrap;
     text-align: center;
+    color:#555;
 }
