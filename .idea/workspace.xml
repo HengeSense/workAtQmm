@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bded1a7-2141-4e19-8f2f-07595849f228" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" afterPath="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" />
-    </list>
+    <list default="true" id="3bded1a7-2141-4e19-8f2f-07595849f228" name="Default" comment="" />
     <ignored path="workAtQmm.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,84 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/m25_custom_event/width100%/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5555556" vertical-offset="1468" max-vertical-offset="4000">
-              <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index2.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3583062" vertical-offset="0" max-vertical-offset="1360">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-              <folding>
-                <element signature="e#19#182#0" expanded="false" />
-                <element signature="e#217#271#0" expanded="false" />
-                <element signature="e#301#377#0" expanded="false" />
-                <element signature="e#414#440#0" expanded="false" />
-                <element signature="e#479#715#0" expanded="false" />
-                <element signature="e#758#922#0" expanded="false" />
-                <element signature="e#1334#1426#0" expanded="false" />
-                <element signature="e#1470#1674#0" expanded="false" />
-                <element signature="e#1702#1930#0" expanded="false" />
-                <element signature="e#2017#2165#0" expanded="false" />
-                <element signature="e#2222#2281#0" expanded="false" />
-                <element signature="e#2337#2458#0" expanded="false" />
-                <element signature="e#2488#2513#0" expanded="false" />
-                <element signature="e#2553#2650#0" expanded="false" />
-                <element signature="e#2709#2743#0" expanded="false" />
-                <element signature="e#2775#2965#0" expanded="false" />
-                <element signature="e#3019#3193#0" expanded="false" />
-                <element signature="e#3274#3429#0" expanded="false" />
-                <element signature="e#3482#3615#0" expanded="false" />
-                <element signature="e#3679#3772#0" expanded="false" />
-                <element signature="e#3822#3844#0" expanded="false" />
-                <element signature="e#3893#3927#0" expanded="false" />
-                <element signature="e#3997#4030#0" expanded="false" />
-                <element signature="e#4091#4206#0" expanded="false" />
-                <element signature="e#4284#4432#0" expanded="false" />
-                <element signature="e#4499#4533#0" expanded="false" />
-                <element signature="e#4779#4979#0" expanded="false" />
-                <element signature="e#5039#5067#0" expanded="false" />
-                <element signature="e#5130#5206#0" expanded="false" />
-                <element signature="e#5276#5382#0" expanded="false" />
-                <element signature="e#5454#5538#0" expanded="false" />
-                <element signature="e#5617#5743#0" expanded="false" />
-                <element signature="e#5817#5907#0" expanded="false" />
-                <element signature="e#5966#5990#0" expanded="false" />
-                <element signature="e#6056#6089#0" expanded="false" />
-                <element signature="e#6143#6167#0" expanded="false" />
-                <element signature="e#6224#6248#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.96" vertical-offset="626" max-vertical-offset="1240">
-              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-              <folding>
-                <element signature="e#233#310#0" expanded="false" />
-                <element signature="e#349#559#0" expanded="false" />
-                <element signature="e#644#787#0" expanded="false" />
-                <element signature="e#2313#2714#0" expanded="false" />
-                <element signature="e#2480#2548#0" expanded="false" />
-                <element signature="e#2583#2708#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.37704918" vertical-offset="590" max-vertical-offset="1360">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,6 +81,7 @@
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js" />
         <option value="$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index2.css" />
+        <option value="$PROJECT_DIR$/m25_custom_event/width100%/index.html" />
       </list>
     </option>
   </component>
@@ -165,8 +90,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="314" />
-    <option name="y" value="71" />
+    <option name="x" value="320" />
+    <option name="y" value="64" />
     <option name="width" value="1387" />
     <option name="height" value="776" />
   </component>
@@ -240,7 +165,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="m29_wap_qmm" />
+              <option name="myItemId" value="m25_custom_event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="width100%" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -254,11 +183,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="m29_wap_qmm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wap-shop-index-page-modify" />
+              <option name="myItemId" value="m25_custom_event" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,7 +286,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="314" y="71" width="1387" height="776" extended-state="0" />
+    <frame x="320" y="64" width="1387" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -412,13 +337,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/m12_all_websites/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m12_all_websites/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -934,21 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5555556" vertical-offset="1468" max-vertical-offset="4000">
-          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.96" vertical-offset="626" max-vertical-offset="1240">
@@ -1007,6 +910,29 @@
             <element signature="e#6143#6167#0" expanded="false" />
             <element signature="e#6224#6248#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m29_wap_qmm/wap-shop-index-page-modify/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33566433" vertical-offset="1468" max-vertical-offset="4000">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m25_custom_event/width100%/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37704918" vertical-offset="590" max-vertical-offset="1360">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
