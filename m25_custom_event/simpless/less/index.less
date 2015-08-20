@@ -1,0 +1,31 @@
+@import "config.less";
+//------
+.div1{
+  position: relative;
+  width:200px;height:200px;
+  background-color: lightblue;
+  .div2{
+    width:100px;height:100px;
+    margin:20px;
+    background-color: #ffffff;
+    .box-shadow(blue 0 0 4px);
+    &:after{
+      content:'';
+      display: inline-block;
+      width:10px;height:10px;
+      background-color: #000099;
+    }
+  }
+}
+.div3{
+  width:300px;height:200px;
+  .border-radius(4px);
+  background-color: lightgray;
+  margin:20px;
+  .div4{
+    width:percentage(@width);height:100px;
+    margin:20px;
+    color:saturate(@color, 5%);
+    background-color: spin(lighten(@background-color, 25%), 8);
+  }
+}
