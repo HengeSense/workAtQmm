@@ -1,5 +1,4 @@
 <?php
-require('save.php');
 // php 抓取类别图片
 function send_post($url, $post_data) {  
   $dir = "result/";
@@ -31,7 +30,7 @@ function send_post($url, $post_data) {
 			  // save($cate['icon']);
 		  // }
 		  if (!empty($cate['icon'])) {
-			  file_put_contents('imgslist.txt', $cate['icon'].PHP_EOL, FILE_APPEND|LOCK_EX);
+			  file_put_contents('imgslist2.txt', $cate['cid'].'=='.$cate['icon'].'=='.$cate['name'].PHP_EOL, FILE_APPEND|LOCK_EX);
 		  }
 		  echo "</div>";
 	  }
@@ -60,6 +59,7 @@ echo "
 	</head>
 	<body>
 ";
+file_put_contents('imgslist2.txt', '');
 foreach($arr as $one) {
 	$post_data = array(
 		'_format_' => 'json',

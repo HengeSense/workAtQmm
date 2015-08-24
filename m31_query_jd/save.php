@@ -1,13 +1,19 @@
 <?php
 
 
-function save($url){
+function save($url, $cid = ''){
 	// $save_dir = 'imgdir/';
-	$save_dir = 'imgdir2/';
+	$save_dir = 'imgdir3/';
 	echo $url."<br>";
 	$img = file_get_contents($url);
-	$arr = explode('/', $url);
-	file_put_contents($save_dir.array_pop($arr), $img);
+	if ($cid === '') {
+		$arr = explode('/', $url);
+		$fileName = $save_dir.array_pop($arr);
+	} else {
+		$extension = '.'.pathinfo($url)['extension'];
+		$fileName = $save_dir.$cid.$extension;
+	}
+	file_put_contents($fileName, $img);
 	// sleep(1);
 }
 
@@ -15,7 +21,7 @@ function save($url){
 
 function readAndSave(){
 	set_time_limit(0);
-	$fileName = "imgslist.txt";
+	$fileName = "imgslist2.txt";
 	$data = file_get_contents($fileName);
 	$arr = explode("\n", $data);
 	$len = count($arr);
@@ -26,7 +32,10 @@ function readAndSave(){
 		// save($one);
 	// }
 	for ($i = 0; $i < $len; $i ++) {
-		save(trim($arr[$i]));
+		$one = explode('==', trim($arr[$i]));
+		$cid = trim($one[0]);
+		$url = trim($one[1]);
+		save($url, $cid);
 	}
 }
 readAndSave();
