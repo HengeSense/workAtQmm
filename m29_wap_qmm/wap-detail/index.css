@@ -5,6 +5,15 @@
     padding-bottom: 40px;
 }
 .aj-zhidemai-detail{}
+.aj-zhidemai-detail .aj-direction-go-shop{
+    position: relative;
+    top:5px;right: 10px;
+    float:right;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px!important;
+    border-radius: 2px;
+}
 .aj-zhidemai-detail .aj-top-img{
 	position:relative;
 	width:100%;height:160px;
@@ -68,56 +77,17 @@
     font-size: 25px;
     color: #aaa;
 }
-/*-------------*/
-.aj-bottom-fixed{
-	position:fixed;
-	bottom:0;left:0;
-	z-index:999;
-	width:100%;height:40px;
-	background-color:white;
-	overflow:hidden;
-	border-top:1px solid #ddd;
+/*--------下面的代码在之前index-page的样式中已经添加了,只要替换之前的相应代码就好了,不用追加到mobile.css------------*/
+.aj-new-top{
+    background-color:#ff6100;
+    border-bottom:1px solid #ff6100;
 }
-.aj-bottom-fixed .aj-zan-cai-pin{
-	position:relative;
+.aj-new-top .home-wrapper{
+    top:9px;
 }
-.aj-bottom-fixed .aj-zan-cai-pin .aj-three-one{
-	width:33%;height:40px;
-	text-align:center;
-	line-height:40px;
-	float:left;
-	font-size:20px;
+.aj-new-top .login-wrapper{
+    top:11px;
 }
-.aj-bottom-fixed .aj-zan-cai-pin .aj-three-one.aj-t-comment{
-	font-size:24px;
-	border-left:1px solid #ccc;
-}
-.aj-bottom-fixed .aj-shoucang{
-	text-align:center;
-	line-height:40px;
-	color:white;
-	background-color:#ff9402;
-}
-.aj-bottom-fixed .btn-goshop{
-	
-}
-.aj-bottom-fixed .aj-one{
-	width:33.3%;height:40px;float:left;
-}
-.aj-bottom-fixed .aj-one .aj-o-line{
-    width:100%;height:20px;float:left;
-    font-size:12px;
-    line-height:20px;
-    overflow:hidden;white-space:nowrap;
-}
-.aj-bottom-fixed .aj-one .aj-o-line .aj-wrap{
-    display:block;
-    padding-left:10px;
-}
-.aj-bottom-fixed .aj-direction-line{}
-.aj-bottom-fixed .aj-direction-line .btn-goshop{
-    height:30px;width:80%;
-    margin:5px auto 0;
-    line-height:30px;
-    border-radius:2px;
+.aj-new-top .aj-qmm-banner-bg{
+    height:50px;
 }
