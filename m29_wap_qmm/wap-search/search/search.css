@@ -1,0 +1,37 @@
+#aj-mobile-search-module{
+    position: fixed;
+    top:51px;left: 50%;
+    transform:translateX(-50%);
+    box-sizing: border-box;
+    max-width: 640px;
+    min-width: 320px;
+    height: 100%;width: 100%;
+    background-color: #ffffff;
+    z-index:1000;
+}
+#aj-mobile-search-module .aj-inside{}
+#aj-mobile-search-module .aj-inside .aj-block{}
+#aj-mobile-search-module .aj-inside .aj-block{}
+#aj-mobile-search-module .aj-inside .aj-block h2.aj-title{
+    background-color: #eee;
+    height:24px;
+    padding-left:16px;
+    line-height: 24px;
+}
+#aj-mobile-search-module .aj-inside .aj-block .aj-content{
+    background-color: #f9f9f9;
+    padding: 8px 20px 0px;
+}
+#aj-mobile-search-module .aj-inside .aj-block .aj-content ul.aj-suggest-hotkey{}
+#aj-mobile-search-module .aj-inside .aj-block .aj-content ul.aj-suggest-hotkey li{
+    border: 1px solid #dedede;
+    height: 26px;
+    line-height: 26px;
+    width: inherit;
+    border-radius: 14px;
+    text-align: center;
+    padding: 0 15px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 12px
+}
