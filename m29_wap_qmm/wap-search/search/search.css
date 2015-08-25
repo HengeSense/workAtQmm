@@ -129,9 +129,9 @@
 }
 #aj-mobile-search-module .aj-inside .aj-block h2.aj-title{
     background-color: #eee;
-    height:24px;
+    height:40px;
     padding-left:16px;
-    line-height: 24px;
+    line-height: 40px;
 }
 #aj-mobile-search-module .aj-inside .aj-block .aj-content{
     background-color: #f9f9f9;
@@ -150,6 +150,13 @@
     margin-right: 8px;
     margin-bottom: 12px
 }
+#aj-mobile-search-module .aj-inside .aj-block .aj-content .aj-show-more{
+    display: block;
+    width:100%;height:25px;line-height: 25px;
+    margin:0 auto;
+    text-align: center;
+    display: none;
+}
 /*--------------------------*/
 #aj-mobile-search-module .aj-n-block{
     position: relative;
@@ -160,6 +167,10 @@
 }
 #aj-mobile-search-module .aj-n-block .aj-content .aj-ul{
     max-height: 240px;
+    overflow: hidden;
+}
+#aj-mobile-search-module .aj-n-block .aj-content .aj-ul.aj-no-max-height{
+    max-height:none!important;
 }
 #aj-mobile-search-module .aj-n-block .aj-content .aj-ul:after{
     content: '';
@@ -169,7 +180,7 @@
 #aj-mobile-search-module .aj-n-block .aj-content .aj-ul .aj-li{
     float: left;
     position: relative;
-    width: 25%;height: 119px;
+    width: 25%;height: 120px;
     background-color: #ffffff;
     box-sizing: border-box;
     border-right:1px solid #eee;

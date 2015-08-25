@@ -74,20 +74,10 @@ $(function () {
             });
             recentSearch.fadeOut();
         });
-        // clear 单条记录
+        // 点击 单条记录
         recentSearch.on('click', '.aj-self-hotkey li', function () {
-            var val = $(this).html(),
-                cookieArr = Youhui.tools.cookie(cookieName).split(',');
-            cookieArr.filter(function (item) {
-                return item !== val;
-            });
-            cookieArr = $.grep(cookieArr, function (item) {
-                return decodeURIComponent(item) !== val;
-            });
-            Youhui.tools.cookie(cookieName, cookieArr.join(','), {
-                expires : 10
-            });
-            $(this).fadeOut();
+            var val = $(this).html();
+            // 搜索val
         });
     })();
     // search types
@@ -101,6 +91,24 @@ $(function () {
             e.stopPropagation();
             btn.find('.aj-s-t-name').html($(this).html());
             wrap.hide();
+        });
+    })();
+    // 商家,分类 等等area 折叠显示
+    (function () {
+        var wrap = div.find('.aj-nopading-blocks'),
+            blocks = wrap.find('.aj-block'),
+            arr = ['展示更多', '折叠当前'];
+        $.each(blocks, function (index, item, arr) {
+            var ul = $(this).find('.aj-ul'),
+                lis = ul.find('.aj-li'),
+                showMoreBtn = $(this).find('.aj-show-more');
+            if (lis.length > 8) {
+                showMoreBtn.show();
+            }
+        });
+        wrap.find('.aj-show-more').on('click',function (e) {
+            $(this).parents('.aj-content').find('.aj-ul').toggleClass('aj-no-max-height');
+            $(this).html(arr[(arr.indexOf($(this).html()) + 1) % arr.length]);
         });
     })();
 });
