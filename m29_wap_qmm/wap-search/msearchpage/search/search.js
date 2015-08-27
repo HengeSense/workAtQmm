@@ -1,27 +1,7 @@
 $(function () {
     var div = $('#aj-mobile-search-module'),
         contentBody = $('#aj-mobile-wrap');
-    //  show search page
-    (function () {
-        var btn = $('#top .login-wrapper');
-//        btn.on('click', function (e) {
-//            e.preventDefault();
-//            if (div.css('display').toLowerCase() === 'none') {
-//                showSearch();
-//            } else {
-//                hideSearch();
-//            }
-//        });
-        function showSearch(){
-            div.show();
-            contentBody.hide();
-            $(div).trigger('aj-show');
-        }
-        function hideSearch(){
-            div.hide();
-            contentBody.show();
-        }
-    })();
+
     // search cookie
     (function () {
         var btn = div.find('.aj-search-input .aj-right'),
@@ -34,6 +14,9 @@ $(function () {
                 arr = [],
                 bool = true, // default all values are unique
                 cookie = Youhui.tools.cookie(cookieName);
+            if ($.trim(val) === '') {
+                return false;
+            }
             if (cookie !== '') {
                 arr = cookie.split(',');
             }
@@ -48,6 +31,12 @@ $(function () {
             Youhui.tools.cookie(cookieName, arr.join(','), {
                 expires : 10    //10 天后过期
             });
+        });
+        // submit form
+        btn.on('click', function () {
+            var form = $('#search-form');
+            form.trigger('submit');
+            form.submit();
         });
         // 展现 recent search
         $(div).on('aj-show', function () {
@@ -111,23 +100,45 @@ $(function () {
             $(this).html(arr[(arr.indexOf($(this).html()) + 1) % arr.length]);
         });
     })();
+    //  show search page
+    (function () {
+        var btn = $('#top .login-wrapper');
+//        btn.on('click', function (e) {
+//            e.preventDefault();
+//            if (div.css('display').toLowerCase() === 'none') {
+//                showSearch();
+//            } else {
+//                hideSearch();
+//            }
+//        });
+        showSearch();
+        function showSearch(){
+            div.show();
+            contentBody.hide();
+            $(div).trigger('aj-show');
+        }
+        function hideSearch(){
+            div.hide();
+            contentBody.show();
+        }
+    })();
 });
 
 // 演示代码
-$(function () {
-    var shops = [
-        'jd.jpg', 'yhd.jpg', 'amazon.jpg'
-    ];
-    var icons = [
-        'icon.jpg', 'icon2.jpg', 'icon3.jpg'
-    ];
-    var index = 0;
-    $('.aj-ul-only-img img').each(function () {
-        $(this).attr('src', 'search/' + shops[index % shops.length]);
-        index ++;
-    });
-    $('.aj-ul-default img').each(function () {
-        $(this).attr('src', 'search/' + icons[index % icons.length]);
-        index ++;
-    });
-});
+//$(function () {
+//    var shops = [
+//        'jd.jpg', 'yhd.jpg', 'amazon.jpg'
+//    ];
+//    var icons = [
+//        'icon.jpg', 'icon2.jpg', 'icon3.jpg'
+//    ];
+//    var index = 0;
+//    $('.aj-ul-only-img img').each(function () {
+//        $(this).attr('src', 'search/' + shops[index % shops.length]);
+//        index ++;
+//    });
+//    $('.aj-ul-default img').each(function () {
+//        $(this).attr('src', 'search/' + icons[index % icons.length]);
+//        index ++;
+//    });
+//});
