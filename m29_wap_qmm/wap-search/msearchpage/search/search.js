@@ -1,5 +1,6 @@
 $(function () {
     var div = $('#aj-mobile-search-module'),
+        form = $('#aj-search-form'),
         contentBody = $('#aj-mobile-wrap');
 
     // search cookie
@@ -9,12 +10,12 @@ $(function () {
             input = div.find('.aj-s-i-wrap input'),
             cookieName = 'aj-wap-search-history';   // 保存用户搜索记录的cookie key值,value以 ","分隔
         // 记录保存
-        btn.on('click', function () {
-            var val = encodeURIComponent(input.val()),
+        form.on('submit', function () {
+            var val = encodeURIComponent($.trim(input.val())),
                 arr = [],
                 bool = true, // default all values are unique
                 cookie = Youhui.tools.cookie(cookieName);
-            if ($.trim(val) === '') {
+            if (val === '') {
                 return false;
             }
             if (cookie !== '') {
@@ -28,16 +29,16 @@ $(function () {
             if (bool) {
                 arr.push(val);
             }
+            arr = arr.reverse().slice(0, 10).reverse();
             Youhui.tools.cookie(cookieName, arr.join(','), {
                 expires : 10    //10 天后过期
             });
         });
         // submit form
         btn.on('click', function () {
-            var form = $('#search-form');
-            form.trigger('submit');
             form.submit();
         });
+
         // 展现 recent search
         $(div).on('aj-show', function () {
             recentSearch.hide();
@@ -63,24 +64,43 @@ $(function () {
             });
             recentSearch.fadeOut();
         });
-        // 点击 单条记录
+        // 点击单条记录
         recentSearch.on('click', '.aj-self-hotkey li', function () {
-            var val = $(this).html();
-            // 搜索val
+            searchThisWord($(this).text());
         });
+        div.on('click', '.aj-sugges-hotkey li', function () {
+            searchThisWord($(this).text());
+        });
+        function searchThisWord(val) {
+            form[0]['keyword'].value = val;
+            form.submit();
+        }
     })();
-    // search types
+    // types of search
     (function () {
         var btn = div.find('.aj-s-types'),
+            name = btn.find('.aj-s-t-name'),
             wrap = div.find('.aj-s-types-list');
+        // 初始化选择的type
+        saveType();
+        // 切换分类
         btn.on('click', function () {
             $(wrap).toggle();
         });
         wrap.on('click', '.aj-li', function (e) {
             e.stopPropagation();
-            btn.find('.aj-s-t-name').html($(this).html());
+            name.html($(this).html());
             wrap.hide();
+            saveType();
         });
+        // 记录用户选择的type
+        function saveType(){
+            wrap.find('.aj-li').each(function () {
+                if ($(this).text() === name.text()) {
+                    form[0]['type'].value = $(this).attr('aj-type-value');
+                }
+            });
+        }
     })();
     // 商家,分类 等等area 折叠显示
     (function () {
