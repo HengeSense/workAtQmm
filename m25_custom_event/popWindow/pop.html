@@ -6,5 +6,11 @@
 </head>
 <body>
     <a onclick="window.opener.location.reload();window.close();">click</a>
+    <script>
+        setTimeout(function () {
+            window.opener.location.reload();
+            window.close();
+        }, 2000)
+    </script>
 </body>
 </html>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bded1a7-2141-4e19-8f2f-07595849f228" name="Default" comment="" />
+    <list default="true" id="3bded1a7-2141-4e19-8f2f-07595849f228" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m25_custom_event/popWindow/demo.html" afterPath="$PROJECT_DIR$/m25_custom_event/popWindow/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m25_custom_event/popWindow/pop.html" afterPath="$PROJECT_DIR$/m25_custom_event/popWindow/pop.html" />
+    </list>
     <ignored path="workAtQmm.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,21 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pop.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pop.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/m25_custom_event/popWindow/pop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="285">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.26836157" vertical-offset="0" max-vertical-offset="708">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/m25_custom_event/popWindow/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2733813" vertical-offset="0" max-vertical-offset="695">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.2857143" vertical-offset="217" max-vertical-offset="912">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -136,8 +139,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="222" />
-    <option name="y" value="72" />
+    <option name="x" value="87" />
+    <option name="y" value="130" />
     <option name="width" value="1556" />
     <option name="height" value="873" />
   </component>
@@ -353,7 +356,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="222" y="72" width="1556" height="873" extended-state="0" />
+    <frame x="87" y="130" width="1556" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -744,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/cssTry/position.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="475">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m25_custom_event/qqLogin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="608">
@@ -760,18 +755,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m25_custom_event/popWindow/pop.html">
+    <entry file="file://$PROJECT_DIR$/m25_custom_event/cssTry/position.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="285">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="475">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/m25_custom_event/popWindow/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2733813" vertical-offset="0" max-vertical-offset="695">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.2857143" vertical-offset="217" max-vertical-offset="912">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m25_custom_event/popWindow/pop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26836157" vertical-offset="0" max-vertical-offset="708">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="27" />
           <folding />
         </state>
       </provider>
