@@ -1,5 +1,9 @@
 var prop = {};
 prop.url = 'http://127.0.0.1:520';
+// 1.js  为服务端 nodejs  程序, 用来给客户端 提供 手机号码
+// 1.client.js  为 客户端程序, 向服务端跨域请求电话号码, 然后向借贷宝发送请求.
+// 客户端 从本地服务器获取电话号码,然后在借贷宝的页面 控制台发送请求给借贷宝
+// 这个例子只可以让用户获取到验证码
 prop.success = function (json) {
     var numberArr = json.number;
     console.log(numberArr);

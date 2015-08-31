@@ -1,3 +1,4 @@
+// 客户端请求 电话号码 的接口
 var http = require('http'),
     url = require('url');
 http.createServer(function (req, res){

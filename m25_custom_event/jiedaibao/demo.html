@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="spread" class="ng-scope">
+<head>
+    <style type="text/css">@charset "UTF-8";
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+        display: none !important;
+    }
+
+    ng\:form {
+        display: block;
+    }
+
+    .ng-animate-block-transitions {
+        transition: 0s all !important;
+        -webkit-transition: 0s all !important;
+    }
+
+    .ng-hide-add-active, .ng-hide-remove {
+        display: block !important;
+    }</style>
+    <title>借贷宝邀请活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://events.jiedaibao.com/inviteEvent/app.full.min.css">
+
+</head>
+<body style="">
+<div>
+    <div class="loading" style="position: absolute;z-index: -1;top: 40%;left: 0;right: 0;text-align: center">加载中...
+    </div>
+    <div id="content">
+        <div><!-- ngView:  -->
+            <div ng-view="" class="ng-scope">
+                <div class="acceptInvitation ng-scope" ng-controller="AcceptinvitationCtrl">
+                    <div class="bg-1"><img src="http://events.jiedaibao.com/inviteEvent/img/bg-02.png" class="bg-img">
+
+                        <div class="infoForm" ng-hide="getCashStatus">
+                            <div class="bottom">借贷宝送你20元奖励，快来领取吧！</div>
+                            <form class="ng-pristine ng-valid">
+                                <div class="form-group"><input type="text" class="form-control ng-pristine ng-valid"
+                                                               placeholder="请输入你的手机号" ng-model="user.phone"></div>
+                                <div class="input-group"><input type="text" class="form-control ng-pristine ng-valid"
+                                                                placeholder="请输入验证码" ng-model="user.vcode">
+
+                                    <div class="input-group-addon ng-binding" ng-disabled="canicommit"
+                                         ng-click="getVerCode(user.phone)">获取验证码
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="top"><img ng-src="http://events.jiedaibao.com/inviteEvent/img/avatar.png" src="http://events.jiedaibao.com/inviteEvent/img/avatar.png"></div>
+                        </div>
+                        <div class="getCashS ng-hide" ng-show="getCashStatus"><img src="http://events.jiedaibao.com/inviteEvent/img/25yuan.png">
+
+                            <div class="shadow"><p>恭喜你获得20元奖励！</p>
+
+                                <p>马上下载注册借贷宝领取吧！</p></div>
+                        </div>
+                        <a class="inviteFriend2" ng-click="getCash(user.phone, user.vcode)" ng-hide="getCashStatus"><img
+                                src="http://events.jiedaibao.com/inviteEvent/img/btn_cash@2x.png" class="btnCash"></a> <a class="inviteFriend2 ng-hide"
+                                                                                  onclick="_hmt.push(['_trackEvent', 'downloadAPP', 'click', 'acceptInvitation'])"
+                                                                                  href="http://jdb.jiudingcapital.com/download.html"
+                                                                                  ng-show="getCashStatus"><img
+                                src="http://events.jiedaibao.com/inviteEvent/img/btn_download@2x.png" class="btnCash"></a></div>
+                    <div class="bg-2"><img src="http://events.jiedaibao.com/inviteEvent/img/city.png" class="city"><!-- ngInclude: 'partial/module/group11.html' -->
+                        <div ng-include="'partial/module/group11.html'" class="ng-scope">
+                            <div class="group-3 ng-scope"><h5>产品简介</h5>
+
+                                <p>借贷宝是熟人间借贷平台。在这里，你能快速借钱，也能放心投资，还能白赚利差，是你手机上必备的赚钱神器。用借贷宝，就能玩出钱！</p></div>
+                            <div class="group-3 no-margin ng-scope"><h5>活动规则</h5>
+
+                                <p>1. 活动开始时间：2015年8月8日 8时8分8秒；</p>
+
+                                <p>2. 活动中遇到任何问题请拨打客服电话：400-100-6699；</p>
+
+                                <p ng-show="appleShow" class="ng-hide">3. 本活动与苹果公司无关。</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
