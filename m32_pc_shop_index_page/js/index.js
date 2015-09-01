@@ -7,7 +7,7 @@ $(function () {
         this.fenlei();
         this.gridList();
         this.filter();
-        this.viewNum();
+//        this.viewNum();
     }
     Nav.prototype = {
         config : function () {
@@ -33,6 +33,7 @@ $(function () {
                             });
                         } else {
                             $this.div.css({position : 'static'});
+                            left = $this.div.offset().left;
                         }
                         timer = 0;
                     }, 200);
