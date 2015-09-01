@@ -10,12 +10,14 @@
   -moz-border-radius: @radius;
   border-radius: @radius;
 }
+@import "./grid_to_list";
 //------------
 #aj-c-top-side{
   @height : 300px;
   position: relative;
   width:100%;height: @height;
   max-width: 1050px;
+  margin-bottom:20px;
 
   .aj-bg{
     width:100%;height: @height;
@@ -87,6 +89,10 @@
 }
 .aj-container{
   .aj-left-side{
+    .filter{
+      margin-top: -1px;
+      display: none;
+    }
     #p_top{
       display: none;
     }
@@ -118,6 +124,11 @@
         top: 12px;
         right: 7px;
         font-size: 12px;
+      }
+      .funcbar .prorank a.aj-select{
+        background-color: #fff0d9;
+        border: 1px solid #f9ae45;
+        color:#ff6c00;
       }
       .funcbar .prorank .bydown .arw {
         background-position: -40px 0;
@@ -187,13 +198,12 @@
         border: 1px solid #ccc;
         text-align: center;
       }
-      .funcbar a.current,.funcbar .prorank .bydownactive,.funcbar .prorank .byupactive {
-        position: relative;
+      .funcbar .displaynum .aj-a.aj-select {
         background-color: #fff0d9;
         border: 1px solid #f9ae45;
         color: #ff6c00;
-        z-index: 1;
       }
+
       .funcbar .fenlei{
         float:left;
         margin-right: 10px;

@@ -6,6 +6,8 @@ $(function () {
         this.fixedTop();
         this.fenlei();
         this.gridList();
+        this.filter();
+        this.viewNum();
     }
     Nav.prototype = {
         config : function () {
@@ -79,6 +81,7 @@ $(function () {
         gridList : function (){
             var aTags = this.div.find('.layout .aj-a'),
                 listClassName = 'aj-grid-to-list-wrap',
+                $this = this,
                 type; // grid or list
             aTags.each(function () {
                 if ($(this).hasClass('aj-select')) {
@@ -90,9 +93,53 @@ $(function () {
             this.div.on('click', '.layout .aj-a', function () {
                 $(this).addClass('aj-select').siblings().removeClass('aj-select');
                 type = $(this).attr('aj-type');
+                changeGridList();
             });
             // change grid list style
+            changeGridList();
+            function changeGridList(){
+                if (type === 'list') {
+                    $this.left.addClass(listClassName);
+                } else {
+                    $this.left.removeClass(listClassName);
+                }
+            }
+        },
+        filter : function () {
+            var aTags = this.div.find('.prorank .aj-a'),
+                obj,
+                filter = this.div.find('.filter');
+                arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'];
+            // style
+            this.div.on('click', '.prorank .aj-a', function () {
+                if ($(this).hasClass('aj-more-filter')) {
+                    if ($(this).hasClass('aj-select')) {
+                        filter.slideToggle();
+                    } else {
+                        filter.slideDown();
+                    }
+                } else {
+                    filter.hide();
+                }
 
+                if ($(this).hasClass('aj-select')) {
+                    obj = $(this).find('em');
+                    $.each(arr, function (index, item) {
+                        if (obj.hasClass(item)) {
+                            obj.removeClass(item).addClass(arr[(index + 1) % arr.length]);
+                            return false;
+                        }
+                    });
+                } else {
+                    $(this).addClass('aj-select').siblings().removeClass('aj-select');
+                }
+            });
+        },
+        viewNum : function() {
+            var aTags = this.div.find('.displaynum .aj-a');
+            this.div.on('click', '.displaynum .aj-a', function () {
+                $(this).addClass('aj-select').siblings().removeClass('aj-select');
+            });
         }
     };
     new Nav();
