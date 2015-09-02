@@ -100,7 +100,7 @@
     .aj-top-nav{
       margin:0 0 5px;
       float: left;
-      width: 730px;
+      width: 710px;
 
       .funcbar .prorank {
         float: right;
@@ -228,6 +228,68 @@
     }
   }
   .aj-right-side{
-
+    // shop info module
+    .aj-r-info{
+      background-color: #5aacd2;
+      width:100%;max-height:300px;
+      color:white;
+      .aj-r-i-inside{
+        padding: 20px;
+      }
+      h2{
+        color:white;
+        margin-bottom:15px;
+        font-size: 20px;
+        width: 100%;
+        height: 30px;line-height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: white;
+        .aj-shoucang{
+          @height: 24px;
+          float:right;
+          display: inline-block;
+          height: @height - 2;
+          margin-top: (30 - @height) / 2;
+          line-height: @height;
+          border:1px solid #ffffff;
+          padding: 0 10px;
+          font-size: 12px;
+          font-weight: normal;
+          color: #ffffff;
+          .border-radius(2px);
+          span[class*="qmm-icon"] {
+            position: relative;
+            top:2px;
+            font-size: 12px;
+            color:#ffffff;
+            cursor: pointer;
+          }
+        }
+      }
+      .aj-r-i-desc{
+        color:white;
+        line-height: 18px;
+        max-height: 72px;
+        overflow: hidden;
+      }
+      .aj-links{
+        @height : 20px;
+        width:100%;height:@height;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 10px;
+        a{
+          display: inline-block;
+          padding: 0 12px;
+          line-height: @height;
+          background-color: white;
+          margin:0 5px;
+          font-size: 12px;
+          .border-radius(2px);
+        }
+      }
+    }
   }
 }

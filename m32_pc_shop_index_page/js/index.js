@@ -58,7 +58,7 @@ $(function () {
                 // style
                 style(this);
                 // scroll
-                scroll(this);
+                //scroll(this);
             });
             function style(obj) {
                 if ($(this).hasClass('aj-select')) return false;
