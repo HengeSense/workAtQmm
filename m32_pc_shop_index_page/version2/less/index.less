@@ -98,36 +98,35 @@
     }
 
     .aj-top-nav{
+      @height1 : 35px;
+      @height2 : 30px;
       margin:0 0 5px;
       float: left;
       width: 710px;
+      background-color: #ffffff;
+      .box-shadow(#ccc 0 1px 1px);
 
       .funcbar .prorank {
-        float: right;
-        background-color: white;
+        float: left;
       }
       .funcbar .prorank a {
         position: relative;
         float: left;
-        height: 37px;
+        height: @height2;
         display: block;
-        margin-right: -1px;
         padding: 0 24px 0 12px;
-        line-height: 36px;
-        border: 1px solid #ccc;
+        line-height: @height2;
       }
       .funcbar .prorank a.derault {
         padding: 0 12px;
       }
       .funcbar .prorank a .arw {
         position: absolute;
-        top: 12px;
+        top: @height2 - 20;
         right: 7px;
         font-size: 12px;
       }
       .funcbar .prorank a.aj-select{
-        background-color: #fff0d9;
-        border: 1px solid #f9ae45;
         color:#ff6c00;
       }
       .funcbar .prorank .bydown .arw {
@@ -144,43 +143,32 @@
       }
 
       .funcbar .layout {
-        float: right;
         background-color: white;
+        float:right;
+        margin-right: 10px;
+        margin-top: 4px;
       }
       .funcbar .layout a {
         position: relative;
         float: left;
-        width: 38px;
-        height: 37px;
-        margin-right: -1px;
+        height: @height2 - 5 - 2;
+        line-height: @height2 - 5;
         border: 1px solid #ccc;
-      }
-      .funcbar .layout a.row{
-        border-right:0;
-        margin-right: 0px;
-      }
-      .funcbar .layout a .icon {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        width: 18px;
-        height: 18px;
-        display: block;
-      }
-      .funcbar .layout .row .icon {
-        background-position: -18px top;
+        padding: 0 5px 0 22px;
       }
       .funcbar .layout .aj-a em{
-        font-size: 19px;
+        font-size: 20px;
+        position: absolute;
+        top:1px;left: 2px;
       }
-      .funcbar .layout .aj-a.aj-list em{
-        font-size: 24px;
-        margin:-3px;
+      .funcbar .layout .aj-a.aj-grid{
+        margin-right: -1px;
       }
       .funcbar .layout .aj-a.aj-select{
         background-color: #fff0d9;
         border: 1px solid #f9ae45;
         z-index: 1;
+        color:#ff6c00;
       }
       .funcbar .layout .aj-a.aj-select em{
         color:#ff6c00;
@@ -205,7 +193,6 @@
         border: 1px solid #f9ae45;
         color: #ff6c00;
       }
-
       .funcbar .fenlei{
         float:left;
         margin-right: 10px;
@@ -215,20 +202,27 @@
         display: inline-block;
         float:left;
         text-align: center;
-        min-width: 40px;height:37px;
-        line-height: 39px;
-        padding: 0 5px;
+        min-width: 40px;height:@height1;
+        line-height: @height1;
+        padding: 0 25px;
         border: 1px solid #ccc;
         margin-right:-1px;
+        font-size: 16px;
       }
       .funcbar .fenlei .a-tag.aj-select{
-        background-color: #fff0d9;
-        color:#ff6c00;
-        border-bottom-color: #ffffff;
+        background-color: #62ab00;
+        color:white;
+        border-bottom-color: #62ab00;
       }
       .aj-auto{
-        width:auto;height:38px;
-        border-bottom:1px solid #ccc;
+        width:auto;height:@height1 + 1;
+        border:1px solid #dfdfd0;
+        border-bottom:2px solid #62ab00;
+        background-color: #ffffff;
+      }
+      .aj-auto2{
+        width:auto;height:@height2 + 2;
+        border:1px solid #dfdfd0;
         background-color: #ffffff;
       }
     }
