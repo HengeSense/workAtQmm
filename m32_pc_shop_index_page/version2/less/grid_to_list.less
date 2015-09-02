@@ -1,18 +1,28 @@
 .aj-grid-to-list-wrap{
+  @topHeight : 30px;
   .aj-grid-list{
     width:720px!important;
     height:240px!important;
+    padding-top: 25px;
 
     .listItem{
       padding-left: 230px;
+      padding-top: 60px;
+      margin-top: 0px;
+    }
+    div.aj-mall-left{
+      left: 230px!important;
     }
     div.mall{
-      right:505px!important;
+      top:55px!important;
+    }
+    .item_buy_mall{
+      top:30px!important;
     }
   }
   .discovery_list a.picBox{
     position: absolute;
-    top: 20px;
+    top: @topHeight + 20;
     left: 20px;
     margin-top:0!important;
   }
@@ -20,5 +30,21 @@
     box-shadow: none!important;
     border-color:white!important;
     border-bottom: 1px solid #dcdcdc!important;
+  }
+  .discovery_list .itemName{
+    position: absolute;
+    top:0px;left: 10px;
+    height: @topHeight;
+    line-height: @topHeight;
+    a{
+      font-size: 20px;
+      font-weight: normal;
+    }
+  }
+  .discovery_list .itemName .black, .discovery_list .itemName .red{
+    display: inline;
+  }
+  .pgreen{
+    font-size: 12px;
   }
 }
