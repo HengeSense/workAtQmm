@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08effeaf-db76-4185-a113-1f0bf20140e2" name="Default" comment="" />
-    <ignored path="wap-shop-index-page-modify.iws" />
+    <list default="true" id="79f8fa05-2a23-47de-89d5-5edef9de2724" name="Default" comment="" />
+    <ignored path="jstest.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,77 +19,28 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="wap-shop-index-page-modify" />
+    <favorites_list name="jstest" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33282673" vertical-offset="1111" max-vertical-offset="13699">
-              <caret line="70" column="26" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="26" />
+            <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="323">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index2.css">
+      <file leaf-file-name="demo.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.92" vertical-offset="251" max-vertical-offset="1026">
-              <caret line="241" column="21" selection-start-line="241" selection-start-column="21" selection-end-line="241" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.40772533" vertical-offset="0" max-vertical-offset="699">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
-                <element signature="e#19#182#0" expanded="false" />
-                <element signature="e#217#271#0" expanded="false" />
-                <element signature="e#301#377#0" expanded="false" />
-                <element signature="e#414#651#0" expanded="false" />
-                <element signature="e#690#926#0" expanded="false" />
-                <element signature="e#969#1133#0" expanded="false" />
-                <element signature="e#1184#1487#0" expanded="false" />
-                <element signature="e#1545#1637#0" expanded="false" />
-                <element signature="e#1681#1885#0" expanded="false" />
-                <element signature="e#1913#2141#0" expanded="false" />
-                <element signature="e#2228#2376#0" expanded="false" />
-                <element signature="e#2433#2492#0" expanded="false" />
-                <element signature="e#2548#2669#0" expanded="false" />
-                <element signature="e#2699#2724#0" expanded="false" />
-                <element signature="e#2764#2861#0" expanded="false" />
-                <element signature="e#2920#2954#0" expanded="false" />
-                <element signature="e#2986#3224#0" expanded="false" />
-                <element signature="e#3278#3452#0" expanded="false" />
-                <element signature="e#3533#3688#0" expanded="false" />
-                <element signature="e#3741#3874#0" expanded="false" />
-                <element signature="e#3938#4031#0" expanded="false" />
-                <element signature="e#4081#4103#0" expanded="false" />
-                <element signature="e#4152#4186#0" expanded="false" />
-                <element signature="e#4256#4289#0" expanded="false" />
-                <element signature="e#4350#4465#0" expanded="false" />
-                <element signature="e#4543#4691#0" expanded="false" />
-                <element signature="e#4758#4792#0" expanded="false" />
-                <element signature="e#4832#4877#0" expanded="false" />
-                <element signature="e#4931#4987#0" expanded="false" />
-                <element signature="e#5038#5238#0" expanded="false" />
-                <element signature="e#5298#5326#0" expanded="false" />
-                <element signature="e#5389#5465#0" expanded="false" />
-                <element signature="e#5535#5641#0" expanded="false" />
-                <element signature="e#5713#5797#0" expanded="false" />
-                <element signature="e#5876#6002#0" expanded="false" />
-                <element signature="e#6076#6166#0" expanded="false" />
-                <element signature="e#6225#6249#0" expanded="false" />
-                <element signature="e#6315#6348#0" expanded="false" />
-                <element signature="e#6402#6426#0" expanded="false" />
-                <element signature="e#6483#6507#0" expanded="false" />
+                <element signature="n#!!doc;n#bindThis#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.12" vertical-offset="38" max-vertical-offset="1596">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -104,14 +55,14 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/index2.css" />
+        <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/demo.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="397" />
-    <option name="y" value="115" />
+    <option name="x" value="280" />
+    <option name="y" value="136" />
     <option name="width" value="1446" />
     <option name="height" value="861" />
   </component>
@@ -146,17 +97,17 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wap-shop-index-page-modify" />
+              <option name="myItemId" value="jstest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wap-shop-index-page-modify" />
+              <option name="myItemId" value="jstest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wap-shop-index-page-modify" />
+              <option name="myItemId" value="jstest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -171,6 +122,8 @@
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -222,14 +175,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="08effeaf-db76-4185-a113-1f0bf20140e2" name="Default" comment="" />
-      <created>1441506930775</created>
-      <updated>1441506930775</updated>
+      <changelist id="79f8fa05-2a23-47de-89d5-5edef9de2724" name="Default" comment="" />
+      <created>1441519298299</created>
+      <updated>1441519298299</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="397" y="115" width="1446" height="861" extended-state="0" />
+    <frame x="280" y="136" width="1446" height="861" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -271,68 +224,21 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.12" vertical-offset="38" max-vertical-offset="1596">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="46" />
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="323">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index2.css">
+    <entry file="file://$PROJECT_DIR$/demo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.92" vertical-offset="251" max-vertical-offset="1026">
-          <caret line="241" column="21" selection-start-line="241" selection-start-column="21" selection-end-line="241" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.40772533" vertical-offset="0" max-vertical-offset="699">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="e#19#182#0" expanded="false" />
-            <element signature="e#217#271#0" expanded="false" />
-            <element signature="e#301#377#0" expanded="false" />
-            <element signature="e#414#651#0" expanded="false" />
-            <element signature="e#690#926#0" expanded="false" />
-            <element signature="e#969#1133#0" expanded="false" />
-            <element signature="e#1184#1487#0" expanded="false" />
-            <element signature="e#1545#1637#0" expanded="false" />
-            <element signature="e#1681#1885#0" expanded="false" />
-            <element signature="e#1913#2141#0" expanded="false" />
-            <element signature="e#2228#2376#0" expanded="false" />
-            <element signature="e#2433#2492#0" expanded="false" />
-            <element signature="e#2548#2669#0" expanded="false" />
-            <element signature="e#2699#2724#0" expanded="false" />
-            <element signature="e#2764#2861#0" expanded="false" />
-            <element signature="e#2920#2954#0" expanded="false" />
-            <element signature="e#2986#3224#0" expanded="false" />
-            <element signature="e#3278#3452#0" expanded="false" />
-            <element signature="e#3533#3688#0" expanded="false" />
-            <element signature="e#3741#3874#0" expanded="false" />
-            <element signature="e#3938#4031#0" expanded="false" />
-            <element signature="e#4081#4103#0" expanded="false" />
-            <element signature="e#4152#4186#0" expanded="false" />
-            <element signature="e#4256#4289#0" expanded="false" />
-            <element signature="e#4350#4465#0" expanded="false" />
-            <element signature="e#4543#4691#0" expanded="false" />
-            <element signature="e#4758#4792#0" expanded="false" />
-            <element signature="e#4832#4877#0" expanded="false" />
-            <element signature="e#4931#4987#0" expanded="false" />
-            <element signature="e#5038#5238#0" expanded="false" />
-            <element signature="e#5298#5326#0" expanded="false" />
-            <element signature="e#5389#5465#0" expanded="false" />
-            <element signature="e#5535#5641#0" expanded="false" />
-            <element signature="e#5713#5797#0" expanded="false" />
-            <element signature="e#5876#6002#0" expanded="false" />
-            <element signature="e#6076#6166#0" expanded="false" />
-            <element signature="e#6225#6249#0" expanded="false" />
-            <element signature="e#6315#6348#0" expanded="false" />
-            <element signature="e#6402#6426#0" expanded="false" />
-            <element signature="e#6483#6507#0" expanded="false" />
+            <element signature="n#!!doc;n#bindThis#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33282673" vertical-offset="1111" max-vertical-offset="13699">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>

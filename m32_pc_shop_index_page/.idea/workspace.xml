@@ -162,8 +162,8 @@
       <file leaf-file-name="index.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/version2/less/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41728762" vertical-offset="803" max-vertical-offset="1653">
-              <caret line="214" column="15" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.25776398" vertical-offset="1601" max-vertical-offset="2337">
+              <caret line="252" column="28" selection-start-line="252" selection-start-column="28" selection-end-line="252" selection-end-column="28" />
               <folding>
                 <element signature="e#44#126#0" expanded="false" />
                 <element signature="e#150#244#0" expanded="false" />
@@ -197,15 +197,11 @@
                 <element signature="e#4018#4230#0" expanded="false" />
                 <element signature="e#4274#4377#0" expanded="false" />
                 <element signature="e#4400#4492#0" expanded="false" />
-                <element signature="e#5368#6926#0" expanded="false" />
-                <element signature="e#5408#6922#0" expanded="false" />
                 <element signature="e#5517#5549#0" expanded="false" />
-                <element signature="e#5558#6394#0" expanded="false" />
-                <element signature="e#5825#6386#0" expanded="false" />
-                <element signature="e#6225#6376#0" expanded="false" />
-                <element signature="e#6413#6522#0" expanded="false" />
-                <element signature="e#6538#6916#0" expanded="false" />
-                <element signature="e#6688#6908#0" expanded="false" />
+                <element signature="e#6224#6375#0" expanded="false" />
+                <element signature="e#6412#6521#0" expanded="false" />
+                <element signature="e#6537#6915#0" expanded="false" />
+                <element signature="e#6687#6907#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -291,10 +287,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="279" />
-    <option name="y" value="96" />
+    <option name="x" value="447" />
+    <option name="y" value="134" />
     <option name="width" value="1446" />
-    <option name="height" value="861" />
+    <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -418,7 +414,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../m29_wap_qmm/wap-shop-index-page-modify" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../m25_custom_event/jstest" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
@@ -487,7 +483,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="279" y="96" width="1446" height="861" extended-state="0" />
+    <frame x="447" y="134" width="1446" height="834" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -700,15 +696,11 @@
             <element signature="e#4018#4230#0" expanded="false" />
             <element signature="e#4274#4377#0" expanded="false" />
             <element signature="e#4400#4492#0" expanded="false" />
-            <element signature="e#5368#6926#0" expanded="false" />
-            <element signature="e#5408#6922#0" expanded="false" />
             <element signature="e#5517#5549#0" expanded="false" />
-            <element signature="e#5558#6394#0" expanded="false" />
-            <element signature="e#5825#6386#0" expanded="false" />
-            <element signature="e#6225#6376#0" expanded="false" />
-            <element signature="e#6413#6522#0" expanded="false" />
-            <element signature="e#6538#6916#0" expanded="false" />
-            <element signature="e#6688#6908#0" expanded="false" />
+            <element signature="e#6224#6375#0" expanded="false" />
+            <element signature="e#6412#6521#0" expanded="false" />
+            <element signature="e#6537#6915#0" expanded="false" />
+            <element signature="e#6687#6907#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,8 +1184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/version2/less/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41728762" vertical-offset="803" max-vertical-offset="1653">
-          <caret line="214" column="15" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.25776398" vertical-offset="1601" max-vertical-offset="2337">
+          <caret line="252" column="28" selection-start-line="252" selection-start-column="28" selection-end-line="252" selection-end-column="28" />
           <folding>
             <element signature="e#44#126#0" expanded="false" />
             <element signature="e#150#244#0" expanded="false" />
@@ -1227,15 +1219,11 @@
             <element signature="e#4018#4230#0" expanded="false" />
             <element signature="e#4274#4377#0" expanded="false" />
             <element signature="e#4400#4492#0" expanded="false" />
-            <element signature="e#5368#6926#0" expanded="false" />
-            <element signature="e#5408#6922#0" expanded="false" />
             <element signature="e#5517#5549#0" expanded="false" />
-            <element signature="e#5558#6394#0" expanded="false" />
-            <element signature="e#5825#6386#0" expanded="false" />
-            <element signature="e#6225#6376#0" expanded="false" />
-            <element signature="e#6413#6522#0" expanded="false" />
-            <element signature="e#6538#6916#0" expanded="false" />
-            <element signature="e#6688#6908#0" expanded="false" />
+            <element signature="e#6224#6375#0" expanded="false" />
+            <element signature="e#6412#6521#0" expanded="false" />
+            <element signature="e#6537#6915#0" expanded="false" />
+            <element signature="e#6687#6907#0" expanded="false" />
           </folding>
         </state>
       </provider>
