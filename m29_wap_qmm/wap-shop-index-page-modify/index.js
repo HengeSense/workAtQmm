@@ -20,6 +20,10 @@ $(function () {
         $(this).addClass('aj-select').siblings().removeClass('aj-select');
         blocks.eq($(this).index()).show().siblings().hide();
     });
+    // 调整 top banner img 宽度 : 高度 = 3.5
+    shopIndex.find('.aj-s-top').css({
+        height : shopIndex.width() / 3.5 + 'px'
+    });
     // sort line
     (function () {
         var showTypes,
@@ -55,6 +59,52 @@ $(function () {
         function toggleShowStyle(){
             shopIndex.find('.aj-s-mid').toggleClass('aj-show-style-grid');
         }
+    })();
+
+    // 排序 new page
+    (function () {
+        var page = shopIndex.find('.aj-s-page');
+        page.on('aj.hide', function () {
+            $(this).css({left : '100%'});
+        });
+        shopIndex.on('click', '.aj-s-u-paixu', function () {
+            $(page).css({
+                left : 0
+            });
+        });
+        // 点击折叠收起
+        page.on('click', '.aj-tb-line', function() {
+            var arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'],
+                obj = $(this).find('.aj-icon');
+            $(this).siblings('.aj-tb-wrap').slideToggle();
+            $(this).parents('.aj-tap-block').siblings().find('.aj-tb-wrap').slideUp();
+            $.each(arr, function (index, item) {
+                if (obj.hasClass(item)) {
+                    obj.removeClass(item).addClass(arr[(index + 1) % arr.length]);
+                    return false;
+                }
+            })
+        });
+        page.on('click', '.aj-tb-wrap .aj-li', function() {
+            $(this).parents('.aj-tap-block').find('.aj-choice').html($(this).text());
+        });
+        page.on('click', '.aj-spr-top .aj-confirm', function() {
+            page.trigger('aj.hide');
+        });
+        page.on('click', '.aj-s-p-left', function() {
+            page.trigger('aj.hide');
+        });
+
+        // 重置 按键
+        var cz_btns = page.find('.aj-tap-block .aj-choice');
+        cz_btns.each(function () {   // 保存初始值
+            this.word = $(this).text();
+        });
+        page.on('click', '.aj-reset', function() {
+            cz_btns.each(function () {
+                $(this).text(this.word);
+            });
+        });
     })();
 });
 
