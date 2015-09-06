@@ -330,6 +330,9 @@
     background-color: #f3f5f7;
     padding-left: 15px;
     line-height: 44px;
+    overflow: hidden;
     border-bottom: 1px solid #bfbfbf;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 /*--------------------*/
