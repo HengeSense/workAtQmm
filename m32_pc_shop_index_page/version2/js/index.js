@@ -15,7 +15,6 @@ $(function () {
         },
         fixedTop : function () {
             var timer,      // for scroll
-                timer2,     // for resize
                 top,
                 left,
                 $this = this;
@@ -24,7 +23,7 @@ $(function () {
             $(window).on('scroll', function() {
                 if (!timer) {
                     timer = setTimeout(function () {
-                        if (top - $this.fixedTopVal <= $(document.body).scrollTop()) {
+                        if (top - $this.fixedTopVal <= $(window).scrollTop()) {
                             $this.div.css({
                                 position : 'fixed',
                                 top : $this.fixedTopVal + 'px',
