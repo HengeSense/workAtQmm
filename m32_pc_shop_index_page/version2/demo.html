@@ -14,10 +14,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="http://www.quanmama.com/images/qmm.ico">
     <link rel="stylesheet" href="http://www.quanmama.com/css2/newstyle.css?v=2015072414"
           type="text/css" charset="utf-8">
-    <link rel="stylesheet" href="http://www.quanmama.com/css2/bestdeal.css?v=2015072818"
+    <link rel="stylesheet" href="css/bestdeal.css"
           type="text/css" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="http://www.quanmama.com/css2/home.css?v=20150705154711111">
-    <link rel="stylesheet" href="http://www.quanmama.com/Css2/categorypage.css?v=7"
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" href="css/categorypage.css"
           type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -7624,173 +7624,6 @@
 </div>
 </div>
 </div>
-<script type="text/javascript">
-    (function(a) {
-        a.fn.Jdropdown = function(b, c) {
-            if (this.length) {
-                "function" == typeof b && (c = b, b = {});
-                var d = a.extend({
-                                    event: "mouseover",
-                                    current: "hover",
-                                    delay: 0
-                                },
-                                        b || {}),
-                        e = "mouseover" == d.event ? "mouseout": "mouseleave";
-                a.each(this,
-                        function() {
-                            var b = null,
-                                    f = null,
-                                    g = !1;
-                            a(this).bind(d.event,
-                                    function() {
-                                        if (g) clearTimeout(f);
-                                        else {
-                                            var e = a(this);
-                                            b = setTimeout(function() {
-                                                        e.addClass(d.current),
-                                                                g = !0,
-                                                                c && c(e)
-                                                    },
-                                                    d.delay)
-                                        }
-                                    }).bind(e,
-                                    function() {
-                                        if (g) {
-                                            var c = a(this);
-                                            f = setTimeout(function() {
-                                                        c.removeClass(d.current),
-                                                                g = !1
-                                                    },
-                                                    d.delay)
-                                        } else clearTimeout(b)
-                                    })
-                        })
-            }
-        }
-    })(jQuery);
-
-    (function(a) {
-        a.fn.dropdown = function(b, c) {
-            var b = a.extend({
-                        className: "item",
-                        current: "hover",
-                        enterDelay: 10,
-                        leaveDelay: 300,
-                        onmouseleave: null
-                    },
-                    b);
-            a.each(this,
-                    function() {
-                        function d() {
-                            function a(a, b) {
-                                return (b.y - a.y) / (b.x - a.x)
-                            }
-
-                            var b = g.offset(),
-                                    c = {
-                                        x: b.left,
-                                        y: b.top
-                                    },
-                                    d = {
-                                        x: b.left + g.outerWidth(),
-                                        y: c.y
-                                    },
-                                    e = {
-                                        x: b.left,
-                                        y: b.top + g.outerHeight()
-                                    },
-                                    f = {
-                                        x: b.left + g.outerWidth(),
-                                        y: e.y
-                                    };
-                            if (loc = i[i.length - 1], prevLoc = i[0], !loc) return 0;
-                            if (prevLoc || (prevLoc = loc), prevLoc.x < b.left || prevLoc.x > f.x || prevLoc.y < b.top || prevLoc.y > f.y) return 0;
-                            if (j && loc.x == j.x && loc.y == j.y) return 0;
-                            var h = d,
-                                    k = f,
-                                    l = a(loc, h),
-                                    m = a(prevLoc, h),
-                                    n = a(loc, k),
-                                    o = a(prevLoc, k);
-                            return m > l && n > o ? prevLoc.x - c.x < 25 ? 0 : (j = loc, 300) : (j = null, 0)
-                        }
-
-                        var e, f, g = a(this),
-                                h = g.find("." + b.className),
-                                i = [],
-                                j = null,
-                                k = 3,
-                                l = !1;
-                        g.bind("mouseenter",
-                                function() {
-                                    clearTimeout(e)
-                                });
-                        var m = null,
-                                n = null;
-                        g.bind("mouseleave",
-                                function() {
-                                    l && (e = setTimeout(function() {
-                                                h.removeClass(b.current)
-                                            },
-                                            b.leaveDelay)),
-                                            b.onmouseleave && b.onmouseleave(),
-                                            m = null
-                                }),
-                                h.bind("mouseenter",
-                                        function() {
-                                            var e = a(this),
-                                                    g = this,
-                                                    i = function() {
-                                                        m = jQuery.inArray(g, h),
-                                                                h.removeClass(b.current),
-                                                                e.addClass(b.current),
-                                                                l = !0,
-                                                                c && c(e)
-                                                    };
-                                            f = setTimeout(function() {
-                                                        0 == d(e) && (i(), clearTimeout(n))
-                                                    },
-                                                    b.enterDelay),
-                                                    n = setTimeout(function() {
-                                                                m != jQuery.inArray(g, h) && i()
-                                                            },
-                                                            700)
-                                        }),
-                                h.bind("mouseleave",
-                                        function() {
-                                            a(this),
-                                                    clearTimeout(f),
-                                                    clearTimeout(n)
-                                        }),
-                                a(document).mousemove(function(a) {
-                                    i.push({
-                                        x: a.pageX,
-                                        y: a.pageY
-                                    }),
-                                            i.length > k && i.shift()
-                                })
-                    })
-        }
-    })(jQuery);
-
-    $(function() {
-        var e = $("#_QMM_ALLSORT").outerWidth(),
-                f = $("#_QMM_ALLSORT").outerHeight();
-
-        $("#_QMM_ALLSORT").dropdown({
-                    delay: 0,
-                    onmouseleave: function() {
-                        $("#_QMM_ALLSORT .item").removeClass("hover")
-                    }
-                },
-                function(a) {});
-
-        $("#categorys-2013").Jdropdown({
-                    delay: 200
-                },
-                function(a) {});
-    });
-</script>
 </div>
 </div>
 <ul class="cui_nav" id="cui_nav_ul">
@@ -8070,23 +7903,10 @@
         'rightSideFloatFixed': 'rightSideFloatFixed/index.js'
     };
 </script>
-<script type="text/javascript" src="http://www.quanmama.com/js/main.js?v=20150728201">
-</script>
+
 <script type="text/javascript" src="js/index.js">
 </script>
-<script type="text/javascript">
-    Youhui.common.user.info = {
-        'userid': '2B4ADD094C6406B665B003940C379B5D@qq.cn',
-        'sina': 0
-    };
-    Youhui = $.extend(Youhui, {
-        SITENAME: "券妈妈",
-        SITEURL: "http://www.quanmama.com/",
-        RESOURCEURL: "",
-        SERVICEURL: "",
-        NOTEFREQUENCY: 60000
-    });
-</script>
+
 <!--内容主体-->
 <div class="clearfix" id="pagecontent" style="padding-bottom: 15px; margin-right: auto;
             margin-left: auto;">
@@ -8426,6 +8246,7 @@
                 <div class="listItem">
                     <h2 class="itemName">
                         <a target="_blank" href="http://www.quanmama.com/zhidemai/301338.html">
+                            <span class="aj-i-stamp">精品</span>
                                                                         <span class="black" title="京东钱包：新用户购物满19元 扫码支付立减10元">
                                                                             <span class="pgreen">
                                                                                 【OK】
@@ -9262,8 +9083,6 @@
     </div>
     <!-- left side ad banner -->
     <div class="leftBanner">
-        <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-        </script>
         <!-- quan页面左侧中部728*90 -->
         <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
              data-ad-client="ca-pub-2779426299774699" data-ad-slot="1101472890" data-adsbygoogle-status="done">
@@ -9284,9 +9103,7 @@
     <!-- 相关优惠券 block-->
     <div class="clear">
     </div>
-    <script type="text/javascript">
-        Youhui.common.trackOrder.doTrack('jd.com_yiqifa', 'http://p.yiqifa.com/n?k=2mLErntOWZLErI6H2mq26EPhU9PHWEK7rnRO6lRqWmLO6nUH2mqerI6HMnB93N2lMJ6H2L--&e=c&t=http://www.jd.com', 0);
-    </script>
+
     </div>
     <div id='aj-right-side-f-j' class="right_side aj-right-side">
     <div class="rightPanel">
@@ -9623,7 +9440,7 @@
             </ul>
         </div>
     </div>
-    <div class="JMyAjax" data-url="/myajax/hotzdm">
+    <div class="JMyAjax">
     <!--is ok -->
     <div class="rightPanel rightTabs floatFixed" id="zdm_hotrank" style="position: static; top: 0px; left: 937px;">
     <h2 class="panelTitle">
@@ -10403,8 +10220,6 @@
 <a href="http://www.quanmama.com/mdl">
     麦当劳优惠券
 </a>
-<script type="text/javascript" src="/js/slick.js">
-</script>
 <a href="http://www.quanmama.com/lipinka_360buy" title="京东礼品卡,京东e卡,京东礼品卡免费领取,京东e卡可以买什么和怎么用">
     京东礼品卡
 </a>
@@ -10698,112 +10513,6 @@
         </div>
     </div>
 </div>
-<div class="JMyAjax" data-url="/html/AutoCompleteHotStores.html">
-    <div id="search-hot-stores" class="autocomplete search_suggest" style="display: none;">
-        <ul class="list-hook" style="height: auto;">
-            <li class="keyinfo unselected" data_id="134">
-                <a title="聚美优品优惠券" target="_blank" href="http://www.quanmama.com/quan_jumei">
-                                <span class="hot-icon hot-icon-index hot-icon-orange ">
-                                    1
-                                </span>
-                                <span class="keyname">
-                                    聚美优品优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="3003">
-                <a title="唯品会优惠券" target="_blank" href="http://www.quanmama.com/quan_vipshop">
-                                <span class="hot-icon hot-icon-index hot-icon-orange ">
-                                    2
-                                </span>
-                                <span class="keyname">
-                                    唯品会优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="19315">
-                <a title="绿能宝优惠券" target="_blank" href="http://www.quanmama.com/quan_solarbao">
-                                <span class="hot-icon hot-icon-index hot-icon-orange ">
-                                    3
-                                </span>
-                                <span class="keyname">
-                                    绿能宝优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="348">
-                <a title="京东优惠券" target="_blank" href="http://www.quanmama.com/quan_360buy">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    4
-                                </span>
-                                <span class="keyname">
-                                    京东优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="17412">
-                <a title="陆金所优惠券" target="_blank" href="http://www.quanmama.com/quan_lufax">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    5
-                                </span>
-                                <span class="keyname">
-                                    陆金所优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="382">
-                <a title="苏宁易购优惠券" target="_blank" href="http://www.quanmama.com/quan_suning">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    6
-                                </span>
-                                <span class="keyname">
-                                    苏宁易购优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="381">
-                <a title="易迅网优惠券" target="_blank" href="http://www.quanmama.com/quan_51buy">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    7
-                                </span>
-                                <span class="keyname">
-                                    易迅网优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="263">
-                <a title="乐蜂网优惠券" target="_blank" href="http://www.quanmama.com/quan_lafaso">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    8
-                                </span>
-                                <span class="keyname">
-                                    乐蜂网优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="288">
-                <a title="1号店优惠券" target="_blank" href="http://www.quanmama.com/quan_yihaodian">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    9
-                                </span>
-                                <span class="keyname">
-                                    1号店优惠券
-                                </span>
-                </a>
-            </li>
-            <li class="keyinfo unselected" data_id="357">
-                <a title="亚马逊优惠券" target="_blank" href="http://www.quanmama.com/quan_amazon">
-                                <span class="hot-icon hot-icon-index hot-icon-dark ">
-                                    10
-                                </span>
-                                <span class="keyname">
-                                    亚马逊优惠券
-                                </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
 <div class="statics">
 </div>
 <div class="clear adminArea" style="text-align: center; width: 100%">
@@ -10817,8 +10526,7 @@
              class="sina_login_image">
     </a>
 </div>
-<div id="autocomplete" class="autocomplete" style="display: none;">
-</div>
+
 </body>
 
 </html>
