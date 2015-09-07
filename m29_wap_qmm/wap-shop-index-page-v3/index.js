@@ -62,53 +62,96 @@ $(function () {
     })();
 
     // 排序 new page
+//    (function () {
+//        var page = shopIndex.find('.aj-s-page');
+//        page.on('aj.hide', function () {
+//            $(this).css({left : '100%'});
+//        });
+//        shopIndex.on('click', '.aj-s-u-paixu', function () {
+//            $(page).css({
+//                left : 0
+//            });
+//        });
+//        // 点击折叠收起
+//        page.on('click', '.aj-tb-line', function() {
+//            var arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'],
+//                obj = $(this).find('.aj-icon');
+//            $(this).siblings('.aj-tb-wrap').slideToggle();
+//            $(this).parents('.aj-tap-block').siblings().find('.aj-tb-wrap').slideUp();
+//            $.each(arr, function (index, item) {
+//                if (obj.hasClass(item)) {
+//                    obj.removeClass(item).addClass(arr[(index + 1) % arr.length]);
+//                    return false;
+//                }
+//            })
+//        });
+//        page.on('click', '.aj-tb-wrap .aj-li', function() {
+//            $(this).parents('.aj-tap-block').find('.aj-choice').html($(this).text());
+//        });
+//        page.on('click', '.aj-spr-top .aj-confirm', function() {
+//            page.trigger('aj.hide');
+//        });
+//        page.on('click', '.aj-s-p-left', function() {
+//            page.trigger('aj.hide');
+//        });
+//
+//        // 重置 按键
+//        var cz_btns = page.find('.aj-tap-block .aj-choice');
+//        cz_btns.each(function () {   // 保存初始值
+//            this.word = $(this).text();
+//        });
+//        page.on('click', '.aj-reset', function() {
+//            cz_btns.each(function () {
+//                $(this).text(this.word);
+//            });
+//        });
+//    })();
+    // nav select
     (function () {
-        var page = shopIndex.find('.aj-s-page');
-        page.on('aj.hide', function () {
-            $(this).css({left : '100%'});
+        var sort = shopIndex.find('.aj-sort'),
+            beforeAfter = 'aj-li-ba-bg',
+            selectClass = "qmm-icon-iconfont-check";
+        sort.on('click', '.aj-so-ul li.aj-has-block', function () {
+            $(this).toggleClass(beforeAfter).siblings().removeClass(beforeAfter);
+            showRelativeBlock($(this).attr('aj-for'), $(this).hasClass(beforeAfter));
         });
-        shopIndex.on('click', '.aj-s-u-paixu', function () {
-            $(page).css({
-                left : 0
-            });
+        function showRelativeBlock(className, isShow) {
+            if (isShow) {
+                sort.find('.' + className).toggle().siblings().hide();
+            } else {
+                sort.find('.aj-s-b').hide();
+            }
+        }
+        sort.on('click', '.aj-s-left li.aj-has-block', function () {
+            var uls = $(this).parents('.aj-s-b').find('.aj-s-right .aj-ul');
+            $(this).addClass('aj-select').siblings().removeClass('aj-select');
+            uls.removeClass('aj-select').eq($(this).index()).addClass('aj-select');
         });
-        // 点击折叠收起
-        page.on('click', '.aj-tb-line', function() {
-            var arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'],
-                obj = $(this).find('.aj-icon');
-            $(this).siblings('.aj-tb-wrap').slideToggle();
-            $(this).parents('.aj-tap-block').siblings().find('.aj-tb-wrap').slideUp();
-            $.each(arr, function (index, item) {
-                if (obj.hasClass(item)) {
-                    obj.removeClass(item).addClass(arr[(index + 1) % arr.length]);
-                    return false;
+        sort.on('click', '.aj-s-right .aj-ul .aj-li', function () {
+            if (!$(this).hasClass('aj-select')) {
+                hide($(this).parents('.aj-s-b'));
+            }
+            choice(this);
+            $(this).find('span').addClass(selectClass);
+            $(this).toggleClass('aj-select').siblings().removeClass('aj-select');
+        });
+        function choice(obj) {  // 在li上显示选择的名称
+            if (!$(obj).hasClass('aj-select')) {
+                sort.find('.aj-s-left li.aj-has-block.aj-select .aj-choice').html($(obj).text());
+            } else {
+                sort.find('.aj-s-left li.aj-has-block.aj-select .aj-choice').html('');
+            }
+        }
+        function hide(obj){ // 隐藏block与小滑块
+            sort.find('.aj-so-ul .aj-has-block').each(function () {
+                if (obj.hasClass($(this).attr('aj-for'))) {
+                    $(this).removeClass(beforeAfter);
                 }
-            })
-        });
-        page.on('click', '.aj-tb-wrap .aj-li', function() {
-            $(this).parents('.aj-tap-block').find('.aj-choice').html($(this).text());
-        });
-        page.on('click', '.aj-spr-top .aj-confirm', function() {
-            page.trigger('aj.hide');
-        });
-        page.on('click', '.aj-s-p-left', function() {
-            page.trigger('aj.hide');
-        });
-
-        // 重置 按键
-        var cz_btns = page.find('.aj-tap-block .aj-choice');
-        cz_btns.each(function () {   // 保存初始值
-            this.word = $(this).text();
-        });
-        page.on('click', '.aj-reset', function() {
-            cz_btns.each(function () {
-                $(this).text(this.word);
             });
-        });
+            obj.hide();
+        }
     })();
 });
-
-
 
 
 // 演示
