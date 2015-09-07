@@ -15,37 +15,45 @@ $(function () {
         },
         fixedTop : function () {
             var timer,      // for scroll
+                timer2,     // for resize
                 top,
                 left,
+                wrapDiv = $('#aj-left-side-f-j'),
                 $this = this;
             top = $this.div.offset().top;
-            left = $this.div.offset().left;
+            left = wrapDiv.offset().left;
             $(window).on('scroll', function() {
                 if (!timer) {
                     timer = setTimeout(function () {
                         if (top - $this.fixedTopVal <= $(window).scrollTop()) {
-                            $this.div.css({
-                                position : 'fixed',
-                                top : $this.fixedTopVal + 'px',
-                                left : left + 'px',
-                                zIndex : 9999
-                            });
+                            fixedPosition();
                         } else {
                             $this.div.css({position : 'static'});
-                            left = $this.div.offset().left;
+                            left = wrapDiv.offset().left;
                         }
                         timer = 0;
                     }, 200);
                 }
             });
-//            $(window).on('resize', function () {
-//                if (!timer2)  {
-//                    timer2 = setTimeout(function () {
-//                        left = $this.div.offset().left;
-//                        timer2 = 0;
-//                    }, 200)
-//                }
-//            });
+            $(window).on('resize', function () {
+                if (!timer2)  {
+                    timer2 = setTimeout(function () {
+                        left = wrapDiv.offset().left;
+                        timer2 = 0;
+                        if (top - $this.fixedTopVal <= $(window).scrollTop()) {
+                            fixedPosition();
+                        }
+                    }, 200);
+                }
+            });
+            function fixedPosition(){
+                $this.div.css({
+                    position : 'fixed',
+                    top : $this.fixedTopVal + 'px',
+                    left : left + 'px',
+                    zIndex : 9999
+                });
+            }
         },
         fenlei : function () {
             var aTags = this.div.find('.fenlei .a-tag'),

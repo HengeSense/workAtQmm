@@ -2,7 +2,6 @@
   @topHeight : 30px;
   .aj-grid-list{
     width:720px!important;
-    height:225px!important;
     padding-top: 25px;
 
     .listItem{
@@ -11,10 +10,11 @@
       margin-top: 0px;
     }
     div.aj-mall-left{
+      top:225px;
     }
-    div.mall{
-      right:515px;
-      top:225px!important;
+    div.mall+div.mall{
+      top:60px;
+      right: 20px;
     }
     .item_buy_mall{
       top:30px!important;
@@ -24,7 +24,16 @@
       color:#666!important;
       font-size: 14px!important;
     }
+    .aj-roll-wrap{
+      top:138px;
+      right: 226px;
+      z-index: 20;
+    }
+    .aj-desc-wrap{
+      display: block!important;
+    }
   }
+
   .discovery_list a.picBox{
     position: absolute;
     top: @topHeight + 20;
@@ -40,6 +49,7 @@
     box-shadow: none!important;
     border-color:white!important;
     border-bottom: 1px solid #dcdcdc!important;
+    height: 225px!important;
   }
   .discovery_list .itemName{
     position: absolute;
@@ -70,5 +80,56 @@
       background-color: #f04848;
       color:#ffffff!important;
     }
+  }
+  .zan_fav_com{
+    height:34px;
+    .zan{
+      position: relative;
+      display: inline-block;
+      float: left;
+      height:28px;
+      line-height: 28px;
+      border:1px solid #ccc;
+      .border-radius(2px);
+      padding: 0 6px;
+      min-width: 44px;
+      text-align: center;
+      .icon-zan2,.icon-cai2{
+        display: none;
+      }
+      &:before{
+        display: inline-block;
+      }
+      &:hover{
+        background-color: #f04848;
+        color:white;
+        text-decoration: none;
+        border:1px solid #f04848;
+        &:before{
+          color:white!important;
+        }
+      }
+
+    }
+    .zan[data-type="yes"]{
+      &:before{
+        content:'值';
+        color: #f04848;
+      }
+    }
+    .zan[data-type="no"]{
+      margin-right: 10px;
+      &:before{
+        content:'不值';
+      }
+    }
+    .comment{
+      position: relative;
+      right: -10px;
+      line-height: 40px;
+    }
+  }
+  .item_buy_mall .directLink{
+    top:8px;
   }
 }
