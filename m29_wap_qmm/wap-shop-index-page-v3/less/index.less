@@ -172,7 +172,8 @@
 }
 /*--------------------*/
 #aj-shop-index-page .list_preferential li{
-  background-color: #ffffff;
+    background-color: #ffffff;
+    padding: 0 5px;
 }
 #aj-shop-index-page .aj-show-style-grid{
   width:100%;
@@ -356,7 +357,7 @@
 }
 #aj-shop-index-page{
     .list_preferential{
-        background-color: white;
+        padding: 0;
     }
     .aj-sort{
         .aj-s-u-li{
@@ -412,6 +413,7 @@
                 .aj-s-l-wrap{
                     .aj-ul{
                         .aj-li{
+                            position: relative;
                             padding-left: 15px;
                             height: 45px;
                             line-height: 45px;
@@ -421,10 +423,10 @@
                                 top:1px;
                             }
                             .aj-choice{
-                                float: right;
+                                position: absolute;
+                                top:0;right: 10px;
                                 font-size: 12px;
-                                margin-right: 10px;
-                                max-width: 80px;
+                                max-width: 70px;
                                 .text-overflow(ellipsis);
                             }
                         }
