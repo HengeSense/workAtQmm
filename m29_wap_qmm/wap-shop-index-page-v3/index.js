@@ -61,59 +61,22 @@ $(function () {
         }
     })();
 
-    // 排序 new page
-//    (function () {
-//        var page = shopIndex.find('.aj-s-page');
-//        page.on('aj.hide', function () {
-//            $(this).css({left : '100%'});
-//        });
-//        shopIndex.on('click', '.aj-s-u-paixu', function () {
-//            $(page).css({
-//                left : 0
-//            });
-//        });
-//        // 点击折叠收起
-//        page.on('click', '.aj-tb-line', function() {
-//            var arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'],
-//                obj = $(this).find('.aj-icon');
-//            $(this).siblings('.aj-tb-wrap').slideToggle();
-//            $(this).parents('.aj-tap-block').siblings().find('.aj-tb-wrap').slideUp();
-//            $.each(arr, function (index, item) {
-//                if (obj.hasClass(item)) {
-//                    obj.removeClass(item).addClass(arr[(index + 1) % arr.length]);
-//                    return false;
-//                }
-//            })
-//        });
-//        page.on('click', '.aj-tb-wrap .aj-li', function() {
-//            $(this).parents('.aj-tap-block').find('.aj-choice').html($(this).text());
-//        });
-//        page.on('click', '.aj-spr-top .aj-confirm', function() {
-//            page.trigger('aj.hide');
-//        });
-//        page.on('click', '.aj-s-p-left', function() {
-//            page.trigger('aj.hide');
-//        });
-//
-//        // 重置 按键
-//        var cz_btns = page.find('.aj-tap-block .aj-choice');
-//        cz_btns.each(function () {   // 保存初始值
-//            this.word = $(this).text();
-//        });
-//        page.on('click', '.aj-reset', function() {
-//            cz_btns.each(function () {
-//                $(this).text(this.word);
-//            });
-//        });
-//    })();
     // nav select
     (function () {
         var sort = shopIndex.find('.aj-sort'),
             beforeAfter = 'aj-li-ba-bg',
+            filterChoice = sort.find('.aj-s-u-filter .aj-choice-name'),
+            filterName = filterChoice.text(),     // 保存筛选的名称
             selectClass = "qmm-icon-iconfont-check";
-        sort.on('click', '.aj-so-ul li.aj-has-block', function () {
-            $(this).toggleClass(beforeAfter).siblings().removeClass(beforeAfter);
-            showRelativeBlock($(this).attr('aj-for'), $(this).hasClass(beforeAfter));
+
+        sort.on('click', '.aj-so-ul li.aj-s-u-li', function () {
+            if ($(this).hasClass('aj-has-block')) {
+                $(this).toggleClass(beforeAfter).siblings().removeClass(beforeAfter);
+                showRelativeBlock($(this).attr('aj-for'), $(this).hasClass(beforeAfter));
+            } else {
+                $(this).siblings().removeClass(beforeAfter);
+                sort.find('.aj-s-b-wrap .aj-s-b').hide();
+            }
         });
         function showRelativeBlock(className, isShow) {
             if (isShow) {
@@ -132,17 +95,29 @@ $(function () {
                 hide($(this).parents('.aj-s-b'));
             }
             choice(this);
+            navShowChoice(this);
             $(this).find('span').addClass(selectClass);
             $(this).toggleClass('aj-select').siblings().removeClass('aj-select');
         });
         function choice(obj) {  // 在li上显示选择的名称
-            if (!$(obj).hasClass('aj-select')) {
+            if (!$(obj).hasClass('aj-select')) {    // 点击之前className还没有aj-select值
                 sort.find('.aj-s-left li.aj-has-block.aj-select .aj-choice').html($(obj).text());
             } else {
                 sort.find('.aj-s-left li.aj-has-block.aj-select .aj-choice').html('');
             }
         }
-        function hide(obj){ // 隐藏block与小滑块
+        function navShowChoice(obj) { //专门提供给filter用的逻辑 -> 点击选项后在导航上显示
+            if ($(obj).parents('.aj-s-b.aj-s-b-f-filter').length > 0) {
+                if ($(obj).hasClass('aj-select')) {
+                    if ($(obj).text() == filterChoice.text()) {
+                        filterChoice.text(filterName);
+                    }
+                } else {
+                    filterChoice.text($(obj).text());
+                }
+            }
+        }
+        function hide(obj){ // 隐藏obj与小滑块
             sort.find('.aj-so-ul .aj-has-block').each(function () {
                 if (obj.hasClass($(this).attr('aj-for'))) {
                     $(this).removeClass(beforeAfter);

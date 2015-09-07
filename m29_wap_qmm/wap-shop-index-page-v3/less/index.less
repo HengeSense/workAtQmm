@@ -145,7 +145,7 @@
 #aj-shop-index-page .aj-sort .aj-s-u-li span[class*="qmm-icon"]{
   display: inline-block;
   width:15px;height:15px;
-  transform:translate(4px, 1px);
+  transform:translate(2px, 0px);
 }
 #aj-shop-index-page .aj-sort .aj-s-u-li.aj-select{
   color:#fe4684;
@@ -361,6 +361,15 @@
     }
     .aj-sort{
         .aj-s-u-li{
+            .aj-choice-name{
+                display: inline-block;
+                max-width: 70%;
+                .text-overflow(ellipsis);
+                vertical-align: middle;
+            }
+            span[class*="qmm-icon"]{
+                vertical-align: middle;
+            }
             &.aj-li-ba-bg{
                 &:before{
                     content: '';
