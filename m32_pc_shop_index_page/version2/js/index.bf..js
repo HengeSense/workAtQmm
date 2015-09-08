@@ -1,5 +1,5 @@
 $(function () {
-    function Nav() {
+    function Nav(){
         this.div = $('#aj-top-nav-f-j');
         this.left = $('#aj-left-side-f-j');
         this.config();
@@ -7,13 +7,13 @@ $(function () {
         this.fenlei();
         this.gridList();
         this.filter();
-        //        this.viewNum();
+//        this.viewNum();
     }
     Nav.prototype = {
-        config: function () {
+        config : function () {
             this.fixedTopVal = 32;
         },
-        fixedTop: function () {
+        fixedTop : function () {
             var timer,      // for scroll
                 timer2,     // for resize
                 top,
@@ -22,13 +22,13 @@ $(function () {
                 $this = this;
             top = $this.div.offset().top;
             left = wrapDiv.offset().left;
-            $(window).on('scroll', function () {
+            $(window).on('scroll', function() {
                 if (!timer) {
                     timer = setTimeout(function () {
                         if (top - $this.fixedTopVal <= $(window).scrollTop()) {
                             fixedPosition();
                         } else {
-                            $this.div.css({ position: 'static' });
+                            $this.div.css({position : 'static'});
                             left = wrapDiv.offset().left;
                         }
                         timer = 0;
@@ -36,7 +36,7 @@ $(function () {
                 }
             });
             $(window).on('resize', function () {
-                if (!timer2) {
+                if (!timer2)  {
                     timer2 = setTimeout(function () {
                         left = wrapDiv.offset().left;
                         timer2 = 0;
@@ -46,39 +46,27 @@ $(function () {
                     }, 200);
                 }
             });
-            function fixedPosition() {
+            function fixedPosition(){
                 $this.div.css({
-                    position: 'fixed',
-                    top: $this.fixedTopVal + 'px',
-                    left: left + 'px',
-                    zIndex: 9999
+                    position : 'fixed',
+                    top : $this.fixedTopVal + 'px',
+                    left : left + 'px',
+                    zIndex : 9999
                 });
             }
         },
-        fenlei: function () {
+        fenlei : function () {
             var aTags = this.div.find('.fenlei .a-tag'),
-                layout_list = this.div.find('.layout .aj-list'),
                 id,
                 aim,
-                $this = this,
                 prop = {};
             this.div.on('click', '.fenlei .a-tag', function (e) {
-                //e.preventDefault();
+                e.preventDefault();
                 // style
                 style(this);
-                toggleLayout();
                 // scroll
                 //scroll(this);
             });
-            toggleLayout();
-            function toggleLayout(){     // 对于 发现 按钮,隐藏显示方式按钮
-                var obj = $this.div.find('.fenlei .a-tag.aj-select');
-                if ($.trim($(obj).text()) === '发现') {
-                    layout_list.hide();
-                } else {
-                    layout_list.show();
-                }
-            }
             function style(obj) {
                 if ($(this).hasClass('aj-select')) return false;
                 $(aTags).removeClass('aj-select');
@@ -93,12 +81,12 @@ $(function () {
                 }
                 if (aim) {
                     $(document.body).animate({
-                        scrollTop: aim.offset().top - 110 + 'px'
+                        scrollTop : aim.offset().top - 110  + 'px'
                     });
                 }
             }
         },
-        gridList: function () {
+        gridList : function (){
             var aTags = this.div.find('.layout .aj-a'),
                 listClassName = 'aj-grid-to-list-wrap',
                 $this = this,
@@ -117,7 +105,7 @@ $(function () {
             });
             // change grid list style
             changeGridList();
-            function changeGridList() {
+            function changeGridList(){
                 if (type === 'list') {
                     $this.left.addClass(listClassName);
                 } else {
@@ -125,14 +113,13 @@ $(function () {
                 }
             }
         },
-        filter: function () {
+        filter : function () {
             var aTags = this.div.find('.prorank .aj-a'),
                 obj,
                 filter = this.div.find('.filter');
             arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'];
             // style
-            this.div.on('click', '.prorank .aj-a', function (ev) {
-                ev.stopPropagation();
+            this.div.on('click', '.prorank .aj-a', function () {
                 if ($(this).hasClass('aj-more-filter')) {
                     if ($(this).hasClass('aj-select')) {
                         filter.slideToggle();
@@ -142,6 +129,7 @@ $(function () {
                 } else {
                     filter.hide();
                 }
+
                 if ($(this).hasClass('aj-select')) {
                     obj = $(this).find('em');
                     $.each(arr, function (index, item) {
@@ -154,14 +142,8 @@ $(function () {
                     $(this).addClass('aj-select').siblings().removeClass('aj-select');
                 }
             });
-            filter.on('click', function (e) {
-                e.stopPropagation();
-            });
-            $(document.body).on('click', function () {
-                filter.slideUp();
-            });
         },
-        viewNum: function () {
+        viewNum : function() {
             var aTags = this.div.find('.displaynum .aj-a');
             this.div.on('click', '.displaynum .aj-a', function () {
                 $(this).addClass('aj-select').siblings().removeClass('aj-select');
