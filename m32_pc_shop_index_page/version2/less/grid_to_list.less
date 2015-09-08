@@ -31,9 +31,10 @@
             top: 30px !important;
         }
         .aj-desc-wrap .aj-desc {
-            height: 80px !important;
+            height: 96px !important;
             color: #666 !important;
             font-size: 14px !important;
+            line-height: 24px;
         }
         .aj-roll-wrap {
             top: 138px;
@@ -42,6 +43,29 @@
         }
         .aj-desc-wrap {
             display: block !important;
+        }
+        .aj-check-and-roll{
+            .itemUserInfo{
+                float: left;
+                .rankTitle{
+                    display: none;
+                }
+                .aj-zhishi{
+                    &:before{
+                        left: 9px;
+                    }
+                    &:after{
+                        left: 10px;
+                    }
+                }
+            }
+            div.aj-read-num, div.aj-tuijianren{
+                display: block;
+                height:24px;float:left;
+                line-height: 24px;
+                color: #999;
+                margin-left: 10px;
+            }
         }
     }
     .discovery_list a.picBox {

@@ -61,6 +61,7 @@ $(function () {
                 id,
                 aim,
                 $this = this,
+                jiluLayout,       // 记录选择发现之前选择的分类样式
                 prop = {};
             this.div.on('click', '.fenlei .a-tag', function (e) {
                 //e.preventDefault();
@@ -74,6 +75,7 @@ $(function () {
             function toggleLayout(){     // 对于 发现 按钮,隐藏显示方式按钮
                 var obj = $this.div.find('.fenlei .a-tag.aj-select');
                 if ($.trim($(obj).text()) === '发现') {
+                    $this.gridList('grid');
                     layout_list.hide();
                 } else {
                     layout_list.show();
@@ -98,15 +100,31 @@ $(function () {
                 }
             }
         },
-        gridList: function () {
+        getGridorlistName : function() {
+            var tags = this.div.find('.layout .aj-a.aj-select');
+            if (tags.length > 0) {
+                return tags.attr('aj-type');
+            } else {
+                return undefined;
+            }
+        },
+        gridList: function (typeValue) {
             var aTags = this.div.find('.layout .aj-a'),
                 listClassName = 'aj-grid-to-list-wrap',
                 $this = this,
-                type; // grid or list
+                type = typeValue; // grid or list
             aTags.each(function () {
-                if ($(this).hasClass('aj-select')) {
-                    type = $(this).attr('aj-type');
-                    return false;
+                if (type === undefined) {
+                    if ($(this).hasClass('aj-select')) {
+                        type = $(this).attr('aj-type');
+                        return false;
+                    }
+                } else {
+                    if ($(this).attr('aj-type').toLowerCase() === typeValue.toLowerCase()) {
+                        aTags.removeClass('aj-select');
+                        $(this).addClass('aj-select');
+                        return false;
+                    }
                 }
             });
             // self style
