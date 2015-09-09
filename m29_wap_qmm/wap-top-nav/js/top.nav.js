@@ -1,3 +1,13 @@
+// 演示用的
+$(function () {
+    var hash = document.location.hash,
+        lis = $('#aj-mobile-wrap .aj-t-l-wrap .aj-li');
+    lis.each(function () {
+        ($(this).find('a').attr('href').indexOf(hash) !== -1) && $(this).addClass('aj-select').siblings().removeClass('aj-select');
+    });
+});
+
+// 以下是代码
 $(function () {
     function Touch(wrap, obj, opt) {   // 在dom 内水平滑动 obj
         this.wrap = wrap;
@@ -11,11 +21,14 @@ $(function () {
             this.v.wrapWidth = $(this.wrap).width();
             this.v.className = 'aj-li';
             this.v.click = true;
+            this.v.margin = 15;
             this.v.objWidth = this.initObjTotalWidth();
             $.extend(this.v, this.opt);
+            // event
             this.touch();
             this.v.click && this.clickStyle();
             this.fixPositon();
+            $(this.obj).trigger('aj.fix_position');
         },
         initObjTotalWidth : function () {
             var total = 0;
@@ -34,10 +47,10 @@ $(function () {
                 jiluDeltaX = 0,
                 left;
             this.v.left = parseInt($(this.obj).css('left'), 10);
-            left = this.v.left;
             min = min <= 0 ? min : 0;
             this.ham = new Hammer(this.obj[0]);
             this.ham.on('pan', function (ev) {
+                left = $this.v.left;
                 if ($this.isDeltaXOK(left + ev.deltaX, min, max)) {
                     $this.obj.css('left', left + ev.deltaX + 'px');
                     jiluDeltaX = ev.deltaX;
@@ -78,9 +91,9 @@ $(function () {
         },
         isZhezhu : function(li){
             if ($(li).offset().left < 0)
-                return -$(li).offset().left;
+                return -($(li).offset().left + this.v.margin);
             if ($(li).offset().left + $(li).width() - $(window).width() > 0)
-                return -($(li).offset().left + $(li).width() - $(window).width());
+                return -($(li).offset().left + $(li).width() + this.v.margin - $(window).width());
             return false;
         }
     };
@@ -89,3 +102,5 @@ $(function () {
     var tt = new Touch(div, ul, {});
     window.tt = tt;
 });
+
+
