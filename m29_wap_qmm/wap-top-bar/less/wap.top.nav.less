@@ -1,0 +1,39 @@
+#aj-mobile-wrap{
+    .aj-topnav-line{
+        @height : 40px;
+        position: relative;
+        width: 100%;height: @height;
+        background-color: #ffffff;
+        border-bottom: 1px solid #cdcdcd;
+        overflow: hidden;
+        .aj-ul{
+            position: absolute;
+            top:0;left: 0;
+            display: inline-block;
+            height: @height;
+            overflow: hidden;
+            .aj-li{
+                @border : 3px;
+                height: @height - @border;
+                line-height: @height;
+                margin: 0 15px;
+                border-bottom: @border solid transparent;
+                float: left;
+
+                a{
+                    color:#666;
+                }
+                &.aj-select{
+                    border-bottom-color: #ff6100;
+                }
+            }
+            &:after{
+                content: '';
+                display: inline-block;
+                font-size: 0;
+                width: 0;height: 0;
+                clear: both;
+            }
+        }
+    }
+}
