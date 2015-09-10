@@ -65,8 +65,8 @@ $(function () {
                 fromBtn.find('span.aj-info').html('加载中...');
             }
             function load(){    // 模拟 ajax 请求评论数据
-                var url = "./ajax.comments.txt?" + Math.random(),
-                    data = {};
+                var url = "./ajax.comments.txt",
+                    data = fromBtn.find('form').serialize();
                 $.ajax({
                     url : url,
                     data : data,
@@ -85,7 +85,12 @@ $(function () {
                 $($this.div).trigger('toggleComments');
             }
             function complete(){    // ajax完成后要做的一些非样式逻辑
+                var form;
                 if (checkAnyMore()) {
+                    form = fromBtn.find('form')[0];
+                    if (form) {
+                        form['page'].value = parseInt(form['page'].value) + 1;
+                    }
                     fromBtn.removeClass('aj-is-loading');
                     fromBtn.find('span.aj-info').html('点击加载更多');
                 } else {

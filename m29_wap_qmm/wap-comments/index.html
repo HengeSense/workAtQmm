@@ -1356,10 +1356,14 @@ Youhui = $.extend(Youhui, {
                             </h5>
                         </li>
                         </ul>
-                        <p class="aj-get-more-comments">
+                        <div class="aj-get-more-comments">
+                            <form style="display: none">    <!-- 请求评论附带的字段 -->
+                                <input type="hidden" name="page" value="2">
+                                <input type="hidden" name="article_id" value="6666">
+                            </form>
                             <span class="aj-info">点击加载更多</span>
                             <i class="icons qmm-icon-iconfont-down"></i>
-                        </p>
+                        </div>
                     </div>
                     <!-- comments area END -->
                 </article></div>
