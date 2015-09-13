@@ -1,0 +1,91 @@
+#aj-lipinc-content{}
+#aj-lipinc-content .aj-price-li{
+    position: relative;
+    padding: 10px;
+    background-color: #FFF2E8;
+}
+#aj-lipinc-content .aj-li{
+    position: relative;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+#aj-lipinc-content .aj-price-li{}
+#aj-lipinc-content .aj-price-li .aj-title{
+    position: absolute;
+    top:10px;left: 10px;
+    color:green;
+    max-width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#aj-lipinc-content .aj-price-li .aj-price-wrap{
+    position: relative;
+    padding-left: 60px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+#aj-lipinc-content .aj-price-li .aj-price-wrap .price{
+    font-size: 24px;
+    color:#f40;
+    font-weight: 700;
+}
+/*----zhifu way -----*/
+#aj-lipinc-content .aj-li.aj-zhifu-way{
+    padding: 10px;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-title{
+    display: block;
+    width:100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-title .h3{
+    font-weight: bold;
+    font-size: 16px;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-title .info{
+    color:  #ff7e26;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-wrap{
+    position: relative;
+    display: block;
+    min-height:30px;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-one-way{
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 3px 6px;
+    min-width: 10px;
+    text-align: center;
+    line-height: 22px;
+    margin-bottom: 5px;
+    margin: 5px 5px 0px 0;
+    border: 1px solid #DCDCDC;
+    background: #FFF;
+    -webkit-user-select:none;
+    font-size: 12px;
+    -moz-transition-property: border-color,background;
+    -o-transition-property: border-color,background;
+    -webkit-transition-property: border-color,background;
+    transition-property: border-color,background;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-one-way:hover{
+    padding: 2px 5px;
+    border: 2px solid #F40;
+}
+#aj-lipinc-content .aj-zhifu-way .aj-one-way.aj-select{
+    padding: 2px 5px;
+    border: 2px solid #F40;
+}
+/*----------*/
