@@ -41,6 +41,12 @@
     left: 0;
     padding: 0;
     border-right: none;
+    width:80px;height:80px;
+    text-align: center;
+}
+.aj-cart .aj-buy-one div.aj-img img{
+    max-width: 100%;
+    max-height: 100%;
 }
 .aj-cart .aj-buy-one .aj-name{
     left: 90px;
@@ -161,6 +167,15 @@
     padding: 2px 5px;
     border: 2px solid #F40;
 }
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways .aj-icon{
+    position: absolute;
+    top:0;right:0;
+    font-size: 16px;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways .aj-icon:hover{
+    cursor: pointer;
+    color:#F40;
+}
 .aj-cart .aj-buy-one .aj-unit-price{
     width: 80px;
 }
@@ -212,6 +227,11 @@
 }
 .aj-cart .aj-buy-one .aj-action .aj-a:hover{
     color:#f60;
+}
+.aj-cart .aj-buy-one .aj-action .aj-a:before{
+    font-size: 17px;
+    vertical-align: middle;
+    margin-right: 4px;
 }
 .aj-cart .aj-buy-one .aj-four-wrap{
     padding-left: 380px;
