@@ -6,6 +6,7 @@ $(function () {
     Cart.prototype = {
         init : function () {
             this.changeNum();
+            this.zhifuWay();
         },
         changeNum : function () {
             var that = this;
@@ -35,6 +36,24 @@ $(function () {
                 unit = parseFloat(unit);
                 total.html((unit * num).toFixed(2));
             }
+        },
+        zhifuWay : function () {
+            var that = this;
+            this.div.on('click', '.aj-zhifu-way .aj-edit-ways', function (e) {
+                e.stopPropagation();
+                // 修改支付方式
+                changeWay.call(this);
+            });
+            this.div.on('click', '.aj-zhifu-all-ways', function (e) {
+                e.stopPropagation();
+            });
+            function changeWay() {
+                var wrap = $(this).parents('.aj-zhifu-way').find('.aj-zhifu-all-ways');
+                wrap.toggle();
+            }
+            $(document).on('click', function (e) {
+                that.div.find('.aj-zhifu-all-ways').hide();
+            });
         }
     };
     var div = $('#deal-buy');

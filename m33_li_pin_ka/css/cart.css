@@ -93,7 +93,73 @@
 }
 .aj-cart .aj-buy-one .aj-zhifu-way .aj-edit-ways{
     position: absolute;
-    top:0;right:0;
+    top:1px;right:5px;
+    font-size: 15px;
+    display: none;
+    cursor: pointer;
+}
+.aj-cart .aj-buy-one:hover .aj-zhifu-way .aj-edit-ways{
+    display: block;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways{
+    min-width: 250px;height: 50px;
+    position: absolute;
+    z-index: 999;
+    top:65px;left: 13px;
+    background-color: #ffffff;
+    box-shadow: #555 0 0 3px;
+    text-align: center;
+    display: none;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways:before{
+    position: absolute;
+    top:-20px;left: 10px;
+    content: '';
+    width:0;height:0;
+    border:10px solid;
+    border-color: transparent;
+    border-bottom-color: #ccc;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways:after{
+    position: absolute;
+    top:-18px;left: 10px;
+    content: '';
+    width:0;height:0;
+    border:10px solid;
+    border-color: transparent;
+    border-bottom-color: white;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways .aj-zaw-wrap{
+    display: inline-block;
+    margin-top: 5px;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways .aj-z-a-w-one{
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 3px 6px;
+    min-width: 10px;
+    text-align: center;
+    line-height: 22px;
+    margin-bottom: 5px;
+    margin: 5px 5px 0px 0;
+    border: 1px solid #DCDCDC;
+    background: #FFF;
+    -webkit-user-select:none;
+    font-size: 12px;
+    -moz-transition-property: border-color,background;
+    -o-transition-property: border-color,background;
+    -webkit-transition-property: border-color,background;
+    transition-property: border-color,background;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+.aj-cart .aj-buy-one .aj-zhifu-way .aj-zhifu-all-ways .aj-z-a-w-one:hover{
+    padding: 2px 5px;
+    border: 2px solid #F40;
 }
 .aj-cart .aj-buy-one .aj-unit-price{
     width: 80px;
