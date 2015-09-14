@@ -62,6 +62,14 @@ $(function () {
                 delter = delter > 0 ? delter : 1;
                 $(this).parents('.aj-goods-one').find('.goods-form')[0]['num'].value = delter;
             }
+            this.div.on('keyup', '.aj-four-wrap .aj-num input', function () {
+                var val = $(this).val();
+                if (!$.isNumeric(val) || val <= 0) {
+                    val = 1;
+                }
+                $(this).parents('.aj-goods-one').find('.goods-form')[0]['num'].value = val;
+                that.renderForm();
+            });
         },
         calculatePrice : function () { // 重新计算所有商品的各自 小计 以及总价
             var all_total = 0;

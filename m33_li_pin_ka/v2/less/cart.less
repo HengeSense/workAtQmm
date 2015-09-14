@@ -239,7 +239,7 @@
 }
 .aj-cart .aj-buy-one .aj-four-wrap .aj-quote-o{
     display: block;
-    width: 25%;height:80px;
+    width: 24%;height:80px;
     float:left;
     text-align: center;
     vertical-align: middle;
@@ -307,12 +307,19 @@
             padding: 0;
             height:@height;
             .aj-float-r{
+                position: relative;
                 float:right;
                 height: @height;
                 .aj-total{
+                    position: absolute;
+                    top:0;right:130px;
                     line-height: @height;
                     display: inline-block;
-                    margin-right: 10px;
+                    width: 200px;
+                    .aj-t-wrap{
+                        display: inline-block;
+                        float:right;
+                    }
                     .price{
                         font-size: 22px;
                         color: #f40;
@@ -320,6 +327,8 @@
                     }
                 }
                 .aj-confirm-order{
+                    position: absolute;
+                    top:0;right: 0;
                     color:white;
                     display: inline-block;
                     width: 120px;
