@@ -107,8 +107,14 @@ $(function () {
             }
         });
         wrap.find('.aj-show-more').on('click',function (e) {
-            $(this).parents('.aj-content').find('.aj-ul').toggleClass('aj-no-max-height');
-            $(this).html(arr[(arr.indexOf($(this).html()) + 1) % arr.length]);
+            var ul = $(this).parents('.aj-content').find('.aj-ul');
+            if (ul.hasClass('aj-no-max-height')) {
+                ul.removeClass('aj-no-max-height');
+                $(this).html(arr[0]);
+            } else {
+                ul.addClass('aj-no-max-height');
+                $(this).html(arr[1]);
+            }
         });
     })();
 });
