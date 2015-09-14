@@ -1,5 +1,4 @@
 $(function () {
-    
     function Lipinka(div) {
         this.div = $(div);
         this.init();
@@ -21,8 +20,17 @@ $(function () {
                     price = $(this).attr('aj-price');
                 div.html(price);
             });
+        },
+        isChooseZhifuWay : function () {  // 是否选择了支付方式
+            var select = this.div.find('.aj-zhifu-way .aj-one-way.aj-select');
+            if (select.length === 1) {
+                return true;
+            } else {
+                return false;
+            }
         }
     };
     var div = $('#aj-lipinc-content');
-    new Lipinka(div);
+    var lpk = new Lipinka(div);
+    window.lpk = lpk;
 });
