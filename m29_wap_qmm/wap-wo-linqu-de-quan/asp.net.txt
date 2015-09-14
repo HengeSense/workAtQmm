@@ -1,0 +1,46 @@
+<div class="aj-quan">
+    <a class="aj-q-img" title="查看《绿能宝》发布的所有优惠券" href="http://m.quanmama.com/mquan_solarbao">
+        <img alt="<%=Model._Coupon._Store.Name %>" src="<%=Model._Coupon._Store.Logo %>"></a>
+    <div class="aj-content">
+        <a class="aj-title aj-line" href="http://m.quanmama.com/mcoupon/249743.html">
+            <%=Model._Coupon.Title %></a>
+        <p class="aj-line">我领到的券代码：<em class="aj-red"><%=Model.ItemCode%></em></p>
+
+        <p class="aj-line"><em class="aj-td1">有效期：</em><%=Model._Coupon._EndTimeStr%>止</p>
+        <p class="aj-line"><em class="aj-td1">领取时间：</em><%=Model.DrawTime.ToDateTimeString()%></p>
+
+        <%if (!Model._Coupon._IsNonPasswordCoupon)
+          { %>
+        <p class="aj-line">我领到的券代码：<em class="aj-red"><%=Model.ItemCode%></em></p>
+
+        <%if (Model._IsCardWithPassword)
+          { %>
+        <p class="aj-line">卡号（或账号）：<em><%=Model._Card %></em></p>
+        <p class="aj-line">密码：<em><%=Model._CardPassword %></em></p>
+        <%} %>
+        <%}
+          else if (Model._Coupon._IsPublicCoupon)
+          {%>
+        <p class="aj-line">优惠券代码：<em><%=Model._Coupon.Code %></em></p>
+        <%}
+          else
+          { %>
+        <p class="aj-line">优惠券相关地址：<em>
+        <%if (Model._Coupon._IsToRedirect)
+          { %>
+        <%=Model._Coupon.Code.ToUrl() %>
+        <%}
+          else
+          { %>
+        <%=Model._Coupon.Code %>
+        <%} %>
+        </em></p>
+        <%} %>
+        <%if (Model.BuyFee > 0)
+          { %>
+        <p class="aj-line"><em>购买费用：</em><%=Model.BuyFee%>元</p>
+        <%} %>
+        <p class="aj-line"><em>有效期：</em><%=Model._Coupon._EndTimeStr%>止</p>
+        <p class="aj-line"><em>领取时间：</em><%=Model.DrawTime.ToDateTimeString()%></p>
+    </div>
+</div>

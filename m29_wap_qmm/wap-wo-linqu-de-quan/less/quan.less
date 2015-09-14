@@ -41,7 +41,7 @@
                 }
             }
             .aj-content{
-                padding-left: 100px;
+                padding-left: 110px;
             }
             .aj-line{
                 @height : 20px;
@@ -61,10 +61,10 @@
         }
     }
     .aj-load-more{
-        height: 30px;
+        width:90%;height: 30px;
         line-height: 30px;
         padding: 0;
-        margin:10px 0;
+        margin:10px auto;
         vertical-align: middle;
         border: .1rem solid;
         border-color: #adb1b8 #a2a6ac #8d9096;
@@ -93,12 +93,21 @@
             text-decoration: none!important;
             cursor: pointer;
             display: block;
-            background: #d8dde6;
             -webkit-tap-highlight-color: transparent;
             background: #e7e9ec;
             border-radius: 4px;
             background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
             background: -webkit-linear-gradient(top,#f7f8fa,#e7e9ec);
+            a{
+                color:#666;
+            }
+            &.aj-select{
+                background: #8d9096;
+                color: white;
+                a{
+                    color:white;
+                }
+            }
         }
         &:after{
             content: '';
