@@ -1,3 +1,111 @@
-*{
-    margin: 0;padding: 0;
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.2;
+    font-family: arial,"Hiragino Sans GB",Simhei,sans-serif;
+    color: #3e474e;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-bottom: 41px
+}
+
+li {
+    list-style: none
+}
+
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {
+    display: block;
+    font-size: 15px
+}
+
+article {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 1em;
+    font-weight: 400;
+    -webkit-text-size-adjust: none
+}
+
+i,em,address,cite {
+    font-style: normal
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+a:active,a:visited {
+    outline: 0
+}
+
+a img {
+    border: 0
+}
+body{
+//    background-image: url(../imgs/bg2.jpg);
+    background-color: #eee;
+}
+#aj-linqu-hb{
+    color:#666;
+    width: 100%;max-width: 640px;
+    margin: 0 auto;
+    .aj-lhb-wrap{
+        padding: 20px;
+    }
+    .aj-line{
+        color: #666;
+        @height : 30px;
+        width: 100%;
+        text-align: center;
+        line-height: @height;
+        &.aj-title{
+            font-size: 30px;
+        }
+        .aj-code{
+            margin: 10px 0;
+            display: inline-block;
+            border: dashed 2px #39ADCF;
+            padding: 2px 15px;
+            background: #D7EFF5;
+            font-size: 16px;
+            color: #000;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        img{
+            max-width: 100%;
+            border-radius: 4px;
+        }
+    }
+    .cutline{
+        border-bottom: 1px solid #ccc;
+        margin: 10px 0;
+    }
+    .aj-top{
+        .aj-line{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .aj-mid{
+        .aj-mid-wrap{
+            padding: 0 40px;
+            img {
+                max-width: 60%;
+            }
+        }
+    }
+    .aj-fot{}
 }
