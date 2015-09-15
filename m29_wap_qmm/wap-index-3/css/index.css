@@ -11,7 +11,7 @@
     transform:translate(-50%,0);
     -webkit-transform:translate(-50%,0);
     width:48px;height:48px;
-    background-image:url(loading.gif);
+    background-image:url(../loading.gif);
 }
 #aj-mobile-wrap .aj-mobile-module{
 	background-color:white;
@@ -238,7 +238,7 @@
 /*----------------*/
 #aj-mobile-wrap .loadMore.aj-is-loading{
     position:relative;top:-2px;
-    background-image:url(wait.gif);
+    background-image:url(../wait.gif);
     background-repeat:no-repeat;
     background-size: 25px 25px;
     color:white;
