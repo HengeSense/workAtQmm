@@ -3,8 +3,20 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width" />
     <script src="../angular-1.2.28/angular.js"></script>
     <script src="js/index.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .a-user{
+            background-color: #eee;
+            margin: 10px;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,11 +31,14 @@
 </div>
 
 <div ng-controller="lolController">
-    <div ng-repeat="user in users">
+    <div class="a-user" ng-repeat="user in users">
         <p>name:{{user.name}}</p>
         <p>age:{{user.age}}</p>
+        <button ng-click="remove($index)">remove</button>
     </div>
 </div>
+
+
 <script>
     function lolController($scope) {
         $scope.users = [
@@ -41,9 +56,13 @@
             },
             {
                 name : 'AJ',
-                age
+                age : '22'
             }
         ];
+        $scope.remove = function(index) {
+            console.log(index);
+            $scope.users.splice(index, 1);
+        }
     }
 </script>
 

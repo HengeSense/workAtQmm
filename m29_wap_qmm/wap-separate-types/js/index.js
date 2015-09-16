@@ -58,7 +58,7 @@ $(function () {
         });
         // ajax的具体实现
         function load(container, catid, fromLi) {
-            var url = "http://localhost:8080/myajax/ourcategoryguide?id=" + catid;
+            var url = "/myajax/ourcategoryguide?id=" + catid;
             container.load(url, function (res) {
                 var div = document.createElement('div');
                 $(div).html(res);
