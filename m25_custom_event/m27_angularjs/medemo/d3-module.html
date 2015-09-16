@@ -10,6 +10,10 @@
 
 <div ng-controller="TextController">
     <p>{{ someText.message}}</p>
+    <input type="text" name="" value="" ng-change="change()" ng-model="input">
+    <p>{{input}}</p>
+    <input type="checkbox" name="" value="" ng-change="computeNeeded()" ng-model="funding.startingEstimate"/>
+    <p>{{funding.needed}}</p>
 </div>
 
 <script>
@@ -18,6 +22,18 @@
         var someText = {};
         someText.message = "You have started your journey.";
         $scope.someText = someText;
+
+        $scope.change = function () {
+            console.log(this.input);
+        };
+
+        $scope.funding = {
+            startingEstimate : 0
+        };
+
+        $scope.computeNeeded = function () {
+            $scope.needed = $scope.startingEstimate * 10;
+        };
     });
 
 </script>
