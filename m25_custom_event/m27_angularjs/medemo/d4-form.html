@@ -41,6 +41,22 @@
 
 </script>
 
+<div ng-controller="showController">
+    <input type="checkbox" ng-model="check" />
+    <ul ng-show="check">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</div>
+
+<script>
+    function showController($scope) {
+
+    }
+
+</script>
+
 
 </body>
 </html>
