@@ -13,10 +13,47 @@
     <p>{{ prop.name }}</p>
 </div>
 
+<div ng-controller="inputController">
+    <input type="text" name="name" value="" ng-model="name"/>
+    <p>Hello{{", " + name}}</p>
+</div>
+
+<div ng-controller="lolController">
+    <div ng-repeat="user in users">
+        <p>name:{{user.name}}</p>
+        <p>age:{{user.age}}</p>
+    </div>
+</div>
+<script>
+    function lolController($scope) {
+        $scope.users = [
+            {
+                name : 'Yoko',
+                age : '19'
+            },
+            {
+                name : 'Baoquan',
+                age : '22'
+            },
+            {
+                name : 'Dandan',
+                age : '22'
+            },
+            {
+                name : 'AJ',
+                age
+            }
+        ];
+    }
+</script>
+
 <script>
     function ajaxController($scope){
         $scope.prop = {};
         $scope.prop.name = 'AJAX';
+    }
+    function inputController($scope){
+        //$scope.name = "";
     }
 </script>
 
