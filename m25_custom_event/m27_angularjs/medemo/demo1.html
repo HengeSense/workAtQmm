@@ -9,7 +9,7 @@
 
 <div ng-app="">
     Name : <input type="text" name="name" ng-model='name' value="">
-    <div>Hello {{angular.lowercase(name) || 'World!'}}</div>
+    <div>Hello {{name || 'World!'}}</div>
 </div>
 
 

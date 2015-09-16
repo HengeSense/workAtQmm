@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../angular-1.2.28/angular.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+
+<div ng-controller="ajaxController">
+    <p>{{ prop.name }}</p>
+</div>
+
+<script>
+    function ajaxController($scope){
+        $scope.prop = {};
+        $scope.prop.name = 'AJAX';
+    }
+</script>
+
+</body>
+</html>

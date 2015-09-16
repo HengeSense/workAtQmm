@@ -6,13 +6,18 @@ $(function () {
         blocks,
         blocksWrap,
         i,
-        divEle
+        divEle,
+        bannerImgHeight,
+        body = $('#body'),
+        bannerImg = $('#body a img:first'),
         scrollTop = -1;
     if (left.length === 0) return false;
+    bannerImgHeight = bannerImg.height();
+    var bannerTop = top.height() + bannerImgHeight;
     lis = left.find('.aj-li');
     blocksWrap = right.find('.aj-r-inside-wrap');
-    left.css({'height' : $(window).height() - top.height() + 'px'});
-    left.css({top : top.height() + 'px'});
+    left.css({'height' : $(window).height() - bannerTop + 'px'});
+    left.css({top : bannerTop + 'px'});
     for (i = 1; i < lis.length; i++) {
         divEle = document.createElement('div');
         $(divEle).addClass('aj-block');
@@ -24,8 +29,10 @@ $(function () {
         $(this).addClass('aj-select').siblings().removeClass('aj-select');
         blocks.eq($(this).index()).show().siblings().hide();
     });
-    right.css({height : $(window).height() - top.height() + 'px'});
-	
+    right.css({height : $(window).height() - bannerTop + 'px'});
+    right.css({top : bannerTop + 'px'});
+    right.css({width : body.width() + 'px'});
+
 	
 	// ajax
 	(function () {
@@ -119,9 +126,3 @@ $(function () {
 //        typesWrap.append(typesOne.clone().find('.aj-img img').attr('src', 'types_imgs/' + (i % 3)+ '.jpg').end());
 //    }
 //});
-
-/*Question
-* 1. jQuery 文件不在了
-* 2. 如果不用 通用html模板 怎么做, 或者说 通用模版某些 模块不想要怎么做
-* 3. 如何把我加的js文件 放在底部
-* */
