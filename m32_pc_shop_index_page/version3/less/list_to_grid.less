@@ -4,8 +4,8 @@
             font-family: Arial,"Microsoft YaHei";
             @title_height : 60px;
             @title_top : 230px;
-            position: relative;
             width: 33%;height: 380px;
+            position: relative;
             border:1px solid #dcdcdc;
             padding-bottom: 0;
             margin-bottom: 15px;
@@ -142,8 +142,14 @@
                         &:hover{
                             background-color: white;
                             color: #f04848;
-                            span.scoreTotal em{
-                                color: #f04848;
+                            .scoredInfo{
+                                display: none;
+                            }
+                            span.scoreTotal{
+                                display: block;
+                                em{
+                                    color: #f04848;
+                                }
                             }
                         }
                         span.scoreTotal{
