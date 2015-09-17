@@ -1,0 +1,181 @@
+.aj-grid-to-list-wrap {
+    @topHeight : 30px;
+    .aj-grid-list {
+        width: 720px !important;
+        padding-top: 25px;
+
+        .listItem {
+            padding-left: 230px;
+            padding-top: 40px;
+            padding-right: 0px;
+            margin-top: 0px;
+        }
+        div.mall{
+            position: relative;
+            top:40px;
+            left: auto;
+            right: 0;
+            float:right;
+            z-index: 20;
+            padding: 0;
+            .mall_word{
+                padding: 0 8px;
+            }
+        }
+        div.aj-mall-left {
+            right: 0px;
+            .mall_bg{
+//                background-color: white;
+//                background-color: transparent;
+            }
+        }
+        div.mall + div.mall {
+            max-width: 50px;
+            overflow: hidden;
+            margin-right: 5px;
+        }
+        .item_buy_mall {
+            top: 30px !important;
+        }
+        .aj-desc-wrap .aj-desc {
+            height: 96px !important;
+            color: #666 !important;
+            font-size: 14px !important;
+            line-height: 24px;
+        }
+        .aj-roll-wrap {
+            top: 138px;
+            right: 226px;
+            z-index: 20;
+        }
+        .aj-desc-wrap {
+            display: block !important;
+        }
+        .aj-check-and-roll{
+            .itemUserInfo{
+                float: left;
+                .rankTitle{
+                    display: none;
+                }
+                .aj-zhishi{
+                    &:before{
+                        left: 9px;
+                    }
+                    &:after{
+                        left: 10px;
+                    }
+                }
+            }
+            div.aj-read-num, div.aj-tuijianren{
+                display: block;
+                height:24px;float:left;
+                line-height: 24px;
+                color: #999;
+                margin-left: 10px;
+            }
+        }
+    }
+    .discovery_list a.picBox {
+        position: absolute;
+        top: @topHeight + 20;
+        left: 20px;
+        width: 180px;
+        height: 180px;
+        margin-top: 0 !important;
+        img {
+            max-width: 180px !important;
+            max-height: 180px !important;
+        }
+    }
+    .discovery_list li.list {
+        box-shadow: none !important;
+        border-color: white !important;
+        border-bottom: 1px solid #dcdcdc !important;
+        height: 225px !important;
+    }
+    .discovery_list .itemName {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        height: @topHeight;
+        line-height: @topHeight;
+        a {
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
+    .discovery_list .itemName .black, .discovery_list .itemName .red {
+        display: inline;
+    }
+    .pgreen {
+        font-size: 12px;
+    }
+    .aj-i-stamp {
+        position: relative;
+        top: -2px;
+        display: inline-block !important;
+        font-size: 12px !important;
+        background-color: #f5f5f5;
+        border-radius: 2px;
+        padding: 0 5px !important;
+        font-weight: normal;
+        color: #f04848 !important;
+        height: 28px;
+        line-height: 28px;
+        &:hover {
+            background-color: #f04848;
+            color: #ffffff !important;
+        }
+    }
+    .zan_fav_com {
+        height: 34px;
+        .zan {
+            position: relative;
+            display: inline-block;
+            float: left;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #ccc;
+            .border-radius(2px);
+            padding: 0 6px;
+            min-width: 44px;
+            text-align: center;
+            .icon-zan2, .icon-cai2 {
+                display: none;
+            }
+            &:before {
+                display: inline-block;
+            }
+            &:hover {
+                background-color: #f04848;
+                color: white;
+                text-decoration: none;
+                border: 1px solid #f04848;
+                &:before {
+                    color: white !important;
+                }
+            }
+
+        }
+        .zan[data-type="yes"] {
+            &:before {
+                content: '值';
+                color: #f04848;
+            }
+        }
+        .zan[data-type="no"] {
+            margin-right: 10px;
+            &:before {
+                content: '不值';
+            }
+        }
+        .comment {
+            position: relative;
+            right: -10px;
+            line-height: 40px;
+        }
+    }
+    .item_buy_mall .directLink {
+        top: 8px;
+    }
+}
