@@ -111,6 +111,7 @@ $(function () {
         gridList: function (typeValue) {
             var aTags = this.div.find('.layout .aj-a'),
                 listClassName = 'aj-grid-to-list-wrap',
+                listToGridClass = 'aj-list-to-grid-wrap',
                 $this = this,
                 type = typeValue; // grid or list
             aTags.each(function () {
@@ -131,15 +132,26 @@ $(function () {
             this.div.on('click', '.layout .aj-a', function () {
                 $(this).addClass('aj-select').siblings().removeClass('aj-select');
                 type = $(this).attr('aj-type');
-                changeGridList();
+//                changeGridList();
+                changeListToGrid();
             });
             // change grid list style
-            changeGridList();
-            function changeGridList() {
+//            changeGridList();
+//            function changeGridList() {
+//                if (type === 'list') {
+//                    $this.left.addClass(listClassName);
+//                } else {
+//                    $this.left.removeClass(listClassName);
+//                }
+//            }
+            // 2015-09-17 改版后不使用ul 渲染视图,使用首页的div渲染
+            // 所以要求把 list 强制转换成 Grid, 使用css
+            changeListToGrid();
+            function changeListToGrid() {
                 if (type === 'list') {
-                    $this.left.addClass(listClassName);
+                    $this.left.removeClass(listToGridClass);
                 } else {
-                    $this.left.removeClass(listClassName);
+                    $this.left.addClass(listToGridClass);
                 }
             }
         },

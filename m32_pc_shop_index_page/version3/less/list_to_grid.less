@@ -1,0 +1,103 @@
+.aj-list-to-grid-wrap{
+    #J_zhide_list{
+        .list{
+            position: relative;
+            width: 33%;
+            border:1px solid #dcdcdc;
+            .listTitle{
+                position: absolute;
+                top:200px;
+                font-size: 14px;
+                margin-bottom: 0;
+                a.icon, .adminArea{
+                    display: none;
+                }
+                h4.itemName{
+                    line-height: 20px;
+                    padding: 0 15px;
+                    font-size: 14px;
+                }
+            }
+            .picLeft{
+                display: block;
+                margin: 15px auto 0;
+                float: none;
+            }
+            .listRight{
+                margin-top:40px;
+                width: 100%;
+                .aj-check{
+                    margin-left: 15px;
+                }
+                .lrTop{
+                    display: none;
+                }
+                .lrInfo{
+                    display: none;
+                }
+                .lrBot{
+                    padding: 0 15px;
+                    margin-top: 35px;
+                    a.fav{
+                        display: none;
+                    }
+                    a.good, a.bad{
+                        border:none;
+                        background-color: white;
+                        min-width: 0;
+                        padding-left: 20px;
+                        padding-right: 0;
+                        outline: 1px solid red;
+                        &:hover{
+                            background-color: white;
+                        }
+                        span.scoreTotal{
+                            b{
+                                display: none;
+                            }
+                            em{
+                                color:#999;
+                                &:hover{
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                    a.good{
+                        background-image: url("http://www.quanmama.com/AdminImageUpload/5257485home_icon.png");
+                        background-repeat: no-repeat;
+                        background-position: -240px -213px;
+                        span.scoreTotal{
+
+                        }
+                    }
+                    a.bad{
+                        background-image: url("http://www.quanmama.com/AdminImageUpload/5257485home_icon.png");
+                        background-repeat: no-repeat;
+                        background-position: -210px -213px;
+                    }
+                    a.comment{
+                        height: 28px;
+                        line-height: 28px;
+                        margin-top: 0px;
+                    }
+                    .botPart{
+                        .buy{
+                            a{
+                                width: 72px;
+                                padding-left: 0px;
+                                text-align: center;
+                                i{
+                                    display: none;
+                                }
+                            }
+                        }
+                        .mall{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
