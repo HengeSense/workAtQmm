@@ -65,8 +65,9 @@ $(function () {
                 fromBtn.find('span.aj-info').html('加载中...');
             }
             function load(){    // 模拟 ajax 请求评论数据
-                var url = "./ajax.comments.txt",
-                    data = fromBtn.find('form').serialize();
+                var form = fromBtn.find('form'),
+                    data = form.serialize(),
+                    url = form[0]['path'].value;
                 $.ajax({
                     url : url,
                     data : data,
