@@ -73,21 +73,30 @@ $(function () {
                     data : data,
                     type : 'GET',
                     success : function (response) {
-                        render(response)
+                        render(response);
+                        complete(response);
                     },
                     complete : function () {
-                        complete();
+                        //complete();
                     }
                 });
             }
             function render(response){  // 渲染加载成功后的html
                 fromBtn.before("<div class='aj-cutline'>....我是一条评论分割线<(￣3￣)> ....</div>");
-                fromBtn.before(response);
+                var ul = document.createElement('ul');
+                $(ul).addClass('aj-comments-list');
+                $(ul).html(response);
+                fromBtn.before(ul);
                 $($this.div).trigger('toggleComments');
             }
-            function complete(){    // ajax完成后要做的一些非样式逻辑
+            function doWhenNoMore() {
+                fromBtn.removeClass('aj-is-loading');
+                fromBtn.addClass('aj-no-more');
+                fromBtn.find('span.aj-info').html('木有更多了');
+            }
+            function complete(response){    // ajax完成后要做的一些非样式逻辑
                 var form;
-                if (checkAnyMore()) {
+                if (checkAnyMore2(response)) {
                     form = fromBtn.find('form')[0];
                     if (form) {
                         form['page'].value = parseInt(form['page'].value) + 1;
@@ -100,11 +109,11 @@ $(function () {
                     fromBtn.find('span.aj-info').html('木有更多了');
                 }
             }
-            function checkAnyMore() {   // 如果木有更多评论, 请在返回的html中 加入 "<span class='aj-no-more-comments-for-ajax'></span>"
-                if ($this.div.find('.aj-no-more-comments-for-ajax').length > 0) {
-                    return false;
-                } else {
+            function checkAnyMore2(response) {
+                if (/\S/.test(response)) {
                     return true;
+                } else {
+                    return false;
                 }
             }
             dealWidthBtn();
