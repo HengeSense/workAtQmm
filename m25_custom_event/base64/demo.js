@@ -79,7 +79,7 @@
             return isStart ? (result + str) : (str + result);
         }
     };
-    var str = "我爱编码";
+    var str = "I love You";
     (new Encode(str)).base64();
     console.log(base64Encode(str));
 })();
