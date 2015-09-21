@@ -1,4 +1,4 @@
-<ul class="aj-comments-list">
+
                         <li class="aj-comments-one">
                             <div class="aj-userInfo">
                                 <em>
@@ -1158,102 +1158,7 @@
                                 </p>
                             </h5>
                         </li>
-                        <li class="aj-comments-one">
-                            <div class="aj-userInfo">
-                                <em>
-                                    渐行渐远渐无书
-                                </em>
-                                2小时前
-                            </div>
-                            <ol class="aj-ol">
-                                <li class="aj-o-li">
-                                    <span class="order">1F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            zhou_18：
-                                        </em>
-                                        千万别买内个打蛋器！！！你单身20年的手速打出来的蛋绝对秒它十几条街...相信我
-                                        <br>
-                                        （不是相信我的手速）[击掌][击掌][击掌][击掌]
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
-                                <li class="aj-o-li">
-                                    <span class="order">2F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            eolef：
-                                        </em>
-                                        运动轨迹相差太大，会导致蛋液飞射
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
 
-                                <li class="aj-o-li">
-                                    <span class="order">3F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            憔悴深秋：
-                                        </em>
-                                        手速。。。蛋液。。。飞射。。。[害羞]
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
-                                <li class="aj-o-li">
-                                    <span class="order">4F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            Laxus：
-                                        </em>
-                                        我要上墙小便
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
-                                <li class="aj-o-li">
-                                    <span class="order">5F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            像疯一笑而过：
-                                        </em>
-                                        我打赌楼上尿不过胸口[阴笑]
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
-                                <li class="aj-o-li">
-                                    <span class="order">6F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            VisIon1943：
-                                        </em>
-                                        当年看新闻说某个部落结婚时候男性尿不过头顶就会被砍死。。。。[饥饿]
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
-                                <li class="aj-o-li">
-                                    <span class="order">7F</span>
-                                    <p class="reply_content">
-                                        <em>
-                                            像疯一笑而过：
-                                        </em>
-                                        [狂汗]吓死我了，赶紧尿个尿压压惊。那女的呢？[邪恶]
-                            <span class="reply_content_more" style="display:none;">
-                            </span>
-                                    </p>
-                                </li>
-                            </ol>
-                            <h5>
-                                <p>
-                                    顶起，跟上墙
-                                </p>
-                            </h5>
-                        </li>
-                        </ul>
                         <!--
                         <span class='aj-no-more-comments-for-ajax'></span>
                         -->

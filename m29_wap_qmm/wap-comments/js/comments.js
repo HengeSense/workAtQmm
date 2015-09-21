@@ -1,11 +1,15 @@
 $(function () {
     function Comment(div){
         this.div = div;
+        this.form = $(this.div).find('.aj-get-more-comments form')[0];
+        this.fromBtn = $(this.div).find('.aj-get-more-comments');
+        this.onePageNum = parseInt(this.form['one_page_num'].value, 10);
     }
     Comment.prototype = {
         init : function () {
             this.event();
             this.commentsAreaInit();
+            this.btnStyle();
         },
         event : function () {
             var $this = this;
@@ -56,9 +60,21 @@ $(function () {
         commentsAreaInit : function () {
             $(this.div).trigger('toggleComments');
         },
+        btnStyle : function () {
+            var fromBtn = this.fromBtn;
+            if (fromBtn.hasClass("aj-no-more")) {
+                this.doWhenNoMore();
+            }
+        },
+        doWhenNoMore : function () {
+            this.fromBtn.removeClass('aj-is-loading');
+            this.fromBtn.addClass('aj-no-more');
+            this.fromBtn.find('span.aj-info').html('木有更多了');
+        },
         getMoreComments : function () {
             var fromBtn = $(this.div).find('.aj-get-more-comments'),
                 $this = this;
+
             if (fromBtn.hasClass('aj-is-loading') || fromBtn.hasClass('aj-no-more')) return false;
             function dealWidthBtn() {
                 fromBtn.addClass('aj-is-loading');
@@ -90,9 +106,7 @@ $(function () {
                 $($this.div).trigger('toggleComments');
             }
             function doWhenNoMore() {
-                fromBtn.removeClass('aj-is-loading');
-                fromBtn.addClass('aj-no-more');
-                fromBtn.find('span.aj-info').html('木有更多了');
+                $this.doWhenNoMore();
             }
             function complete(response){    // ajax完成后要做的一些非样式逻辑
                 var form;
@@ -104,13 +118,13 @@ $(function () {
                     fromBtn.removeClass('aj-is-loading');
                     fromBtn.find('span.aj-info').html('点击加载更多');
                 } else {
-                    fromBtn.removeClass('aj-is-loading');
-                    fromBtn.addClass('aj-no-more');
-                    fromBtn.find('span.aj-info').html('木有更多了');
+                    $this.doWhenNoMore();
                 }
             }
             function checkAnyMore2(response) {
-                if (/\S/.test(response)) {
+                var ul = document.createElement('ul');
+                $(ul).html(response);
+                if (/\S/.test(response) && $(ul).find('.aj-comments-one').length === $this.onePageNum) {
                     return true;
                 } else {
                     return false;
