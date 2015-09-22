@@ -1,0 +1,89 @@
+@import url(config.less);
+@import "smile.less";
+#aj-comment-area{
+    .comment_operate{
+        position: relative;
+    }
+    .aj-biaoqin-wrap{
+        position: absolute;
+        top:0;left: 0;
+        width:30px;height:40px;
+        .aj-biaoqin{
+            display: inline-block;
+            font-size: 20px;
+            line-height: 40px;
+            color: #666;
+            .transition();
+            cursor: pointer;
+            &:hover{
+                color:#f04848;
+            }
+        }
+        .smileLayerBg{
+            width: auto;
+            height: auto;
+            background-color: #f5f5f5;
+            padding:10px;
+            display: block;
+
+            position: absolute;
+            top: 34px;
+            left: 0;
+            clear: both;
+            width: 386px;
+            height: 176px;
+            padding: 12px;
+            background-color: #f5f5f5;
+            border: 1px solid #dcdcdc;
+            ul.smileBox{
+                width: 386px;
+                height: 140px;
+                clear: both;
+                li{
+                    width: 36px;
+                    height: 36px;
+                    float: left;
+                    margin: -1px 0 0 -1px;
+                    padding: 0;
+                    border-bottom: 0;
+                    a{
+                        background-image: url(../img/static.gif);
+                        width:34px;
+                        height:34px;
+                        display:block;
+                        border:1px solid #dcdcdc;
+                        background-color:#fff;
+                        &:hover{
+                            border: 1px solid #f04848;
+                            background-color: #f9f9f9;
+                            position: relative;
+                            z-index: 2;
+                        }
+                    }
+                }
+            }
+            .smilePage{
+                margin-top: 10px;
+                padding:0px;
+                background-color: #f5f5f5;
+                a{
+                    padding:0;
+                    min-width: 25px;
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 4px;
+                    line-height: 24px;
+                    text-align: center;
+                    .border-radius(2px);
+                    &.current, &:hover{
+                        background-color: #f04848;
+                        color: #fff;
+                        font-weight: bold;
+                        text-decoration: none
+                    }
+                }
+            }
+        }
+    }
+}
