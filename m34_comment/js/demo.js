@@ -97,7 +97,7 @@ $(function () {
             });
 
         },
-        dealRenderForWap : function () {
+        dealRenderForWap : function (wrap) {
             var lis = wrap.find('.aj-comments-one'),
                 that = this;
             les.each(function () {
@@ -141,7 +141,7 @@ $(function () {
     };
     var area = $("#aj-comment-area"),
         coDom = $('#comment'),
-        wapDom = $('#aj-comments.aj-comments');
+        wapDom = $('#aj-comments.aj-comments'),
         s;
     if (area.length > 0) {
         s = new Smile(area);

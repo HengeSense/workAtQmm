@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+</head>
+<body>
+
+<style>
+    #aj-delay-page{
+        position: fixed;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.5);
+        top:0;left: 0;
+        width:100%;height: 100%;
+        display: none;
+    }
+    #aj-delay-page .img{
+        position: absolute;
+        top:50%;left: 50%;
+        transform:translate(-50%, -50%);
+        -webkit-transform:translate(-50%, -50%);
+        -moz-transform:translate(-50%, -50%);
+    }
+    .aj-delay-div-inside{
+        position: relative;
+        width:100%;
+        height:40px;
+        background-color: #ffffff;
+    }
+    .aj-delay-div-inside .img{
+        position: absolute;
+        top: 50%; left: 50%;
+        transform:translate(-50%, -50%);
+        -webkit-transform:translate(-50%, -50%);
+        -moz-transform:translate(-50%, -50%);
+    }
+</style>
+<div id="aj-delay-page">
+    <img  class="img" src="http://www.quanmama.com/AdminImageUpload/20148150838532.jpg">
+</div>
+</body>
+</html>
