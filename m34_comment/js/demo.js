@@ -95,6 +95,12 @@ $(function () {
                 }
             });
         },
+        bindRenderEventFor : function (coDom) { // 如果在其它脚本里渲染评论区域的表情, 请触发绑定在 div#comment 的 aj.render事件
+            var that = this;
+            coDom.on('aj.render', function () {
+                that.dealRender(coDom);
+            });
+        },
         getSmileConfig : function () {   // 如果以后添加表情, 可以用这个方法刷新config json数据
             var config = {},
                 className,
@@ -114,6 +120,13 @@ $(function () {
             return config;
         }
     };
-    var s = new Smile($("#aj-comment-area"));
-    s.dealRender($('#comment'));
+    var area = $("#aj-comment-area"),
+        coDom,
+        s;
+    if (area.length > 0) {
+        s = new Smile(area);
+        coDom = $('#comment');
+        s.dealRender(coDom);
+        s.bindRenderEventFor(coDom);
+    }
 });

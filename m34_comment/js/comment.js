@@ -1,28 +1,19 @@
 $(function () {
 
     //敲回车自动保存
-    document.onkeydown = function (moz_ev) {
-        var ev = null;
-        if (window.event) {
-            ev = window.event
-        } else {
-            ev = moz_ev
-        }
+    var doc = document;
+    $(doc).on('keydown', function (ev) {
         if (ev != null && ev.ctrlKey && ev.keyCode == 13) {
-
             var comment_isFocus = $("#textareaComment").is(":focus");
             if (true == comment_isFocus) {
                 $("#textCommentSubmit").click()
             }
-
-
             var quick_isFocus = $("#quickComment").is(":focus");
             if (true == quick_isFocus) {
                 $("#textCommentSubmitQuick").click()
             }
-
         }
-    };
+    });
 
     //快速回复
     commentQuickReply(".reply");
@@ -34,8 +25,8 @@ $(function () {
     visibleOrNot("blockquote", ".comment_action", "display");
     tab(".tab_comment_li", ".tab_info", "current_item", "click");
     openClose(".seaAll", "", "comments");
-//    popUp("#textareaComment", "#pop-login", "");
-//    popUp(".comment_tips", "#pop-login", "");
+    //    popUp("#textareaComment", "#pop-login", "");
+    //    popUp(".comment_tips", "#pop-login", "");
     //comment_share_to_sina("i.check");
 
     var txt3 = '"><i class="icon-loginright"></i> 提交成功。',
@@ -134,12 +125,13 @@ $(function () {
             success: function (html) {
                 loadingImg.hide();
                 $("#li_comment_new").after(html);
+                $('#comment').trigger("aj.render"); // 该事件来自另一个脚本的Smile类, 用来主动触发渲染div#comment内部的表情的事件
             }
         })
     }
 
-//    func_atta();
-//    func_report()
+    //    func_atta();
+    //    func_report()
 });
 
 function func_atta(obj_name) {
@@ -322,7 +314,25 @@ function init_smile() {
         $(this).addClass("current").siblings().removeClass("current");
         $(".smileBox").hide().eq($(".smilePage a").index(this)).show()
     });
-   
+    $(".smileLayerBg li a").each(function () {
+        $(this).click(function () {
+            var temp_div = $(this).parent().parent().parent().parent();
+            var textarea_obj = temp_div.parent().parent().find("textarea:first");
+            temp_div.find(".smileLayerBg").css("display", "none");
+            temp_div.find(".icon-small").removeAttr("isclick");
+            var dstr = textarea_obj.attr("default");
+            var str = textarea_obj.val();
+            if (str == default_data) {
+                str = ""
+            }
+            var sstr = str;
+            if (dstr) {
+                var sstr = str.replace(dstr, "")
+            }
+            textarea_obj.val(sstr);
+            textarea_obj.insertContent($(this).attr("default-data"))
+        })
+    });
     return false
 }
 
