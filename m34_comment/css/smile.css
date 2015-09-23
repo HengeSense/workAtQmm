@@ -1,5 +1,5 @@
 .aj-comment-smile-bg {
-  background-image: url("/images/smile/static.gif");
+  background: url(/images/smile/static.gif);
   width: 34px;
   height: 34px;
   vertical-align: bottom;

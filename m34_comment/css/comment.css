@@ -1,5 +1,5 @@
 .aj-comment-smile-bg {
-  background-image: url("/images/smile/static.gif");
+  background: url(/images/smile/static.gif);
   width: 34px;
   height: 34px;
   vertical-align: bottom;
@@ -491,9 +491,10 @@
   margin: -1px 0 0 -1px;
   padding: 0;
   border-bottom: 0;
+  overflow: hidden;
 }
 #aj-comment-area .aj-biaoqin-wrap .smileLayerBg ul.smileBox li a {
-  background-image: url("/images/smile/static.gif");
+  background-image: url(/images/smile/static.gif);
   width: 34px;
   height: 34px;
   display: block;

@@ -1,6 +1,3 @@
-/**
- * Created by james on 2015/9/22.
- */
 $(function () {
     function Smile(div) {
         this.div = div;
@@ -86,6 +83,18 @@ $(function () {
             }
             $(container).html(htmlCopy);
         },
+        dealRender : function (wrap) { // dealRender 接收一个Dom对象, 该对象是评论的外围包裹div
+            var lis = wrap.find('.comment_listBox .comment_list'),
+                that = this;
+            lis.each(function () {
+                if (!$(this).hasClass('aj-has-render')) {
+                    $(this).addClass('aj-has-render');
+                    $(this).find('.comment_conWrap .comment_con p').each(function () {
+                        that.render(this);
+                    });
+                }
+            });
+        },
         getSmileConfig : function () {   // 如果以后添加表情, 可以用这个方法刷新config json数据
             var config = {},
                 className,
@@ -105,5 +114,6 @@ $(function () {
             return config;
         }
     };
-    new Smile($("#aj-comment-area"));
+    var s = new Smile($("#aj-comment-area"));
+    s.dealRender($('#comment'));
 });
