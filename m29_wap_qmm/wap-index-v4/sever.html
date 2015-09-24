@@ -1,0 +1,41 @@
+<div class="aj-one-type aj-mobile-module">
+    <div class="aj-header">
+        <div class="aj-color-border" style="background-color: rgb(86, 178, 255);"></div>
+        <div class="aj-color-title">
+            <span>热门网购优惠券</span>
+            <a class="aj-more" style="color: rgb(86, 178, 255);">
+                <span>更多</span>
+                <i class="qmm-icon-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="aj-content aj-content-inside-roll">
+
+            <%int myindex = 0; foreach (var store in (List<Quanmama.Models.Store>)ViewData["hotStores"])
+            {
+                if (myindex % 4 == 0) {
+            %>
+                    <ul class='aj-ul'>
+            <%
+                }
+            if (myindex == ((List<Quanmama.Models.Store>)ViewData["hotStores"]).Count) break;
+                myindex++;
+
+                %>
+                <li class="aj-li">
+                    <a href="<%=store._MobileUrl %>" class="aj-a">
+                        <img src="images/vip.jpg" class="aj-a-img" alt="<%=store.Name %>优惠券" />
+                    </a>
+                    <p class="aj-p"><%=store.Name%></p>
+                </li>
+
+                <%
+                    if (myindex % 4 == 0) {
+                %>
+                    </ul>
+                <%
+                    }
+                } %>
+
+    </div>
+</div>

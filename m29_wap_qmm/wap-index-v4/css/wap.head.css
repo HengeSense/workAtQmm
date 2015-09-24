@@ -1,2 +1,42 @@
-#top.aj-new-top{background-color:#ff6100;border-bottom:1px solid #ff6100}#top.aj-new-top .home-wrapper{top:9px;display:none}#top.aj-new-top .login-wrapper{top:11px}#top.aj-new-top .aj-qmm-banner-bg{height:50px}#top.aj-new-top .header_right .aj-search{position:absolute;top:13px;right:35px}#top.aj-new-top .header_right .aj-search span[class*='qmm-icon']{font-size:20px}#top.aj-new-top .header_right .aj-menu{position:absolute;top:13px;right:15px}#top.aj-new-top .header_right .aj-menu span[class*='qmm-icon']{font-size:20px}#sidr{position:fixed;z-index:999;top:50px}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+#top.aj-new-top {
+  background-color: #00BBBB;
+  border-bottom: 1px solid #00BBBB;
+}
+#top.aj-new-top .aj-back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+  color: white;
+}
+#top.aj-new-top .home-wrapper {
+  top: 9px;
+  display: none;
+}
+#top.aj-new-top .login-wrapper {
+  top: 11px;
+}
+#top.aj-new-top .aj-qmm-banner-bg {
+  height: 50px;
+}
+#top.aj-new-top .header_right .aj-search {
+  position: absolute;
+  top: 13px;
+  right: 35px;
+}
+#top.aj-new-top .header_right .aj-search span[class*='qmm-icon'] {
+  font-size: 20px;
+}
+#top.aj-new-top .header_right .aj-menu {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+#top.aj-new-top .header_right .aj-menu span[class*='qmm-icon'] {
+  font-size: 20px;
+}
+#sidr {
+  position: fixed;
+  z-index: 999;
+  top: 50px;
+}
