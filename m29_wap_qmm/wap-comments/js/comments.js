@@ -104,6 +104,7 @@ $(function () {
                 $(ul).html(response);
                 fromBtn.before(ul);
                 $($this.div).trigger('toggleComments');
+                $($this.div).trigger('aj.renderSmile');
             }
             function doWhenNoMore() {
                 $this.doWhenNoMore();
