@@ -484,6 +484,7 @@ $(function () {
 
 });
 
+
 var is_inited = 0;
 var zdmListForDuplicateCheck = [];
 function initZdmListForDuplicateCheck() {
@@ -500,19 +501,15 @@ function initZdmListForDuplicateCheck() {
 
 function youhuiListLoad(youhuiParams, successCallback) {
     $(".loadMore").addClass("aj-is-loading");
-
     youhuiParams = (typeof youhuiParams == 'object') ? youhuiParams : {};
     var ajaxData = $.extend({}, Qmm_config.youhuiInfo, youhuiParams);
-
     console.log(ajaxData);
-
     $.ajax({
         type: "get",
-        url: "/myajax/mobileYouhuiListPage", //?page=" + (current_page + 1) + "&pagetype=" + pagetype + "&posttype=" + posttype + "&promotype=" + promotype + "&sort=" + sort + "&category=" + category + "&site=" + site + "&time=" + time + "&area=" + area + "&status=" + status + "&pagesize=" + pagesize,
+        url: "/myajax/mobileYouhuiListPage",
         data: ajaxData,
         dataType: "html",
         success: function (html) {
-
             //Qmm_config.youhuiInfo = youhuiParams;
             Qmm_config.youhuiInfo = ajaxData;
 
@@ -520,34 +517,32 @@ function youhuiListLoad(youhuiParams, successCallback) {
 
             if ($(html).find(".zdm_list_li").length == 0) {
                 $(".loadMore").hide();
+                $(".aj-getmore-by-click").hide();
             } else {
-                //initZdmListForDuplicateCheck();
-
+                initZdmListForDuplicateCheck();
                 var cnt = 0;
 
-                if (Qmm_config.youhuiInfo.page == 1) {
-                    $(".list_preferential").html(html);
-                }else {
-                    $(".list_preferential").append(html);
+                if (parseInt(Qmm_config.youhuiInfo.page) === 1) {
+                    zdmListForDuplicateCheck = [];
                 }
-//                $(html).find(".zdm_list_li").each(function () {
-//                    var now_zdm_id = parseInt($(this).attr("data-id"));
-//
-//                    if (now_zdm_id > 0 && zdmListForDuplicateCheck.indexOf(now_zdm_id) < 0) {
-//                        zdmListForDuplicateCheck.push(now_zdm_id);
-//
-//
-//                        if (Qmm_config.youhuiInfo.page == 1 && cnt == 0) {
-//                            $(".list_preferential").html($(this).prop("outerHTML"));
-//                        }
-//                        else {
-//                            $(".list_preferential").append($(this).prop("outerHTML"));
-//                        }
-//
-//                        cnt += 1;
-//                    }
-//                });
 
+                $(html).find(".zdm_list_li").each(function () {
+                    var now_zdm_id = parseInt($(this).attr("data-id"));
+
+                    if (now_zdm_id > 0 && zdmListForDuplicateCheck.indexOf(now_zdm_id) < 0) {
+                        zdmListForDuplicateCheck.push(now_zdm_id);
+
+
+                        if (Qmm_config.youhuiInfo.page == 1 && cnt == 0) {
+                            $(".list_preferential").html($(this).prop("outerHTML"));
+                        }
+                        else {
+                            $(".list_preferential").append($(this).prop("outerHTML"));
+                        }
+
+                        cnt += 1;
+                    }
+                });
             }
             Qmm_config.youhuiInfo.page = parseInt(Qmm_config.youhuiInfo.page, 10) + 1;
             successCallback && successCallback();
@@ -562,6 +557,8 @@ function youhuiListLoad(youhuiParams, successCallback) {
         }
     });
 }
+
+
 
 $(function () {
     $(".loadMore").click(function () {
@@ -579,14 +576,20 @@ $(function () {
     $(win).on('scroll', function () {
         if (!timer) {
             timer = setTimeout(function () {
-                if (needAjax()) {
-                    ajax();
+                if (isCloseBottom()) {
+                    if (needAjax()) {
+                        ajax();
+                        hideClickModule();
+                    } else {
+                        addAjaxByClickModule();
+                        showClickModule();
+                    }
                 }
                 timer = 0;
             }, 200);
         }
     });
-    function needAjax() {
+    function isCloseBottom() {
         delter = $(doc.body).height() - $(win).scrollTop() - $(win).height();
         if (delter <= 200) {
             return true;
@@ -594,7 +597,29 @@ $(function () {
             return false;
         }
     }
-    function showDelay(){
+    function needAjax() {
+        if (parseInt(Qmm_config.youhuiInfo.page) < 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function addAjaxByClickModule() {
+        if (!container.hasClass('aj-ajax-by-click')) {
+            container.addClass('aj-ajax-by-click');
+            container.append("<div class='getmore aj-getmore-by-click'>加载更多</div>");
+        }
+    }
+    function hideClickModule() {
+        $('.aj-getmore-by-click').hide();
+    }
+    function showClickModule() {
+        $('.aj-getmore-by-click').show();
+    }
+    container.on('click', '.aj-getmore-by-click', function () {
+        ajax();
+    });
+    function showDelay() {
         container.append("<div class='aj-delay-div-inside'><img  class='img' " +
             "src='http://www.quanmama.com/AdminImageUpload/20148150838532.jpg'></div>");
 
@@ -610,10 +635,9 @@ $(function () {
             if (Qmm_config.youhuiInfo) {
                 youhuiListLoad(Qmm_config.youhuiInfo, function () {
                     isAjaxNow = false;
-                    //hideDelay();
+                    hideDelay();
                 });
             }
         }
     }
 });
-
