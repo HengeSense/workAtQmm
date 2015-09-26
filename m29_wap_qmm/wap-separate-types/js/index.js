@@ -10,7 +10,7 @@ $(function () {
         bannerImgHeight,
         body = $('#body'),
         bannerImg = $('#body a img:first'),
-        scrollTop = -1;
+        scrollTop = -1;0
     if (left.length === 0) return false;
     bannerImgHeight = bannerImg.height();
     var bannerTop = top.height() + bannerImgHeight;

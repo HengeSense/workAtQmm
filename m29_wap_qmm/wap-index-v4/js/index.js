@@ -148,6 +148,21 @@ $(function () {
             resize();
         });
     })();
+    // 如果一行滚动8个修改高度
+    (function () {
+        var div = mobile_wrap.find('#aj-top-types');
+        if (div.length === 0) return false;
+        div.find('.aj-one-type:not(.aj-t-tuijian)').each(function () {
+            var uls = $(this).find('.aj-content .aj-ul'),
+                lines;
+            if (uls[0]) {
+                lines = Math.ceil(uls.eq(0).find('li.aj-li').length / 4);
+            }
+            $(this).css({
+                height : 40 + lines * 70 + 'px'
+            });
+        });
+    })();
 });
 
 
