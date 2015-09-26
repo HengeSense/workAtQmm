@@ -512,19 +512,12 @@ function youhuiListLoad(youhuiParams, successCallback) {
         dataType: "html",
         success: function (html) {
             //Qmm_config.youhuiInfo = youhuiParams;
+            var responseContainer = $(".list_preferential");
             Qmm_config.youhuiInfo = ajaxData;
 
             $(".loadMore").removeClass("aj-is-loading");
             var backNum = $(html).find(".zdm_list_li").length;
             console.log(backNum + '=== Page : ' + ajaxData.page);
-            if (backNum < ajaxData.pagesize) {
-                $(".loadMore").hide();
-                $(".aj-getmore-by-click").hide();
-                isThisPageHaveAnyMoreLis = false;
-            }
-            if (backNum === 0 && parseInt(ajaxData.page) === 1) {
-                $(".list_preferential").load("/html/AJ/noContentPageForWap.htm");
-            }
             if (backNum > 0) {
                 initZdmListForDuplicateCheck();
                 var cnt = 0;
@@ -539,15 +532,25 @@ function youhuiListLoad(youhuiParams, successCallback) {
                     if (now_zdm_id > 0 && zdmListForDuplicateCheck.indexOf(now_zdm_id) < 0) {
                         zdmListForDuplicateCheck.push(now_zdm_id);
                         if (Qmm_config.youhuiInfo.page == 1 && cnt == 0) {
-                            $(".list_preferential").html($(this).prop("outerHTML"));
+                            responseContainer.html($(this).prop("outerHTML"));
                         }
                         else {
-                            $(".list_preferential").append($(this).prop("outerHTML"));
+                            responseContainer.append($(this).prop("outerHTML"));
                         }
                         cnt += 1;
                     }
                 });
             }
+            if (backNum < ajaxData.pagesize) {
+                $(".loadMore").hide();
+                $(".aj-getmore-by-click").hide();
+                responseContainer.append('<li style="text-align: center;padding: 10px 0;">没有更多了</li>');
+                isThisPageHaveAnyMoreLis = false;
+            }
+            if (backNum === 0 && parseInt(ajaxData.page) === 1) {
+                $(".list_preferential").load("/html/AJ/noContentPageForWap.htm");
+            }
+
             Qmm_config.youhuiInfo.page = parseInt(Qmm_config.youhuiInfo.page, 10) + 1;
             successCallback && successCallback();
         },
@@ -581,7 +584,10 @@ $(function () {
     $(win).on('scroll', function () {
         if (!timer) {
             timer = setTimeout(function () {
-                if (!isThisPageHaveAnyMoreLis) return false;
+                timer = 0;
+                if (!isThisPageHaveAnyMoreLis){
+                    return false;
+                }
                 if (isCloseBottom()) {
                     if (needAjax()) {
                         ajax();
@@ -591,7 +597,6 @@ $(function () {
                         showClickModule();
                     }
                 }
-                timer = 0;
             }, 200);
         }
     });
@@ -634,8 +639,9 @@ $(function () {
         container.find('.aj-delay-div-inside').remove();
     }
     function ajax() {
-        var ajaxConfig = {};
+        var ajaxConfig;
         if (!isAjaxNow) {
+            ajaxConfig  = {};
             isAjaxNow = true;
             showDelay();
             if (Qmm_config.youhuiInfo) {
