@@ -26,62 +26,78 @@
       <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/version3/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="167105" max-vertical-offset="197752">
+            <state vertical-scroll-proportion="-2.0357144" vertical-offset="167029" max-vertical-offset="197714">
               <caret line="8795" column="10" selection-start-line="8795" selection-start-column="10" selection-end-line="8795" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/version3/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38118213" vertical-offset="3959" max-vertical-offset="6023">
-              <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+            <state vertical-scroll-proportion="-24.32" vertical-offset="0" max-vertical-offset="1007">
+              <caret line="181" column="24" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="24" />
               <folding>
-                <element signature="e#7710#8072#0" expanded="false" />
-                <marker date="1443259562852" expanded="true" signature="10571:10586" placeholder="..." />
+                <element signature="e#35#280#0" expanded="false" />
+                <element signature="e#331#377#0" expanded="false" />
+                <element signature="e#409#1955#0" expanded="false" />
+                <element signature="e#749#1238#0" expanded="false" />
+                <element signature="e#779#1224#0" expanded="false" />
+                <element signature="e#832#1199#0" expanded="false" />
+                <element signature="e#912#984#0" expanded="false" />
+                <element signature="e#990#1142#0" expanded="false" />
+                <element signature="e#1288#1676#0" expanded="false" />
+                <element signature="e#1319#1662#0" expanded="false" />
+                <element signature="e#1373#1637#0" expanded="false" />
+                <element signature="e#1543#1615#0" expanded="false" />
+                <element signature="e#1716#1945#0" expanded="false" />
+                <element signature="e#1748#1929#0" expanded="false" />
+                <element signature="e#1985#3554#0" expanded="false" />
+                <element signature="e#2324#2521#0" expanded="false" />
+                <element signature="e#2342#2363#0" expanded="false" />
+                <element signature="e#2466#2475#0" expanded="false" />
+                <element signature="e#2587#2918#0" expanded="false" />
+                <element signature="e#2736#2839#0" expanded="false" />
+                <element signature="e#2845#2904#0" expanded="false" />
+                <element signature="e#2951#3128#0" expanded="false" />
+                <element signature="e#3162#3544#0" expanded="false" />
+                <element signature="e#3236#3291#0" expanded="false" />
+                <element signature="e#3297#3349#0" expanded="false" />
+                <element signature="e#3375#3530#0" expanded="false" />
+                <element signature="e#3422#3510#0" expanded="false" />
+                <element signature="e#3595#3820#0" expanded="false" />
+                <element signature="e#3695#3755#0" expanded="false" />
+                <element signature="e#3761#3810#0" expanded="false" />
+                <element signature="e#3861#5725#0" expanded="false" />
+                <element signature="e#4148#4685#0" expanded="false" />
+                <element signature="e#4190#4382#0" expanded="false" />
+                <element signature="e#4247#4364#0" expanded="false" />
+                <element signature="e#4388#4671#0" expanded="false" />
+                <element signature="e#4481#4653#0" expanded="false" />
+                <element signature="e#4776#4994#0" expanded="false" />
+                <element signature="e#5009#5034#0" expanded="false" />
+                <element signature="e#5499#5715#0" expanded="false" />
+                <element signature="e#5538#5618#0" expanded="false" />
+                <element signature="e#5624#5701#0" expanded="false" />
+                <element signature="e#7059#7297#0" expanded="false" />
+                <element signature="e#7187#7285#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bifen" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bifen">
+      <file leaf-file-name="data.params.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/version3/js/data.params.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="70302" max-vertical-offset="71269">
-              <caret line="3728" column="0" selection-start-line="3728" selection-start-column="0" selection-end-line="3728" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file_to_view_zhidemai.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_to_view_zhidemai.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="209">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zhidelist_img_xy_middle.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/version3/less/zhidelist_img_xy_middle.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="361">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/version3/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="152">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.47285888" vertical-offset="1432" max-vertical-offset="2356">
+              <caret line="106" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <folding>
+                <element signature="e#176#538#0" expanded="false" />
+                <marker date="1443263893900" expanded="false" signature="3092:3107" placeholder="..." />
+                <marker date="1443263893900" expanded="true" signature="5140:5208" placeholder="..." />
+                <marker date="1443263893900" expanded="true" signature="5222:5304" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,12 +138,13 @@
         <option value="$PROJECT_DIR$/version3/less/zhidelist_img_xy_middle.less" />
         <option value="$PROJECT_DIR$/bifen" />
         <option value="$PROJECT_DIR$/version3/js/index.js" />
+        <option value="$PROJECT_DIR$/version3/js/data.params.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="360" />
-    <option name="y" value="54" />
+    <option name="x" value="339" />
+    <option name="y" value="31" />
     <option name="width" value="1527" />
     <option name="height" value="979" />
   </component>
@@ -291,7 +308,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="360" y="54" width="1527" height="979" extended-state="0" />
+    <frame x="339" y="31" width="1527" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -333,13 +350,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/version3/less/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="6479">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/version3/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="152">
@@ -665,14 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version3/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="167105" max-vertical-offset="197752">
-          <caret line="8795" column="10" selection-start-line="8795" selection-start-column="10" selection-end-line="8795" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/version3/less/zhidelist_img_xy_middle.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="361">
@@ -689,13 +691,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/version3/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0357144" vertical-offset="167029" max-vertical-offset="197714">
+          <caret line="8795" column="10" selection-start-line="8795" selection-start-column="10" selection-end-line="8795" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/version3/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38118213" vertical-offset="3959" max-vertical-offset="6023">
-          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        <state vertical-scroll-proportion="-24.32" vertical-offset="0" max-vertical-offset="1007">
+          <caret line="181" column="24" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="24" />
           <folding>
-            <element signature="e#7710#8072#0" expanded="false" />
-            <marker date="1443259562852" expanded="true" signature="10571:10586" placeholder="..." />
+            <element signature="e#35#280#0" expanded="false" />
+            <element signature="e#331#377#0" expanded="false" />
+            <element signature="e#409#1955#0" expanded="false" />
+            <element signature="e#749#1238#0" expanded="false" />
+            <element signature="e#779#1224#0" expanded="false" />
+            <element signature="e#832#1199#0" expanded="false" />
+            <element signature="e#912#984#0" expanded="false" />
+            <element signature="e#990#1142#0" expanded="false" />
+            <element signature="e#1288#1676#0" expanded="false" />
+            <element signature="e#1319#1662#0" expanded="false" />
+            <element signature="e#1373#1637#0" expanded="false" />
+            <element signature="e#1543#1615#0" expanded="false" />
+            <element signature="e#1716#1945#0" expanded="false" />
+            <element signature="e#1748#1929#0" expanded="false" />
+            <element signature="e#1985#3554#0" expanded="false" />
+            <element signature="e#2324#2521#0" expanded="false" />
+            <element signature="e#2342#2363#0" expanded="false" />
+            <element signature="e#2466#2475#0" expanded="false" />
+            <element signature="e#2587#2918#0" expanded="false" />
+            <element signature="e#2736#2839#0" expanded="false" />
+            <element signature="e#2845#2904#0" expanded="false" />
+            <element signature="e#2951#3128#0" expanded="false" />
+            <element signature="e#3162#3544#0" expanded="false" />
+            <element signature="e#3236#3291#0" expanded="false" />
+            <element signature="e#3297#3349#0" expanded="false" />
+            <element signature="e#3375#3530#0" expanded="false" />
+            <element signature="e#3422#3510#0" expanded="false" />
+            <element signature="e#3595#3820#0" expanded="false" />
+            <element signature="e#3695#3755#0" expanded="false" />
+            <element signature="e#3761#3810#0" expanded="false" />
+            <element signature="e#3861#5725#0" expanded="false" />
+            <element signature="e#4148#4685#0" expanded="false" />
+            <element signature="e#4190#4382#0" expanded="false" />
+            <element signature="e#4247#4364#0" expanded="false" />
+            <element signature="e#4388#4671#0" expanded="false" />
+            <element signature="e#4481#4653#0" expanded="false" />
+            <element signature="e#4776#4994#0" expanded="false" />
+            <element signature="e#5009#5034#0" expanded="false" />
+            <element signature="e#5499#5715#0" expanded="false" />
+            <element signature="e#5538#5618#0" expanded="false" />
+            <element signature="e#5624#5701#0" expanded="false" />
+            <element signature="e#7059#7297#0" expanded="false" />
+            <element signature="e#7187#7285#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version3/js/data.params.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47285888" vertical-offset="1432" max-vertical-offset="2356">
+          <caret line="106" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding>
+            <element signature="e#176#538#0" expanded="false" />
+            <marker date="1443263893900" expanded="false" signature="3092:3107" placeholder="..." />
+            <marker date="1443263893900" expanded="true" signature="5140:5208" placeholder="..." />
+            <marker date="1443263893900" expanded="true" signature="5222:5304" placeholder="..." />
           </folding>
         </state>
       </provider>
