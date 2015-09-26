@@ -525,7 +525,7 @@ function youhuiListLoad(youhuiParams, successCallback) {
             if (backNum === 0 && parseInt(ajaxData.page) === 1) {
                 $(".list_preferential").load("/html/AJ/noContentPageForWap.htm");
             }
-            if (backNum > 0){
+            if (backNum > 0) {
                 initZdmListForDuplicateCheck();
                 var cnt = 0;
 
