@@ -516,13 +516,13 @@ function youhuiListLoad(youhuiParams, successCallback) {
 
             $(".loadMore").removeClass("aj-is-loading");
             var backNum = $(html).find(".zdm_list_li").length;
-            console.log(backNum);
+            console.log(backNum + '=== Page : ' + ajaxData.page);
             if (backNum < ajaxData.pagesize) {
                 $(".loadMore").hide();
                 $(".aj-getmore-by-click").hide();
                 isThisPageHaveAnyMoreLis = false;
             }
-            if (backNum === 0 && ajaxData.page === 1) {
+            if (backNum === 0 && parseInt(ajaxData.page) === 1) {
                 $(".list_preferential").load("/html/AJ/noContentPageForWap.htm");
             }
             if (backNum > 0){
@@ -561,7 +561,6 @@ function youhuiListLoad(youhuiParams, successCallback) {
         }
     });
 }
-
 $(function () {
     $(".loadMore").click(function () {
         youhuiListLoad();
@@ -712,6 +711,7 @@ $(function () {
             shopIndex.find('.aj-s-mid').toggleClass('aj-show-style-grid');
         }
     })();
+
     // nav select
     (function () {
         var sort = shopIndex.find('.aj-sort'),
@@ -782,7 +782,7 @@ $(function () {
 // 导航 点击 ajax
 $(function () {
     var div = $("#aj-shop-index-page");
-    if (div.length <= 0) {return false;}
+    if (div.length <= 0) { return false; }
     var ajaxConfig,
         isAjaxNow = false;
     function resetYouhuiObj(params) {
@@ -801,18 +801,15 @@ $(function () {
 
         return result;
     }
-    div.find('.aj-nav .aj-li').click(function () {
+
+    div.find('.j_load').click(function () {
         var params = $(this).attr("data-params");
 
         ajaxConfig = resetYouhuiObj(params);
 
         ajaxFunc(ajaxConfig);
     });
-    div.find('.aj-sort .aj-so-ul .aj-li-js').click(function () {
-        var params = $(this).attr("data-params");
-        ajaxConfig = resetYouhuiObj(params);
-        ajaxFunc(ajaxConfig);
-    });
+
     function ajaxFunc(ajaxConfig) {
         if (!isAjaxNow) {
             showDelay();
@@ -834,4 +831,20 @@ $(function () {
     function hideDelay() {
         $('#aj-delay-page').hide();
     }
+});
+
+// 如果一行滚动8个修改高度
+$(function () {
+    var div = $('#aj-mobile-wrap #aj-top-types');
+    if (div.length === 0) return false;
+    div.find('.aj-one-type:not(.aj-t-tuijian)').each(function () {
+        var uls = $(this).find('.aj-content .aj-ul'),
+            lines;
+        if (uls[0]) {
+            lines = Math.ceil(uls.eq(0).find('li.aj-li').length / 4);
+        }
+        $(this).css({
+            height: 40 + lines * 70 + 'px'
+        });
+    });
 });
