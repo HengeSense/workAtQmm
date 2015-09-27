@@ -69,17 +69,19 @@ $(function () {
         });
     }
     (function () {
-        var div = $(document);
+        var div = $('#aj-top-nav-f-j');
         if (div.length <= 0) { return false; }
         var ajaxConfig,
             isAjaxNow = false,
-            delayContainer  = $('#aj-left-side-f-j');
+            delayContainer  = $('.aj-delay-area');
         div.on('click', '.j_load', function (e) {
             e.preventDefault();
-            localStorage.setItem('sakklajslfk', 98172489712984)
             var params = $(this).attr("data-params");
-            ajaxConfig = resetYouhuiObj(params);
-            ajaxFunc(ajaxConfig);
+            if (params.length > 0) {
+                ajaxConfig = resetYouhuiObj(params);
+                ajaxFunc(ajaxConfig);
+                $('#aj-top-nav-f-j').trigger("aj.rollTop");
+            }
         });
         //------------------------------
         function resetYouhuiObj(params) {
@@ -118,8 +120,10 @@ $(function () {
                     });
                 }
                 delayContainer.addClass('aj-has-add-delay-module');
-                delayContainer.append('<div class="aj-delay-module-for-pc" style="position: absolute;z-index:100;width:100%;height: 100%;top:0;left: 0"><img style="position: absolute;top:100px;left: 50%;margin-left: -25px;width:50px;height: 50px;" src="http://www.quanmama.com/AdminImageUpload/20148150838532.jpg"></div>');
+                delayContainer.append('<div class="aj-delay-module-for-pc" style="position: absolute;z-index:100;background-color:white;' +
+                    'opacity:0.6;filter:alpha(opacity=60);width:100%;height: 100%;top:0;left: 0"><img style="position: absolute;top:100px;left: 50%;margin-left: -25px;width:50px;height: 50px;" src="http://www.quanmama.com/AdminImageUpload/20148150838532.jpg"></div>');
             }
+            delayContainer.find('.aj-delay-module-for-pc').show();
         }
         function hideDelay(container) {
             delayContainer.hasClass('aj-has-add-delay-module') && delayContainer.find('.aj-delay-module-for-pc').hide();

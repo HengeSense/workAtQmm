@@ -123,24 +123,52 @@
             width: 720px;
             background-color: #ffffff;
 
-            .funcbar .prorank {
-                float: left;
+            .funcbar {
+                position: relative;
+                .prorank{
+                    float: left;
+                    .aj-more-filter{
+                        top:2px;
+                        margin-left: 10px;
+                        .arw{
+                            left: 7px;
+                            top: @height2 - 21;
+                        }
+                    }
+                }
             }
             .funcbar .prorank a {
                 position: relative;
                 float: left;
                 height: @height2;
                 display: block;
-                padding: 0 24px 0 12px;
+                padding: 0 5px 0 22px;
                 line-height: @height2;
+            }
+            .funcbar .prorank a.j_load{
+                position: relative;
+                height: 23px;
+                line-height: 25px;
+                border: 1px solid #ccc;
+                padding: 0 5px 0 22px;
+                margin-right: -1px;
+                margin-top: 4px;
+                .arw{
+                    left: 7px;
+                    top:6px;
+                }
+                &.aj-select{
+                    background-color: #fff0d9;
+                    border: 1px solid #f9ae45;
+                    z-index: 1;
+                    color: #ff6c00;
+                }
             }
             .funcbar .prorank a.derault {
                 padding: 0 12px;
             }
             .funcbar .prorank a .arw {
                 position: absolute;
-                top: @height2 - 20;
-                right: 7px;
                 font-size: 12px;
             }
             .funcbar .prorank a.aj-select {

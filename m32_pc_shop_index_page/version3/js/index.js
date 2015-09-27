@@ -54,6 +54,13 @@ $(function () {
                     zIndex: 9999
                 });
             }
+            $($this.div).on('aj.rollTop', function () {
+                console.log(top);
+                $(document.body).animate({
+                    scrollTop : top - 100 + 'px'
+                });
+            });
+            //$('#aj-top-nav-f-j').trigger("aj.rollTop");
         },
         fenlei: function () {
             var aTags = this.div.find('.fenlei .a-tag'),
@@ -159,9 +166,10 @@ $(function () {
             var aTags = this.div.find('.prorank .aj-a'),
                 obj,
                 filter = this.div.find('.filter');
-            arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-top'];
+            arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-down'];
             // style
             this.div.on('click', '.prorank .aj-a', function (ev) {
+                ev.stopPropagation();
                 if ($(this).hasClass('aj-more-filter')) {
                     if ($(this).hasClass('aj-select')) {
                         filter.slideToggle();
@@ -193,6 +201,7 @@ $(function () {
                 $(this).addClass('aj-select').siblings().removeClass('aj-select');
             });
         }
+
     };
     new Nav();
 });

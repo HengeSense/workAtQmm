@@ -544,7 +544,7 @@ function youhuiListLoad(youhuiParams, successCallback) {
             if (backNum < ajaxData.pagesize) {
                 $(".loadMore").hide();
                 $(".aj-getmore-by-click").hide();
-                responseContainer.append('<li style="text-align: center;padding: 10px 0;">没有更多了</li>');
+                responseContainer.append('<li style="text-align: center;padding: 0;width: 100%;margin: 0;height: 40px;line-height: 40px;">没有更多了</li>');
                 isThisPageHaveAnyMoreLis = false;
             }
             if (backNum === 0 && parseInt(ajaxData.page) === 1) {
@@ -564,6 +564,7 @@ function youhuiListLoad(youhuiParams, successCallback) {
         }
     });
 }
+
 $(function () {
     $(".loadMore").click(function () {
         youhuiListLoad();
