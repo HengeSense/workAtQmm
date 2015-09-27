@@ -1,10 +1,17 @@
 $(function () {
-    var is_inited = 0;
-    var zdmListForDuplicateCheck = [];
-    var isThisPageHaveAnyMoreLis = true; //该页是否有更多列表项
+    var is_inited = 0,
+        zdmListForDuplicateCheck = [],
+        isThisPageHaveAnyMoreLis = true; //该页是否有更多列表项
+    var prop = {
+        url : "/myajax/youhuipage",
+        backItemClassName : 'div.list',
+        container : '.aj-ajaxdata-wrap',
+        clickParent : '#aj-ajaxdata',
+        delayArea : '.aj-delay-area'
+    };
     function initZdmListForDuplicateCheck() {
         if (is_inited == 0) {
-            $(".zdm_list_li").each(function () {
+            $(prop.backItemClassName).each(function () {
                 var zdm_id = parseInt($(this).attr("data-id"));
                 if (zdm_id > 0 && zdmListForDuplicateCheck.indexOf(zdm_id) < 0) {
                     zdmListForDuplicateCheck.push(zdm_id);
@@ -18,13 +25,13 @@ $(function () {
         var ajaxData = $.extend({}, Qmm_config.youhuiInfo, youhuiParams);
         console.log(ajaxData);
         var otherConfig = {
-            container : '#J_zhide_list',
-            listSelector : 'div.list'
+            container: prop.container,
+            listSelector: prop.backItemClassName
         };
         otherConfig = $.extend(otherConfig, moreConfig);
         $.ajax({
             type: "get",
-            url: "/myajax/youhuipage",
+            url: prop.url,
             data: ajaxData,
             dataType: "html",
             success: function (html) {
@@ -69,18 +76,17 @@ $(function () {
         });
     }
     (function () {
-        var div = $('#aj-top-nav-f-j');
+        var div = $(prop.clickParent);
         if (div.length <= 0) { return false; }
         var ajaxConfig,
             isAjaxNow = false,
-            delayContainer  = $('.aj-delay-area');
+            delayContainer = $(prop.delayArea);
         div.on('click', '.j_load', function (e) {
             e.preventDefault();
             var params = $(this).attr("data-params");
             if (params.length > 0) {
                 ajaxConfig = resetYouhuiObj(params);
                 ajaxFunc(ajaxConfig);
-                $('#aj-top-nav-f-j').trigger("aj.rollTop");
             }
         });
         //------------------------------
@@ -113,10 +119,10 @@ $(function () {
             }
         }
         function showDelay() {
-            if (!delayContainer.hasClass('aj-has-add-delay-module')){
-                if (delayContainer.css('position').toLowerCase() === 'static'){
+            if (!delayContainer.hasClass('aj-has-add-delay-module')) {
+                if (delayContainer.css('position').toLowerCase() === 'static') {
                     delayContainer.css({
-                        position : 'relative'
+                        position: 'relative'
                     });
                 }
                 delayContainer.addClass('aj-has-add-delay-module');

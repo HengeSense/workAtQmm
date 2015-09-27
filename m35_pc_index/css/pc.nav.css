@@ -1,0 +1,124 @@
+.container .leftNotice {
+  border: none;
+  box-shadow: none;
+}
+.container .topZdm {
+  border: none;
+}
+.aj-pc-nav {
+  position: relative;
+  z-index: 99;
+  margin-top: 20px;
+  width: 100%;
+  height: 37px;
+}
+.aj-pc-nav .clear {
+  display: block;
+  clear: both;
+  overflow: auto;
+}
+.aj-pc-nav .inside {
+  display: block;
+  width: 10000px;
+  height: 35px;
+}
+.aj-pc-nav .inside .ul {
+  float: left;
+  height: 35px;
+}
+.aj-pc-nav .inside .ul .li {
+  display: inline-block;
+  min-width: 40px;
+  height: 35px;
+  padding: 0 8px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+  float: left;
+  cursor: pointer;
+  font-size: 16px;
+  color: #545454;
+  border-bottom: 2px solid white;
+}
+.aj-pc-nav .inside .ul .li a {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  max-width: 65px;
+  overflow: hidden;
+  color: #545454;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+}
+.aj-pc-nav .inside .ul .li:hover {
+  color: #4ebc80;
+}
+.aj-pc-nav .inside .ul .li:hover a {
+  color: #4ebc80;
+}
+.aj-pc-nav .inside .ul .li.aj-select {
+  border-bottom: 2px solid #4ebc80;
+}
+.aj-pc-nav .inside .ul .li.li-more {
+  padding: 0;
+}
+.aj-pc-nav .inside .ul .li .wrap {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 35px;
+  padding-right: 20px;
+}
+.aj-pc-nav .inside .ul .li .wrap .span {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+}
+.aj-pc-nav .inside .ul .li .wrap em.em {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.aj-pc-nav .inside .ul .li:hover .ul-wrap {
+  display: block;
+}
+.aj-pc-nav .inside .ul .li .ul-wrap {
+  position: absolute;
+  top: 37px;
+  right: 0;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 2px 2px 0 #f0f0f0;
+  border: 1px solid #dfdfdf;
+  border-bottom: none;
+  text-align: center;
+  width: 100px;
+  display: none;
+}
+.aj-pc-nav .inside .ul .li .ul-wrap .ul-w-li {
+  font-size: 13px;
+  display: block;
+  height: 37px;
+  width: 60px;
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: white;
+  float: left;
+  line-height: 37px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+}
+.aj-pc-nav .inside .ul .li .ul-wrap .ul-w-li a {
+  color: #545454;
+}
+.aj-pc-nav .inside .ul .li .ul-wrap .ul-w-li a:hover {
+  color: #4ebc80;
+}
+.aj-pc-nav .inside .ul .li .ul-wrap .ul-w-li:hover {
+  background-color: #f1f1f1;
+}

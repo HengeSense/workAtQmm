@@ -1,4 +1,4 @@
-.aj-list-to-grid-wrap #J_zhide_list .list {
+.aj-list-to-grid-wrap div.list {
   font-family: Arial, "Microsoft YaHei";
   width: 32%;
   height: 380px;
@@ -9,7 +9,7 @@
   margin-right: 1%;
   float: left;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list:hover {
+.aj-list-to-grid-wrap div.list:hover {
   border-color: #f04848;
   box-shadow: #ccc 0 2px 5px;
   -webkit-transition: all 0.3s;
@@ -18,7 +18,7 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listTitle {
+.aj-list-to-grid-wrap div.list .listTitle {
   position: absolute;
   top: 230px;
   font-size: 14px;
@@ -27,27 +27,27 @@
   font-weight: bold;
   overflow: hidden;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listTitle a.icon,
-.aj-list-to-grid-wrap #J_zhide_list .list .listTitle .adminArea {
+.aj-list-to-grid-wrap div.list .listTitle a.icon,
+.aj-list-to-grid-wrap div.list .listTitle .adminArea {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listTitle h4.itemName {
+.aj-list-to-grid-wrap div.list .listTitle h4.itemName {
   line-height: 20px;
   padding: 0 15px;
   font-size: 14px;
   font-family: Arial, "Microsoft YaHei";
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listTitle h4.itemName a {
+.aj-list-to-grid-wrap div.list .listTitle h4.itemName a {
   display: block;
   width: 100%;
   font-weight: bold;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .picLeft {
+.aj-list-to-grid-wrap div.list .picLeft {
   display: block;
   margin: 15px auto 0;
   float: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .picLeft:before {
+.aj-list-to-grid-wrap div.list .picLeft:before {
   content: '';
   display: inline-block;
   width: 0;
@@ -55,30 +55,30 @@
   margin-left: -1px;
   vertical-align: middle;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .picLeft img {
+.aj-list-to-grid-wrap div.list .picLeft img {
   max-width: 98%;
   max-height: 100%;
   vertical-align: middle;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight {
+.aj-list-to-grid-wrap div.list .listRight {
   margin-top: 90px;
   width: 100%;
   height: auto;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .aj-check {
+.aj-list-to-grid-wrap div.list .listRight .aj-check {
   margin-left: 15px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .aj-check .aj-zhishi {
+.aj-list-to-grid-wrap div.list .listRight .aj-check .aj-zhishi {
   left: -13px;
   padding: 6px 4px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .aj-check .aj-zhishi:before {
+.aj-list-to-grid-wrap div.list .listRight .aj-check .aj-zhishi:before {
   left: 15px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .aj-check .aj-zhishi:after {
+.aj-list-to-grid-wrap div.list .listRight .aj-check .aj-zhishi:after {
   left: 16px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .aj-check:after {
+.aj-list-to-grid-wrap div.list .listRight .aj-check:after {
   content: '小编已验证';
   max-width: 100px;
   white-space: nowrap;
@@ -92,7 +92,7 @@
   padding-left: 5px;
   line-height: 18px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrTop {
+.aj-list-to-grid-wrap div.list .listRight .lrTop {
   position: absolute;
   display: block;
   width: 100%;
@@ -100,11 +100,11 @@
   top: -95px;
   left: 0;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrTop span:first-child,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrTop span:last-child {
+.aj-list-to-grid-wrap div.list .listRight .lrTop span:first-child,
+.aj-list-to-grid-wrap div.list .listRight .lrTop span:last-child {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrTop span {
+.aj-list-to-grid-wrap div.list .listRight .lrTop span {
   position: absolute;
   top: 0;
   padding: 0 8px;
@@ -121,28 +121,28 @@
   overflow: hidden;
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrTop span.lrTime {
+.aj-list-to-grid-wrap div.list .listRight .lrTop span.lrTime {
   display: block;
   right: 15px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrTop span.lrTime + span {
+.aj-list-to-grid-wrap div.list .listRight .lrTop span.lrTime + span {
   display: block;
   left: 15px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrInfo {
+.aj-list-to-grid-wrap div.list .listRight .lrInfo {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot {
+.aj-list-to-grid-wrap div.list .listRight .lrBot {
   position: relative;
   padding: 0 15px;
   margin-top: 35px;
   width: auto;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.fav {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.fav {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad {
   border: none;
   background-color: white;
   min-width: 0;
@@ -153,55 +153,55 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good:hover,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad:hover {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good:hover,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad:hover {
   background-color: white;
   color: #f04848;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good:hover .scoredInfo,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad:hover .scoredInfo {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good:hover .scoredInfo,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad:hover .scoredInfo {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good:hover span.scoreTotal,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad:hover span.scoreTotal {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good:hover span.scoreTotal,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad:hover span.scoreTotal {
   display: block;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good:hover span.scoreTotal em,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad:hover span.scoreTotal em {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good:hover span.scoreTotal em,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad:hover span.scoreTotal em {
   color: #f04848;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good span.scoreTotal b,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad span.scoreTotal b {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good span.scoreTotal b,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad span.scoreTotal b {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good span.scoreTotal em,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad span.scoreTotal em {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good span.scoreTotal em,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad span.scoreTotal em {
   display: inline-block;
   background-color: white;
   min-width: 10px;
   color: #999;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good span.scoreTotal em:hover,
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad span.scoreTotal em:hover {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good span.scoreTotal em:hover,
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad span.scoreTotal em:hover {
   color: #999;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good {
   background-image: url("http://www.quanmama.com/AdminImageUpload/5257485home_icon.png");
   background-repeat: no-repeat;
   background-position: -240px -213px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.good:hover {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.good:hover {
   background-position: -242px -242px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad {
   background-image: url("http://www.quanmama.com/AdminImageUpload/5257485home_icon.png");
   background-repeat: no-repeat;
   background-position: -208px -213px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.bad:hover {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.bad:hover {
   background-position: -210px -240px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.comment {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.comment {
   height: 28px;
   line-height: 28px;
   margin-top: 0px;
@@ -209,41 +209,41 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot a.comment .icon-comment {
+.aj-list-to-grid-wrap div.list .listRight .lrBot a.comment .icon-comment {
   margin-right: 0;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .botPart {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .botPart {
   position: absolute;
   top: 0;
   right: 15px;
   margin-top: -1px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .botPart .buy {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .botPart .buy {
   width: 72px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .botPart .buy a {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .botPart .buy a {
   width: 72px;
   padding-left: 0px;
   text-align: center;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .botPart .buy a i {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .botPart .buy a i {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .botPart .mall {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .botPart .mall {
   display: none;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .aj-roll-wrap {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .aj-roll-wrap {
   position: absolute;
   top: -28px;
   right: 11px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .aj-roll-wrap .aj-zhishi {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .aj-roll-wrap .aj-zhishi {
   left: -43px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .aj-roll-wrap .aj-zhishi:before {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .aj-roll-wrap .aj-zhishi:before {
   left: 57px;
 }
-.aj-list-to-grid-wrap #J_zhide_list .list .listRight .lrBot .aj-roll-wrap .aj-zhishi:after {
+.aj-list-to-grid-wrap div.list .listRight .lrBot .aj-roll-wrap .aj-zhishi:after {
   left: 58px;
 }
 .aj-zhide-list a.picLeft {

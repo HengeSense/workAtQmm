@@ -7,6 +7,7 @@ $(function () {
         this.fenlei();
         this.gridList();
         this.filter();
+        this.containerGoTopWhenClickJload();
         //        this.viewNum();
     }
     Nav.prototype = {
@@ -168,7 +169,7 @@ $(function () {
                 filter = this.div.find('.filter');
             arr = ['qmm-icon-iconfont-down', 'qmm-icon-iconfont-down'];
             // style
-            this.div.on('click', '.prorank .aj-a', function (ev) {
+            $(document.body).on('click', '.prorank .aj-a', function (ev) {
                 ev.stopPropagation();
                 if ($(this).hasClass('aj-more-filter')) {
                     if ($(this).hasClass('aj-select')) {
@@ -191,7 +192,7 @@ $(function () {
                     $(this).addClass('aj-select').siblings().removeClass('aj-select');
                 }
             });
-            $(document.body).on('click', function () {
+            $(document).on('click', function () {
                 filter.slideUp();
             });
         },
@@ -200,11 +201,12 @@ $(function () {
             this.div.on('click', '.displaynum .aj-a', function () {
                 $(this).addClass('aj-select').siblings().removeClass('aj-select');
             });
+        },
+        containerGoTopWhenClickJload : function () {
+            $(this.div).on('click', '.j_load', function () {
+                $('#aj-top-nav-f-j').trigger("aj.rollTop");
+            });
         }
-
     };
     new Nav();
 });
-
-
-//--------------------------------------------------------------------
