@@ -39,6 +39,7 @@ $(function () {
                 var backNum = $(html).find(otherConfig.listSelector).length,
                     cnt,
                     responseContainer = $(otherConfig.container);
+                console.log(backNum);
                 if (backNum < ajaxData.pagesize) {
                     $(".loadMore").hide();
                     $(".aj-getmore-by-click").hide();
@@ -133,6 +134,90 @@ $(function () {
         }
         function hideDelay(container) {
             delayContainer.hasClass('aj-has-add-delay-module') && delayContainer.find('.aj-delay-module-for-pc').hide();
+        }
+    }());
+
+    // 滚动, 点击 ajax 部分
+    (function () {
+        var win = window,
+            doc = document,
+            isAjaxNow = false,
+            timer,
+            container = $(".aj-ajaxdata-wrap"),
+            delter;
+        // 每多少页手动点击ajax
+        if (typeof Qmm_config === 'undefined') return false;
+        var howManyPagesThenClick = Qmm_config.youhuiInfo.howManyPagesThenClick || 4;
+        $(win).on('scroll', function () {
+            if (!timer) {
+                timer = setTimeout(function () {
+                    timer = 0;
+                    if (!isThisPageHaveAnyMoreLis){
+                        return false;
+                    }
+                    if (isCloseBottom()) {
+                        if (needAjax()) {
+                            ajax();
+                            hideClickModule();
+                        } else {
+                            addAjaxByClickModule();
+                            showClickModule();
+                        }
+                    }
+                }, 200);
+            }
+        });
+        function isCloseBottom() {
+            delter = $(doc.body).height() - $(win).scrollTop() - $(win).height();
+            if (delter <= 900) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function needAjax() {
+            if (parseInt(Qmm_config.youhuiInfo.page) % howManyPagesThenClick !== 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function addAjaxByClickModule() {
+            if (!container.hasClass('aj-ajax-by-click')) {
+                container.addClass('aj-ajax-by-click');
+                container.append("<div class='getmore aj-getmore-by-click'>加载更多</div>");
+            }
+        }
+        function hideClickModule() {
+            $('.aj-getmore-by-click').hide();
+        }
+        function showClickModule() {
+            $('.aj-getmore-by-click').show();
+        }
+        container.on('click', '.aj-getmore-by-click', function () {
+            ajax();
+        });
+        function showDelay() {
+            container.append("<div class='aj-delay-div-inside'><img  class='img' " +
+                "src='http://www.quanmama.com/AdminImageUpload/20148150838532.jpg'></div>");
+
+        }
+        function hideDelay() {
+            container.find('.aj-delay-div-inside').remove();
+        }
+        function ajax() {
+            var ajaxConfig;
+            if (!isAjaxNow) {
+                ajaxConfig  = {};
+                isAjaxNow = true;
+                showDelay();
+                if (Qmm_config.youhuiInfo) {
+                    youhuiListLoad(Qmm_config.youhuiInfo, function () {
+                        isAjaxNow = false;
+                        hideDelay();
+                    });
+                }
+            }
         }
     }());
 });

@@ -484,7 +484,7 @@ $(function () {
 
 });
 
-
+//--
 var is_inited = 0;
 var zdmListForDuplicateCheck = [];
 var isThisPageHaveAnyMoreLis = true; //该页是否有更多列表项
