@@ -47,9 +47,10 @@ $(function () {
                 if (backNum < ajaxData.pagesize) {
                     $("." + prop.clickToAjaxClassName).hide();
                     isThisPageHaveAnyMoreLis = false;
+                    $(prop.container).append("<div class='aj-no-more-content-pc' style='clear: both;text-align: center;padding: 15px;font-size: 15px;color:#666;'>没有更多内容了</div>");
                 }
                 if (backNum === 0 && parseInt(ajaxData.page) === 1) {
-                    $(".list_preferential").load("/html/AJ/noContentPageForWap.htm");
+                    $(prop.container).load("/html/AJ/noContentPageForWap.htm");
                 }
                 if (backNum > 0) {
                     initZdmListForDuplicateCheck();

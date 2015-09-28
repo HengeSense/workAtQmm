@@ -10,4 +10,3 @@ $(".aj-img-slick").slick({
     slidesToScroll: 1, //幻灯片每次滑动个数
     accessibility : true
 });
-
