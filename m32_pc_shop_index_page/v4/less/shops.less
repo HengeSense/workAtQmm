@@ -1,0 +1,116 @@
+.aj-relative-shops {
+    margin:10px 0;
+    .slick-prev, .slick-next{
+        width:30px;height: 30px;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .title {
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+        color: #666;
+        font-weight: normal;
+        border-left: 3px solid #00a0ed;
+        padding: 0 10px;
+        margin: 5px 0;
+    }
+    ul.shops_wrap{
+        position: relative;
+        width: 720px;
+        padding: 0 10px;
+        -webkit-user-select:none;
+        height: 63px;
+        display: block;
+        overflow: hidden;
+        li.m-r:hover {
+            border: 1px #fff solid
+        }
+        li {
+            float: left;
+            text-align: center;
+            padding: 3px 3px;
+            height: 55px;
+            border: 1px white solid;
+
+            width: 105px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            a.more-malls-hover {
+                display: inline-block;
+                background: url('#') no-repeat 0 0 #eee;
+                height: 55px;
+                line-height: 55px;
+                text-indent: 0;
+                opacity: 1;
+                color: #a1a1a1
+            }
+            a.more-malls {
+                display: inline-block;
+                background: url('/AdminImageUpload/201442943530575.jpg') no-repeat -5px -305px transparent;
+                width: 100px;
+                height: 55px;
+                text-indent: -999px;
+                opacity: .6;
+                position: relative
+            }
+        }
+        li span {
+            display: block;
+            padding: 2px 0 0 0;
+            color: #999;
+            line-height: 20px;
+        }
+        .li{
+            &:hover{
+                border: 1px #fc6 solid;
+                .ops{
+                    text-align: center;
+                    bottom: 0;
+                }
+            }
+            img {
+                height: 34px;
+                width: 68px;
+            }
+            a{
+                color: #666;
+            }
+            span em {
+                color: #d84600
+            }
+            .ops {
+                position: absolute;
+                bottom: -25px;
+                left: 1px;
+                width: 110px;
+                height: 20px;
+                background-color: white;
+                a {
+                    display: inline-block;
+                    width: 52px;
+                    height: 18px;
+                    overflow: hidden;
+                    color: #fff
+                }
+                a.go-shopping {
+                    background-color: #ff9c03
+                }
+                a.go-shopping:hover {
+                    background-color: #ed9e1e;
+                    color: #fff
+                }
+                a.go-detail {
+                    background-color: #7bb702
+                }
+                a.go-detail:hover {
+                    background-color: #79ad0a;
+                    color: #fff
+                }
+            }
+        }
+
+    }
+}

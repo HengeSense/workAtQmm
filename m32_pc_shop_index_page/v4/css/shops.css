@@ -1,0 +1,114 @@
+.aj-relative-shops {
+  margin: 10px 0;
+}
+.aj-relative-shops .slick-prev,
+.aj-relative-shops .slick-next {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 30px;
+}
+.aj-relative-shops .title {
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
+  border-left: 3px solid #00a0ed;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+.aj-relative-shops ul.shops_wrap {
+  position: relative;
+  width: 720px;
+  padding: 0 10px;
+  -webkit-user-select: none;
+  height: 63px;
+  display: block;
+  overflow: hidden;
+}
+.aj-relative-shops ul.shops_wrap li.m-r:hover {
+  border: 1px #ffffff solid;
+}
+.aj-relative-shops ul.shops_wrap li {
+  float: left;
+  text-align: center;
+  padding: 3px 3px;
+  height: 55px;
+  border: 1px white solid;
+  width: 105px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.aj-relative-shops ul.shops_wrap li a.more-malls-hover {
+  display: inline-block;
+  background: url('#') no-repeat 0 0 #eeeeee;
+  height: 55px;
+  line-height: 55px;
+  text-indent: 0;
+  opacity: 1;
+  color: #a1a1a1;
+}
+.aj-relative-shops ul.shops_wrap li a.more-malls {
+  display: inline-block;
+  background: url('/AdminImageUpload/201442943530575.jpg') no-repeat -5px -305px transparent;
+  width: 100px;
+  height: 55px;
+  text-indent: -999px;
+  opacity: .6;
+  position: relative;
+}
+.aj-relative-shops ul.shops_wrap li span {
+  display: block;
+  padding: 2px 0 0 0;
+  color: #999;
+  line-height: 20px;
+}
+.aj-relative-shops ul.shops_wrap .li:hover {
+  border: 1px #fc6 solid;
+}
+.aj-relative-shops ul.shops_wrap .li:hover .ops {
+  text-align: center;
+  bottom: 0;
+}
+.aj-relative-shops ul.shops_wrap .li img {
+  height: 34px;
+  width: 68px;
+}
+.aj-relative-shops ul.shops_wrap .li a {
+  color: #666;
+}
+.aj-relative-shops ul.shops_wrap .li span em {
+  color: #d84600;
+}
+.aj-relative-shops ul.shops_wrap .li .ops {
+  position: absolute;
+  bottom: -25px;
+  left: 1px;
+  width: 110px;
+  height: 20px;
+  background-color: white;
+}
+.aj-relative-shops ul.shops_wrap .li .ops a {
+  display: inline-block;
+  width: 52px;
+  height: 18px;
+  overflow: hidden;
+  color: #ffffff;
+}
+.aj-relative-shops ul.shops_wrap .li .ops a.go-shopping {
+  background-color: #ff9c03;
+}
+.aj-relative-shops ul.shops_wrap .li .ops a.go-shopping:hover {
+  background-color: #ed9e1e;
+  color: #ffffff;
+}
+.aj-relative-shops ul.shops_wrap .li .ops a.go-detail {
+  background-color: #7bb702;
+}
+.aj-relative-shops ul.shops_wrap .li .ops a.go-detail:hover {
+  background-color: #79ad0a;
+  color: #ffffff;
+}
