@@ -8,6 +8,9 @@
         border:none;
     }
 }
+.home-tab{
+    display: none;
+}
 .aj-pc-nav{
     position: relative;
     z-index:99;
@@ -16,6 +19,8 @@
     margin-top:20px;
     width: 100%;
     height: @h;
+    border: 1px solid #eee;
+    border-top:2px solid #4EBC80;
     .clear{
         display: block;
         clear: both;
@@ -60,6 +65,11 @@
                 }
             }
 
+            &.ul-right{
+                position: absolute;
+                right: 0;top:0;
+                background-color: white;
+            }
             .li{
                 @max-w : 65px;
                 &.li-more{
@@ -79,7 +89,8 @@
                     }
                     em.em{
                         position: absolute;
-                        top:10px; right: -17px;
+                        top:10px; right: -19px;
+                        width: 20px;height: 35px;
                     }
                 }
                 &:hover{
@@ -90,7 +101,7 @@
                 .ul-wrap{
                     position: absolute;
                     top:@h;
-                    right: 0px;
+                    right: -20px;
                     background-color: white;
                     z-index: 10;
                     box-shadow: 2px 2px 0 #f0f0f0;

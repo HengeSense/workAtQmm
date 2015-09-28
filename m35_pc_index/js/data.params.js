@@ -3,12 +3,21 @@ $(function () {
         zdmListForDuplicateCheck = [],
         isThisPageHaveAnyMoreLis = true; //该页是否有更多列表项
     var prop = {
-        url : "/myajax/youhuipage",
-        backItemClassName : 'div.list',
-        container : '.aj-ajaxdata-wrap',
-        clickParent : '#aj-ajaxdata',
-        delayArea : '.aj-delay-area'
+        url : "/myajax/youhuipage",         // ajax请求地址
+        backItemClassName : 'div.list',     // 返回的list的选择器
+        container : '.aj-ajaxdata-wrap',    // 返回的list装入的容器
+        clickParent : '#aj-ajaxdata',       // 导航点击ajax的容器
+        delayArea : '.aj-delay-area',       // ajax时要遮盖并显示"转转"的区域选择器
+        dataBindTag : '.j_load',             // data-params 所绑定的Tag的选择器
+        pagesDelter : 4,                     // 每四页从"滚动ajax"切换到"点击ajax"
+        bottomWhenAjax : 900,                // 当滚动至距离页面底部900px以下时触发ajax事件
+        delayDivClassName : 'delay-roll-' + rand(),   // "转转转"样式div的classname
+        delayShadowClassName : 'delay-shadow-' + rand(),     // ajax时的遮罩层
+        clickToAjaxClassName : 'getmore-' + rand()         // 点击ajax的className
     };
+    function rand() {
+        return Math.round(Math.random() * 10000);
+    }
     function initZdmListForDuplicateCheck() {
         if (is_inited == 0) {
             $(prop.backItemClassName).each(function () {
@@ -20,15 +29,10 @@ $(function () {
             is_inited = 1;
         }
     }
-    function youhuiListLoad(youhuiParams, successCallback, moreConfig) {
+    function Load(youhuiParams, successCallback) {
         youhuiParams = (typeof youhuiParams == 'object') ? youhuiParams : {};
         var ajaxData = $.extend({}, Qmm_config.youhuiInfo, youhuiParams);
         console.log(ajaxData);
-        var otherConfig = {
-            container: prop.container,
-            listSelector: prop.backItemClassName
-        };
-        otherConfig = $.extend(otherConfig, moreConfig);
         $.ajax({
             type: "get",
             url: prop.url,
@@ -36,13 +40,12 @@ $(function () {
             dataType: "html",
             success: function (html) {
                 Qmm_config.youhuiInfo = ajaxData;
-                var backNum = $(html).find(otherConfig.listSelector).length,
+                var backNum = $(html).find(prop.backItemClassName).length,
                     cnt,
-                    responseContainer = $(otherConfig.container);
+                    responseContainer = $(prop.container);
                 console.log(backNum);
                 if (backNum < ajaxData.pagesize) {
-                    $(".loadMore").hide();
-                    $(".aj-getmore-by-click").hide();
+                    $("." + prop.clickToAjaxClassName).hide();
                     isThisPageHaveAnyMoreLis = false;
                 }
                 if (backNum === 0 && parseInt(ajaxData.page) === 1) {
@@ -54,7 +57,7 @@ $(function () {
                     if (parseInt(Qmm_config.youhuiInfo.page) === 1) {
                         zdmListForDuplicateCheck = [];
                     }
-                    $(html).find(otherConfig.listSelector).each(function () {
+                    $(html).find(prop.backItemClassName).each(function () {
                         var now_zdm_id = parseInt($(this).attr("data-id"));
                         if (now_zdm_id > 0 && zdmListForDuplicateCheck.indexOf(now_zdm_id) < 0) {
                             zdmListForDuplicateCheck.push(now_zdm_id);
@@ -72,17 +75,18 @@ $(function () {
                 successCallback && successCallback();
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
-                $(".pagination").before('<p class="center" style="padding:30px 0;">很抱歉，您的网络可能有点问题，请尝试使用翻页浏览方式，或者<a id="ajaxErrorRetry">重试</a></p>');
+                $(prop.container).append('<p class="center" style="padding:30px 0;">很抱歉, 您的网络可能有点问题, 或者<a id="ajaxErrorRetry">重试</a></p>');
             }
         });
     }
+    // 点击导航的分页ajax 效果
     (function () {
         var div = $(prop.clickParent);
         if (div.length <= 0) { return false; }
         var ajaxConfig,
             isAjaxNow = false,
             delayContainer = $(prop.delayArea);
-        div.on('click', '.j_load', function (e) {
+        div.on('click', prop.dataBindTag, function (e) {
             e.preventDefault();
             var params = $(this).attr("data-params");
             if (params.length > 0) {
@@ -90,7 +94,6 @@ $(function () {
                 ajaxFunc(ajaxConfig);
             }
         });
-        //------------------------------
         function resetYouhuiObj(params) {
             var prop = {},  // string to object
                 one,
@@ -113,7 +116,7 @@ $(function () {
                 if (parseInt(ajaxConfig.page, 10) === 1) {
                     isThisPageHaveAnyMoreLis = true;
                 }
-                youhuiListLoad(ajaxConfig, function () {
+                Load(ajaxConfig, function () {
                     isAjaxNow = false;
                     hideDelay();
                 });
@@ -127,27 +130,26 @@ $(function () {
                     });
                 }
                 delayContainer.addClass('aj-has-add-delay-module');
-                delayContainer.append('<div class="aj-delay-module-for-pc" style="position: absolute;z-index:100;background-color:white;' +
-                    'opacity:0.6;filter:alpha(opacity=60);width:100%;height: 100%;top:0;left: 0"><img style="position: absolute;top:100px;left: 50%;margin-left: -25px;width:50px;height: 50px;" src="http://www.quanmama.com/AdminImageUpload/20148150838532.jpg"></div>');
+                delayContainer.append('<div class="aj-ajax-delay-shadow ' + prop.delayShadowClassName +
+                    '"><img src="http://www.quanmama.com/AdminImageUpload/20148150838532.jpg"></div>');
             }
-            delayContainer.find('.aj-delay-module-for-pc').show();
+            delayContainer.find('.' + prop.delayShadowClassName).show();
         }
         function hideDelay(container) {
-            delayContainer.hasClass('aj-has-add-delay-module') && delayContainer.find('.aj-delay-module-for-pc').hide();
+            delayContainer.hasClass('aj-has-add-delay-module') && delayContainer.find('.' + prop.delayShadowClassName).hide();
         }
     }());
-
     // 滚动, 点击 ajax 部分
     (function () {
         var win = window,
             doc = document,
             isAjaxNow = false,
             timer,
-            container = $(".aj-delay-area"),
+            container = $(prop.delayArea),
             delter;
         // 每多少页手动点击ajax
         if (typeof Qmm_config === 'undefined') return false;
-        var howManyPagesThenClick = Qmm_config.youhuiInfo.howManyPagesThenClick || 4;
+        var howManyPagesThenClick = prop.pagesDelter;
         $(win).on('scroll', function () {
             if (!timer) {
                 timer = setTimeout(function () {
@@ -169,7 +171,7 @@ $(function () {
         });
         function isCloseBottom() {
             delter = $(doc.body).height() - $(win).scrollTop() - $(win).height();
-            if (delter <= 900) {
+            if (delter <= prop.bottomWhenAjax) {
                 return true;
             } else {
                 return false;
@@ -185,28 +187,28 @@ $(function () {
         function addAjaxByClickModule() {
             if (!container.hasClass('aj-ajax-by-click')) {
                 container.addClass('aj-ajax-by-click');
-                container.append("<div class='getmore aj-getmore-by-click'>加载更多</div>");
+                container.append("<div class='getmore aj-getmore-by-click " + prop.clickToAjaxClassName + "'>加载更多</div>");
             }
         }
         function hideClickModule() {
-            $('.aj-getmore-by-click').hide();
+            $('.' + prop.clickToAjaxClassName).hide();
         }
         function showClickModule() {
-            $('.aj-getmore-by-click').show();
+            $('.' + prop.clickToAjaxClassName).show();
         }
-        container.on('click', '.aj-getmore-by-click', function () {
+        container.on('click', '.' + prop.clickToAjaxClassName, function () {
             ajax();
         });
         function showDelay() {
             if (!container.hasClass('aj-has-add-delay-img')){
                 container.addClass('aj-has-add-delay-img');
-                container.append("<div class='aj-delay-div-inside'><img  class='img' " +
+                container.append("<div class='aj-delay-div-inside " + prop.delayDivClassName  + "'><img  class='img' " +
                     "src='http://www.quanmama.com/AdminImageUpload/20148150838532.jpg'></div>");
             }
-            container.find(".aj-delay-div-inside").slideDown();
+            container.find("." + prop.delayDivClassName).slideDown();
         }
         function hideDelay() {
-            container.find('.aj-delay-div-inside').fadeOut();
+            container.find('.' + prop.delayDivClassName).fadeOut();
         }
         function ajax() {
             var ajaxConfig;
@@ -215,7 +217,7 @@ $(function () {
                 isAjaxNow = true;
                 showDelay();
                 if (Qmm_config.youhuiInfo) {
-                    youhuiListLoad(Qmm_config.youhuiInfo, function () {
+                    Load(Qmm_config.youhuiInfo, function () {
                         isAjaxNow = false;
                         hideDelay();
                     });
