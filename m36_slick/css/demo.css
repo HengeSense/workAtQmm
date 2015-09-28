@@ -1,0 +1,7 @@
+.aj-img-slick {
+  width: 730px;
+  overflow: hidden;
+}
+.aj-img-slick img {
+  float: left;
+}
