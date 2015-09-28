@@ -203,9 +203,10 @@ $(function () {
                 container.append("<div class='aj-delay-div-inside'><img  class='img' " +
                     "src='http://www.quanmama.com/AdminImageUpload/20148150838532.jpg'></div>");
             }
+            container.find(".aj-delay-div-inside").slideDown();
         }
         function hideDelay() {
-            container.find('.aj-delay-div-inside').hide();
+            container.find('.aj-delay-div-inside').fadeOut();
         }
         function ajax() {
             var ajaxConfig;
