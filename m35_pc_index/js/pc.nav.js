@@ -8,6 +8,7 @@ $(function () {
             this.event();
             this.resize();
             this.hideMoreIfNoMore();
+            this.fixedTop();
         },
         event : function () {
             var that = this;
@@ -30,6 +31,9 @@ $(function () {
             ul.css({
                 width : cols *  width + 'px'
             });
+            this.div.css({
+                width : this.div.width() + 'px'
+            });
         },
         chooseThis : function (from) {
             $(from).parents('.li-more').addClass('aj-select').find('.wrap .span').html($(from).html());
@@ -42,9 +46,42 @@ $(function () {
         },
         isMoreInLiMore : function () {
             return this.div.find('li.li-more .ul-wrap .ul-w-li').length > 0 ? true : false;
+        },
+        fixedTop : function () {
+            var timer = 0,
+                offset = this.div.offset(),
+                top = offset.top,
+                left = offset.left,
+                increment = 32,
+                scrollTop,
+                that = this;
+            $(document).on('scroll', function () {
+                if (!timer) {
+                    timer = setTimeout(function () {
+                        if (that.div.css('position') === 'static') {
+                            top = that.div.offset().top;
+                        }
+                        scrollTop = $(document.body).scrollTop();
+                        if (scrollTop + increment >= top) {
+                            that.div.addClass('aj-fixed');
+                        } else {
+                            that.div.removeClass('aj-fixed');
+                        }
+                        timer = 0;
+                    }, 200);
+                }
+            });
+            $(that.div).on('aj.rollTop', function () {
+                $(document.body).animate({
+                    scrollTop : top - 100 + 'px'
+                });
+            });
+            $(that.div).on('click', '.j_load', function () {
+                $(that.div).trigger('aj.rollTop');
+            });
         }
     };
-    var div = $('.aj-pc-nav'),
+    var div = $('.aj-pc-nav-o-o'),
         obj;
     if (div.length > 0) {
         obj = new Nav(div);
