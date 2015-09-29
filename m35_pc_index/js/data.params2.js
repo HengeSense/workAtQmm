@@ -8,7 +8,8 @@ $(function () {
         backItemClassName: 'div.list',     // 返回的list的选择器
         container: '.aj-ajaxdata-wrap',    // 返回的list装入的容器
         clickParent: '#aj-ajaxdata',       // 导航点击ajax的容器
-        delayArea: '.aj-delay-area',       // ajax时要遮盖并显示"转转"的区域选择器
+        delayArea: '.aj-delay-area',       // ajax时要遮盖并显示"转转"的区域选择器 (也是点击底部更多的容器)
+        // delayArea 一定要是 container 的父级
         dataBindTag: '.j_load',             // data-params 所绑定的Tag的选择器
         pagesDelter: 4,                     // 每四页从"滚动ajax"切换到"点击ajax"
         bottomWhenAjax: 900,                // 当滚动至距离页面底部900px以下时触发ajax事件

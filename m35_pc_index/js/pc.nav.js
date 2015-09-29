@@ -7,6 +7,7 @@ $(function () {
         init : function () {
             this.event();
             this.resize();
+            this.hideMoreIfNoMore();
         },
         event : function () {
             var that = this;
@@ -33,10 +34,19 @@ $(function () {
         chooseThis : function (from) {
             $(from).parents('.li-more').addClass('aj-select').find('.wrap .span').html($(from).html());
             this.div.find('.li-js').removeClass('aj-select');
-
+        },
+        hideMoreIfNoMore : function () {
+            if (!this.isMoreInLiMore()) {
+                this.div.find('.ul-right').hide();
+            }
+        },
+        isMoreInLiMore : function () {
+            return this.div.find('li.li-more .ul-wrap .ul-w-li').length > 0 ? true : false;
         }
     };
     var div = $('.aj-pc-nav'),
         obj;
-    obj = new Nav(div);
+    if (div.length > 0) {
+        obj = new Nav(div);
+    }
 });
