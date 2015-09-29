@@ -1,0 +1,152 @@
+.aj-table{
+    font-size: 13px;
+    font-family: "lucida Grande",Verdana,"Microsoft YaHei";
+    width: 100%;
+    border:0;padding: 0;
+    margin:0;
+    tr{
+        margin:0;
+        border-bottom: 1px solid #ccc;
+        .button{
+            min-width: 40px;
+            padding: 5 10px;
+            background-color: #ccc;
+            border:1px solid #eee;
+            border-radius: 2px;
+        }
+        th{
+            text-align: left;
+        }
+        td{
+            height: 25px;
+            line-height: 25px;
+            border-bottom: 1px solid #ccc;
+
+            .txtover{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .content{
+                max-width: 400px;max-height: 100px;
+                overflow: auto;
+            }
+        }
+        &.aj-tr{
+            &.aj-select{
+                background-color: #bcc2cd;
+                color: white;
+            }
+        }
+    }
+}
+.aj-options {
+    font-family: "lucida Grande",Verdana,"Microsoft YaHei";
+    background: -webkit-gradient(linear,0 0,0 100%,from(#cdd1d9),to(#bcc2cd));
+    background: -moz-linear-gradient(top,#cdd1d9,#bcc2cd);
+    background-color: #bcc2cd;
+    padding: 7px;
+    font-size: 13px;
+    .button{
+        display: inline-block;
+        height: 22px;
+        min-width: 24px;
+        line-height: 24px;
+        padding: 0 12px;
+        margin: 0 5px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: default;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        border-radius: 3px;
+        float: left;
+
+        border: 1px solid #888;
+        color: #000000;
+        background: #F3F3F3;
+        background: -moz-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+        background: -webkit-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+        background: -o-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+        background: -ms-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#d7d7d7',GradientType=0 );
+        background: linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+        &:hover{
+            background: #bcc2cd;
+            color: white;
+        }
+    }
+    .clear{
+        clear: both;
+    }
+}
+.aj-myquan-page .aj-page-wrap {
+    text-align: center
+}
+
+.aj-myquan-page .aj-page-wrap .aj-p-w-inside {
+    display: inline-block
+}
+
+.aj-myquan-page .aj-page-wrap .aj-p-div {
+    float: left;
+    min-width: 20px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    margin: 5px 3px;
+    vertical-align: middle;
+    border: .1rem solid;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    text-align: center;
+    text-decoration: none!important;
+    cursor: pointer;
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+    background: #e7e9ec;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    background: -webkit-linear-gradient(top, #f7f8fa, #e7e9ec)
+}
+
+.aj-page-wrap {
+    &:after {
+        content: '';
+        display: block;
+        height: 0;
+        clear: both
+    }
+    .aj-p-w-inside{
+        .aj-p-div{
+            float: left;
+            min-width: 20px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 5px;
+            margin: 5px 3px;
+            vertical-align: middle;
+            border: .1rem solid;
+            border-color: #adb1b8 #a2a6ac #8d9096;
+            text-align: center;
+            text-decoration: none!important;
+            cursor: pointer;
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+            background: #e7e9ec;
+            border-radius: 4px;
+            background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+            background: -webkit-linear-gradient(top, #f7f8fa, #e7e9ec);
+            a {
+                color: #666
+            }
+            &.aj-select {
+                background: #8d9096;
+                color: #fff;
+                a {
+                    color: #fff
+                }
+            }
+        }
+    }
+}
