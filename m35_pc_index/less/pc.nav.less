@@ -23,7 +23,8 @@
         box-shadow: #ccc 0 0 2px;
     }
     .aj-pc-nav-o{
-        width:100%;height:400px;overflow:hidden;
+        width:100%;height:40px;
+        overflow: visible;
     }
 }
 .aj-pc-nav{
@@ -35,6 +36,7 @@
     height: @h;
     border: 1px solid #eee;
     border-top:2px solid #4EBC80;
+    margin-top: 0;
     .clear{
         display: block;
         clear: both;
@@ -42,11 +44,11 @@
     }
     .inside{
         display: block;
-        width: 10000px;
+        width: 100%;
         height: 35px;
         .ul{
             float: left;
-            height: @h - 2;
+            height: @h;
             .li{
                 display: inline-block;
                 min-width: 40px;
@@ -78,7 +80,10 @@
                     border-bottom: 2px solid @s_color;
                 }
             }
-
+            &.ul-line{
+                width: 100%;
+                overflow: hidden;
+            }
             &.ul-right{
                 position: absolute;
                 right: 0;top:0;

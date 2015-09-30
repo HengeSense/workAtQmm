@@ -23,8 +23,8 @@
 }
 .aj-pc-nav-o-o .aj-pc-nav-o {
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  height: 40px;
+  overflow: visible;
 }
 .aj-pc-nav {
   position: relative;
@@ -33,6 +33,7 @@
   height: 37px;
   border: 1px solid #eee;
   border-top: 2px solid #4EBC80;
+  margin-top: 0;
 }
 .aj-pc-nav .clear {
   display: block;
@@ -41,12 +42,12 @@
 }
 .aj-pc-nav .inside {
   display: block;
-  width: 10000px;
+  width: 100%;
   height: 35px;
 }
 .aj-pc-nav .inside .ul {
   float: left;
-  height: 35px;
+  height: 37px;
 }
 .aj-pc-nav .inside .ul .li {
   display: inline-block;
@@ -82,6 +83,10 @@
 }
 .aj-pc-nav .inside .ul .li.aj-select {
   border-bottom: 2px solid #4ebc80;
+}
+.aj-pc-nav .inside .ul.ul-line {
+  width: 100%;
+  overflow: hidden;
 }
 .aj-pc-nav .inside .ul.ul-right {
   position: absolute;
