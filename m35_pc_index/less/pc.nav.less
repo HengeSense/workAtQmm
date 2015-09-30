@@ -49,6 +49,7 @@
         .ul{
             float: left;
             height: @h;
+            overflow: hidden;
             .li{
                 display: inline-block;
                 min-width: 40px;
@@ -80,14 +81,11 @@
                     border-bottom: 2px solid @s_color;
                 }
             }
-            &.ul-line{
-                width: 100%;
-                overflow: hidden;
-            }
             &.ul-right{
                 position: absolute;
                 right: 0;top:0;
                 background-color: white;
+                overflow: visible;
             }
             .li{
                 @max-w : 65px;

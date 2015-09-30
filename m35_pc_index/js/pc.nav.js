@@ -1,16 +1,17 @@
+// "一条"样式的导航的点击切换样式JS
 $(function () {
     function Nav(div) {
         this.div = div;
         this.init();
     }
     Nav.prototype = {
-        init : function () {
+        init: function () {
             this.event();
             this.resize();
             this.hideMoreIfNoMore();
             this.fixedTop();
         },
-        event : function () {
+        event: function () {
             var that = this;
             this.div.on('click', '.ul-js .li-js', function () {
                 $(this).addClass('aj-select').siblings().removeClass('aj-select');
@@ -20,7 +21,7 @@ $(function () {
                 that.chooseThis(this)
             });
         },
-        resize : function () {
+        resize: function () {
             var ul = this.div.find('.ul-wrap'),
                 lis = ul.find('.ul-w-li'),
                 width = lis.eq(0).outerWidth(),
@@ -29,25 +30,25 @@ $(function () {
             cols = cols < 1 ? 1 : cols;
             cols = cols > 4 ? 4 : cols;
             ul.css({
-                width : cols *  width + 'px'
+                width: cols * width + 'px'
             });
             this.div.css({
-                width : this.div.width() + 'px'
+                width: this.div.width() + 'px'
             });
         },
-        chooseThis : function (from) {
+        chooseThis: function (from) {
             $(from).parents('.li-more').addClass('aj-select').find('.wrap .span').html($(from).html());
             this.div.find('.li-js').removeClass('aj-select');
         },
-        hideMoreIfNoMore : function () {
+        hideMoreIfNoMore: function () {
             if (!this.isMoreInLiMore()) {
                 this.div.find('.ul-right').hide();
             }
         },
-        isMoreInLiMore : function () {
+        isMoreInLiMore: function () {
             return this.div.find('li.li-more .ul-wrap .ul-w-li').length > 0 ? true : false;
         },
-        fixedTop : function () {
+        fixedTop: function () {
             var timer = 0,
                 offset = this.div.offset(),
                 top = offset.top,
@@ -55,13 +56,13 @@ $(function () {
                 increment = 32,
                 scrollTop,
                 that = this;
-            $(document).on('scroll', function () {
+            $(window).on('scroll', function () {
                 if (!timer) {
                     timer = setTimeout(function () {
                         if (that.div.css('position') === 'static') {
                             top = that.div.offset().top;
                         }
-                        scrollTop = $(document.body).scrollTop();
+                        scrollTop = $(window).scrollTop();
                         if (scrollTop + increment >= top) {
                             that.div.addClass('aj-fixed');
                         } else {
@@ -72,8 +73,8 @@ $(function () {
                 }
             });
             $(that.div).on('aj.rollTop', function () {
-                $(document.body).animate({
-                    scrollTop : top - 100 + 'px'
+                $("html, body").animate({
+                    scrollTop: top - 100 + 'px'
                 });
             });
             $(that.div).on('click', '.j_load', function () {

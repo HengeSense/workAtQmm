@@ -48,6 +48,7 @@
 .aj-pc-nav .inside .ul {
   float: left;
   height: 37px;
+  overflow: hidden;
 }
 .aj-pc-nav .inside .ul .li {
   display: inline-block;
@@ -84,15 +85,12 @@
 .aj-pc-nav .inside .ul .li.aj-select {
   border-bottom: 2px solid #4ebc80;
 }
-.aj-pc-nav .inside .ul.ul-line {
-  width: 100%;
-  overflow: hidden;
-}
 .aj-pc-nav .inside .ul.ul-right {
   position: absolute;
   right: 0;
   top: 0;
   background-color: white;
+  overflow: visible;
 }
 .aj-pc-nav .inside .ul .li.li-more {
   margin-right: 20px;

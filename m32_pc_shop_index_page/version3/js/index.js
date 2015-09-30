@@ -2,6 +2,9 @@ $(function () {
     function Nav() {
         this.div = $('#aj-top-nav-f-j');
         this.left = $('#aj-left-side-f-j');
+        if (this.div.length <= 0) {
+            return false;
+        }
         this.config();
         this.fixedTop();
         this.fenlei();
@@ -57,7 +60,7 @@ $(function () {
             }
             $($this.div).on('aj.rollTop', function () {
                 console.log(top);
-                $(document.body).animate({
+                $("html, body").animate({
                     scrollTop : top - 100 + 'px'
                 });
             });
