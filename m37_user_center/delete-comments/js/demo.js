@@ -45,13 +45,13 @@ $(function () {
             }
         },
         renderForm : function () {
-            this.t.find('.check-one').each(function () {
-                if (this.checked) {
-                    $(this).parents('.aj-tr').addClass('aj-select');
-                } else {
-                    $(this).parents('.aj-tr').removeClass('aj-select');
-                }
-            });
+//            this.t.find('.check-one').each(function () {
+//                if (this.checked) {
+//                    $(this).parents('.aj-tr').addClass('aj-select');
+//                } else {
+//                    $(this).parents('.aj-tr').removeClass('aj-select');
+//                }
+//            });
         }
     };
 
