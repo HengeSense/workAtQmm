@@ -1,0 +1,70 @@
+.aj-homepage-shops{
+    .shop{
+        @pad:3px;
+        position: relative;
+        width: 105px;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 2px;
+        float: left;
+        text-align: center;
+        padding: @pad;
+        height: 55px;
+        border: 1px solid white;
+        &:hover{
+            border: 1px #fc6 solid;
+            .zujian{
+                display: block;
+            }
+        }
+        .a1{
+            display: block;
+            text-align: center;
+            .img{
+                height: 34px;
+                width: 68px
+            }
+            .sp1{
+                display: block;
+                position: absolute;
+                bottom: @pad;left: 0;
+                width: 100%;
+                height: 20px;line-height: 20px;
+                overflow: hidden;
+                text-align: center;
+            }
+        }
+        .zujian{
+            display: none;
+            position: absolute;
+            bottom: 0;left: 0;
+            width: 100%;height: 20px;
+            background-color: white;
+            .a2-wrap{
+                margin:0 auto;
+                font-size: 0;
+            }
+            .a2{
+                color: white;
+                display: inline-block;
+                width: 52px;
+                height: 18px;
+                overflow: hidden;
+                font-size: 12px;
+                &.buy{
+                    background-color: #ff9c03;
+                    &:hover{
+                        background-color: #ed9e1e;
+                    }
+                }
+                &.quan{
+                    background-color: #7bb702;
+                    &:hover{
+                        background-color: #79ad0a;
+                    }
+                }
+            }
+        }
+
+    }
+}

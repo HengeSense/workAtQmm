@@ -60,6 +60,18 @@ $(function () {
             ul.append("<p style='text-align: center;padding: 20px 0;'>该分类下没有相关商家</p>");
         }
     }
+
+    var ul = div.find('.sps-all'),
+        status = ['status-show', 'status-hide'];
+    div.on('click', '.toggle-more', function () {
+        if ($(this).hasClass('status-hide')) {
+            ul.addClass('height-auto');
+            $(this).removeClass('status-hide').addClass('status-show');
+        } else {
+            ul.removeClass('height-auto');
+            $(this).removeClass('status-show').addClass('status-hide');
+        }
+    });
 });
 
 
