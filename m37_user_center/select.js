@@ -1,8 +1,7 @@
 $(function () {
-    var data = {},
+    var data = [],
         table = $('.aj-table'),
         dataContainer = $('#HiddenField1');
-    data.arr = [];
     $('.choose-all').on('click', function () {
         $(document).trigger('aj.changeModel');
     });
@@ -12,13 +11,11 @@ $(function () {
 
 
     $(document).on('aj.changeModel', function () {
-        var trs = table.find('.aj-tr'),
-            arr = [];
-        data.arr = [];
+        var trs = table.find('.aj-tr');
+        data = [];
         trs.each(function () {
             if ($(this).find('.check-one:checked').length > 0) {
-                arr.push();
-                data.arr.push({
+                data.push({
                     'comment_id' : $(this).attr('comment_id'),
                     'item_id' : $(this).attr('item_id')
                 });
