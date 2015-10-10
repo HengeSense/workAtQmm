@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="applicable-device" content="mobile">
+
+    <link href="http://www.quanmama.com/MobileCss/mobile.css?v=20150929" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/qmm.ico" />
+
+    <title>关于我们-券妈妈WAP版</title>
+
+</head>
+<body>
+<div style="position: fixed; top: 0; width: 100%; z-index: 100;">
+    <header id="top" class='aj-new-top'>
+
+        <a class="aj-back qmm-icon-circle-left" onclick="$(document).trigger('aj.goback')"></a>
+        <h1 style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+        </h1>
+        <div class="header_right">
+            <a title="返回首页" href="/mobile/home" class="home-wrapper iconCom clearfix"><span class="head-home">
+				    首页</span> </a>
+            <a title="搜索" class="aj-search login-wrapper clearfix" href="/msearchpage">
+                <span class="qmm-icon-iconfont-search"></span>
+            </a>
+            <a class="side-wrapper iconCom clearfix aj-menu right_menu_btn">
+                <span class="qmm-icon-iconfont-qita right_menu_btn"></span>
+            </a>
+        </div>
+
+    </header>
+</div>
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='/js/jquery.min-1.10.2.js'>\x3C/script>")
+</script>
+<script type="text/javascript" src="http://www.quanmama.com/mobilejs/wap.js?v=20150929"></script>
+<script type="text/javascript">
+
+    Youhui.PageType = '';
+
+    Youhui.PageID = '';
+
+
+    Youhui.CookieDomain = '';
+
+</script>
+<script type="text/javascript">
+    Youhui.common.user.info = {
+        'userid': '',
+        'sina': 0
+    };
+    Youhui = $.extend(Youhui, {
+        SITENAME: "券妈妈",
+        SITEURL: "http://www.quanmama.com/",
+        RESOURCEURL: "",
+        SERVICEURL: "",
+        NOTEFREQUENCY: 60000
+    });
+
+    $(function(){
+
+        $("img").bind("error",function(){
+            if (this.src.indexOf('imgerror') === -1) {
+                this.src = this.src.replace("image1.juanlaoda.com","www.quanmama.com").replace("image2.juanlaoda.com","www.quanmama.com").replace("image3.juanlaoda.com","www.quanmama.com").replace("www.juanlaoda.com","www.quanmama.com") + "?imgerror=1";
+            } else {
+                this.src = '/images/b.gif';
+            }
+        });
+
+    });
+
+</script>
+<link rel="stylesheet" type="text/css" href="less/demo.css" />
+<div class="dealout" style="padding-top:50px;" id="body" >
+    <p><a href="http://a2158.oadz.com/link/C/2158/31/osfFihlENBtLHkgh5EyqoluAtas_/p029/0/http://m.solarbao.com/?source=quanmama004" target="_blank"> <img src="http://www.juanlaoda.com/AdminImageUpload/5527565zuixintupian.jpg" style="width: 100%" /></a></p>
+    <div class="helpabout">
+        <p class="p"><img src="http://www.juanlaoda.com/AdminImageUpload/589164wxs.jpg" width="100%" /></p>
+        <p class="p">券妈妈（www.quanmama.com）是中国最大的优惠券免费领取网站，已有超过<span>8462717</span>个注册用户！</p>
+        <p class="p">券妈妈除了提供京东、唯品会、聚美优品等网购优惠券，现在还提供KFC肯德基优惠券、麦当劳等手机券和最新滴滴打车、饿了么等o2o生活+优惠券。</p>
+        <p class="p">购物消费领取优惠券就找券妈妈！券妈妈的口号是:无优惠不消费。</p>
+    </div>
+</div>
+
+<!--  右侧边栏  -->
+<div id="sidr" style="display: none; position: fixed;z-index:99999; top: 84px; right: 0px; border: 1px solid #898989;
+    background: none repeat scroll 0 0 #fff;">
+    <div class=" goes_login" id="loginN">
+
+        <dl>
+            <dd>
+                券妈妈登陆：</dd>
+            <dt><a href="http://localhost:8080/t/qq.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2fmobile%2fabout">
+                <img title="用QQ账号登录" alt="用QQ账号登录" src="/images/tencent_logo_big.png" /></a></dt>
+            <dt><a href="http://localhost:8080/t/gotosinaweibo.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2fmobile%2fabout">
+                <img
+                        title="用新浪微博账号登录" alt="用新浪微博账号登录" src="/images/sina_logo_big.gif" class="sina_login_image" /></a></dt>
+        </dl>
+
+    </div>
+    <ul class="list_block">
+        <li><a href="/myfav">我收藏的肯麦券</a></li>
+        <li><a href="/msearchpage">搜索优惠券</a></li>
+        <li><a href="javascript:document.location.reload();">刷新</a></li>
+        <li><a href="/mobile/contact">联系我们</a></li>
+        <li><a href="/mobile/about">关于券妈妈</a></li>
+
+    </ul>
+</div>
+<script type="text/javascript">
+    $(".right_menu_btn").click(function (e) {
+        if (!$("#sidr").is(":visible")) {
+            $("#sidr").show();
+        } else {
+            $("#sidr").hide();
+        }
+
+        e.stopPropagation();
+    });
+
+    $(document).click(function () {
+        $("#sidr").hide();
+    });
+
+    $("#sidr").click(function (e) {
+        e.stopPropagation();
+    });
+
+    //图片延时加载
+    if (Youhui) {
+        Youhui.delayLoader.init();
+    }
+
+    if (Youhui.tools.cookie("webapp") == "1") {
+        $(".JNavTabs").hide();
+        $(".tab_home").hide();
+        $(".tab_yhq").hide();
+        $(".tab_zdm").hide();
+        $(".tab_jiukuaijiu").hide();
+        $(".tab_kendeji").hide();
+    }
+</script>
+<div style="text-align: left; clear: both;" id="footer">
+    <div style="clear: both">
+    </div>
+    <div style="background-color:  #00bbbb; color: #FFFFFF; padding: 5px 2px;text-align:center;">
+        <a href="http://m.quanmama.com/mobile/home" class="navfooter"><span class="footerspan">首页</span></a><font
+            color="#FFFFFF">|</font>
+
+        <a href="/mobile/login"><span class="footerspan">登陆</span></a>
+
+        <font color="#FFFFFF">|</font><a href="/myfav" class="navfooter"><span class="footerspan">
+            收藏的券</span></a> <font color="#FFFFFF">|</font><a href="/mobile/help" class="navfooter">
+        <span class="footerspan">帮助</span></a> <font color="#FFFFFF">|</font><a href="/mobile/about"
+                                                                                class="navfooter"><span class="footerspan">关于</span></a>
+    </div>
+    <div class='version' style="margin-left: 5px;display: none;text-align:center;line-height:30px;">
+        <a rel="nofollow" href="/mobile/download"><span class="footerspan2 appdown">安卓客户端<img
+                alt="" height="16px" style="padding-top: 5px; padding-bottom: 5px;" src="http://www.quanmama.com/images/apptj.png" /></span></a>|<a
+            href="http://www.quanmama.com/?utm_source=wap"><span class="footerspan2">电脑版</span></a>
+    </div>
+    <div style="text-align: left; padding-left: 4px;text-align:center;line-height:25px;color:#666;padding-bottom:20px;">
+        <p>
+            券妈妈&copy;2011-2015
+            <br />
+        </p>
+        <p id="qmmtotalusercount">
+            券妈妈-中国最大网购优惠券网，已有<b>9851828</b>个用户</p>
+    </div>
+</div>
+<div class="gj-go-top" style="display: none;" onclick="javascript:$(document).scrollTop(0);return false;">
+    <i></i>
+</div>
+
+<script src="/mobilejs/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var slider = $("#slider");
+        if (slider.length > 0 && $.isFunction(slider.owlCarousel)) {
+            slider.owlCarousel({
+                singleItem: true,
+                autoPlay: true
+
+            });
+        }
+    });
+
+    var goTopObj = $(".gj-go-top");
+    $(window).bind("scroll.gotop", function () {
+        $("#sidr").hide();
+
+        if ($(window).scrollTop() > 30) {
+            goTopObj.fadeIn('fast').css("display", "block");
+        } else {
+            goTopObj.fadeOut('fast');
+        }
+    });
+
+    if (Youhui.tools.cookie("appclose") != "1") {
+        $("#pop").show();
+    } else {
+        goTopObj.css('bottom', '8px');
+    }
+
+    $(".pop-close").click(function () {
+        $("#pop").hide();
+
+        goTopObj.css('bottom', '8px');
+
+        Youhui.tools.cookie("appclose", "1", {
+            path: '/',
+            domain: Youhui.CookieDomain,
+            expires: 864000
+        });
+    });
+
+    //手机app的访问
+    if (window.location.href.indexOf("utm_source=ios") > 0 || window.location.href.indexOf("utm_source=android") > 0
+            || window.location.href.indexOf("from=ios") > 0 || window.location.href.indexOf("from=android") > 0) {
+        Youhui.tools.cookie("appvisit", "1", {
+            path: '/',
+            domain: Youhui.CookieDomain,
+            expires: 864000
+        });
+    }
+
+    if (Youhui.tools.cookie("appvisit") == "1") {
+        $("#pop").hide();
+    }
+    else {
+        $(".version").show();
+    }
+
+    Youhui.tools.cookie("pc", "0", {
+        path: '/',
+        domain: Youhui.CookieDomain,
+        expires: 864000
+    });
+
+</script>
+<div id="userweibo" style="display: none;">
+    <a href="/t/qq.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2fmobile%2fabout">
+        <img title="用QQ账号登录" alt="用QQ账号登录" src="/images/tencent_logo_big.png" /></a>
+    <br />
+    <a href="/t/gotosinaweibo.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2fmobile%2fabout">
+        <img title="用新浪微博账号登录" alt="用新浪微博账号登录" src="/images/sina_logo_big.gif" class="sina_login_image" /></a>
+</div>
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22799670-1']);
+    _gaq.push(['_setDomainName', '.quanmama.com'])
+
+    _gaq.push(['_addOrganic', 'baidu', 'word']);
+    _gaq.push(['_addOrganic', 'soso', 'w']);
+    _gaq.push(['_addOrganic', '3721', 'name']);
+    _gaq.push(['_addOrganic', 'youdao', 'q']);
+    _gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+    _gaq.push(['_addOrganic', 'so.com', 'q']);
+    _gaq.push(['_addOrganic', 'vnet', 'kw']);
+    _gaq.push(['_addOrganic', 'sogou', 'query']);
+
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</body>
+</html>
