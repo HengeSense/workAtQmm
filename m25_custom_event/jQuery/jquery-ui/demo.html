@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <style>
+        div[class*='ui-widget']{
+            width:150px;height:150px;
+        }
+        .div{
+            width: 50px;height: 50px;
+            border: 1px solid #ccc;
+        }
+        #div1{
+            width: 50px;height: 50px;
+            border: 1px solid #ccc;
+        }
+        #draggable { width: 150px; height: 150px; padding: 0.5em; }
+        #draggable3 { width: 150px; height: 150px; padding: 0.5em; }
+        .ul .li{
+            width:100px;height:20px;text-align: center;
+            margin: 5px;
+            background-color: #ccc;
+        }
+    </style>
+    <script>
+        $(function() {
+            $( "#draggable" ).draggable();
+            $("#draggable3").draggable({
+                scroll : true
+            });
+            $("#draggable4").draggable({
+                axis : 'x'
+            });
+            $("#draggable5").draggable({
+                axis : 'y'
+            });
+            $('#div1').draggable({
+                containment : 'parent'
+            });
+            $('#drag6').draggable({
+                handle : '.div'
+            });
+            $('#drag6').resizable();
+            $('#draggable5').resizable({
+                animate : true
+            });
+
+            $('.ul').sortable();
+        });
+    </script>
+</head>
+<body>
+
+<div id="draggable" class="ui-widget-content">
+    <p>Drag me around</p>
+</div>
+
+<div id="draggable3" class="ui-widget-content">
+    <p>scrollSpeed set to 100</p>
+</div>
+<div id="draggable4" class="ui-widget-content">
+    <p>scrollSpeed set to 100</p>
+</div>
+<div id="draggable5" class="ui-widget-content">
+    <div id="div1"></div>
+</div>
+
+<div id="drag6" class="ui-widget-content">
+    <div class="div"></div>
+</div>
+
+<ul class="ul">
+    <li class="li">A</li>
+    <li class="li">B</li>
+    <li class="li">C</li>
+    <li class="li">D</li>
+</ul>
+
+
+</body>
+</html>
