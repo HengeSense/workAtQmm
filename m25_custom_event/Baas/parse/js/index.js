@@ -25,15 +25,11 @@ $(function () {
 //    });
     var GameScore = new Parse.Object.extend("GameScore");
     var gs = new GameScore();
-    gs.save({
-        name : 'Qmm',
-        age : 5
-    },{
-        success : function(gs) {
-            console.log(gs.id);
-        },
-        error : function (gs, err) {
-            console.log(err.message);
-        }
-    } );
+    window.gs = gs;
+
+    var Blogs = new Parse.Object.extend("blogs");
+    var blogs = new Blogs();
+    var blogsQuery = new Parse.Query(Blogs);
+    window.blogs = blogs;
+    window.blogsQuery = blogsQuery;
 });
