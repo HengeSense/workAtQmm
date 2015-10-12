@@ -9,18 +9,31 @@ $(function () {
 //    }).then(function (obj) {
 //        console.log("OK");
 //    });
-    var user = new Parse.User();
-    user.set("username", "AJAX");
-    user.set("password", "123");
-    user.set("email", "735267452@qq.com");
-
-    user.set("phone", "18075076612");
-    user.signUp(null, {
-        success : function (user) {
-            
+//    var user = new Parse.User();
+//    user.set("username", "AJAX");
+//    user.set("password", "123");
+//    user.set("email", "735267452@qq.com");
+//
+//    user.set("phone", "18075076612");
+//    user.signUp(null, {
+//        success : function (user) {
+//
+//        },
+//        error : function (user, err) {
+//            console.log(err.code + '--' + err.message);
+//        }
+//    });
+    var GameScore = new Parse.Object.extend("GameScore");
+    var gs = new GameScore();
+    gs.save({
+        name : 'Qmm',
+        age : 5
+    },{
+        success : function(gs) {
+            console.log(gs.id);
         },
-        error : function (user, err) {
-            console.log(err.code + '--' + err.message);
+        error : function (gs, err) {
+            console.log(err.message);
         }
-    });
+    } );
 });
