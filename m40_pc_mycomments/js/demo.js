@@ -12,26 +12,37 @@ $(function () {
             tishi.html("内容不能为空");
             return false;
         }
-        $.ajax({
-            url : '',
-            data : data,
-            dataType : 'json',
-            success : function (json) {
-                if (parseInt(json.error_code) == 0) {
+        if (canAjax()) {
+            ajax();
+        }
+
+        function ajax(){
+            $(that).addClass('aj-is-ajax-ing');
+            tishi.html('<img class="wait" src="http://localhost:8080/images/loading_comment.gif">');
+            $.ajax({
+                type: "POST",
+                url: "/comment/addcomment",
+                data: data,
+                dataType: "html",
+                success: function (html) {
                     doSuccess();
-                } else {
-                    doFail();
+                },
+                error : function () {
+                    doError();
+                },
+                complete : function () {
+                    $(that).removeClass('aj-is-ajax-ing');
                 }
-            },
-            error : function () {
-                doError();
-            }
-        });
+            });
+        }
+        function canAjax(){
+            return !$(that).hasClass('aj-is-ajax-ing');
+        }
         function check() {
             return ($.trim(that['content'].value) == '') ? false : true;
         }
         function doSuccess() {
-            that.find('.content').val('');
+            $(that).find('.content').val('');
             tishi.css({
                 color : 'lightseagreen'
             });
@@ -53,5 +64,12 @@ $(function () {
 
     $('.aj-module-for-reply').on('click', '.aj-reply', function () {
         $(this).siblings('.aj-reply-area').slideToggle();
+    });
+
+    $('.aj-module-for-comment').on('click', '.aj-delete a', function (e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        $.get(url);
+        $(this).parents(".infoCommentBlock").slideUp();
     });
 });
