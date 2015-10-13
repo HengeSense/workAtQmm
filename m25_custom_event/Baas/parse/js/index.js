@@ -24,16 +24,14 @@ $(function () {
 //        }
 //    });
     var GameScore = new Parse.Object.extend("GameScore");
-    var gs = new GameScore();
-    gs.save({
-        name : 'Qmm',
-        age : 5
-    },{
-        success : function(gs) {
-            console.log(gs.id);
-        },
-        error : function (gs, err) {
-            console.log(err.message);
-        }
-    } );
+    window.gs = new GameScore();
+
+    var Users = new Parse.Object.extend('users');
+    window.u = new Users();
+
+    var Goods = new Parse.Object.extend('goods');
+    window.g = new Goods();
+
+    var Blogs = new Parse.Object.extend("blogs");
+    window.b = new Blogs();
 });
