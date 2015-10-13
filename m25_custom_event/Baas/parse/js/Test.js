@@ -6,6 +6,7 @@ query.limit(2); // default is 100 , valid between  1 - 1000
 query.skip((page - 1) * num);  // this is for pagination
 //query.ascending("updatedAt");   // 升序
 query.descending("updatedAt");   // 降序
+//query.startsWith("title", "Hello"); //Hello and Hello World both match , while hello not.
 
 query.find({
     success : function (results) {
@@ -33,3 +34,14 @@ query.first({
 // Query Constrants
 // query.notEqualTo("playerName", "Michael Yabuti");
 // query.greaterThan("playerAge", 18);
+
+// count
+var query = new Parse.Query(b);
+query.count({
+    success : function (results) {
+        console.log(results);    // typeof results  === 'number'
+    },
+    error : function (err) {
+        console.log(err);
+    }
+});
