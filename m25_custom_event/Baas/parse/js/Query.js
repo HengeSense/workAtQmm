@@ -45,3 +45,42 @@ query.count({
         console.log(err);
     }
 });
+
+// save with ACL
+
+// Public : read; Self : read, write;
+var acl = new Parse.ACL();
+acl.setPublicReadAccess(true);
+acl.setWriteAccess(Parse.User.current().id, true);
+var Danmu = new Parse.Object.extend("Danmu");
+var dd = new Danmu();
+dd.setACL(acl);
+dd.save({
+    content : "Beyond compare is a good tool for comparing files."
+},{
+    success : function (back) {
+        console.log(back);
+    },
+    error : function (err) {
+        console.log(err);
+    }
+});
+
+//
+
+var acl = new Parse.ACL();
+acl.setPublicReadAccess(true);
+acl.setWriteAccess(Parse.User.current().id, true);
+var Danmu = new Parse.Object.extend("Danmu");
+var dd = new Danmu();
+dd.setACL(acl);
+dd.save({
+    content : "Beyond compare is a good tool for comparing files."
+},{
+    success : function (back) {
+        console.log(back);
+    },
+    error : function (err) {
+        console.log(err);
+    }
+});
