@@ -1,0 +1,1603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="dns-prefetch" href="//image1.quanmama.com">
+    <link rel="dns-prefetch" href="//image2.quanmama.com">
+    <link rel="dns-prefetch" href="//image3.quanmama.com">
+    <link rel="dns-prefetch" href="//www.juanlaoda.com">
+    <link rel="dns-prefetch" href="//image1.juanlaoda.com">
+    <link rel="dns-prefetch" href="//image2.juanlaoda.com">
+    <link rel="dns-prefetch" href="//image3.juanlaoda.com">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:8080/images/qmm.ico"/>
+    <link rel="stylesheet" href="http://www.quanmama.com/css2/newstyle.css?v=20150291"
+          type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="http://www.quanmama.com/css2/bestdeal.css?v=2015029"
+          type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="less/style.css?v=2015029"
+          type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="less/pc-search-bar.css?v=2015029"
+          type="text/css" charset="utf-8"/>
+    <title>
+        京东优惠券-券妈妈优惠券搜索 </title>
+    <meta name="Keywords" content="京东优惠券,京东优惠券团购,京东优惠劵,京东优惠卷,京东代金券"/>
+    <meta name="Description"
+          content="券妈妈有最新2015年10月优惠券。京东优惠券，也叫京东优惠劵、京东优惠卷、或者京东代金券。 京东优惠券在结算时用于抵消部分购物金额。 通常一个订单只能使用一张优惠券，每张京东优惠券也有一定的有效期限。领取或购买京东优惠券时，请详细阅读优惠券的使用规则。"/>
+
+</head>
+<body>
+<!--页面顶部-->
+<div class="header">
+    <!--navBarWrap-->
+
+    <div class="navBarWrap">
+        <!--navBar-->
+        <div class="navBar">
+            <div class="nav">
+                <a href="http://localhost:8080/">首页</a>
+
+                <div class="moreNav" style="padding-right: 16px; margin-left: 2px;">
+                    <a href="http://localhost:8080/new">优惠券</a> <i></i>
+                    <ul class="more_moreNav" style="width: 90px;">
+                        <li><a href="http://localhost:8080/new">优惠券大全</a></li>
+                        <li><a href="http://localhost:8080/coupon">优惠券活动</a></li>
+                        <li><a href="http://localhost:8080/newkfc">肯德基优惠券</a></li>
+                        <li><a href="http://localhost:8080/youhuima">海淘优惠码</a></li>
+                        <li><a href="http://localhost:8080/licai">P2P理财券</a></li>
+                    </ul>
+                </div>
+                <a style="margin-right: 24px;" href="http://localhost:8080/zhidemai">今日值得买<span
+                        class="hot"> Hot</span></a>
+
+                <div class="moreNav" style="padding-right: 16px; margin-left: 2px;">
+                    <a href="http://localhost:8080/haitao">海淘</a> <i></i>
+                    <ul class="more_moreNav" style="width: 90px;">
+                        <li><a href="http://localhost:8080/haitao">海淘值得买</a></li>
+                        <li><a href="http://localhost:8080/youhuima">海淘优惠码</a></li>
+                        <li><a href="http://localhost:8080/haitaodaohang">海淘导航</a></li>
+                        <li><a href="http://localhost:8080/haitaogonglue">海淘攻略</a></li>
+                    </ul>
+                </div>
+                <a href="http://localhost:8080/faxian">发现</a> <a href="http://localhost:8080/news">
+                资讯</a>
+
+                <div class="moreNav">
+                    <a href="#">更多</a> <i></i>
+                    <ul class="more_moreNav">
+                        <li><a href="http://localhost:8080/wanggou">商家大全</a></li>
+                        <li><a href="http://localhost:8080/category">类别导航</a></li>
+                        <li><a href="http://localhost:8080/huodong">打折促销</a></li>
+                        <li><a href="http://localhost:8080/danpin">优惠单品</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--loginArea-->
+            <script type="text/javascript">
+                // 获取用户收到待处理回复的数目
+                window.onload = function () {
+                    var nav;
+                    if (Youhui.common.user.info.userid !== '') {
+                        nav = $('#navBar_login_Info');
+                        $.ajax({
+                            url: "/ajax/UnreadGotCommentsNumber.ashx",
+                            type: "GET",
+                            dataType: "JSON",
+                            success: function (res) {
+                                var num = res.num;
+                                if (parseInt(res.num) > 0) {
+                                    nav.find(".tongzhi_number").html(num);
+                                    nav.find(".tongzhi_number_parent").css({
+                                        'display': 'inline-block'
+                                    }).show();
+                                    $('#notice_comment').trigger('aj.getnum');
+                                }
+                            },
+                            error: function () {
+
+                            }
+                        });
+
+                    }
+                }
+            </script>
+            <div class="loginArea">
+
+                <div id="navBar_login_Info" class="login_Info" style="display: block;">
+                    <a class="nickName" target="_blank" href="http://localhost:8080/user/coupons/">
+                        用户5708191141
+                    </a><i></i>
+                    <ul class="more_login_Info">
+                        <li><a target="_blank" href="http://localhost:8080/user/coupons/" rel="nofollow">
+                            我领取的优惠券</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/user/boughtcoupons" rel="nofollow">
+                            我购买的优惠券</a></li>
+                        <li id="user_menu_comment"><a target="_blank" href="http://localhost:8080/user/myGotComments"
+                                                      rel="nofollow">
+                            我的评论
+                        <span class='tongzhi_number_parent'
+                              style='display:none;position:static;background:none;color:#666;'>
+                            (<span style='position:static;background:none;display:inline-block;color:#666;'
+                                   class='tongzhi_number'>0</span>)
+                        </span>
+
+                        </a></li>
+                        <li><a target="_blank" href="http://localhost:8080/user/myfav/" rel="nofollow">我的收藏</a></li>
+                        <li id="user_menu_message"><a target="_blank" href="http://localhost:8080/messagebox"
+                                                      rel="nofollow">站内信</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/user/chongzhi/" rel="nofollow">
+                            账号充值</a></li>
+                        <li>
+                            <a href="http://localhost:8080/user/logoff?returl=http%3a%2f%2flocalhost%3a8080%2fsearch%2f%3fkeyword%3d%e4%ba%ac%e4%b8%9c">
+                                退出登录</a></li>
+                    </ul>
+                </div>
+
+                <a rel="nofollow" style="float: right;" onclick="trackEvent3('顶部', '官方微信','' );"
+                   href="javascript:;" class="weixinlink">券妈妈微信</a>
+
+                <div id="weixinimg" style="top: 32px; position: absolute; display: none; border: solid 1px gray">
+                    <img alt="sd" src="http://www.juanlaoda.com/AdminImageUpload/265824weixin_副本.jpg"/>
+                </div>
+                <div class="submission">
+                    <a href="http://localhost:8080/faq" target="_blank">帮助中心</a> <i></i>
+                    <ul class="more_submission">
+                        <li><a target="_blank" href="http://localhost:8080/LoginHelp">如何注册</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/DrawCouponHelp">如何领券</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/usage">如何用券</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/help/HowToViewDrawedCoupons">查领的券</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/BuyCouponHelp">如何买券</a></li>
+                        <li><a target="_blank" href="http://localhost:8080/faq">更多问题</a></li>
+                    </ul>
+                </div>
+
+                <div id="chief_notice" class="more_user_news">
+                    <i class="icon-cross-lighter close"></i>
+                    <a href="#" id="notice_message" style='display:none;'><em></em>条新消息</a>
+                    <a href="http://localhost:8080/user/myGotComments" id="notice_comment"
+                       style='display:none;'><em></em>条新评论</a>
+                </div>
+
+
+            </div>
+            <!--loginArea end-->
+            <div class="clear">
+            </div>
+        </div>
+        <!--navBar end-->
+    </div>
+
+    <!--navBarWrap end-->
+</div>
+
+
+<!--<div style='margin-top:32px;margin-bottom: -32px; text-align:center;'>
+<a target="_blank" href="http://www.quanmama.com/zhidemai/295759.html">
+<img src="http://www.juanlaoda.com/AdminImageUpload/83833jiedaibao.jpg"/>
+</a>
+</div> -->
+<!--logo & search-->
+<div class="clear" style="width: 100%; padding-top: 32px; height: 85px; background-color: #FFFFFF;">
+    <div class="w990 clear">
+        <div id="logosearch">
+            <div class="top">
+                <div class="logo" style="padding-top: 12px;">
+                    <a href="http://localhost:8080/" title="券妈妈 - 中国最大的网购优惠券网，已有9851828个注册会员">
+                        <img class="logoimg" src="http://www.juanlaoda.com/ImageUpload/4247quanmama_副本.jpg"
+                             style="width: 300px; height: 66px;" alt="券妈妈"/></a></div>
+                <div class="search">
+                    <div>
+                        <form name="searchform" id="searchform" method="get" action="http://localhost:8080/search/">
+                            <div class="search_container">
+                                <span class="tri"></span>
+                                <ul class="J-searchbox_tabs searchbox_tabs">
+                                    <li class="searchtype_coupon searchbox_tab searchbox_tab-current" rel="coupon"
+                                        keywords="输入京东或jd.com等搜索券">
+                                        优惠券
+                                    </li>
+                                    <li class="searchtype_zdm searchbox_tab" rel="zdm" keywords="输入您要搜的值得买关键词">值得买</li>
+                                </ul>
+                            </div>
+                            <div class="mysearchinput">
+                                <input type="text" name="keyword" id="search_input" pre="" autocomplete="off"
+                                       value="京东"/>
+
+                                <div onselectstart="return false;" class="g-toggle" id="search-hotword">
+                                </div>
+                                <div data-expires="24" id="search-hotword-update" style="display: none;">
+                                    0
+                                </div>
+                            </div>
+                            <input type="submit" value="搜索" hidefocus="true" style="display: list-item"
+                                   id="search_button"/>
+                        </form>
+                    </div>
+                    <div class="search_hot">
+                        <div class="search_hot_coupon">
+
+                            <a href="http://www.quanmama.com/quan_didishunfengche">滴滴顺风车优惠券</a>
+                            <a href="http://www.quanmama.com/quan_gome">国美在线优惠券</a>
+                            <a href="http://www.quanmama.com/quan_uber">uber优惠码</a>
+                            <a href="http://www.quanmama.com/quan_xiaojukeji">滴滴打车优惠券</a>
+                            <a href="http://www.quanmama.com/quan_didapinche">嘀嗒拼车优惠券</a>
+                            <a href="http://www.quanmama.com/quan_niwodai/">你我贷优惠券</a>
+
+                        </div>
+                        <div class="search_hot_zdm" style="display: none">
+                            <a href="/store_360buy">京东</a>
+                            <a href="/store_suning">苏宁</a>
+                            <a href="/store_51buy">易迅</a>
+                            <a href="/store_gome">国美</a>
+                            <a href="/store_amazon">亚马逊</a>
+                            <a href="/store_yihaodian">1号店</a>
+                            |
+                            <a href="/brand/2">苹果</a>
+                            <a href="http://www.quanmama.com/category/167">电脑</a>
+                            <a href="/category/571">手机</a>
+                            <a href="/category/168">笔记本</a>
+                            <a href="/category/592">相机</a>
+                            <a href="/category/78">电视</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="headeract">
+                    <a title="券妈妈手机版" href="http://localhost:8080/QuanMamaApp" target="_blank">
+                        <img src="http://www.juanlaoda.com/AdminImageUpload/20141123223946419.jpg" alt="券妈妈手机版"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo & search-->
+<div id="nav-2013" class="cui_nav_single w990">
+
+    <div class="w990" style="position: relative; padding-left: 40px; width: 1010px;">
+        <div id="categorys-2013" class="categorys-2014">
+            <div class="mt ld">
+                <h2>
+                    <a href="/category" title="全部优惠分类"><b></b></a>
+                </h2>
+            </div>
+            <div class="mc" id="_QMM_ALLSORT" load="2">
+            </div>
+        </div>
+        <ul class="cui_nav" id="cui_nav_ul">
+            <li id="cui_nav_home" class="nav_li"><a class="cui_nav_non" href='http://localhost:8080/'>
+                <span>&nbsp;首页&nbsp;</span></a></li>
+            <li class="sep"></li>
+            <li id="cui_nav_yhq" class=""><a href="http://localhost:8080/new"
+                                             class="cui_nav_has"><span>&nbsp;优惠券&nbsp;</span></a></li>
+
+            <li class="sep"></li>
+            <li id="cui_nav_faxian" class=""><a href="/faxian"
+                                                class=" cui_nav_has"><span>&nbsp;发现优惠&nbsp;</span></a></li>
+            <li class="sep"></li>
+            <li id="cui_nav_dyq" class=""><a class="cui_nav_has"
+                                             href='http://localhost:8080/newkfc'><span>肯德基优惠券</span></a></li>
+
+            <li class="cui_myctrip">
+
+                <div>
+                    <a class="cui_myctrip_status" href="http://localhost:8080/user/coupons" rel="nofollow">
+                        我的券妈妈</a>
+
+                    <div title="用户5708191141" class="cui_myctrip_username">
+                        用户5708191141
+                    </div>
+                    <b class=""></b><a class="cui_links_exit"
+                                       href="http://localhost:8080/user/logoff?returl=http%3a%2f%2flocalhost%3a8080%2fsearch%2f%3fkeyword%3d%e4%ba%ac%e4%b8%9c"
+                                       rel="nofollow">退出</a></div>
+                <div style="display: none;" id="notLoginDiv" class="cui_account">
+                    <div>
+                        <a href="http://localhost:8080/user/coupons" rel="nofollow">我的券妈妈首页</a></div>
+                    <div class="cui_account_info">
+                        <a href="http://localhost:8080/user/coupons/" rel="nofollow">我领取的优惠券</a> <a
+                            href="http://localhost:8080/user/boughtcoupons"
+                            rel="nofollow">我购买的优惠券</a>
+                    </div>
+                    <div class="cui_account_info">
+                        <a href="http://localhost:8080/user/chongzhi/" rel="nofollow">账号充值</a><a
+                            href="http://localhost:8080/messagebox"
+                            rel="nofollow">站内信</a><a href="http://localhost:8080/user/myfav/" rel="nofollow">我的收藏</a><a
+                            href="http://localhost:8080/user/myGotComments" rel="nofollow">我的评论</a>
+                    </div>
+                </div>
+
+            </li>
+
+            <li class="sep"></li>
+            <li id="cui_nav_shangjia" class=""><a class="cui_nav_has"
+                                                  href='http://localhost:8080/wanggou'><span>&nbsp;商家大全&nbsp;&nbsp;</span></a>
+            </li>
+            <li class="sep"></li>
+            <li><a id="cui_nav_fuli" class="cui_nav_has" href='http://localhost:8080/fuli'><span>
+            &nbsp;福利大全&nbsp;&nbsp;</span></a></li>
+        </ul>
+    </div>
+
+    <div class="cui_subnav_wrap">
+        <div class="cui_sub_nav cui_nav_yhq">
+            <a class="" href="http://localhost:8080/coupon" title="优惠券">
+                优惠券</a> |<a class="" href="http://localhost:8080/youhuima"
+                            title="优惠码">海淘优惠码</a>|<a href="http://localhost:8080/newkfc" title="肯德基等优惠券">肯德基优惠券</a>|<a
+                href="http://localhost:8080/licai" title="p2p优惠券">P2P理财优惠券</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_zdm">
+            <a class="" href="/faxian"
+               title="发现优惠">发现优惠</a>&nbsp; |&nbsp;<a class=""
+                                                     href="http://localhost:8080/haitao" title="海淘值得买+优惠券">海淘</a>&nbsp;|&nbsp;<a
+                class=""
+                href="/zhidemai" title="今日值得买">今日值得买</a>|&nbsp;<a
+                class="" href="http://localhost:8080/news" title="新闻资讯">新闻资讯</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_faxian">
+            <a class="" href="/zhidemai"
+               title="今日值得买">今日值得买</a>&nbsp;|&nbsp;<a class="" href="/faxian"
+                                                      title="发现优惠">发现优惠</a> &nbsp;|&nbsp;<a class=""
+                                                                                            href="http://localhost:8080/haitao"
+                                                                                            title="海淘值得买">海淘</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_haitao">
+            <a class="" href="http://localhost:8080/youhuima"
+               title="海淘优惠码">海淘优惠码</a>&nbsp; |&nbsp;<a class=""
+                                                       href="http://localhost:8080/haitao" title="海淘值得买">海淘值得买</a>&nbsp;|&nbsp;<a
+                class=""
+                href="/haitaogonglue" title="海淘攻略">海淘攻略</a> &nbsp;|&nbsp;<a href="/haitaodaquan"
+                                                                            class="" title="海淘导航">海淘导航</a>
+            &nbsp;
+        </div>
+        <div class="cui_sub_nav cui_nav_dyq">
+            <a href="http://localhost:8080/kfc" title="肯德基优惠券">肯德基优惠券</a>| <a href="http://localhost:8080/mdl"
+                                                                              title="麦当劳优惠券">麦当劳优惠券</a>| <a
+                href="http://localhost:8080/xiabu" title="呷哺呷哺优惠券">
+            呷哺呷哺优惠券</a>| <a href="http://localhost:8080/zhengongfu" title="真功夫优惠券">真功夫优惠券</a>|
+            <a href="http://localhost:8080/jiyejia" title="吉野家优惠券">吉野家优惠券</a>| <a href="http://www.quanmama.com/bsk"
+                                                                                  title="必胜客优惠券">必胜客优惠券</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_shangjia">
+            <a class="" href="http://localhost:8080/wanggou"
+               title="网购网站大全">网购网站大全</a>| <a class="" href="http://localhost:8080/taobaodianpu"
+                                             title="淘宝店铺大全">淘宝店铺大全</a>| <a class=""
+                                                                           href="http://localhost:8080/haitaodaquan"
+                                                                           title="海淘网站大全">海淘网站大全</a>| <a
+                href="http://localhost:8080/print" title="肯德基、麦当劳等">
+            肯德基等</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var se_keywords = '';
+    var se_type = '';
+</script>
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='/js/jquery.min-1.10.2.js'>\x3C/script>")
+</script>
+<script type="text/javascript" src="/js/base.js?v=20150723"></script>
+<script type="text/javascript">
+    if (window.location.href.indexOf("quanmama.08qeo.com") > -1) {
+        $("a").each(function () {
+            var $this = $(this);
+            var href = $this.attr("href");
+
+            if (href && href.indexOf("www.quanmama.com") > -1) {
+                $this.attr("href", href.replace("www.quanmama.com", "quanmama.08qeo.com"));
+            }
+
+        });
+    }
+
+
+    redirectForMobile();
+
+    Youhui.PageType = '';
+
+    Youhui.PageID = '';
+
+
+    Youhui.CookieDomain = '';
+
+    Youhui.isadmin = 0;
+
+    function trackEvent3(category, action, opt_label) {
+        if (_gaq && typeof(_gaq) != 'undefined') {
+            _gaq.push(["_trackEvent", category, action, opt_label]);
+        }
+    }
+    function trackEvent4(category, action, opt_label, opt_value) {
+        if (_gaq && typeof(_gaq) != 'undefined') {
+            _gaq.push(["_trackEvent", category, action, opt_label, option_value]);
+        }
+    }
+
+    var sea_module_name = {
+        'CategoryNavBar': 'CategoryNavBar/index-nav.js',
+        'ninePicRoll': 'ninePic/index.js',
+        'imgsRollX': 'imgsRollX/index.js',
+        'triRanksMostClick': 'triRanksMostClick/index.js',
+        'rightSideFloatFixed': 'rightSideFloatFixed/index.js'
+    };
+
+</script>
+<script type="text/javascript" src="/js/main.js?v=20150291"></script>
+
+<script type="text/javascript">
+    Youhui.common.user.info = {
+        'userid': '5708191141@weibo.com',
+        'sina': 1
+    };
+    Youhui = $.extend(Youhui, {
+        SITENAME: "券妈妈",
+        SITEURL: "http://www.quanmama.com/",
+        RESOURCEURL: "",
+        SERVICEURL: "",
+        NOTEFREQUENCY: 60000
+    });
+</script>
+
+
+<!--内容主体-->
+<div class="clearfix" id="pagecontent" style="padding-bottom: 15px; margin-right: auto;
+        margin-left: auto;">
+<div class="clear">
+
+
+<script type="text/javascript">
+    Youhui.common.trackOrder.doTrack('jd.com_yiqifa', 'http://p.yiqifa.com/n?k=2mLErntOWZLErI6H2mq26EPhU9PHWEK7rnRO6lRqWmLO6nUH2mqerI6HMnB93N2lMJ6H2L--&e=c&t=http://www.jd.com', 0);
+</script>
+
+<div class="w990 clear">
+<div class="container">
+<div class="left_side searchpage">
+
+
+<!--值得买推荐 区域 begin-->
+
+<div class="coupon_block">
+
+<div id="aj-search-bar">
+    <div class="crumbs">
+        <ul class="ul">
+            <li class="li disable"><a class="li-a" href="">当前位置:</a></li>
+            <li class="li"><a class="li-a a-icon qmm-icon-chevron-right" href="">首页</a></li>
+            <li class="li"><a class="li-a a-icon qmm-icon-chevron-right" href="">搜索</a></li>
+            <li class="li"><a class="li-a a-icon qmm-icon-chevron-right" href="">值得买</a></li>
+            <li class="li disable"><a class="li-a a-icon qmm-icon-chevron-right" href="">"手机"的搜索结果</a></li>
+        </ul>
+    </div>
+    <div class="suggest">
+        <div class="s-wrap">
+            <span class="s-title">推荐您直接查看这些相关分类：</span>
+            <span class="s-keywords">
+                <ul class="ul">
+                    <li class="li"><a href="">智能手机</a></li>
+                    <li class="li"><a href="">安卓手机</a></li>
+                    <li class="li"><a href="">保护壳</a></li>
+                    <li class="li"><a href="">苹果手机</a></li>
+                    <li class="li"><a href="">WP手机</a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
+    <div class="core">
+        <div class="a-nav">
+            <ul class="ul">
+                <li class="li aj-select">
+                    <a href="">
+                        <span class="a-title">优惠</span>
+                        (<span class="num">1056</span>)
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="">
+                        <span class="a-title">海淘</span>
+                        (<span class="num">135</span>)
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="">
+                        <span class="a-title">发现</span>
+                        (<span class="num">7586</span>)
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="">
+                        <span class="a-title">原创</span>
+                        (<span class="num">846</span>)
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="">
+                        <span class="a-title">资讯</span>
+                        (<span class="num">359</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="a-filter">
+            <ul class="ul">
+                <li class="li">
+                    <span class="a-title">
+                        <span class="a-t-val">匹配标题</span>
+                        <span class="a-icon qmm-icon-iconfont-down"></span>
+                    </span>
+                    <ul class="in-ul">
+                        <li class="in-li"><a href="">匹配标题</a></li>
+                        <li class="in-li"><a href="">匹配内容</a></li>
+                    </ul>
+                </li>
+                <li class="li">
+                    <span class="a-title">
+                        <span class="a-t-val">按时间排序</span>
+                        <span class="a-icon qmm-icon-iconfont-down"></span>
+                    </span>
+                    <ul class="in-ul">
+                        <li class="in-li"><a href="">按时间排序</a></li>
+                        <li class="in-li"><a href="">按相关排序</a></li>
+                    </ul>
+                </li>
+                <li class="li">
+                    <span class="a-title">
+                        <span class="a-t-val">时间不限</span>
+                        <span class="a-icon qmm-icon-iconfont-down"></span>
+                    </span>
+                    <ul class="in-ul">
+                        <li class="in-li"><a href="">时间不限</a></li>
+                        <li class="in-li"><a href="">一周内</a></li>
+                        <li class="in-li"><a href="">一月内</a></li>
+                        <li class="in-li"><a href="">一年内</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div style="display: block;" class="leftWrap body" id="J_zhide_list">
+
+<div class="aj-delay-area">
+<div class="aj-ajaxdata-wrap">
+
+<div data-id="218394" class="list aj-zhide-list J_item_wrap zhidemai-content setImgMaxWidth"
+     onclick="javascript:post_view(218394);" post_type="2"
+     id="J_zhide_218394" _hover-ignore="1">
+
+    <div class="listTitle">
+        <a class="icon" target="_blank" href="/zhidemai">
+            精选</a>
+        <h4 class="itemName">
+            <span class=" adminArea"><a style='color:green' href='/shouzhaoliu/post/update.aspx?sysno=218394'
+                                        target='_blank'>【OK】</a></span><a target="_blank" rel="nofollow"
+                                                                          href="http://localhost:8080/zhidemai/218394.html">
+            五一京东苏宁有哪些促销<span class="red" _hover-ignore="1">京东苏宁51大波优惠券来袭 最高可领2000元！！！</span></a></h4>
+
+        <div class="newclear">
+        </div>
+    </div>
+    <a title="" class="picLeft" target="_blank" rel="nofollow" href="http://localhost:8080/zhidemai/218394.html">
+        <img alt="五一京东苏宁有哪些促销" style="margin-top: 0px; max-width: 190px;"
+             src="http://www.quanmama.com/AdminImageUpload/1848279QQ截图20150428111950.png">
+    </a>
+
+    <div class="listRight" _hover-ignore="1">
+
+        <div class='aj-check qmm-icon-iconfont-check2' rank="10">
+            <div class='aj-zhishi'>
+                166天前验证过
+
+            </div>
+        </div>
+
+        <div class="lrTop">
+            <span></span>
+
+            <span class="lrTime">
+                04-28 11:17</span>
+
+            <span>阅读数：80162
+            </span><span>推荐人：券妈妈小编
+            </span>
+        </div>
+        <div class="lrInfo" _hover-ignore="1">
+            五一京东苏宁有哪些促销活动？51是所有电商不可错过的价格战，电器无意是五一促销的主角！就电器方面而言京东、易迅同时打出大家电满1000-100无封顶，小家电满500-100无封顶，同时可以叠加优惠券，最高900元，苏宁国美更是紧随其后，优惠券力度高达2000元...
+            <a target="_blank" rel="nofollow" href="http://localhost:8080/zhidemai/218394.html">
+                阅读全文 </a>
+        </div>
+        <div class="lrBot" _hover-ignore="1">
+            <a id="rating_worthy_218394" class="good" onclick="rating(this,218394,1,3,1);"
+               href="javascript:void(0);"><span class="scoreTotal"><b _hover-ignore="1">值</b> <em>
+                3</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                        +1</span> </a><a id="rating_unworthy_218394" class="bad" onclick="rating(this,218394,2,3,1);"
+                                         href="javascript:void(0);"><span class="scoreTotal"><b>不值</b> <em>
+            1</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                                    +1</span> </a><a title="收藏" class="fav" onclick="ajax_collect(218394,this);"
+                                                     href="javascript:void(0);" id="collect_218394"><i
+                class="icon-collect">
+            <!--[if lt IE 8]>收藏<![endif]-->
+        </i><em>
+            1
+        </em></a><a rel="nofollow" target="_blank" title="评论" class="comment"
+                    href="http://localhost:8080/zhidemai/218394.html#comments">
+            <i class="icon-comment">
+                <!--[if lt IE 8]>评论<![endif]-->
+            </i><em>
+            0
+        </em></a>
+
+            <div class="aj-roll-wrap">
+                <span class="aj-zhishi aj-tran aj-pian-left">
+                    75%用户认为可用</span> <span class="aj-roll"><span class="aj-inside"
+                                                                 rank="7"></span></span><span class="aj-percent">
+                            75%</span>
+            </div>
+
+            <div class="botPart">
+
+                <div style="z-index: 2;" class="buy">
+                    <a target="_blank" rel="nofollow"
+                       href="http://www.quanmama.com/t/zhekou.aspx?sysno=218394&url=http://www.jd.com">直达链接<i>
+                        &gt;</i></a>
+                </div>
+
+                <a class="mall" target="_blank" href="http://localhost:8080/quan_360buy">
+                    京东</a>
+
+            </div>
+            <div class="newclear">
+            </div>
+        </div>
+    </div>
+    <div class="newclear">
+    </div>
+</div>
+
+<div data-id="304543" class="list aj-zhide-list J_item_wrap zhidemai-content setImgMaxWidth"
+     onclick="javascript:post_view(304543);" post_type="4"
+     id="J_zhide_304543" _hover-ignore="1">
+
+    <div class="listTitle">
+        <a class="icon" target="_blank" href="/lipinka">
+            礼品卡</a>
+        <h4 class="itemName">
+            <span class=" adminArea"><a style='color:green' href='/shouzhaoliu/post/updatecoupon.aspx?sysno=304543'
+                                        target='_blank'>【OK】</a></span><a target="_blank" rel="nofollow"
+                                                                          href="http://localhost:8080/lipinka/304543.html">
+            京东新版优惠券系统测试需<span class="red" _hover-ignore="1">副标题慢200-100</span></a></h4>
+
+        <div class="newclear">
+        </div>
+    </div>
+    <a title="" class="picLeft" target="_blank" rel="nofollow" href="http://localhost:8080/lipinka/304543.html">
+        <img alt="京东新版优惠券系统测试需" style="margin-top: 0px; max-width: 190px;"
+             src="http://image1.juanlaoda.com/QMMImg/2014/11/28/32057703.gif">
+    </a>
+
+    <div class="listRight" _hover-ignore="1">
+
+        <div class='aj-check qmm-icon-iconfont-check2' rank="10">
+            <div class='aj-zhishi'>
+                31天前验证过
+
+            </div>
+        </div>
+
+        <div class="lrTop">
+            <span></span>
+
+            <span class="lrTime">
+                09-12 17:10</span>
+
+            <span>阅读数：21
+            </span><span>推荐人：券妈妈小编
+            </span>
+        </div>
+        <div class="lrInfo" _hover-ignore="1">
+            第一行第二行第三行优惠信息... <a target="_blank" rel="nofollow" href="http://localhost:8080/lipinka/304543.html">
+            阅读全文 </a>
+        </div>
+        <div class="lrBot" _hover-ignore="1">
+            <a id="rating_worthy_304543" class="good" onclick="rating(this,304543,1,0,0);"
+               href="javascript:void(0);"><span class="scoreTotal"><b _hover-ignore="1">值</b> <em>
+                0</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                        +1</span> </a><a id="rating_unworthy_304543" class="bad" onclick="rating(this,304543,2,0,0);"
+                                         href="javascript:void(0);"><span class="scoreTotal"><b>不值</b> <em>
+            0</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                                    +1</span> </a><a title="收藏" class="fav" onclick="ajax_collect(304543,this);"
+                                                     href="javascript:void(0);" id="collect_304543"><i
+                class="icon-collect">
+            <!--[if lt IE 8]>收藏<![endif]-->
+        </i><em>
+            0
+        </em></a><a rel="nofollow" target="_blank" title="评论" class="comment"
+                    href="http://localhost:8080/lipinka/304543.html#comments">
+            <i class="icon-comment">
+                <!--[if lt IE 8]>评论<![endif]-->
+            </i><em>
+            0
+        </em></a>
+
+            <div class="botPart">
+
+                <div style="z-index: 2;" class="buy">
+                    <a target="_blank" rel="nofollow" href="http://localhost:8080/lipinka/304543.html">领取优惠券<i>&gt;</i></a>
+                </div>
+
+                <a class="mall" target="_blank" href="http://localhost:8080/quan_360buy">
+                    京东</a>
+
+            </div>
+            <div class="newclear">
+            </div>
+        </div>
+    </div>
+    <div class="newclear">
+    </div>
+</div>
+
+<div data-id="277745" class="list aj-zhide-list J_item_wrap zhidemai-content setImgMaxWidth"
+     onclick="javascript:post_view(277745);" post_type="3"
+     id="J_zhide_277745" _hover-ignore="1">
+
+    <div class="listTitle">
+        <a class="icon" target="_blank" href="/coupon">
+            收录券</a>
+        <h4 class="itemName">
+            <span class=" adminArea"><a style='color:green' href='/shouzhaoliu/post/update.aspx?sysno=277745'
+                                        target='_blank'>【OK】</a></span><a target="_blank" rel="nofollow"
+                                                                          href="http://localhost:8080/quan/277745.html">
+            718 放假又放价 糯米全品类团购享78折<span class="red" _hover-ignore="1">国美在线空调最高立减1000元！</span></a></h4>
+
+        <div class="newclear">
+        </div>
+    </div>
+    <a title="" class="picLeft" target="_blank" rel="nofollow" href="http://localhost:8080/quan/277745.html">
+        <img alt="718  放假又放价   糯米全品类团购享78折" style="margin-top: 0px; max-width: 190px;"
+             src="http://www.juanlaoda.com/AdminImageUpload/4330904QQ截图20150717134316_副本.png">
+    </a>
+
+    <div class="listRight" _hover-ignore="1">
+
+        <div class='aj-check qmm-icon-iconfont-check2' rank="10">
+            <div class='aj-zhishi'>
+                86天前验证过
+
+            </div>
+        </div>
+
+        <div class="lrTop">
+            <span></span>
+
+            <span class="lrTime">
+                07-17 12:37</span>
+
+            <span>阅读数：2469
+            </span><span>推荐人：券妈妈小编
+            </span>
+        </div>
+        <div class="lrInfo" _hover-ignore="1">
+            钱砸股市上啦？钱拿不回来了？没钱给你买东买西买家电了？没事儿，还有我！所谓真爱，就是为了你高兴，我什么都干得出来，在此，小编就来为您盘点717的哪些我们不能错过的促销！718促销NO1：百度糯米 &nbsp;
+            推荐指数：★★★★★推荐上榜理由：全品类领219-... <a target="_blank" rel="nofollow"
+                                            href="http://localhost:8080/quan/277745.html">
+            阅读全文 </a>
+        </div>
+        <div class="lrBot" _hover-ignore="1">
+            <a id="rating_worthy_277745" class="good" onclick="rating(this,277745,1,2,1);"
+               href="javascript:void(0);"><span class="scoreTotal"><b _hover-ignore="1">值</b> <em>
+                2</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                        +1</span> </a><a id="rating_unworthy_277745" class="bad" onclick="rating(this,277745,2,2,1);"
+                                         href="javascript:void(0);"><span class="scoreTotal"><b>不值</b> <em>
+            1</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                                    +1</span> </a><a title="收藏" class="fav" onclick="ajax_collect(277745,this);"
+                                                     href="javascript:void(0);" id="collect_277745"><i
+                class="icon-collect">
+            <!--[if lt IE 8]>收藏<![endif]-->
+        </i><em>
+            1
+        </em></a><a rel="nofollow" target="_blank" title="评论" class="comment"
+                    href="http://localhost:8080/quan/277745.html#comments">
+            <i class="icon-comment">
+                <!--[if lt IE 8]>评论<![endif]-->
+            </i><em>
+            0
+        </em></a>
+
+            <div class="aj-roll-wrap">
+                <span class="aj-zhishi aj-tran aj-pian-left">
+                    66%用户认为可用</span> <span class="aj-roll"><span class="aj-inside"
+                                                                 rank="6"></span></span><span class="aj-percent">
+                            66%</span>
+            </div>
+
+            <div class="botPart">
+
+                <div style="z-index: 2;" class="buy">
+                    <a target="_blank" rel="nofollow"
+                       href="http://localhost:8080/t/goto.aspx?union=smzdm&tag=zdm277745&url=http://www.nuomi.com/">直达链接<i>
+                        &gt;</i></a>
+                </div>
+
+                <a class="mall" target="_blank" href="http://localhost:8080/quan_360buy">
+                    京东</a>
+
+            </div>
+            <div class="newclear">
+            </div>
+        </div>
+    </div>
+    <div class="newclear"></div>
+</div>
+<div data-id="218394" class="list aj-zhide-list J_item_wrap zhidemai-content setImgMaxWidth"
+     onclick="javascript:post_view(218394);" post_type="2"
+     id="J_zhide_218394" _hover-ignore="1">
+
+    <div class="listTitle">
+        <a class="icon" target="_blank" href="/zhidemai">
+            精选</a>
+        <h4 class="itemName">
+            <span class=" adminArea"><a style='color:green' href='/shouzhaoliu/post/update.aspx?sysno=218394'
+                                        target='_blank'>【OK】</a></span><a target="_blank" rel="nofollow"
+                                                                          href="http://localhost:8080/zhidemai/218394.html">
+            五一京东苏宁有哪些促销<span class="red" _hover-ignore="1">京东苏宁51大波优惠券来袭 最高可领2000元！！！</span></a></h4>
+
+        <div class="newclear">
+        </div>
+    </div>
+    <a title="" class="picLeft" target="_blank" rel="nofollow" href="http://localhost:8080/zhidemai/218394.html">
+        <img alt="五一京东苏宁有哪些促销" style="margin-top: 0px; max-width: 190px;"
+             src="http://www.quanmama.com/AdminImageUpload/1848279QQ截图20150428111950.png">
+    </a>
+
+    <div class="listRight" _hover-ignore="1">
+
+        <div class='aj-check qmm-icon-iconfont-check2' rank="10">
+            <div class='aj-zhishi'>
+                166天前验证过
+
+            </div>
+        </div>
+
+        <div class="lrTop">
+            <span></span>
+
+            <span class="lrTime">
+                04-28 11:17</span>
+
+            <span>阅读数：80162
+            </span><span>推荐人：券妈妈小编
+            </span>
+        </div>
+        <div class="lrInfo" _hover-ignore="1">
+            五一京东苏宁有哪些促销活动？51是所有电商不可错过的价格战，电器无意是五一促销的主角！就电器方面而言京东、易迅同时打出大家电满1000-100无封顶，小家电满500-100无封顶，同时可以叠加优惠券，最高900元，苏宁国美更是紧随其后，优惠券力度高达2000元...
+            <a target="_blank" rel="nofollow" href="http://localhost:8080/zhidemai/218394.html">
+                阅读全文 </a>
+        </div>
+        <div class="lrBot" _hover-ignore="1">
+            <a id="rating_worthy_218394" class="good" onclick="rating(this,218394,1,3,1);"
+               href="javascript:void(0);"><span class="scoreTotal"><b _hover-ignore="1">值</b> <em>
+                3</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                        +1</span> </a><a id="rating_unworthy_218394" class="bad" onclick="rating(this,218394,2,3,1);"
+                                         href="javascript:void(0);"><span class="scoreTotal"><b>不值</b> <em>
+            1</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                                    +1</span> </a><a title="收藏" class="fav" onclick="ajax_collect(218394,this);"
+                                                     href="javascript:void(0);" id="collect_218394"><i
+                class="icon-collect">
+            <!--[if lt IE 8]>收藏<![endif]-->
+        </i><em>
+            1
+        </em></a><a rel="nofollow" target="_blank" title="评论" class="comment"
+                    href="http://localhost:8080/zhidemai/218394.html#comments">
+            <i class="icon-comment">
+                <!--[if lt IE 8]>评论<![endif]-->
+            </i><em>
+            0
+        </em></a>
+
+            <div class="aj-roll-wrap">
+                <span class="aj-zhishi aj-tran aj-pian-left">
+                    75%用户认为可用</span> <span class="aj-roll"><span class="aj-inside"
+                                                                 rank="7"></span></span><span class="aj-percent">
+                            75%</span>
+            </div>
+
+            <div class="botPart">
+
+                <div style="z-index: 2;" class="buy">
+                    <a target="_blank" rel="nofollow"
+                       href="http://www.quanmama.com/t/zhekou.aspx?sysno=218394&url=http://www.jd.com">直达链接<i>
+                        &gt;</i></a>
+                </div>
+
+                <a class="mall" target="_blank" href="http://localhost:8080/quan_360buy">
+                    京东</a>
+
+            </div>
+            <div class="newclear">
+            </div>
+        </div>
+    </div>
+    <div class="newclear">
+    </div>
+</div>
+
+<div data-id="304543" class="list aj-zhide-list J_item_wrap zhidemai-content setImgMaxWidth"
+     onclick="javascript:post_view(304543);" post_type="4"
+     id="J_zhide_304543" _hover-ignore="1">
+
+    <div class="listTitle">
+        <a class="icon" target="_blank" href="/lipinka">
+            礼品卡</a>
+        <h4 class="itemName">
+            <span class=" adminArea"><a style='color:green' href='/shouzhaoliu/post/updatecoupon.aspx?sysno=304543'
+                                        target='_blank'>【OK】</a></span><a target="_blank" rel="nofollow"
+                                                                          href="http://localhost:8080/lipinka/304543.html">
+            京东新版优惠券系统测试需<span class="red" _hover-ignore="1">副标题慢200-100</span></a></h4>
+
+        <div class="newclear">
+        </div>
+    </div>
+    <a title="" class="picLeft" target="_blank" rel="nofollow" href="http://localhost:8080/lipinka/304543.html">
+        <img alt="京东新版优惠券系统测试需" style="margin-top: 0px; max-width: 190px;"
+             src="http://image1.juanlaoda.com/QMMImg/2014/11/28/32057703.gif">
+    </a>
+
+    <div class="listRight" _hover-ignore="1">
+
+        <div class='aj-check qmm-icon-iconfont-check2' rank="10">
+            <div class='aj-zhishi'>
+                31天前验证过
+
+            </div>
+        </div>
+
+        <div class="lrTop">
+            <span></span>
+
+            <span class="lrTime">
+                09-12 17:10</span>
+
+            <span>阅读数：21
+            </span><span>推荐人：券妈妈小编
+            </span>
+        </div>
+        <div class="lrInfo" _hover-ignore="1">
+            第一行第二行第三行优惠信息... <a target="_blank" rel="nofollow" href="http://localhost:8080/lipinka/304543.html">
+            阅读全文 </a>
+        </div>
+        <div class="lrBot" _hover-ignore="1">
+            <a id="rating_worthy_304543" class="good" onclick="rating(this,304543,1,0,0);"
+               href="javascript:void(0);"><span class="scoreTotal"><b _hover-ignore="1">值</b> <em>
+                0</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                        +1</span> </a><a id="rating_unworthy_304543" class="bad" onclick="rating(this,304543,2,0,0);"
+                                         href="javascript:void(0);"><span class="scoreTotal"><b>不值</b> <em>
+            0</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                                    +1</span> </a><a title="收藏" class="fav" onclick="ajax_collect(304543,this);"
+                                                     href="javascript:void(0);" id="collect_304543"><i
+                class="icon-collect">
+            <!--[if lt IE 8]>收藏<![endif]-->
+        </i><em>
+            0
+        </em></a><a rel="nofollow" target="_blank" title="评论" class="comment"
+                    href="http://localhost:8080/lipinka/304543.html#comments">
+            <i class="icon-comment">
+                <!--[if lt IE 8]>评论<![endif]-->
+            </i><em>
+            0
+        </em></a>
+
+            <div class="botPart">
+
+                <div style="z-index: 2;" class="buy">
+                    <a target="_blank" rel="nofollow" href="http://localhost:8080/lipinka/304543.html">领取优惠券<i>&gt;</i></a>
+                </div>
+
+                <a class="mall" target="_blank" href="http://localhost:8080/quan_360buy">
+                    京东</a>
+
+            </div>
+            <div class="newclear">
+            </div>
+        </div>
+    </div>
+    <div class="newclear">
+    </div>
+</div>
+
+<div data-id="277745" class="list aj-zhide-list J_item_wrap zhidemai-content setImgMaxWidth"
+     onclick="javascript:post_view(277745);" post_type="3"
+     id="J_zhide_277745" _hover-ignore="1">
+
+    <div class="listTitle">
+        <a class="icon" target="_blank" href="/coupon">
+            收录券</a>
+        <h4 class="itemName">
+            <span class=" adminArea"><a style='color:green' href='/shouzhaoliu/post/update.aspx?sysno=277745'
+                                        target='_blank'>【OK】</a></span><a target="_blank" rel="nofollow"
+                                                                          href="http://localhost:8080/quan/277745.html">
+            718 放假又放价 糯米全品类团购享78折<span class="red" _hover-ignore="1">国美在线空调最高立减1000元！</span></a></h4>
+
+        <div class="newclear">
+        </div>
+    </div>
+    <a title="" class="picLeft" target="_blank" rel="nofollow" href="http://localhost:8080/quan/277745.html">
+        <img alt="718  放假又放价   糯米全品类团购享78折" style="margin-top: 0px; max-width: 190px;"
+             src="http://www.juanlaoda.com/AdminImageUpload/4330904QQ截图20150717134316_副本.png">
+    </a>
+
+    <div class="listRight" _hover-ignore="1">
+
+        <div class='aj-check qmm-icon-iconfont-check2' rank="10">
+            <div class='aj-zhishi'>
+                86天前验证过
+
+            </div>
+        </div>
+
+        <div class="lrTop">
+            <span></span>
+
+            <span class="lrTime">
+                07-17 12:37</span>
+
+            <span>阅读数：2469
+            </span><span>推荐人：券妈妈小编
+            </span>
+        </div>
+        <div class="lrInfo" _hover-ignore="1">
+            钱砸股市上啦？钱拿不回来了？没钱给你买东买西买家电了？没事儿，还有我！所谓真爱，就是为了你高兴，我什么都干得出来，在此，小编就来为您盘点717的哪些我们不能错过的促销！718促销NO1：百度糯米 &nbsp;
+            推荐指数：★★★★★推荐上榜理由：全品类领219-... <a target="_blank" rel="nofollow"
+                                            href="http://localhost:8080/quan/277745.html">
+            阅读全文 </a>
+        </div>
+        <div class="lrBot" _hover-ignore="1">
+            <a id="rating_worthy_277745" class="good" onclick="rating(this,277745,1,2,1);"
+               href="javascript:void(0);"><span class="scoreTotal"><b _hover-ignore="1">值</b> <em>
+                2</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                        +1</span> </a><a id="rating_unworthy_277745" class="bad" onclick="rating(this,277745,2,2,1);"
+                                         href="javascript:void(0);"><span class="scoreTotal"><b>不值</b> <em>
+            1</em></span> <span class="scoredInfo">已打分</span> <span class="scoreAnimate">
+                                    +1</span> </a><a title="收藏" class="fav" onclick="ajax_collect(277745,this);"
+                                                     href="javascript:void(0);" id="collect_277745"><i
+                class="icon-collect">
+            <!--[if lt IE 8]>收藏<![endif]-->
+        </i><em>
+            1
+        </em></a><a rel="nofollow" target="_blank" title="评论" class="comment"
+                    href="http://localhost:8080/quan/277745.html#comments">
+            <i class="icon-comment">
+                <!--[if lt IE 8]>评论<![endif]-->
+            </i><em>
+            0
+        </em></a>
+
+            <div class="aj-roll-wrap">
+                <span class="aj-zhishi aj-tran aj-pian-left">
+                    66%用户认为可用</span> <span class="aj-roll"><span class="aj-inside"
+                                                                 rank="6"></span></span><span class="aj-percent">
+                            66%</span>
+            </div>
+
+            <div class="botPart">
+
+                <div style="z-index: 2;" class="buy">
+                    <a target="_blank" rel="nofollow"
+                       href="http://localhost:8080/t/goto.aspx?union=smzdm&tag=zdm277745&url=http://www.nuomi.com/">直达链接<i>
+                        &gt;</i></a>
+                </div>
+
+                <a class="mall" target="_blank" href="http://localhost:8080/quan_360buy">
+                    京东</a>
+
+            </div>
+            <div class="newclear">
+            </div>
+        </div>
+    </div>
+    <div class="newclear"></div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!--值得买推荐 区域 end-->
+
+</div>
+<div class="right_side">
+
+    <div class="rightPanel" id="J-aside-hot">
+        <h2 class="panelTitle">
+            热门优惠券 <a class="more green" href="/new" target="_blank">更多</a>
+        </h2>
+
+        <div class="rightHotExp">
+            <ul class="new_hot_coupon">
+
+                <li><a class="new_img_wrap" href="http://localhost:8080/quan_solarbao">
+                    <img alt="绿能宝优惠券" src="/images/b.gif"
+                         drc="http://www.juanlaoda.com/AdminImageUpload/359705lnb.jpg"/>
+                </a>
+
+                    <div class="new_img_detail">
+                        <p class="name">
+                            <a href="http://localhost:8080/quan/1249743.html" title="绿能宝8月最新红包，50元现金红包免费领取">
+                                绿能宝8月最新红包，50元现金红包免费领取</a></p>
+
+                        <p class="btn_wrap">
+                            <a href="http://localhost:8080/quan/1249743.html" class="btn" title="绿能宝8月最新红包，50元现金红包免费领取"><span>立即领取</span></a>
+                        </p>
+
+                        <p class="score_now">
+                            已领：27123张</p>
+
+                        <p class="score_old">
+                            <em class="size12">50元红包</em>
+                        </p>
+                    </div>
+                </li>
+
+                <li><a class="new_img_wrap" href="http://localhost:8080/quan_jumei">
+                    <img alt="聚美优品优惠券" src="/images/b.gif"
+                         drc="http://image1.juanlaoda.com/QMMImg/2014/11/11/04916345.jpg"/>
+                </a>
+
+                    <div class="new_img_detail">
+                        <p class="name">
+                            <a href="http://localhost:8080/quan/1252287.html" title="8月最新聚美优品优惠券，满200元减30元聚美优品优惠券">
+                                8月最新聚美优品优惠券，满200元减30元聚美优品优惠券</a></p>
+
+                        <p class="btn_wrap">
+                            <a href="http://localhost:8080/quan/1252287.html" class="btn"
+                               title="8月最新聚美优品优惠券，满200元减30元聚美优品优惠券"><span>立即领取</span></a></p>
+
+                        <p class="score_now">
+                            已领：23332张</p>
+
+                        <p class="score_old">
+                            满<em>200</em>减<em>30</em>
+                        </p>
+                    </div>
+                </li>
+
+                <li><a class="new_img_wrap" href="http://localhost:8080/quan_vipshop">
+                    <img alt="唯品会优惠券" src="/images/b.gif" drc="http://image1.juanlaoda.com/QMMImg/2014/7/1/138592.jpg"/>
+                </a>
+
+                    <div class="new_img_detail">
+                        <p class="name">
+                            <a href="http://localhost:8080/quan/1252847.html" title="唯品会代金券，满300元减30元唯品会最新优惠券领取">
+                                唯品会代金券，满300元减30元唯品会最新优惠券领取</a></p>
+
+                        <p class="btn_wrap">
+                            <a href="http://localhost:8080/quan/1252847.html" class="btn"
+                               title="唯品会代金券，满300元减30元唯品会最新优惠券领取"><span>立即领取</span></a></p>
+
+                        <p class="score_now">
+                            已领：75153张</p>
+
+                        <p class="score_old">
+                            满<em>300</em>减<em>30</em>
+                        </p>
+                    </div>
+                </li>
+
+                <li><a class="new_img_wrap" href="http://localhost:8080/quan_miyabaobei">
+                    <img alt="蜜芽优惠券" src="/images/b.gif"
+                         drc="http://image2.juanlaoda.com/AdminImageUpload/551428miya-logo.png"/>
+                </a>
+
+                    <div class="new_img_detail">
+                        <p class="name">
+                            <a href="http://localhost:8080/quan/1252293.html" title="蜜芽优惠券，满100-10元蜜芽宝贝优惠券领取">
+                                蜜芽优惠券，满100-10元蜜芽宝贝优惠券领取</a></p>
+
+                        <p class="btn_wrap">
+                            <a href="http://localhost:8080/quan/1252293.html" class="btn"
+                               title="蜜芽优惠券，满100-10元蜜芽宝贝优惠券领取"><span>立即领取</span></a></p>
+
+                        <p class="score_now">
+                            已领：4994张</p>
+
+                        <p class="score_old">
+                            满<em>100</em>减<em>10</em>
+                        </p>
+                    </div>
+                </li>
+
+                <li><a class="new_img_wrap" href="http://localhost:8080/quan_lafaso">
+                    <img alt="乐蜂网优惠券" src="/images/b.gif"
+                         drc="http://image1.juanlaoda.com/QMMImg/2014/11/18/143823349.jpg"/>
+                </a>
+
+                    <div class="new_img_detail">
+                        <p class="name">
+                            <a href="http://localhost:8080/quan/1256598.html" title="最新乐蜂网优惠券，【新客】30元无限制乐蜂网优惠券">
+                                最新乐蜂网优惠券，【新客】30元无限制乐蜂网优惠券</a></p>
+
+                        <p class="btn_wrap">
+                            <a href="http://localhost:8080/quan/1256598.html" class="btn"
+                               title="最新乐蜂网优惠券，【新客】30元无限制乐蜂网优惠券"><span>立即领取</span></a></p>
+
+                        <p class="score_now">
+                            已领：2729张</p>
+
+                        <p class="score_old">
+                            <em>30元</em>无限制券
+                        </p>
+                    </div>
+                </li>
+
+                <li><a class="new_img_wrap" href="http://localhost:8080/quan_imike">
+                    <img alt="眯客优惠券" src="/images/b.gif"
+                         drc="http://www.quanmama.com/AdminImageUpload/91885520150630120805.png"/>
+                </a>
+
+                    <div class="new_img_detail">
+                        <p class="name">
+                            <a href="http://localhost:8080/quan/1256973.html" title="酒店优惠券，30元无限制眯客优惠券">
+                                酒店优惠券，30元无限制眯客优惠券</a></p>
+
+                        <p class="btn_wrap">
+                            <a href="http://localhost:8080/quan/1256973.html" class="btn"
+                               title="酒店优惠券，30元无限制眯客优惠券"><span>立即领取</span></a></p>
+
+                        <p class="score_now">
+                            已领：1874张</p>
+
+                        <p class="score_old">
+                            <em>30元</em>无限制券
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="rightPanel ">
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:600px"
+             data-ad-client="ca-pub-2779426299774699"
+             data-ad-slot="9038746892"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="rightPanel" id="J-aside-new">
+        <h2 class="panelTitle">
+            最新优惠券 <a class="more green" href="/new" target="_blank">更多</a>
+        </h2>
+
+        <div class="rightHotExp">
+            <ul class="aside-list">
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/1667062.html" target="_blank" title="京东满减活动满100-10">
+                        京东满减活动满100-10</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/1667061.html" target="_blank" title="京东满减活动满100-10">
+                        京东满减活动满100-10</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/1667060.html" target="_blank" title="京东满减活动满100-10">
+                        京东满减活动满100-10</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/1667063.html" target="_blank" title="京东优惠券满100-10">
+                        京东优惠券满100-10</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/1667059.html" target="_blank" title="Godaddy优惠:1美元/月的托管+免域">
+                        Godaddy优惠:1美元/月的托管+免域</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/1667026.html" target="_blank" title="唯品会满100-20元优惠券免费领取">
+                        唯品会满100-20元优惠券免费领取</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/quan/304072.html" target="_blank" title="唯品会 免费美妆预约">
+                        唯品会 免费美妆预约</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/xiti/printcoupon17346.html" target="_blank"
+                       title="西堤牛排每月9号会员日 4人同行1人免单">
+                        西堤牛排每月9号会员日 4人同行1人免单</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/kfc/printcoupon17344.html" target="_blank"
+                       title="肯德基下午茶时段点任意中大杯现磨咖啡+3元得精选甜品小食1份">
+                        肯德基下午茶时段点任意中大杯现磨咖啡+3元得精选甜品小食1份</a></li>
+
+                <li>
+
+                    <a href="http://localhost:8080/bsk/printcoupon17313.html" target="_blank"
+                       title="必胜客用心寻找美食，抽150元免单券">
+                        必胜客用心寻找美食，抽150元免单券</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- quan右侧底部300*250 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:300px;height:250px"
+         data-ad-client="ca-pub-2779426299774699"
+         data-ad-slot="6014019691"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+</div>
+</div>
+
+</div>
+<div id="content_ft_div">
+</div>
+</div>
+
+
+<!--页面底部-->
+<div id="pagefooter">
+    <div class="pagefooter_ad">
+    </div>
+
+
+    <div id="footerTab">
+        <div class="bordiv">
+            <div class="footer_txt">
+                <span class="on" data-id="0">优惠券免费领取</span><span data-id="1">热门导航</span>
+            </div>
+            <p class="on footer_msg p0" data-id="0">
+                券妈妈优惠券网-中国最大的优惠券网站，已有<font color="red">9851828</font>个用户。京东优惠券领取,唯品会优惠券免费领取和聚美优品红包,6PM优惠码,1号店抵用券,美团代金券,肯德基优惠券
+
+
+            </p>
+
+            <p class=" p1" data-id="1">
+                <a href="http://m.quanmama.com">券妈妈手机版</a>
+                <a href="http://dididache.quanmama.com">滴滴打车代金券</a>
+                <a href="http://www.quanmama.com/quan_didapinche">嘀嗒拼车优惠券</a>
+                <a href="http://www.quanmama.com/quan_didishunfengche">滴滴顺风车优惠券</a>
+                <a href="http://www.quanmama.com/quan_didizhuanche">滴滴专车优惠券</a>
+                <a href="http://www.quanmama.com/quan_didikuaiche">滴滴快车优惠券</a>
+                <a href="http://www.quanmama.com/quan_xiaojukeji">滴滴打车优惠券</a>
+                <a href="http://www.quanmama.com/quan_uber">优步优惠码</a>
+                <a href="http://www.quanmama.com/quan_maoyan">猫眼电影优惠券</a>
+                <a href="http://www.quanmama.com/quan_niwodai/">你我贷优惠券</a>
+                <a href="http://www.quanmama.com/youhuima">优惠码</a>
+                <a href="http://www.quanmama.com/quan_aliyun">阿里云优惠券</a>
+                <a href="http://www.quanmama.com/quan_xiji">西集网优惠券</a>
+                <a href="http://www.quanmama.com/new">电子优惠券</a>
+                <a href="http://www.quanmama.com/quan_taodiandian">淘点点优惠券</a>
+                <a href="http://www.quanmama.com/quan_yoho/">有货优惠券</a>
+                <a href="http://www.quanmama.com/quan_touna">投哪网体验金</a>
+                <a href="http://www.quanmama.com/quan_kidsroom_de">kidsroom优惠码</a>
+                <a href="http://www.quanmama.com/quan_gome">国美在线优惠券</a>
+                <a href="http://www.quanmama.com/shidapinpai">十大品牌</a>
+                <a href="http://jiyejia.quanmama.com">吉野家优惠券</a>
+                <a href="http://www.quanmama.com/quan_yintai">银泰网优惠券</a>
+                <a href="http://www.quanmama.com/quan_ctrip">携程优惠券</a>
+                <a href="http://www.quanmama.com/quan_vipshop">唯品会优惠券免费领取</a>
+                <a href="http://www.quanmama.com/quan_360buy">京东优惠券领取</a>
+                <a href="http://www.quanmama.com/quan_tmallchaoshi">天猫超市优惠券</a>
+                <a href="http://www.quanmama.com/quan_yihaodian">1号店优惠券</a>
+                <a href="http://www.quanmama.com/lipinka_vipshop">唯品会礼品卡</a>
+                <a href="http://www.quanmama.com/quan_jiuxian">酒仙网优惠券</a>
+                <a href="http://www.quanmama.com/quan_jumei">聚美红包</a>
+                <a href="http://www.quanmama.com/quan_tmallchaoshi/10">天猫超市10元优惠券</a>
+                <a href="http://www.quanmama.com/quan_shopbop">shopbop优惠码</a>
+                <a href="http://www.quanmama.com/quan_tmall">天猫优惠券</a>
+                <a href="http://www.quanmama.com/quan_ashford">Ashford优惠码</a>
+                <a href="http://www.quanmama.com/quan_nuomi">糯米网优惠券</a>
+                <a href="http://www.quanmama.com/quan_meituan">美团代金券</a>
+                <a href="http://www.quanmama.com/quan_taobao">淘宝优惠券</a>
+                <a href="http://www.quanmama.com/quan_qunar">去哪儿优惠券</a>
+                <a href="http://www.quanmama.com/quan_suning">苏宁易购优惠券</a>
+                <a href="http://www.quanmama.com/quan_kuaidi">快的打车优惠券</a>
+                <a href="http://www.quanmama.com/quan_nuoxin">诺心蛋糕优惠券</a>
+                <a href="http://ctrip.quanmama.com">携程网优惠券</a>
+                <a href="http://www.quanmama.com/quan_yongche">易到用车优惠券</a>
+                <a href="http://www.quanmama.com/quan_lafaso">乐蜂网优惠券</a>
+                <a href="http://www.quanmama.com/kfc">肯德基优惠券</a>
+                <a href="http://www.quanmama.com">券老大</a>
+                <a href="http://www.quanmama.com/mdl">麦当劳优惠券</a>
+                <a href="http://jingdonghongbao.quanmama.com" title="京东红包">京东红包</a>
+
+                <br/>
+                券妈妈有最新2015年10月京东优惠券。
+                <br/>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti58633.html" title="京东618红包">
+                京东618红包</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti87259.html" title="京东618活动参与攻略">
+                京东618活动参与攻略</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti72182.html" title="京东攻略网">
+                京东攻略网</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti87257.html" title="京东618抢购攻略">
+                京东618抢购攻略</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti87256.html" title="京东618购物攻略">
+                京东618购物攻略</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti87258.html" title="京东618活动攻略">
+                京东618活动攻略</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti60058.html" title="京东618活动">
+                京东618活动</a>
+
+                ,<a href="http://localhost:8080/tag/34560-京东618.html" title="京东618">
+                京东618</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti87247.html" title="2015京东活动时间">
+                2015京东活动时间</a>
+
+                ,<a href="http://localhost:8080/quan_360buy/zhuanti87246.html" title="京东618攻略">
+                京东618攻略</a>
+
+            </p>
+        </div>
+    </div>
+
+    <p class="pagefooter_link">
+        <a rel="nofollow" href="http://localhost:8080/about" target="_blank">关于券妈妈</a><span>-</span><a
+            href="http://localhost:8080/quanmamaApp">手机客户端</a><span>-</span><a rel="nofollow"
+                                                                               rel="nofollow"
+                                                                               href="http://localhost:8080/contact">联系我们</a><span>-</span><a
+            rel="nofollow"
+            rel="nofollow" href="http://localhost:8080/joinus">人才招聘</a><span>-</span><a rel="nofollow"
+                                                                                        href="http://localhost:8080/drawcouponhelp">优惠券免费领取</a><span>-</span><a
+            rel="nofollow"
+            href="http://localhost:8080/LoginHelp">如何注册和登陆</a><span>-</span><a rel="nofollow"
+                                                                               href="http://localhost:8080/chongzhihelp">如何充值买劵</a><span>-</span>
+        <a href="http://localhost:8080/usage">优惠券怎么用</a><span>-</span> <a rel="nofollow"
+                                                                          href="http://localhost:8080/faq">帮助中心</a>
+        <span>-</span><a href="http://localhost:8080/links">友情链接</a>
+    </p>
+
+    <p class="pagefooter_copyright">
+        券妈妈 - 优惠券免费领取，是中国最大的优惠券网,
+
+        2010-2015，All Rights Reserved 皖ICP备12015864号-1
+
+    </p>
+
+    <div style="border-style: solid; border-width: 1px; border-color: red">
+    </div>
+    <script type="text/javascript">
+        function admin_hide() {
+            Youhui.tools.cookie('closeadmin', 1, {
+                path: '/',
+                domain: Youhui.CookieDomain,
+                expires: 86400
+            });
+
+            $(".adminManageArea").hide();
+            $(".adminManageArea2").show();
+            $(".adminArea").hide();
+        }
+
+        function admin_show() {
+            Youhui.tools.cookie('closeadmin', 0, {
+                path: '/',
+                domain: Youhui.CookieDomain,
+                expires: 86400
+            });
+
+            $(".adminManageArea").show();
+            $(".adminManageArea2").hide();
+
+            $(".adminArea").show();
+        }
+    </script>
+
+    <div style="border-style: solid; border-width: 2px; padding: 10px; border-color: black;
+            display: none; width: 120px; left: 10px; bottom: 40px; position: fixed; text-align: left;
+            padding-left: 4px;" class="adminManageArea">
+        <a target="_blank" href="/shouzhaoliu/guide.aspx">管理中心</a>&nbsp;<a target="_blank"
+                                                                           href="/shouzhaoliu/editor.aspx"> 编辑中心</a>&nbsp;<a
+            onclick="admin_hide();" href="javascript:;">X关闭</a><br/>
+        <hr/>
+
+    </div>
+    <div style="border-style: solid; border-width: 2px; padding: 10px; border-color: black;
+            display: none; left: 10px; bottom: 10px; position: fixed; text-align: left; padding-left: 4px;"
+         class="adminManageArea2">
+        <a onclick="admin_show();" href="javascript:;">显示管理后台</a>
+    </div>
+    <script type="text/javascript">
+        if (Youhui.tools.cookie('closeadmin') != 1) {
+            $(".adminManageArea").show();
+            $(".adminArea").show();
+        } else {
+            $(".adminManageArea2").show();
+            $(".adminArea").hide();
+        }
+
+        $(".adminManageArea").css('width', ($(window).width() - 1100) / 2.0 - 30);
+    </script>
+
+</div>
+<div class="cartTop J_floatright" style="right: 50px;">
+    <a href="javascript:;" class="J_totop item hideitem" style="display: none;"><span
+            class="icon top"></span><span class="text">返回顶部</span> </a><a target="_blank"
+                                                                          href="http://localhost:8080/faq?utm_source=floatright"
+                                                                          class="item csbox J_floatright J_open_kefu"
+                                                                          data-show="true" style="display: block;">
+    <span class="icon cs"></span><span class="text">客服帮助</span></a></div>
+<div id="note_tips" style="top: 28px; right: 222.5px; display: none;">
+    <a target="_blank" title="查看收件箱" href="/adminNotice"><em class="note_num">0</em>&nbsp;条新消息</a>
+
+    <div id="note_list">
+        <ul>
+        </ul>
+        <div id="note_act">
+            <a href="/adminNotice">查看收件箱</a></div>
+    </div>
+</div>
+<div class="JMyAjax" data-url="/html/AutoCompleteHotStores.html">
+</div>
+<div class="statics">
+
+
+</div>
+<div class="clear adminArea" style="text-align: center; width: 100%">
+
+</div>
+<div id="userweibo" style="display: none;">
+
+
+    <a onclick="return window.open('http://localhost:8080/t/qq.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2ft%2flogin_jump.htm%3faj_is_from_login%3d1%26from%3d', 'oauth2Login_10909', 'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes')"
+       href="javascript:;">
+        <img title="用QQ账号登录" alt="用QQ账号登录" src="http://localhost:8080/images/tencent_logo_big.png"/></a>
+
+    <!--
+ <a href="http://localhost:8080/t/qq.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2f">
+     <img title="用QQ账号登录" alt="用QQ账号登录" src="http://localhost:8080/images/tencent_logo_big.png" /></a>
+  -->
+    <a href="http://localhost:8080/t/gotosinaweibo.aspx?action=go&returl=http%3a%2f%2flocalhost%3a8080%2f">
+        <img style="padding-left: 8px;"
+             title="用新浪微博账号登录" alt="用新浪微博账号登录" src="http://localhost:8080/images/sina_logo_big.gif"
+             class="sina_login_image"/></a>
+</div>
+
+<script>
+    var Qmm_config = Qmm_config || {};
+    Qmm_config.youhuiInfo = {
+        page : 2,     //current_page
+        pagesize : 16,
+        category : 0,
+        sort : 1,
+        site : '',
+        area : 0,
+        time : 0,
+        status : 10000,
+        pagetype : 1,
+        posttype : 2,
+        promotype : 0
+    };
+</script>
+<script src="js/pc-search-bar.js"></script>
+</body>
+</html>
