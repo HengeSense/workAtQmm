@@ -62,6 +62,25 @@
   width: 690px;
   max-width: 690px;
 }
+.aj-pc-com-wrap .infoPerBlock .aj-reply-area .left {
+  position: relative;
+  float: left;
+  z-index: 9;
+}
+.aj-pc-com-wrap .infoPerBlock .aj-reply-area .left .aj-biaoqin-wrap {
+  margin-top: 5px;
+}
+.aj-pc-com-wrap .infoPerBlock .aj-reply-area .left .aj-biaoqin-wrap .aj-biaoqin {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+}
+.aj-pc-com-wrap .infoPerBlock .aj-reply-area .left .aj-biaoqin-wrap .aj-biaoqin:hover {
+  color: lightcoral;
+}
+.aj-pc-com-wrap .infoPerBlock .aj-reply-area .left .aj-biaoqin-wrap .smileLayerBg {
+  display: none;
+}
 .aj-pc-com-wrap .infoPerBlock .aj-reply-area .right {
   float: right;
   margin-top: 5px;
