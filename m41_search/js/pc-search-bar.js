@@ -228,3 +228,14 @@ $(function () {
         }
     }());
 });
+
+$(function () {
+    var bar = $("#aj-search-bar");
+    if (bar.length > 0) {
+        bar.find(".a-filter li .in-ul").each(function () {
+            var title = $(this).siblings(".a-title").find('span.a-t-val'),
+                select = $(this).find(".in-li.aj-select a");
+            title.html(select.html());
+        });
+    }
+});
