@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Underscore</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min.js"></script>
+</head>
+
+<body>
+</body>
+</html>
+
+<!--ace-template demo-->
+
+
+
+<script>
+    //seajs.use("./demo.js");
+    var model =
+    {
+        title: "一九四二",
+        url: "http://www.baidu.com",
+        film:"电影1"
+    };
+    (function () {
+        var item =
+        {
+            title: "一九四二",
+            url: "http://www.baidu.com",
+            film:"电影1"
+        };
+        $.get("./ajax.html", function (back) {
+
+            var html;
+
+            $("body").html(_.template(back, {
+                'item' :  item
+            }));
+
+        });
+    })();
+
+</script>
