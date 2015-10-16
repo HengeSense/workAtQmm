@@ -24,6 +24,7 @@ $(function () {
 //        }
 //    });
     var GameScore = new Parse.Object.extend("GameScore");
+
     var gs = new GameScore();
     window.gs = gs;
 
@@ -32,4 +33,15 @@ $(function () {
     var blogsQuery = new Parse.Query(Blogs);
     window.blogs = blogs;
     window.blogsQuery = blogsQuery;
+
+    window.gs = new GameScore();
+
+    var Users = new Parse.Object.extend('users');
+    window.u = new Users();
+
+    var Goods = new Parse.Object.extend('goods');
+    window.g = new Goods();
+
+    var Blogs = new Parse.Object.extend("blogs");
+    window.b = new Blogs();
 });
