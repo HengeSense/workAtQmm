@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                'url' : 'http://localhost:525/?r=query',
+                data : '',
+                dataType : 'json',
+                success : function (res) {
+                    render(res);
+                },
+                error : function () {
+
+                }
+            });
+            function render(json) {
+                var content = [];
+                content.push('<table class="table table-striped">');
+                content.push("<tr>");
+                for (var key in json[0]) {
+                    content.push("<th>");
+                    content.push(key);
+                    content.push("</th>");
+                }
+                content.push("</tr>");
+                $.each(json, function (index, item) {
+                    content.push("<tr>");
+                    for (var key in item) {
+                        content.push('<td>');
+                        if (item[key] == null) {
+                            content.push("无");
+                        } else {
+                            content.push(item[key]);
+                        }
+                        content.push('</td>');
+                    }
+                    content.push("</tr>s");
+                });
+                content.push('</table>');
+                $('#aj-kpi-list').html(content.join(''));
+
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div id="aj-kpi-list"></div>
+
+
+
+</body>
+</html>

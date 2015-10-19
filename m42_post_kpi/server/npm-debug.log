@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'mssql',
+1 verbose cli   '-g' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of C:\xampp\nodejs\package.json
+5 verbose readDependencies loading dependencies from C:\xampp\nodejs\package.json
+6 silly cache add args [ 'mssql', null ]
+7 verbose cache add spec mssql
+8 silly cache add parsed spec { raw: 'mssql',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: 'mssql',
+8 silly cache add   spec: 'C:\\Users\\james\\Documents\\GitHub\\workAtQmm\\m42_post_kpi\\server\\mssql',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory C:\Users\james\AppData\Roaming\npm-cache\mssql\2.3.1\package.tgz not in flight; packing
+10 verbose tar pack [ 'C:\\Users\\james\\AppData\\Roaming\\npm-cache\\mssql\\2.3.1\\package.tgz',
+10 verbose tar pack   'C:\\Users\\james\\Documents\\GitHub\\workAtQmm\\m42_post_kpi\\server\\mssql' ]
+11 verbose tarball C:\Users\james\AppData\Roaming\npm-cache\mssql\2.3.1\package.tgz
+12 verbose folder C:\Users\james\Documents\GitHub\workAtQmm\m42_post_kpi\server\mssql
+13 info prepublish mssql@2.3.1
+14 verbose unsafe-perm in lifecycle true
+15 info mssql@2.3.1 Failed to exec prepublish script
+16 error addLocalDirectory Could not pack C:\Users\james\Documents\GitHub\workAtQmm\m42_post_kpi\server\mssql to C:\Users\james\AppData\Roaming\npm-cache\mssql\2.3.1\package.tgz
+17 error addLocal Could not install C:\Users\james\Documents\GitHub\workAtQmm\m42_post_kpi\server\mssql
+18 verbose stack Error: mssql@2.3.1 prepublish: `coffee --compile --output ./lib ./src`
+18 verbose stack Exit status 1
+18 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+18 verbose stack     at EventEmitter.emit (events.js:110:17)
+18 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+18 verbose stack     at ChildProcess.emit (events.js:110:17)
+18 verbose stack     at maybeClose (child_process.js:1015:16)
+18 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+19 verbose pkgid mssql@2.3.1
+20 verbose cwd C:\Users\james\Documents\GitHub\workAtQmm\m42_post_kpi\server
+21 error Windows_NT 6.1.7601
+22 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "mssql" "-g"
+23 error node v0.12.7
+24 error npm  v2.11.3
+25 error code ELIFECYCLE
+26 error mssql@2.3.1 prepublish: `coffee --compile --output ./lib ./src`
+26 error Exit status 1
+27 error Failed at the mssql@2.3.1 prepublish script 'coffee --compile --output ./lib ./src'.
+27 error This is most likely a problem with the mssql package,
+27 error not with npm itself.
+27 error Tell the author that this fails on your system:
+27 error     coffee --compile --output ./lib ./src
+27 error You can get their info via:
+27 error     npm owner ls mssql
+27 error There is likely additional logging output above.
+28 verbose exit [ 1, true ]
