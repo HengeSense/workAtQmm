@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KPI</title>
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Console</title>
 
-    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="less/demo.css">
 
     <script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore.js"></script>
-    <script src="js/jQuery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.0/jquery.js"></script>
 
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/sea.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/JS/base.js"></script>
     <script>
         seajs.config({
-            base: './js/ConsoleModules/',
+            base: '/js/seajs/ConsoleModules/',
             alias: {
                 index: 'index/index.js',
-                kpi : 'kpi/kpi.js'
+                kpi: 'kpi/kpi.js'
             },
             charset: 'utf-8'
         });
@@ -31,7 +29,7 @@
 </head>
 <body>
 
-<div class="container-fluid">
+<div id='aj-console' class="container-fluid">
     <div class="row">
         <div class="col-md-2" id="aj-nav">
             <ul class="nav nav-pills nav-stacked">
@@ -72,7 +70,11 @@
             <div class="aj-block aj-block-kpi">
                 <div class="panel panel-default">
                     <div class="panel-heading">列表展示</div>
-                    <div class="panel-body aj-block-kpi-list">
+                    <div class="panel-body aj-block-kpi-list"></div>
+                </div>
+                <div class="panel panel-default aj-block-kpi-update-panel">
+                    <div class="panel-heading">修改</div>
+                    <div class="panel-body aj-block-kpi-update">
 
                     </div>
                 </div>

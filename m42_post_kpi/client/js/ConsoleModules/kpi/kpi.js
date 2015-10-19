@@ -5,8 +5,51 @@ define(function (require, exports, module) {
             url : 'http://localhost:8080/ajax/post_kpi.ashx?json=',
             data : 'action=getlist'
         };
+        this.event();
     }
     Kpi.prototype = {
+        event : function () {
+            var that = this;
+            this.div.on('click', '.aj-update', function () {
+                var params = $.parseJSON($(this).parents('.aj-tr').attr('data-aj-params'));
+                that.fillUpdateForm(params);
+            });
+
+            // 提交update表单
+            this.div.find('.aj-block-kpi-update-form').on('submit', function (e) {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    url : that.params.url + '&action=update',
+                    data : data,
+                    dataType : 'json',
+                    success : function (json) {
+                        info.html('提交成功');
+                    },
+                    error : function (err) {
+                        info.html('提交失败');
+                    }
+                });
+            });
+
+            // 提交 save 表单
+            this.div.find('.aj-block-kpi-save-form').on('submit', function (e) {
+                e.preventDefault();
+                var data = $(this).serialize(),
+                    info = $(this).find('.aj-info');
+                $.ajax({
+                    url : that.params.url + '&action=save',
+                    data : data,
+                    dataType : 'json',
+                    success : function (json) {
+                        info.html('提交成功');
+                    },
+                    error : function (err) {
+                        info.html('提交失败');
+                    }
+                });
+            });
+        },
         getAllList : function () {
             var that = this,
                 wrap = this.div.find('.aj-block-kpi-list');
@@ -29,6 +72,7 @@ define(function (require, exports, module) {
                     "        </thead>"].join(""));
                 html.push("<tbody>");
                 _.each(rows.rows, function (item) {
+                    item.params = JSON.stringify(item);
                     html.push(template({
                         item : item
                     }));
@@ -36,6 +80,13 @@ define(function (require, exports, module) {
                 html.push("</tbody></table>");
                 wrap.append(html.join(''));
             });
+        },
+        fillUpdateForm : function (params) {
+            var panel = this.div.find('.aj-block-kpi-update-panel'),
+                form = this.div.find('.aj-block-kpi-update-form')[0];
+            for (var key in params) {
+                form[key].value = params[key];
+            }
         },
         ajax : function (way, fn, err) {
             var data = {},
@@ -68,7 +119,7 @@ define(function (require, exports, module) {
 
     var kpi = new Kpi(div);
     kpi.getAllList();
-    view.table = ["<tr>",
+    view.table = ["<tr class='aj-tr' data-aj-params='<%=item.params%>'>",
         "    <td><%=item.sysno%></td>",
         "    <td><%=item.postsysno%></td>",
         "    <td><%=item.editor%></td>",
@@ -83,8 +134,8 @@ define(function (require, exports, module) {
         "                操作<span class=\"caret\"></span>",
         "            </button>",
         "            <ul class=\"dropdown-menu\">",
-        "                <li><a href=\"#\">删除</a></li>",
-        "                <li><a href=\"#\">修改</a></li>",
+        "                <li class='aj-delete'><a href=\"#\">删除</a></li>",
+        "                <li class='aj-update'><a href=\"#\">修改</a></li>",
         "            </ul>",
         "        </div>",
         "    </td>",
