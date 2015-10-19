@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KPI</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <script src="http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore.js"></script>
+    <script src="js/jQuery.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sea.min.js"></script>
+    <script>
+        seajs.config({
+            base: './js/ConsoleModules/',
+            alias: {
+                index: 'index/index.js',
+                kpi : 'kpi/kpi.js'
+            },
+            charset: 'utf-8'
+        });
+        seajs.use('index');
+    </script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" id="aj-nav">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        常用的功能
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">券妈妈首页</a></li>
+                        <li><a href="#">添加优惠券</a></li>
+                        <li><a href="#">添加商家(b2c,天猫,海淘)</a></li>
+                        <li><a href="#">添加促销活动</a></li>
+                        <li><a href="#">添加新的值得买</a></li>
+                        <li><a href="#">获得干净的链接</a></li>
+                        <li><a href="#">值得买判断是否已经发过</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="aj-module-kpi"><a href="#">KPI</a></li>
+                    </ul>
+                </li>
+                <li role="presentation"><a href="#">图片管理</a></li>
+                <li role="presentation"><a href="#">值得买ZDM管理</a></li>
+                <li role="presentation"><a href="#">值得买ZDM管理</a></li>
+                <li role="presentation"><a href="#">专题seo管理</a></li>
+                <li role="presentation"><a href="#">优惠券翻译和发布管理</a></li>
+                <li role="presentation"><a href="#">添加值得买、经验、攻略等</a></li>
+                <li role="presentation"><a href="#">9.9九块九包邮</a></li>
+                <li role="presentation"><a href="#">商家网站每日拜访管理</a></li>
+                <li role="presentation"><a href="#">团购优惠券</a></li>
+                <li role="presentation"><a href="#">普通优惠券</a></li>
+                <li role="presentation"><a href="#">肯德基优惠券等</a></li>
+                <li role="presentation"><a href="#">国内竞争对手</a></li>
+                <li role="presentation"><a href="#">常用的网址</a></li>
+                <li role="presentation"><a href="#">国外网站</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10" id="aj-container">
+            <div class="aj-block aj-block-kpi">
+                <div class="panel panel-default">
+                    <div class="panel-heading">列表展示</div>
+                    <div class="panel-body aj-block-kpi-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
