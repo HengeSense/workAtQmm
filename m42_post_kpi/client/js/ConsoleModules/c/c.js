@@ -116,11 +116,16 @@ _.mixin({
         div.setAttribute('onclick','(function(e){var e=c.getEvent(e);c.stopPropagation(e);})()');
         div.setAttribute('class','waiting_div');
         div.setAttribute('style','position:absolute;background-color:rgba(255,255,255,0.5);top:0;left:0;width:100%;height:100%;');
-        div.innerHTML = "<img src='./img/c/wait.gif' style='position:absolute;top:" + top + "px;left:50%;"+
+        div.innerHTML = "<img src='http://www.quanmama.com/AdminImageUpload/20148150838532.jpg' style='position:absolute;top:" + top + "px;left:50%;"+
             "margin-left:"+(-height/2)+"px;width:"+height+"px;height:"+height+"px;'>";
         obj.append(div);
     },
     ajNoWait : function(obj){
         $(obj).find('.waiting_div').hide();
+    },
+    urlParams : function (name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
     }
 });

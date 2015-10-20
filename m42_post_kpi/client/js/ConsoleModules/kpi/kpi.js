@@ -19,7 +19,8 @@ define(function (require, exports, module) {
             // 提交update表单
             this.div.find('.aj-block-kpi-update-form').on('submit', function (e) {
                 e.preventDefault();
-                var data = $(this).serialize();
+                var data = $(this).serialize(),
+                    info = $(this).find('.aj-info');
                 $.ajax({
                     url : that.params.url + '&action=update',
                     data : data,
@@ -37,13 +38,15 @@ define(function (require, exports, module) {
             this.div.find('.aj-block-kpi-save-form').on('submit', function (e) {
                 e.preventDefault();
                 var data = $(this).serialize(),
-                    info = $(this).find('.aj-info');
+                    info = $(this).find('.aj-info'),
+                    form = this;
                 $.ajax({
                     url : that.params.url + '&action=save',
                     data : data,
                     dataType : 'json',
                     success : function (json) {
                         info.html('提交成功');
+                        form.reset();
                     },
                     error : function (err) {
                         info.html('提交失败');
@@ -51,13 +54,29 @@ define(function (require, exports, module) {
                 });
             });
 
-            // 获取某个 得分者 的一段时间内  所有记录
+            // 获取某个 得分者 或者 值得买 的一段时间内  所有记录
             this.div.find('.aj-block-kpi-get-via-email-form').on('submit', function (e) {
                 e.preventDefault();
+                _.ajWait(that.listWrap);
                 var data = $(this).serialize(),
+                    action,
                     info = $(this).find('.aj-info');
+                var haveEmail = $.trim(this['email'].value) !== '',
+                    havePostsysno = $.trim(this['postsysno'].value) !== '';
+
+                action = '&action=getlist'
+                if (haveEmail) {
+                    action = '&action=getlistOf';
+                }
+                if (havePostsysno) {
+                    action = '&action=GetListByPostsysno';
+                }
+                if (haveEmail && havePostsysno) {
+                    action = '&action=GetListByPostsysnoAndEmail';
+                }
+
                 $.ajax({
-                    url : that.params.url + '&action=getlistOf',
+                    url : that.params.url + action,
                     data : data,
                     dataType : 'json',
                     success : function (rows) {
@@ -65,6 +84,9 @@ define(function (require, exports, module) {
                     },
                     error : function () {
 
+                    },
+                    complete : function () {
+                        _.ajNoWait(that.listWrap);
                     }
                 });
             });
@@ -89,7 +111,11 @@ define(function (require, exports, module) {
             html.push("<tbody>");
             _.each(rows, function (item) {
                 item.params = JSON.stringify(item);
-                item.dateShow = 
+                if (item.ratingTime !== "") {
+                    item.dateShow = _.dateShow(item.ratingTime);
+                } else {
+                    item.dateShow = "";
+                }
                 html.push(template({
                     item : item
                 }));
@@ -115,6 +141,7 @@ define(function (require, exports, module) {
         ajax : function (way, fn, err) {
             var data = {},
                 that = this;
+            _.ajWait(that.listWrap);
             way = Number(way);
             switch (way) {
                 case 1 : // 获取所有列
@@ -130,6 +157,9 @@ define(function (require, exports, module) {
                 },
                 error : function () {
                     err && err();
+                },
+                complete : function () {
+                    _.ajNoWait(that.listWrap);
                 }
             });
         }
@@ -146,12 +176,12 @@ define(function (require, exports, module) {
     view.table = ["<tr class='aj-tr' data-aj-params='<%=item.params%>'>",
         "    <td><%=item.sysno%></td>",
         "    <td><%=item.postsysno%></td>",
-        "    <td><%=item.editor%></td>",
+        "    <td><%=item.email%></td>",
         "    <td><%=item.score%></td>",
         "    <td><%=item.scoreReason%></td>",
         "    <td><%=item.scoreType%></td>",
         "    <td><%=item.ratingAdmin%></td>",
-        "    <td><%=item.ratingTime%></td>",
+        "    <td title='<%=item.ratingTime%>'><%=item.ratingTime%></td>",
         "    <td>",
         "        <div class=\"btn-group\">",
         "            <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">",
