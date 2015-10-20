@@ -5,6 +5,7 @@ define(function (require, exports, module) {
             url : 'http://localhost:8080/ajax/post_kpi.ashx?json=',
             data : 'action=getlist'
         };
+        this.listWrap = this.div.find('.aj-block-kpi-list');
         this.event();
     }
     Kpi.prototype = {
@@ -49,36 +50,59 @@ define(function (require, exports, module) {
                     }
                 });
             });
+
+            // 获取某个 得分者 的一段时间内  所有记录
+            this.div.find('.aj-block-kpi-get-via-email-form').on('submit', function (e) {
+                e.preventDefault();
+                var data = $(this).serialize(),
+                    info = $(this).find('.aj-info');
+                $.ajax({
+                    url : that.params.url + '&action=getlistOf',
+                    data : data,
+                    dataType : 'json',
+                    success : function (rows) {
+                        that.listWrap.html(that.renderList(rows.rows));
+                    },
+                    error : function () {
+
+                    }
+                });
+            });
+        },
+        renderList : function (rows) {
+            var template = _.template(view.table);
+            var html = [];
+            html.push("<table class='table'>");
+            html.push(["<thead>",
+                "            <tr>",
+                "                <th>sysno</th>",
+                "                <th>值得买编号(postsysno)</th>",
+                "                <th>得分人(editor)</th>",
+                "                <th>得分(score)</th>",
+                "                <th>得分理由(scoreReason)</th>",
+                "                <th>得分类型(scoreType)</th>",
+                "                <th>打分人(ratingAdmin)</th>",
+                "                <th>打分时间(ratingTime)</th>",
+                "                <th>更多操作</th>",
+                "            </tr>",
+                "        </thead>"].join(""));
+            html.push("<tbody>");
+            _.each(rows, function (item) {
+                item.params = JSON.stringify(item);
+                item.dateShow = 
+                html.push(template({
+                    item : item
+                }));
+            });
+            html.push("</tbody></table>");
+            return html.join('');
         },
         getAllList : function () {
             var that = this,
-                wrap = this.div.find('.aj-block-kpi-list');
+                wrap = this.listWrap;
             this.ajax(1, function (rows) {
-                var template = _.template(view.table);
-                var html = [];
-                html.push("<table class='table'>");
-                html.push(["<thead>",
-                    "            <tr>",
-                    "                <th>sysno</th>",
-                    "                <th>值得买编号(postsysno)</th>",
-                    "                <th>得分人(editor)</th>",
-                    "                <th>得分(score)</th>",
-                    "                <th>得分理由(scoreReason)</th>",
-                    "                <th>得分类型(scoreType)</th>",
-                    "                <th>打分人(ratingAdmin)</th>",
-                    "                <th>打分时间(ratingTime)</th>",
-                    "                <th>更多操作</th>",
-                    "            </tr>",
-                    "        </thead>"].join(""));
-                html.push("<tbody>");
-                _.each(rows.rows, function (item) {
-                    item.params = JSON.stringify(item);
-                    html.push(template({
-                        item : item
-                    }));
-                });
-                html.push("</tbody></table>");
-                wrap.append(html.join(''));
+                var innerHTML = that.renderList(rows.rows);
+                wrap.append(innerHTML);
             });
         },
         fillUpdateForm : function (params) {
