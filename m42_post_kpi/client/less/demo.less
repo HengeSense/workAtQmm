@@ -1,5 +1,33 @@
+body{
+    font-family: "Helvetica" , "Hiragino Sans GB" , "Microsoft Yahei" ,sans-serif;
+}
 #aj-console{
     .aj-block{
         display: none;
+    }
+
+    .aj-block-kpi{
+        &.admin{
+            .show-for-admin{
+                display: block;
+            }
+        }
+        .show-for-admin{
+            display: none;
+        }
+
+        .aj-block-kpi-list{
+            max-height: 600px;
+            overflow: auto;
+        }
+        .aj-block-kpi-update-panel{
+            position: fixed;
+            width:500px;
+            top: 30%;
+            left: 30%;
+            z-index: 99;
+            box-shadow: #333 0 0 8px;
+            display: none;
+        }
     }
 }

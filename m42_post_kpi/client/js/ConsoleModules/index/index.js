@@ -31,7 +31,6 @@ define(function (require, exports, module) {
             }
         },
         kpi : function () {
-
             require('kpi');
         }
     };
