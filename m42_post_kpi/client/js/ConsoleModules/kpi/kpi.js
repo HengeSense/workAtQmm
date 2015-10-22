@@ -144,59 +144,69 @@ define(function (require, exports, module) {
             // 获取某个 得分者 或者 值得买 的一段时间内  所有记录
             this.div.find('.aj-block-kpi-get-via-email-form').on('submit', function (e) {
                 e.preventDefault();
-                _.ajWait(that.div);
-                var data = $(this).serialize(),
-                    action,
-                    info = $(this).find('.aj-info');
-                var haveEmail = $.trim(this['email'].value) !== '',
-                    havePostsysno = $.trim(this['postsysno'].value) !== '';
 
-                action = '&action=getlist'
-                if (haveEmail) {
-                    action = '&action=getlistOf';
-                }
-                if (havePostsysno) {
-                    action = '&action=GetListByPostsysno';
-                }
-                if (haveEmail && havePostsysno) {
-                    action = '&action=GetListByPostsysnoAndEmail';
-                }
-
-                $.ajax({
-                    url : that.params.url + action,
-                    data : data,
-                    dataType : 'json',
-                    success : function (rows) {
-                        that.listWrap.html(that.renderList(rows.rows));
-                        var duration_kpi = 0;
-                        _.each(rows.rows, function (item) {
-                            duration_kpi += parseInt(item.score);
-                        });
-                        that.div.find('.duration_kpi').html(duration_kpi);
-                    },
-                    error : function () {
-
-                    },
-                    complete : function () {
-                        _.ajNoWait(that.div);
-                    }
-                });
+                // query
+                that.getList();
 
                 // get total kpi
-                var getwho = '';
                 if (this['email'].value !== '') {
-                     getwho = this['email'].value;
+                    that.getTotalKpiOf(this['email'].value, function (kpi) {
+                        that.div.find('.his_total_kpi').html(kpi.total);
+                    });
+                } else {
+                    that.div.find('.duration_kpi').html("");
+                    that.div.find('.his_total_kpi').html("");
                 }
-                that.getTotalKpiOf(getwho, function (kpi) {
-                    var wrap = that.div.find('.aj-total-kpi');
-                    wrap.find('.result').html(kpi.total);
-                    wrap.show();
-                });
             });
 
             this.div.find('.aj-block-kpi-get-via-email-form').trigger('submit');
             that.div.trigger("aj.showoptionsifadmin");
 
+        },
+        getList : function () {
+
+            var form = this.div.find('.aj-block-kpi-get-via-email-form')[0],
+                data = $(form).serialize(),
+                action,
+                that = this,
+                info = $(form).find('.aj-info');
+            var haveEmail = $.trim(form['email'].value) !== '',
+                havePostsysno = $.trim(form['postsysno'].value) !== '';
+
+            _.ajWait(that.div);
+
+            action = '&action=getlist';
+            if (haveEmail) {
+                action = '&action=getlistOf';
+            }
+            if (havePostsysno) {
+                action = '&action=GetListByPostsysno';
+            }
+            if (haveEmail && havePostsysno) {
+                action = '&action=GetListByPostsysnoAndEmail';
+            }
+
+            $.ajax({
+                url : that.params.url + action,
+                data : data,
+                dataType : 'json',
+                success : function (rows) {
+                    that.listWrap.html(that.renderList(rows.rows));
+                    if (form['email'].value !== '') {
+                        var duration_kpi = 0;
+                        _.each(rows.rows, function (item) {
+                            duration_kpi += parseInt(item.score);
+                        });
+                        that.div.find('.duration_kpi').html(duration_kpi);
+                    }
+                },
+                error : function () {
+
+                },
+                complete : function () {
+                    _.ajNoWait(that.div);
+                }
+            });
         },
         renderList : function (rows) {
             var template = _.template(view.table);
@@ -281,24 +291,6 @@ define(function (require, exports, module) {
                 },
                 complete : function () {
                     _.ajNoWait(that.listWrap);
-                }
-            });
-        },
-        getEditorsList2 : function () {
-            var that = this;
-            if (this.div.hasClass('aj-has-ajax-editor-list')){
-                return false;
-            }
-            $.ajax({
-                url : that.params.url + '&action=getEditorsList',
-                dataType : 'json',
-                success : function (json) {
-                    var html = that.renderUserList(json.rows);
-                    that.div.find('.aj-qmm-editors-list').append(html);
-                    that.div.addClass('aj-has-ajax-editor-list');
-                },
-                error : function () {
-                    
                 }
             });
         },
