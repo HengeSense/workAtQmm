@@ -11,7 +11,6 @@ body {
   display: none;
 }
 #aj-console .aj-block-kpi .aj-block-kpi-list {
-  max-height: 600px;
   overflow: auto;
 }
 #aj-console .aj-block-kpi .aj-block-kpi-update-panel {

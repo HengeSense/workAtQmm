@@ -62,6 +62,7 @@
   line-height: 40px;
 }
 #aj-search-bar .core .a-nav .ul .li {
+  display: none;
   float: left;
   height: 39px;
   line-height: 40px;

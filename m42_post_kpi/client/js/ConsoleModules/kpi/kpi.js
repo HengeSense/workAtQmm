@@ -16,11 +16,23 @@ define(function (require, exports, module) {
         init : function () {
             var that = this;
             this.initQueryAndAddForm();
-            this.getEditorsList();
-            this.initDatePick();
-            this.getInfoFromPostsysno(function (post) {
-                that.addPanel.find('.aj-post-title').html(post['article_title']);
-            });
+        },
+        dealWithCurrentPost : function () {
+            var that = this;
+            var post = ajax.post,
+                radios = this.addPanel.find('input[name="editor_which"]');
+            if (post) {
+                that.addPanel.find('.aj-post-title').html(post['post_title']);
+                if (post.in_email === "") {
+                    radios.eq(0).hide();
+                }
+                if (post.validete_user === "") {
+                    radios.eq(1).hide();
+                }
+                if (post.in_email === "" && post.validete_user === "") {
+                    that.addPanel.hide();
+                }
+            }
         },
         initQueryAndAddForm : function () {
             var that = this,
@@ -30,45 +42,13 @@ define(function (require, exports, module) {
             queryForm['pageFrom'].value = 1;
             queryForm['pageSize'].value = 20;
             addForm['postsysno'].value = that.postSysno;
-        },
-        getInfoFromPostsysno : function (fn) {
-            if(this.post) {
-                fn(this.post);
-                return false;
-            }
-            if(this.postSysno) {
-                var that = this;
-                $.ajax({
-                    url : that.params.url + '&action=getpost_info_by_postsysno',
-                    data : 'postsysno=' + that.postSysno,
-                    dataType : 'json',
-                    success : function (json) {
-                        that.post = json;
-                        fn(that.post);
-                    }
-                });
-            }
+
+            this.getEditorsList();
+            this.initDatePick();
+            this.dealWithCurrentPost();
         },
         ifisAdmin : function (fn) {
-            var that = this;
-            if (this.everPanduanIsAdmin) {
-                fn(that.everPanduanIsAdminResult);
-            } else {
-                $.ajax({
-                    url : that.params['url'] + "&action=isadmin",
-                    dataType : 'json',
-                    success : function (res) {
-                        that.everPanduanIsAdmin = true;
-                        var num = parseInt(res.isadmin, 10);
-                        if (num === 1) {
-                            that.everPanduanIsAdminResult = true;
-                        } else {
-                            that.everPanduanIsAdminResult = false;
-                        }
-                        fn(that.everPanduanIsAdminResult);
-                    }
-                });
-            }
+            fn(ajax.isadmin);
         },
         event : function () {
             var that = this;
@@ -164,7 +144,6 @@ define(function (require, exports, module) {
 
         },
         getList : function () {
-
             var form = this.div.find('.aj-block-kpi-get-via-email-form')[0],
                 data = $(form).serialize(),
                 action,
