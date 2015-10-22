@@ -22,4 +22,11 @@ body {
   z-index: 99;
   box-shadow: #333 0 0 8px;
   display: none;
+  overflow: hidden;
+}
+#aj-console .aj-block-kpi .aj-block-kpi-update-panel .aj-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
 }

@@ -237,5 +237,11 @@ $(function () {
                 select = $(this).find(".in-li.aj-select a");
             title.html(select.html());
         });
+        bar.find(".core .a-nav .li").each(function () {
+            var num = parseInt($.trim($(this).find('.num').text()));
+            if (num !== 0) {
+                $(this).show();
+            }
+        });
     }
 });

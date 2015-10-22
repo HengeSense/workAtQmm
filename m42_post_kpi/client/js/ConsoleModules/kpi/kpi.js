@@ -6,23 +6,48 @@ define(function (require, exports, module) {
             data : 'action=getlist'
         };
         this.listWrap = this.div.find('.aj-block-kpi-list');
+        this.addPanel = this.div.find('.aj-block-kpi-save-panel');
         this.postSysno = _.urlParams('postsysno');   // null if not defined
+        this.post = null;       // 关于 某条post 的全部数据
         this.init();
         this.event();
     }
     Kpi.prototype = {
         init : function () {
-            if (this.postSysno !== null) {
-                var queryForm = this.div.find('.aj-block-kpi-get-via-email-form')[0],
-                    addForm = this.div.find(".aj-block-kpi-save-form")[0];
-                queryForm['postsysno'].value = this.postSysno;
-                queryForm['pageFrom'].value = 1;
-                queryForm['pageSize'].value = 20;
-
-                addForm['postsysno'].value = this.postSysno;
-            }
+            var that = this;
+            this.initQueryAndAddForm();
             this.getEditorsList();
             this.initDatePick();
+            this.getInfoFromPostsysno(function (post) {
+                that.addPanel.find('.aj-post-title').html(post['article_title']);
+            });
+        },
+        initQueryAndAddForm : function () {
+            var that = this,
+                queryForm = that.div.find('.aj-block-kpi-get-via-email-form')[0],
+                addForm = that.div.find(".aj-block-kpi-save-form")[0];
+            queryForm['postsysno'].value = that.postSysno;
+            queryForm['pageFrom'].value = 1;
+            queryForm['pageSize'].value = 20;
+            addForm['postsysno'].value = that.postSysno;
+        },
+        getInfoFromPostsysno : function (fn) {
+            if(this.post) {
+                fn(this.post);
+                return false;
+            }
+            if(this.postSysno) {
+                var that = this;
+                $.ajax({
+                    url : that.params.url + '&action=getpost_info_by_postsysno',
+                    data : 'postsysno=' + that.postSysno,
+                    dataType : 'json',
+                    success : function (json) {
+                        that.post = json;
+                        fn(that.post);
+                    }
+                });
+            }
         },
         ifisAdmin : function (fn) {
             var that = this;
@@ -119,7 +144,7 @@ define(function (require, exports, module) {
             // 获取某个 得分者 或者 值得买 的一段时间内  所有记录
             this.div.find('.aj-block-kpi-get-via-email-form').on('submit', function (e) {
                 e.preventDefault();
-                _.ajWait(that.listWrap);
+                _.ajWait(that.div);
                 var data = $(this).serialize(),
                     action,
                     info = $(this).find('.aj-info');
@@ -143,18 +168,34 @@ define(function (require, exports, module) {
                     dataType : 'json',
                     success : function (rows) {
                         that.listWrap.html(that.renderList(rows.rows));
-                        that.div.trigger("aj.showoptionsifadmin");
+                        var duration_kpi = 0;
+                        _.each(rows.rows, function (item) {
+                            duration_kpi += parseInt(item.score);
+                        });
+                        that.div.find('.duration_kpi').html(duration_kpi);
                     },
                     error : function () {
 
                     },
                     complete : function () {
-                        _.ajNoWait(that.listWrap);
+                        _.ajNoWait(that.div);
                     }
+                });
+
+                // get total kpi
+                var getwho = '';
+                if (this['email'].value !== '') {
+                     getwho = this['email'].value;
+                }
+                that.getTotalKpiOf(getwho, function (kpi) {
+                    var wrap = that.div.find('.aj-total-kpi');
+                    wrap.find('.result').html(kpi.total);
+                    wrap.show();
                 });
             });
 
             this.div.find('.aj-block-kpi-get-via-email-form').trigger('submit');
+            that.div.trigger("aj.showoptionsifadmin");
 
         },
         renderList : function (rows) {
@@ -175,17 +216,21 @@ define(function (require, exports, module) {
                 "            </tr>",
                 "        </thead>"].join(""));
             html.push("<tbody>");
-            _.each(rows, function (item) {
-                item.params = JSON.stringify(item);
-                if (item.ratingTime !== "") {
-                    item.dateShow = _.dateShow(item.ratingTime);
-                } else {
-                    item.dateShow = "";
-                }
-                html.push(template({
-                    item : item
-                }));
-            });
+            if (rows.length > 0) {
+                _.each(rows, function (item) {
+                    item.params = JSON.stringify(item);
+                    if (item.ratingTime !== "") {
+                        item.dateShow = _.dateShow(item.ratingTime);
+                    } else {
+                        item.dateShow = "";
+                    }
+                    html.push(template({
+                        item : item
+                    }));
+                });
+            } else {
+                html.push("<tr class='aj-tr'><td colspan='6'>没有KPI记录, 你可以在下面的添加面板添加记录.</td></tr>");
+            }
             html.push("</tbody></table>");
             return html.join('');
         },
@@ -239,13 +284,49 @@ define(function (require, exports, module) {
                 }
             });
         },
-        getEditorsList : function () {
+        getEditorsList2 : function () {
             var that = this;
+            if (this.div.hasClass('aj-has-ajax-editor-list')){
+                return false;
+            }
             $.ajax({
                 url : that.params.url + '&action=getEditorsList',
                 dataType : 'json',
                 success : function (json) {
-                    console.log(json);
+                    var html = that.renderUserList(json.rows);
+                    that.div.find('.aj-qmm-editors-list').append(html);
+                    that.div.addClass('aj-has-ajax-editor-list');
+                },
+                error : function () {
+                    
+                }
+            });
+        },
+        getEditorsList : function () {
+            var rows = ajax.editors.rows;
+            var html = this.renderUserList(rows);
+            this.div.find('.aj-qmm-editors-list').html(html);
+        },
+        renderUserList : function (users) {
+            var back = [];
+            back.push("<select name='editor'>");
+            _.each(users, function (user) {
+                back.push("<option value='" + user.email + "'>" + user.name+ "</option>");
+            });
+            back.push("</select>");
+            return back.join("");
+        },
+        getTotalKpiOf : function (email, fn) {
+            var that = this;
+            $.ajax({
+                url : that.params.url + '&action=gettotalkpiof',
+                data : 'email=' + email,
+                dataType : 'json',
+                success : function (json) {
+                    var kpi = {
+                        total : json.total_kpi
+                    };
+                    fn && fn(kpi);
                 },
                 error : function () {
                     
@@ -278,7 +359,7 @@ define(function (require, exports, module) {
         "    <td><%=item.score%></td>",
         "    <td><%=item.scoreReason%></td>",
         "    <td><%=item.scoreType%></td>",
-        "    <td><%=item.ratingAdmin%></td>",
+        "    <td><%=item.ratingAdminRealName%></td>",
         "    <td title='<%=item.ratingTime%>'><%=item.ratingTime%></td>",
         "    <td class='show-for-admin'>",
         "        <div class=\"btn-group\">",
