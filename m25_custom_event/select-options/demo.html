@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<form>
+    <select name="name" id="select">
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+        <option value="" selected>其他</option>
+    </select>
+    <input style='display: none' id="select-options" type="text" value="">
+
+    <button>submit</button>
+</form>
+<script>
+    (function () {
+        var inp = document.getElementById('select-options'),
+            select = document.getElementById('select'),
+            options = select.getElementsByTagName('option');
+        select.onchange = function () {
+            if (this.selectedIndex === (select.options.length - 1)) {
+                inp.style.display = 'block';
+            } else {
+                inp.style.display = 'none';
+            }
+        };
+        inp.onchange = function () {
+            options[options.length - 1].value = this.value;
+        }
+    })()
+    window.addEventListener('load', function () {
+        console.log(1);
+    });
+</script>
+
+
+</body>
+</html>
