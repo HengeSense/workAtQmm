@@ -13,19 +13,20 @@
 define(function (require, exports, module) {
     function LY(params, small) {
         this.params = {
-            width : 500,
-            height : 500,
-            img : "",
-            link : "",
-            zIndex : 1000,
-            expires : 1 / 24
+            width: 500,
+            height: 500,
+            img: "",
+            link: "",
+            zIndex: 1000,
+            expires: 1 / 24
         };
         this.small = {
-            width : 0,
-            height : 0,
-            img : "",
-            bottom : 190,
-            right : $(window).width() / 2 - 1050 / 2
+            width: 0,
+            height: 0,
+            img: "",
+            bottom: 190,
+            right: $(window).width() / 2 - 1050 / 2,
+            offset: -5
         };
 
         this.shadowDiv = null;
@@ -37,13 +38,14 @@ define(function (require, exports, module) {
         this.event();
     }
     LY.prototype = {
-        show : function (bool) {
+        show: function (bool) {
+            //            bool || Youhui.tools.cookie("aj.hide.layer") !== '1'
             if (bool || Youhui.tools.cookie("aj.hide.layer") !== '1') {
                 this.showBG();
                 this.showContainer();
             }
         },
-        event : function () {
+        event: function () {
             var that = this;
             this.shadowDiv.on("click", function () {
                 that.close();
@@ -52,30 +54,30 @@ define(function (require, exports, module) {
                 that.close();
             });
         },
-        addComponents : function () {
+        addComponents: function () {
             this.addShadow();
             this.addContainer();
             this.addSmall();
         },
-        addSmall : function () {
+        addSmall: function () {
             var that = this;
             if (this.small.width > 0 && this.small.height > 0) {
                 var div = $(document.createElement('div'));
                 var img = this.small.img || this.img;
                 div.css({
-                    position : 'fixed',
-                    right : this.small.right - this.small.width + 'px',
-                    bottom : this.small.bottom + 'px',
-                    width : this.small.width + 'px',
-                    height : this.small.height + 'px'
+                    position: 'fixed',
+                    right: this.small.right - this.small.width + this.small.offset + 'px',
+                    bottom: this.small.bottom + 'px',
+                    width: this.small.width + 'px',
+                    height: this.small.height + 'px',
+                    textAlign: 'center',
+                    cursor: 'pointer'
                 });
-                div.addClass("aj123456");
                 div.html("<img style='max-width:100%;max-height:100%;' src='" + img + "' >");
                 $(document.body).append(div);
                 $(window).on("resize", function () {
-                    console.log(1);
                     div.css({
-                        right : $(window).width() / 2 - 1050 / 2 - that.small.width + 'px'
+                        right: $(window).width() / 2 - 1050 / 2 - that.small.width + that.small.offset + 'px'
                     });
                 });
                 div.on("click", function () {
@@ -83,29 +85,29 @@ define(function (require, exports, module) {
                 });
             }
         },
-        addShadow : function () {
+        addShadow: function () {
             if (!this.shadowDiv) {
                 var div = $(document.createElement("div"));
-                div.attr("style", "background:#000;width:100%;display:none;height:100%;z-index:" + this.params.zIndex +";top:0;left:0;position:fixed;opacity:0;filter:alpha(opacity=0);transition:all .3s");
+                div.attr("style", "background:#000;width:100%;display:none;height:100%;z-index:" + this.params.zIndex + ";top:0;left:0;position:fixed;opacity:0;filter:alpha(opacity=0);transition:all .3s");
                 $(document.body).append(div);
                 this.shadowDiv = div;
             }
         },
-        addContainer : function () {
+        addContainer: function () {
             if (!this.container) {
                 var div = $(document.createElement("div"));
                 div.css({
-                    position : 'fixed',
-                    width : this.params.width + 'px',
-                    height : this.params.height + 'px',
-                    top : "50%",
-                    left : "50%",
-                    marginTop :  -this.params.height / 2 + 'px',
-                    marginLeft : -this.params.width / 2 + 'px',
-                    display : 'none',
-                    zIndex : this.params.zIndex + 1
+                    position: 'fixed',
+                    width: this.params.width + 'px',
+                    height: this.params.height + 'px',
+                    top: "50%",
+                    left: "50%",
+                    marginTop: -this.params.height / 2 + 'px',
+                    marginLeft: -this.params.width / 2 + 'px',
+                    display: 'none',
+                    zIndex: this.params.zIndex + 1
                 });
-                div.append("<a href='" + this.params.link + "'><img style='max-height: 100%;max-width: 100%;' src='" + this.params.img + "' ></a>");
+                div.append("<a target='_blank' href='" + this.params.link + "'><img style='max-height: 100%;max-width: 100%;' src='" + this.params.img + "' ></a>");
                 div.append("<span style='position: absolute;top:-10px;right:-10px;color:#eee;font-size: 30px;cursor: pointer;' class='qmm-icon-iconfont-close'></span>");
                 $(document.body).append(div);
                 this.container = div;
@@ -114,19 +116,19 @@ define(function (require, exports, module) {
         showBG : function() {
             this.shadowDiv.show();
             this.shadowDiv.animate({
-                opacity : 0.8
+                opacity: 0.8
             });
         },
-        showContainer : function () {
+        showContainer: function () {
             this.container.fadeIn("0.3s");
         },
-        close : function () {
+        close: function () {
             this.container.fadeOut();
             this.shadowDiv.fadeOut();
             Youhui.tools.cookie("aj.hide.layer", "1", {
-                path : '/',
-                doamin : Youhui.CookieDomain,
-                expires : 1 / 24  // 1 小时内不再显示
+                path: '/',
+                doamin: Youhui.CookieDomain,
+                expires: 1 / 24  // 1 小时内不再显示
             });
         }
     };
