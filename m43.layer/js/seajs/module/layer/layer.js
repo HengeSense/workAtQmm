@@ -113,7 +113,7 @@ define(function (require, exports, module) {
                 this.container = div;
             }
         },
-        showBG : function() {
+        showBG: function () {
             this.shadowDiv.show();
             this.shadowDiv.animate({
                 opacity: 0.8

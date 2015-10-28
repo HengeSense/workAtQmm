@@ -18,18 +18,20 @@ $(function () {
         base: '/m43.layer/js/seajs/module/',
         charset: 'utf-8'
     });
-    
-    seajs.use("layer", function (LY) {
-        var ly = new LY({
-            width : 751,
-            height : 587,
-            img : "http://www.malianyi.com/qmm/images/indexshow2.png",
-            link : "http://hbao.tmall.com/pc"
+
+    seajs.use("/js/seajs/module/layer/layer.js", function (LY) {
+        if(LY){var ly = new LY({
+            width : 620,
+            height : 484,
+            img : "/images/smile/indexshow2.png",
+            link : "http://s.click.taobao.com/2iSyimx"
         }, {
-            width : 128,
-            height : 54,
-            img : "http://www.malianyi.com/qmm/images/small_layer2.png",
+            width : 70,
+            height : 70,
+            img : "/images/smile/small_layer.png",
         });
-        ly.show();
-    });
+            ly.show();
+        }
+    })
+
 });
