@@ -2,8 +2,8 @@ define(function (require, exports, module) {
     function Kpi(div) {
         this.div = $(div);
         this.params = {
-            url : 'http://localhost:8080/ajax/post_kpi.ashx?json=',
-            data : 'action=getlist'
+            url: '/ajax/post_kpi.ashx?json=',
+            data: 'action=getlist'
         };
         this.listWrap = this.div.find('.aj-block-kpi-list');
         this.addPanel = this.div.find('.aj-block-kpi-save-panel');
@@ -13,11 +13,11 @@ define(function (require, exports, module) {
         this.event();
     }
     Kpi.prototype = {
-        init : function () {
+        init: function () {
             var that = this;
             this.initQueryAndAddForm();
         },
-        dealWithCurrentPost : function () {
+        dealWithCurrentPost: function () {
             var that = this;
             var post = ajax.post,
                 radios = this.addPanel.find('input[name="editor_which"]');
@@ -34,7 +34,7 @@ define(function (require, exports, module) {
                 }
             }
         },
-        initQueryAndAddForm : function () {
+        initQueryAndAddForm: function () {
             var that = this,
                 queryForm = that.div.find('.aj-block-kpi-get-via-email-form')[0],
                 addForm = that.div.find(".aj-block-kpi-save-form")[0];
@@ -47,10 +47,10 @@ define(function (require, exports, module) {
             this.initDatePick();
             this.dealWithCurrentPost();
         },
-        ifisAdmin : function (fn) {
+        ifisAdmin: function (fn) {
             fn(ajax.isadmin);
         },
-        event : function () {
+        event: function () {
             var that = this;
             this.div.on('click', '.aj-update', function () {
                 var params = $.parseJSON($(this).parents('.aj-tr').attr('data-aj-params'));
@@ -76,16 +76,16 @@ define(function (require, exports, module) {
                 $(form).addClass('aj-is-ajaxing');
 
                 $.ajax({
-                    url : that.params.url + '&action=update',
-                    data : data,
-                    dataType : 'json',
-                    success : function (json) {
+                    url: that.params.url + '&action=update',
+                    data: data,
+                    dataType: 'json',
+                    success: function (json) {
                         info.html('提交成功');
                     },
-                    error : function (err) {
+                    error: function (err) {
                         info.html('提交失败');
                     },
-                    complete : function () {
+                    complete: function () {
                         $(form).removeClass('aj-is-ajaxing');
                         form.reset();
                         form['sysno'].value = -1;
@@ -103,19 +103,24 @@ define(function (require, exports, module) {
                     return false;
                 }
                 $(form).addClass('aj-is-ajaxing');
-                
+
                 $.ajax({
-                    url : that.params.url + '&action=save',
-                    data : data,
-                    dataType : 'json',
-                    success : function (json) {
-                        info.html('提交成功');
-                        form.reset();
+                    url: that.params.url + '&action=save',
+                    data: data,
+                    dataType: 'json',
+                    success: function (json) {
+                        if (json.error_code == "0") {
+                            info.html('提交成功');
+                            form.reset();
+                        } else {
+                            info.html(json.error_msg);
+                            form.reset();
+                        }
                     },
-                    error : function (err) {
+                    error: function (err) {
                         info.html('提交失败');
                     },
-                    complete : function () {
+                    complete: function () {
                         $(form).removeClass('aj-is-ajaxing');
                     }
                 });
@@ -143,7 +148,7 @@ define(function (require, exports, module) {
             that.div.trigger("aj.showoptionsifadmin");
 
         },
-        getList : function () {
+        getList: function () {
             var form = this.div.find('.aj-block-kpi-get-via-email-form')[0],
                 data = $(form).serialize(),
                 action,
@@ -164,12 +169,38 @@ define(function (require, exports, module) {
             if (haveEmail && havePostsysno) {
                 action = '&action=GetListByPostsysnoAndEmail';
             }
-
             $.ajax({
-                url : that.params.url + action,
-                data : data,
-                dataType : 'json',
-                success : function (rows) {
+                url: that.params.url + action,
+                data: data,
+                dataType: 'json',
+                success: function (rows) {
+                    for (var i = 0; i < rows.rows.length; i++) {
+                        switch (parseInt(rows.rows[i].editorType)) {
+                            case 1:
+                                rows.rows[i].editorTypeWho = "编辑者";
+                                break;
+                            case 2:
+                                rows.rows[i].editorTypeWho = "审核者";
+                                break;
+                            case 3:
+                                rows.rows[i].editorTypeWho = "管理员";
+                                break;
+                            default:
+                                rows.rows[i].editorTypeWho = "未知";
+                                break;
+                        };
+                    }
+                    //                    _.each(rows.rows, function (item) {
+                    //                        switch (item.editorType) {
+                    //                            case "1":
+                    //                                item.editorTypeWho = "编辑者";
+                    //                                break;
+                    //                            case "2":
+                    //                                item.editorTypeWho = "审核者";
+                    //                                break;
+                    //                        };
+
+                    //                    });
                     that.listWrap.html(that.renderList(rows.rows));
                     if (form['email'].value !== '') {
                         var duration_kpi = 0;
@@ -179,15 +210,14 @@ define(function (require, exports, module) {
                         that.div.find('.duration_kpi').html(duration_kpi);
                     }
                 },
-                error : function () {
-
-                },
-                complete : function () {
+                complete: function () {
                     _.ajNoWait(that.div);
                 }
             });
+
+
         },
-        renderList : function (rows) {
+        renderList: function (rows) {
             var template = _.template(view.table);
             var html = [];
             html.push("<table class='table aj-kpi-list-table'>");
@@ -198,8 +228,8 @@ define(function (require, exports, module) {
                 "                <th>得分人</th>",
                 "                <th>得分</th>",
                 "                <th>得分理由</th>",
-                "                <th>得分类型</th>",
-                "                <th>打分人</th>",
+                //"                <th>得分类型</th>",
+                "                <th>谁得分</th>",
                 "                <th>打分时间</th>",
                 "                <th class='show-for-admin'>更多操作</th>",
                 "            </tr>",
@@ -214,7 +244,7 @@ define(function (require, exports, module) {
                         item.dateShow = "";
                     }
                     html.push(template({
-                        item : item
+                        item: item
                     }));
                 });
             } else {
@@ -223,15 +253,15 @@ define(function (require, exports, module) {
             html.push("</tbody></table>");
             return html.join('');
         },
-//        getAllList : function () {
-//            var that = this,
-//                wrap = this.listWrap;
-//            this.ajax(1, function (rows) {
-//                var innerHTML = that.renderList(rows.rows);
-//                wrap.append(innerHTML);
-//            });
-//        },
-        fillUpdateForm : function (params) {
+        //        getAllList : function () {
+        //            var that = this,
+        //                wrap = this.listWrap;
+        //            this.ajax(1, function (rows) {
+        //                var innerHTML = that.renderList(rows.rows);
+        //                wrap.append(innerHTML);
+        //            });
+        //        },
+        fillUpdateForm: function (params) {
             var panel = this.div.find('.aj-block-kpi-update-panel'),
                 form = this.div.find('.aj-block-kpi-update-form')[0];
             for (var key in params) {
@@ -248,63 +278,63 @@ define(function (require, exports, module) {
                 panel.draggable();
             }
         },
-        ajax : function (way, fn, err) {
+        ajax: function (way, fn, err) {
             var data = {},
                 that = this;
             _.ajWait(that.listWrap);
             way = Number(way);
             switch (way) {
-                case 1 : // 获取所有列
+                case 1: // 获取所有列
                     data['action'] = 'getlist';
                     break;
             }
             $.ajax({
-                url : that.params.url,
-                data : data,
-                dataType : 'json',
-                success : function (json) {
+                url: that.params.url,
+                data: data,
+                dataType: 'json',
+                success: function (json) {
                     fn && fn(json);
                 },
-                error : function () {
+                error: function () {
                     err && err();
                 },
-                complete : function () {
+                complete: function () {
                     _.ajNoWait(that.listWrap);
                 }
             });
         },
-        getEditorsList : function () {
+        getEditorsList: function () {
             var rows = ajax.editors.rows;
             var html = this.renderUserList(rows);
             this.div.find('.aj-qmm-editors-list').html(html);
         },
-        renderUserList : function (users) {
+        renderUserList: function (users) {
             var back = [];
             back.push("<select name='editor'>");
             _.each(users, function (user) {
-                back.push("<option value='" + user.email + "'>" + user.name+ "</option>");
+                back.push("<option value='" + user.email + "'>" + user.name + "</option>");
             });
             back.push("</select>");
             return back.join("");
         },
-        getTotalKpiOf : function (email, fn) {
+        getTotalKpiOf: function (email, fn) {
             var that = this;
             $.ajax({
-                url : that.params.url + '&action=gettotalkpiof',
-                data : 'email=' + email,
-                dataType : 'json',
-                success : function (json) {
+                url: that.params.url + '&action=gettotalkpiof',
+                data: 'email=' + email,
+                dataType: 'json',
+                success: function (json) {
                     var kpi = {
-                        total : json.total_kpi
+                        total: json.total_kpi
                     };
                     fn && fn(kpi);
                 },
-                error : function () {
-                    
+                error: function () {
+
                 }
             });
         },
-        initDatePick : function () {
+        initDatePick: function () {
             var queryForm = this.div.find('.aj-block-kpi-get-via-email-form')[0];
             var from,
                 end,
@@ -329,8 +359,8 @@ define(function (require, exports, module) {
         "    <td><%=item.realName%></td>",
         "    <td><%=item.score%></td>",
         "    <td><%=item.scoreReason%></td>",
-        "    <td><%=item.scoreType%></td>",
-        "    <td><%=item.ratingAdminRealName%></td>",
+        //"    <td><%=item.scoreType%></td>",
+        "    <td><%=item.editorTypeWho%></td>",
         "    <td title='<%=item.ratingTime%>'><%=item.ratingTime%></td>",
         "    <td class='show-for-admin'>",
         "        <div class=\"btn-group\">",
