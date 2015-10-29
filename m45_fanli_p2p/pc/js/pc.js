@@ -476,180 +476,180 @@
     $.countdown.setDefaults($.countdown.regional['zh-CN']);
 })(jQuery);
 ;
-(function (FHP) {
-    var rootDomain = Fanli.Utility.rootDomain;
-    var timestamp;
-    var $fixedBottom = $("#J_fixed_bottom");
-    var width = $(window).width();
-    FHP.add("ShowLoginPopup", function () {
-        var userid = "prouserid".getCookie();
-
-        function setup() {
-            isLogin();
-        }
-
-        function isLogin() {
-            if (!userid) {
-                Huodong.Common.showLoginPopup();
-                setTimeout(function () {
-                    $("#J_pop_title").siblings().click(function () {
-                        window.location.reload();
-                    })
-                }, 300)
-            }
-        }
-
-        setup();
-    }).ShowLoginPopup();
-    FHP.add("GetServerTime", function (options) {
-        function setup() {
-            var getServerTimeUrl = "http://fun{0}/topheader/getTime?t={1}&jsoncallback=?".format(rootDomain, Math.random());
-            window.getServerTimeAjax = $.getJSON(getServerTimeUrl, function (JSON) {
-                if (JSON.status == 1) {
-                    timestamp = JSON.data.timestamp;
-                }
-            });
-        }
-
-        setup();
-    }).GetServerTime();
-    FHP.add("BindClick", function () {
-        getServerTimeAjax.done(function () {
-            bindClick();
-            isReceive();
-        });
-        var $bindphoneTips = $("#J_bindphone_tips");
-        var userid = "prouserid".getCookie();
-        var isReceiveCookieName = "p2p_reward_cookie" + userid;
-        var phoneTipsCookie = "p2p_phone_tips";
-        var startTime = 1446134400;
-
-        function bindClick() {
-            $(".J_link").click(function () {
-                var $this = $(this);
-                var tips = $this.closest(".J_product_box").data("tips");
-                var $thisLink = $this.data("href");
-                var href = $thisLink;
-                if (timestamp > startTime) {
-                    var $tartPop = $("#J_start_pop");
-                    $("#J_product_tips").text(tips);
-                    $tartPop.data("overlay").load();
-                    $tartPop.find(".J_go_btn").attr("href", href);
-                    $tartPop.find(".close").click(function () {
-                        isReceive();
-                    });
-                } else {
-                    var $notStartPop = $("#J_notStart_pop");
-                    $notStartPop.data("overlay").load();
-                    $notStartPop.find(".J_go_btn").attr("href", href);
-                }
-            });
-            $(".J_btn_phonetips").on("click", function () {
-                if (phoneTipsCookie.getCookie() != 1) {
-                    setTimeout(function () {
-                        $bindphoneTips.data("overlay").load();
-                    }, 2000);
-                }
-            });
-            $("#J_phone_close").on("click", function () {
-                phoneTipsCookie.setCookie("1", 1);
-                window.location.reload();
-            });
-        }
-
-        function isReceive() {
-            if (timestamp > startTime) {
-                if (isReceiveCookieName.getCookie()) {
-                    footerSiderbar();
-                    $fixedBottom.show();
-                } else {
-                    getAjax();
-                }
-            }
-        }
-
-        function getAjax() {
-            var url = "http://huodong{0}/p2p_1510301/ajaxUserSubscribe/?type=2&jsoncallback=?".format(rootDomain);
-            $.getJSON(url, function (JSON) {
-                if (JSON.status == 1) {
-                    footerSiderbar();
-                    $fixedBottom.show();
-                    isReceiveCookieName.setCookie("1", 1);
-                }
-            });
-        }
-
-        function footerSiderbar() {
-            $fixedBottom.sidebar({position: "bottom", min: 0, relative: true, relativeWidth: -width});
-        }
-    }).BindClick();
-    FHP.add("BindSubmitPhoneNumber", function () {
-        function setup() {
-            bindSubmit();
-        }
-
-        function bindSubmit() {
-            $("#J_submit_phone").click(function () {
-                var mobileNum = $.trim($("#J_mobile_input").val());
-                if (mobileNum == "") {
-                    alert("手机号不能为空!");
-                    return;
-                }
-                if (!InputValidation.isPhone(mobileNum)) {
-                    alert("请输入正确的手机号格式");
-                    return;
-                }
-                var url = "http://huodong{0}/p2p_1510301/ajaxUserSubscribe/?type=1&mobile={1}&jsoncallback=?".format(rootDomain, mobileNum);
-                $.getJSON(url, function (JSON) {
-                    if (JSON.status == 1) {
-                        $("#J_success_pop").data("overlay").load();
-                        $("#J_mobile_input").val("");
-                    } else {
-                        alert(JSON.info);
-                    }
-                });
-            })
-        }
-
-        setup();
-    }).BindSubmitPhoneNumber();
-    FHP.add("BindSidebar", function () {
-        function setup() {
-            bindSidebar();
-        }
-
-        function bindSidebar() {
-            $("#J_right_sidebar").sidebar({position: "top", min: 500, relative: true, relativeWidth: 1070});
-            $(window).trigger("scroll.sidebar");
-        }
-
-        setup();
-    }).BindSidebar();
-    FHP.add("BindOverlay", function () {
-        function setup() {
-            bindPop();
-        }
-
-        function bindPop() {
-            $(".J_p2p_pop").overlay({closeOnClick: false, closeOnEsc: false, top: "center", fixed: false});
-        }
-
-        setup();
-    }).BindOverlay();
-    FHP.add("BindCountdown", function () {
-        var $wrap = $("#J_main_cd_wrap");
-        var starttime = $wrap.data("start");
-        var endtime = $wrap.data("end");
-        getServerTimeAjax.done(function () {
-            if (timestamp > starttime && timestamp < endtime) {
-                bindCountdown(timestamp);
-            }
-        });
-        function bindCountdown(timestamp) {
-            $("#J_countdown").countdown({until: endtime - timestamp, format: 'dHMS', layout: '{d<}<em>{dnn}</em>天{d>}<em>{hnn}</em>时<em>{mnn}</em>分<em>{snn}</em>秒', onExpiry: function () {
-                $wrap.hide();
-            }});
-            $wrap.show();
-        }
-    }).BindCountdown();
-})(FLNS.register("Fanli.Huodong.P2p"));
+//(function (FHP) {
+//    var rootDomain = Fanli.Utility.rootDomain;
+//    var timestamp;
+//    var $fixedBottom = $("#J_fixed_bottom");
+//    var width = $(window).width();
+//    FHP.add("ShowLoginPopup", function () {
+//        var userid = "prouserid".getCookie();
+//
+//        function setup() {
+//            isLogin();
+//        }
+//
+//        function isLogin() {
+//            if (!userid) {
+//                Huodong.Common.showLoginPopup();
+//                setTimeout(function () {
+//                    $("#J_pop_title").siblings().click(function () {
+//                        window.location.reload();
+//                    })
+//                }, 300)
+//            }
+//        }
+//
+//        setup();
+//    }).ShowLoginPopup();
+//    FHP.add("GetServerTime", function (options) {
+//        function setup() {
+//            var getServerTimeUrl = "http://fun{0}/topheader/getTime?t={1}&jsoncallback=?".format(rootDomain, Math.random());
+//            window.getServerTimeAjax = $.getJSON(getServerTimeUrl, function (JSON) {
+//                if (JSON.status == 1) {
+//                    timestamp = JSON.data.timestamp;
+//                }
+//            });
+//        }
+//
+//        setup();
+//    }).GetServerTime();
+//    FHP.add("BindClick", function () {
+//        getServerTimeAjax.done(function () {
+//            bindClick();
+//            isReceive();
+//        });
+//        var $bindphoneTips = $("#J_bindphone_tips");
+//        var userid = "prouserid".getCookie();
+//        var isReceiveCookieName = "p2p_reward_cookie" + userid;
+//        var phoneTipsCookie = "p2p_phone_tips";
+//        var startTime = 1446134400;
+//
+//        function bindClick() {
+//            $(".J_link").click(function () {
+//                var $this = $(this);
+//                var tips = $this.closest(".J_product_box").data("tips");
+//                var $thisLink = $this.data("href");
+//                var href = $thisLink;
+//                if (timestamp > startTime) {
+//                    var $tartPop = $("#J_start_pop");
+//                    $("#J_product_tips").text(tips);
+//                    $tartPop.data("overlay").load();
+//                    $tartPop.find(".J_go_btn").attr("href", href);
+//                    $tartPop.find(".close").click(function () {
+//                        isReceive();
+//                    });
+//                } else {
+//                    var $notStartPop = $("#J_notStart_pop");
+//                    $notStartPop.data("overlay").load();
+//                    $notStartPop.find(".J_go_btn").attr("href", href);
+//                }
+//            });
+//            $(".J_btn_phonetips").on("click", function () {
+//                if (phoneTipsCookie.getCookie() != 1) {
+//                    setTimeout(function () {
+//                        $bindphoneTips.data("overlay").load();
+//                    }, 2000);
+//                }
+//            });
+//            $("#J_phone_close").on("click", function () {
+//                phoneTipsCookie.setCookie("1", 1);
+//                window.location.reload();
+//            });
+//        }
+//
+//        function isReceive() {
+//            if (timestamp > startTime) {
+//                if (isReceiveCookieName.getCookie()) {
+//                    footerSiderbar();
+//                    $fixedBottom.show();
+//                } else {
+//                    getAjax();
+//                }
+//            }
+//        }
+//
+//        function getAjax() {
+//            var url = "http://huodong{0}/p2p_1510301/ajaxUserSubscribe/?type=2&jsoncallback=?".format(rootDomain);
+//            $.getJSON(url, function (JSON) {
+//                if (JSON.status == 1) {
+//                    footerSiderbar();
+//                    $fixedBottom.show();
+//                    isReceiveCookieName.setCookie("1", 1);
+//                }
+//            });
+//        }
+//
+//        function footerSiderbar() {
+//            $fixedBottom.sidebar({position: "bottom", min: 0, relative: true, relativeWidth: -width});
+//        }
+//    }).BindClick();
+//    FHP.add("BindSubmitPhoneNumber", function () {
+//        function setup() {
+//            bindSubmit();
+//        }
+//
+//        function bindSubmit() {
+//            $("#J_submit_phone").click(function () {
+//                var mobileNum = $.trim($("#J_mobile_input").val());
+//                if (mobileNum == "") {
+//                    alert("手机号不能为空!");
+//                    return;
+//                }
+//                if (!InputValidation.isPhone(mobileNum)) {
+//                    alert("请输入正确的手机号格式");
+//                    return;
+//                }
+//                var url = "http://huodong{0}/p2p_1510301/ajaxUserSubscribe/?type=1&mobile={1}&jsoncallback=?".format(rootDomain, mobileNum);
+//                $.getJSON(url, function (JSON) {
+//                    if (JSON.status == 1) {
+//                        $("#J_success_pop").data("overlay").load();
+//                        $("#J_mobile_input").val("");
+//                    } else {
+//                        alert(JSON.info);
+//                    }
+//                });
+//            })
+//        }
+//
+//        setup();
+//    }).BindSubmitPhoneNumber();
+//    FHP.add("BindSidebar", function () {
+//        function setup() {
+//            bindSidebar();
+//        }
+//
+//        function bindSidebar() {
+//            $("#J_right_sidebar").sidebar({position: "top", min: 500, relative: true, relativeWidth: 1070});
+//            $(window).trigger("scroll.sidebar");
+//        }
+//
+//        setup();
+//    }).BindSidebar();
+//    FHP.add("BindOverlay", function () {
+//        function setup() {
+//            bindPop();
+//        }
+//
+//        function bindPop() {
+//            $(".J_p2p_pop").overlay({closeOnClick: false, closeOnEsc: false, top: "center", fixed: false});
+//        }
+//
+//        setup();
+//    }).BindOverlay();
+//    FHP.add("BindCountdown", function () {
+//        var $wrap = $("#J_main_cd_wrap");
+//        var starttime = $wrap.data("start");
+//        var endtime = $wrap.data("end");
+//        getServerTimeAjax.done(function () {
+//            if (timestamp > starttime && timestamp < endtime) {
+//                bindCountdown(timestamp);
+//            }
+//        });
+//        function bindCountdown(timestamp) {
+//            $("#J_countdown").countdown({until: endtime - timestamp, format: 'dHMS', layout: '{d<}<em>{dnn}</em>天{d>}<em>{hnn}</em>时<em>{mnn}</em>分<em>{snn}</em>秒', onExpiry: function () {
+//                $wrap.hide();
+//            }});
+//            $wrap.show();
+//        }
+//    }).BindCountdown();
+//})(FLNS.register("Fanli.Huodong.P2p"));

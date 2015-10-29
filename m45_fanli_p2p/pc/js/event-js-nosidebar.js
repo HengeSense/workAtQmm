@@ -1,4 +1,3 @@
-;
 (function (exports) {
     exports.BowserDetect = (function () {
         var ua = navigator.userAgent;
@@ -312,106 +311,106 @@
     exports.GrenralEscape = GrenralEscape;
     exports.FLNS = FLNS;
 }(this));
-(function ($) {
-    $.extend(FLNS.register("quanmama"), {"Class": function (parent) {
-        var klass = function () {
-            this.init.apply(this, arguments);
-        };
-        if (parent) {
-            var subclass = function () {
-            };
-            subclass.prototype = parent.prototype;
-            klass.prototype = new subclass();
-        }
-        klass.prototype.init = function () {
-        };
-        klass.fn = klass.prototype;
-        klass.fn.parent = klass;
-        klass.extend = function (obj) {
-            var extended = obj.extended;
-            for (var i in obj) {
-                klass[i] = obj[i];
-            }
-            if (extended)extended(klass);
-        };
-        klass.inculde = function (obj) {
-            var included = obj.included;
-            for (var i in obj) {
-                klass.fn[i] = obj[i];
-            }
-            if (included)included(klass);
-        };
-        klass.proxy = function (func) {
-            var self = this;
-            return(function () {
-                return func.apply(self, arguments);
-            });
-        };
-        klass.fn.proxy = klass.proxy;
-        return klass;
-    }});
-    $.extend(FLNS.register("quanmama.Utility"), {"random": function (n) {
-        var uid = Math.random().toString(16).substr(2, n);
-        while (uid.length < n) {
-            uid = Math.random().toString(16).substr(2, n);
-        }
-        return uid;
-    }, "guid": function () {
-        return'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        }).toUpperCase();
-    }, "staticTimeStamp": function (t) {
-        var getTime = new Date().getTime();
-        var returnts = parseInt(getTime / 300000);
-        var currentScriptPath = $('link[rel=stylesheet]').eq(0).attr('href');
-        if (t) {
-            returnts = parseInt(getTime / (60 * 1000 * t));
-        }
-        else if (typeof(currentScriptPath) !== "undefined") {
-            var timeStampArr = currentScriptPath.match(/^.*[\?\&](\d+\_\d+){1}$/i);
-            if (timeStampArr) {
-                returnts = timeStampArr[1];
-            }
-        }
-        return returnts;
-    }, "requirejs": function (jsArr, callback) {
-        var v = parseInt(new Date().getTime() / 300000);
-        if (!callback) {
-            callback = $.noop;
-        }
-        $.tools = $.tools || {};
-        var jsListConfig = {'overlay': {isload: $.tools.overlay, jsUrl: "//static2.51fanli.net/common/libs/tools/overlay.min.js"}, 'expose': {isload: $.tools.expose, jsUrl: "//static2.51fanli.net/common/libs/tools/expose.min.js"}, 'light': {isload: $.light, jsUrl: "//static2.51fanli.net/static/?f=passport/js/light/createpopup.js"}, 'easing': {isload: $.easing["easeOutBack"], jsUrl: "//static2.51fanli.net/common/plugins/easing/jquery.easing-min.js"}, 'switchable': {isload: $.fn.switchable, jsUrl: "//static2.51fanli.net/common/plugins/switchable/jquery.switchable-min.js"}};
-        var loadJs = (function () {
-            var arr = [];
-            $.each(jsArr, function (i, item) {
-                if (!jsListConfig[item]) {
-                    return true;
-                }
-                var jsObj = jsListConfig[item];
-                if (!jsObj['isload']) {
-                    var connect = /\?/.test(jsObj['jsUrl']) ? '&' : '?';
-                    var url = jsObj['jsUrl'];
-                    if (url.indexOf('/common/plugins/') > -1) {
-                        arr.push(url);
-                    }
-                    else {
-                        arr.push(url + connect + "v={0}".format(v));
-                    }
-                }
-            });
-            return arr;
-        })();
-        loadJs.length > 0 ? head && head.load(loadJs, callback) : callback();
-    }, "isLogin": "prouserid".getCookie() > 0, "rootDomain": (function () {
-        var tryExecLocation = /^.*?(\.(?:51)?quanmama\.com)$/ig.exec(location.hostname);
-        var rootDomain = ".quanmama.com";
-        if (tryExecLocation) {
-            rootDomain = tryExecLocation[1];
-        }
-        return rootDomain;
-    }()), "currentDomain": document.domain});
-})(jQuery);
+//(function ($) {
+//    $.extend(FLNS.register("quanmama"), {"Class": function (parent) {
+//        var klass = function () {
+//            this.init.apply(this, arguments);
+//        };
+//        if (parent) {
+//            var subclass = function () {
+//            };
+//            subclass.prototype = parent.prototype;
+//            klass.prototype = new subclass();
+//        }
+//        klass.prototype.init = function () {
+//        };
+//        klass.fn = klass.prototype;
+//        klass.fn.parent = klass;
+//        klass.extend = function (obj) {
+//            var extended = obj.extended;
+//            for (var i in obj) {
+//                klass[i] = obj[i];
+//            }
+//            if (extended)extended(klass);
+//        };
+//        klass.inculde = function (obj) {
+//            var included = obj.included;
+//            for (var i in obj) {
+//                klass.fn[i] = obj[i];
+//            }
+//            if (included)included(klass);
+//        };
+//        klass.proxy = function (func) {
+//            var self = this;
+//            return(function () {
+//                return func.apply(self, arguments);
+//            });
+//        };
+//        klass.fn.proxy = klass.proxy;
+//        return klass;
+//    }});
+//    $.extend(FLNS.register("quanmama.Utility"), {"random": function (n) {
+//        var uid = Math.random().toString(16).substr(2, n);
+//        while (uid.length < n) {
+//            uid = Math.random().toString(16).substr(2, n);
+//        }
+//        return uid;
+//    }, "guid": function () {
+//        return'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+//            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+//            return v.toString(16);
+//        }).toUpperCase();
+//    }, "staticTimeStamp": function (t) {
+//        var getTime = new Date().getTime();
+//        var returnts = parseInt(getTime / 300000);
+//        var currentScriptPath = $('link[rel=stylesheet]').eq(0).attr('href');
+//        if (t) {
+//            returnts = parseInt(getTime / (60 * 1000 * t));
+//        }
+//        else if (typeof(currentScriptPath) !== "undefined") {
+//            var timeStampArr = currentScriptPath.match(/^.*[\?\&](\d+\_\d+){1}$/i);
+//            if (timeStampArr) {
+//                returnts = timeStampArr[1];
+//            }
+//        }
+//        return returnts;
+//    }, "requirejs": function (jsArr, callback) {
+//        var v = parseInt(new Date().getTime() / 300000);
+//        if (!callback) {
+//            callback = $.noop;
+//        }
+//        $.tools = $.tools || {};
+//        var jsListConfig = {'overlay': {isload: $.tools.overlay, jsUrl: ""}, 'expose': {isload: $.tools.expose, jsUrl: "//static2.51fanli.net/common/libs/tools/expose.min.js"}, 'light': {isload: $.light, jsUrl: "//static2.51fanli.net/static/?f=passport/js/light/createpopup.js"}, 'easing': {isload: $.easing["easeOutBack"], jsUrl: "//static2.51fanli.net/common/plugins/easing/jquery.easing-min.js"}, 'switchable': {isload: $.fn.switchable, jsUrl: "//static2.51fanli.net/common/plugins/switchable/jquery.switchable-min.js"}};
+//        var loadJs = (function () {
+//            var arr = [];
+//            $.each(jsArr, function (i, item) {
+//                if (!jsListConfig[item]) {
+//                    return true;
+//                }
+//                var jsObj = jsListConfig[item];
+//                if (!jsObj['isload']) {
+//                    var connect = /\?/.test(jsObj['jsUrl']) ? '&' : '?';
+//                    var url = jsObj['jsUrl'];
+//                    if (url.indexOf('/common/plugins/') > -1) {
+//                        arr.push(url);
+//                    }
+//                    else {
+//                        arr.push(url + connect + "v={0}".format(v));
+//                    }
+//                }
+//            });
+//            return arr;
+//        })();
+//        loadJs.length > 0 ? head && head.load(loadJs, callback) : callback();
+//    }, "isLogin": "prouserid".getCookie() > 0, "rootDomain": (function () {
+//        var tryExecLocation = /^.*?(\.(?:51)?quanmama\.com)$/ig.exec(location.hostname);
+//        var rootDomain = ".quanmama.com";
+//        if (tryExecLocation) {
+//            rootDomain = tryExecLocation[1];
+//        }
+//        return rootDomain;
+//    }()), "currentDomain": document.domain});
+//})(jQuery);
 (function (FPO) {
     var $origin = $({});
     FPO.add("subscribe", function () {
@@ -447,29 +446,29 @@
         return $.ajax({type: "GET", url: url, cache: true, data: data, jsonpCallback: "jQuery" + ts + (++jsonpid), success: callback, dataType: "jsonp"});
     }});
 }(jQuery));
-(function ($) {
-    if (!'FirstUrl'.getCookie()) {
-        var ref = (!!document.referrer && document.referrer.indexOf('quanmama.com') < 0) ? document.referrer : 'http://www{0}/'.format(quanmama.Utility.rootDomain);
-        'FirstUrl'.setCookie(ref, '', quanmama.Utility.rootDomain, '/');
-    }
-    if (!'LandingUrl'.getCookie()) {
-        'LandingUrl'.setCookie(window.location.href, '', quanmama.Utility.rootDomain, '/');
-    }
-    $(document).on('click', 'a', function () {
-        var $this = $(this);
-        var url = $this.attr('href') || '';
-        var re = /&v=(\d+)/gi;
-        if (url.indexOf('fun.51fanli.com/goshop') != -1 || url.indexOf('fun.quanmama.com/goshop') != -1) {
-            if (url.indexOf('v=') == -1) {
-                url = url + '&v=' + new Date().getTime();
-            }
-            else {
-                url = url.replace(re, '&v=' + new Date().getTime());
-            }
-            $this.attr('href', url);
-        }
-    });
-})(jQuery);
+//(function ($) {
+//    if (!'FirstUrl'.getCookie()) {
+//        var ref = (!!document.referrer && document.referrer.indexOf('quanmama.com') < 0) ? document.referrer : 'http://www{0}/'.format(quanmama.Utility.rootDomain);
+//        'FirstUrl'.setCookie(ref, '', quanmama.Utility.rootDomain, '/');
+//    }
+//    if (!'LandingUrl'.getCookie()) {
+//        'LandingUrl'.setCookie(window.location.href, '', quanmama.Utility.rootDomain, '/');
+//    }
+//    $(document).on('click', 'a', function () {
+//        var $this = $(this);
+//        var url = $this.attr('href') || '';
+//        var re = /&v=(\d+)/gi;
+//        if (url.indexOf('fun.51fanli.com/goshop') != -1 || url.indexOf('fun.quanmama.com/goshop') != -1) {
+//            if (url.indexOf('v=') == -1) {
+//                url = url + '&v=' + new Date().getTime();
+//            }
+//            else {
+//                url = url.replace(re, '&v=' + new Date().getTime());
+//            }
+//            $this.attr('href', url);
+//        }
+//    });
+//})(jQuery);
 //function open53kf() {
 //    $.getJSON('//fun{0}/client/homepage/monitor?title=kefu&jsoncallback=?'.format(quanmama.Utility.rootDomain));
 //    window.open('http://www.53kf.com/company.php?arg=51fanli&style=1', '_blank', 'height=473,width=703,fullscreen=3,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=no,location=no,titlebar=no,fullscreen=no');
@@ -659,22 +658,22 @@ function addFavorite(obj, msg) {
         }
     });
 }(jQuery));
-(function () {
-    var hostDomain = quanmama.Utility.rootDomain;
-    var host = location.host.toLowerCase();
-    var newLocation = location.href.replace(/51fanli\.com/i, 'quanmama.com');
-    if (!host || hostDomain == '.quanmama.com' || /^(fun|trace)\./.test(host)) {
-        return;
-    }
-    else {
-        window.location.href = newLocation;
-    }
-})();
-var passportAppUrl = "//passport{0}".format(quanmama.Utility.rootDomain);
-var redirectPrefixAfterLogin = "{0}/redirect/loginsuccess".format(passportAppUrl);
-var redirectPrefixAfterRegister = "{0}/redirect/regsuccess".format(passportAppUrl);
-var verifyCodeImageUrl = "//fun{0}/verify.png?".format(quanmama.Utility.rootDomain);
-;
+//(function () {
+//    var hostDomain = quanmama.Utility.rootDomain;
+//    var host = location.host.toLowerCase();
+//    var newLocation = location.href.replace(/51fanli\.com/i, 'quanmama.com');
+//    if (!host || hostDomain == '.quanmama.com' || /^(fun|trace)\./.test(host)) {
+//        return;
+//    }
+//    else {
+//        window.location.href = newLocation;
+//    }
+//})();
+//var passportAppUrl = "//passport{0}".format(quanmama.Utility.rootDomain);
+//var redirectPrefixAfterLogin = "{0}/redirect/loginsuccess".format(passportAppUrl);
+//var redirectPrefixAfterRegister = "{0}/redirect/regsuccess".format(passportAppUrl);
+//var verifyCodeImageUrl = "//fun{0}/verify.png?".format(quanmama.Utility.rootDomain);
+//;
 (function (exports) {
     var traceCrossPageCookie = "__fl_trace_cpc";
     var tid = 'xxxxxxxx-xxxx-xxxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -690,37 +689,37 @@ var verifyCodeImageUrl = "//fun{0}/verify.png?".format(quanmama.Utility.rootDoma
         return rootDomain;
     }());
     var urlReg = /^(?:(?:http(?:s)?:\/\/)?[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"\"])|(?:\/.*))*$/ig;
-    var CookieOperation = (function () {
-        function _setCookie(name, value, expiryDays, domain, path, secure) {
-            var builder = [name, "=", escape(value)];
-            if (expiryDays) {
-                var date = new Date();
-                date.setTime(date.getTime() + (expiryDays * 86400000));
-                builder.push(";expires=");
-                builder.push(date.toUTCString());
-            }
-            if (domain) {
-                builder.push(";domain=");
-                builder.push(domain);
-            }
-            if (path) {
-                builder.push(";path=");
-                builder.push(path);
-            }
-            if (secure) {
-                builder.push(";secure");
-            }
-            document.cookie = builder.join("");
-        }
-
-        function _getCookie(name) {
-            var re = new RegExp('\\b' + name + '\\s*=\\s*([^;]*)', 'i');
-            var match = re.exec(document.cookie);
-            return(match && match.length > 1 ? unescape(match[1]) : '');
-        }
-
-        return{setCookie: _setCookie, getCookie: _getCookie};
-    }());
+//    var CookieOperation = (function () {
+//        function _setCookie(name, value, expiryDays, domain, path, secure) {
+//            var builder = [name, "=", escape(value)];
+//            if (expiryDays) {
+//                var date = new Date();
+//                date.setTime(date.getTime() + (expiryDays * 86400000));
+//                builder.push(";expires=");
+//                builder.push(date.toUTCString());
+//            }
+//            if (domain) {
+//                builder.push(";domain=");
+//                builder.push(domain);
+//            }
+//            if (path) {
+//                builder.push(";path=");
+//                builder.push(path);
+//            }
+//            if (secure) {
+//                builder.push(";secure");
+//            }
+//            document.cookie = builder.join("");
+//        }
+//
+//        function _getCookie(name) {
+//            var re = new RegExp('\\b' + name + '\\s*=\\s*([^;]*)', 'i');
+//            var match = re.exec(document.cookie);
+//            return(match && match.length > 1 ? unescape(match[1]) : '');
+//        }
+//
+//        return{setCookie: _setCookie, getCookie: _getCookie};
+//    }());
     var StringOperation = {format: function (s, args) {
         for (var i = 0; i < args.length; ++i) {
             s = s.replace(new RegExp("\\{" + i + "\\}", "g"), args[i]);
@@ -3295,354 +3294,355 @@ var verifyCodeImageUrl = "//fun{0}/verify.png?".format(quanmama.Utility.rootDoma
     })
 })(typeof jQuery != "undefined" ? jQuery : window.Zepto);
 ;
-(function ($) {
-    var defaults = {sInputSelector: "#search-field", apiUrl: "http://fun.quanmama.com/api/search/searchshop", selectedClass: "ui-state-hover", sHiddenSelector: "#J_url", dUrlHiddenSelector: "#J_durl"};
-    $.extend({flSearch: function (options) {
-        var settings = $.extend(true, {}, defaults, options);
-        var $sInput = $(settings.sInputSelector);
-        var $form = $sInput.closest("form");
-        var $vh = $(settings.sHiddenSelector);
-        var $durlh = $(settings.dUrlHiddenSelector);
-        var currentMenuItem = {};
-        var isSelectedRedirect = 0;
-        var $taobaoTips = $("<div class='hp_taobao_71_tips' style='width:{0}px;' id='J_taobao_71_tips'>淘宝/天猫宝贝不能使用链接搜索！请复制宝贝标题进行搜索！</div>".format($sInput.outerWidth(true) - 30 - 2));
-        var $erOverlay;
-        var filterKey = $sInput.data("yyg_keyword");
-        var filterArray = filterKey ? filterKey.split(",") : [];
-        var oTbS8Pop = {$tbOverlay: null, searchFlag: false, searchCoVal: '11669', searchCoName: 'header-tbs8pop'};
-        bindBehavior();
-        function bindBehavior() {
-            quanmama.Utility.requirejs(['overlay', 'expose'], function () {
-                bindTbS8Pop();
-            });
-            if ($.fn.placeholder) {
-                $sInput.placeholder({type: 'label', klass: 'search-placeholder'});
-            }
-            $sInput.on("input.autocomplete", function () {
-                currentMenuItem = {};
-                $sInput.trigger('keydown.autocomplete');
-            }).autocomplete({source: function (request, response) {
-                var painVal = $.trim(request.term);
-                if (!painVal) {
-                    $(".ui-autocomplete").hide();
-                    $("#J_taobao_71_tips").hide();
-                    return;
-                }
-                if (/(taobao|tmall){1}\.com/g.test(painVal)) {
-                    if ($("#J_taobao_71_tips").length == 0) {
-                        $taobaoTips.appendTo($sInput.parent());
-                    } else {
-                        $("#J_taobao_71_tips").show();
-                    }
-                    $(".ui-autocomplete").hide();
-                    return;
-                } else {
-                    $("#J_taobao_71_tips").hide();
-                }
-                sourceSetting(request, response, painVal);
-            }, select: function (event, ui) {
-                selectSetting(event, ui);
-                return false;
-            }, focus: function (event, ui) {
-                focusSetting(event, ui);
-                return false;
-            }, position: {offset: "-2 1"}, appendTo: "#suggestmenu", minLength: 1, autoSubmitViaEnter: 1}).data("autocomplete")._renderItem = function (ul, item) {
-                return renderItem(ul, item);
-            };
-            $sInput.on("click", function (ev) {
-                var kc = ev.keyCode;
-                if (kc && (kc == 38 || kc == 40)) {
-                    return;
-                }
-                currentMenuItem = {};
-                $sInput.data("autocomplete")._search($sInput.val());
-            });
-            $form.on("submit", submitHandler);
-            $("#suggestmenu").delegate(".{0}".format(settings.selectedClass), "mousedown", function (event) {
-                isSelectedRedirect = 1;
-            });
-        }
-
-        function buildErOverlay() {
-            if (!$.tools.overlay) {
-                return false;
-            }
-            var erHtml = new StringBuilder();
-            erHtml.append('<div class="popover">').append('    <div class="pop-header"><h3 class="pop-title">返利网温馨提示</h3><a href="javascript:void(0);" class="close">&times;</a></div>').append('    <div><img src="http://static2.51fanli.net/common/images/header/er.png" alt="" /></div>').append('</div>');
-            $erOverlay = $(erHtml.toString()).appendTo("body").overlay({top: "20%", api: true, fixed: false, onLoad: function () {
-                UBT.track("top_serach_er_open", "pc", "wd-{0}".format($.trim($sInput.val())));
-            }, onClose: function () {
-                UBT.track("top_serach_er_close", "pc", "wd-{0}".format($.trim($sInput.val())));
-            }});
-            $erOverlay.load();
-        }
-
-        function bindTbS8Pop() {
-            if (!$.tools.overlay) {
-                return false;
-            }
-            var aHtml = [];
-            aHtml.push('<div id="tb-s8-tips" class="yahei popover common-tb-popover" style="display:none;">');
-            aHtml.push('<div class="pop-header"><h3 class="pop-title">返利网温馨提示</h3><a href="javascript:void(0);" class="close">&times;</a></div>');
-            aHtml.push('<div class="pop-content">');
-            aHtml.push('<p class="tbpop-h2">亲~您将跳到<span style="color:#e22c37;">爱淘宝</span>~</p>');
-            aHtml.push('<p class="tbpop-h3">淘宝返利升级了！搜索结果都有返利哦~</p>');
-            aHtml.push('<p class="tb-pop-btndiv"><a href="javascript:void(0);" class="tb-pop-btn J_tb_pop_confirm">确定</a> <label><input type="checkbox" class="confirm-tb-nopop"/>不再提示</label></p>');
-            aHtml.push('</div>');
-            aHtml.push('</div>');
-            var $popTbTips = $(aHtml.join('')).appendTo('body');
-            oTbS8Pop.$tbOverlay = $popTbTips.overlay({top: '20%', onLoad: function () {
-                var $overlay = this.getOverlay();
-                $overlay.find("img.lazy").trigger("appear");
-            }, api: true});
-            $popTbTips.find('.J_tb_pop_confirm').click(function (ev) {
-                ev.preventDefault();
-                if ($(".confirm-tb-nopop").eq(0).prop("checked")) {
-                    oTbS8Pop.searchCoName.setCookie(oTbS8Pop.searchCoVal, 365, quanmama.Utility.rootDomain, '/');
-                } else {
-                    oTbS8Pop.searchFlag = true;
-                }
-                oTbS8Pop.$tbOverlay.close();
-                $form.submit();
-            });
-            $popTbTips.find('.close').click(function (ev) {
-                ev.preventDefault();
-                oTbS8Pop.searchFlag = true;
-                oTbS8Pop.$tbOverlay.close();
-                $form.submit();
-            });
-        }
-
-        function sourceSetting(request, response, searchValue) {
-            $.getCacheJSONP(settings.apiUrl + '?jsoncallback=?', {'keywords': searchValue}, function (result) {
-                response(buildSearchResult(result, searchValue));
-            });
-        }
-
-        function focusSetting(event, ui) {
-            var item = ui.item;
-            if (item.idx > 0) {
-                $("#suggestmenu li a:eq(0)").removeClass(settings.selectedClass);
-            }
-        }
-
-        function selectSetting(event, ui) {
-            var item = ui.item;
-            currentMenuItem = item;
-            $sInput.val(item.val);
-            $vh.val(item.url);
-            if (isSelectedRedirect == 1) {
-                isSelectedRedirect = 0;
-                $form.trigger("submit");
-            }
-        }
-
-        function renderItem(ul, item) {
-            var sb = new StringBuilder();
-            var $li = !item.isadvise ? $("<li class='stitleli'></li>") : $("<li class='sitemli'></li>");
-            var $a = $("<a href='javascript:void(0);'></a>");
-            if (item.hasspace) {
-                $a.addClass("sitem");
-            }
-            if (item.idx == 0) {
-                $a.addClass(settings.selectedClass);
-            }
-            sb.append(item.benefit ? "<span class='hasfl'>{0}</span>".format(item.benefit) : "").append(item.icon ? "<span style='_float:left;vertical-align:middle;margin:-2px 4px 0 0;_margin-top:8px;display:inline-block;width:16px;height:16px;background: transparent url({0}) no-repeat 0 0 scroll;'></span>".format(item.icon) : "").append(item.text);
-            return $li.data("item.autocomplete", item).append($a.html(sb.toString())).appendTo(ul.addClass('search-suggest'));
-        }
-
-        function submitHandler(ev) {
-            var ival = $.trim($sInput.val());
-            var sval = currentMenuItem.val || ival;
-            var coVal = oTbS8Pop.searchCoName.getCookie();
-            if (filterArray && $.inArray(ival, filterArray) > -1) {
-                if ($erOverlay) {
-                    $erOverlay.load();
-                } else {
-                    buildErOverlay();
-                }
-                return false;
-            }
-            if (!ival && $sInput.attr("placeholder") == "天猫双11红包抢先领") {
-                window.location.href = "http://zt.quanmama.com/zt/tmall_pc_151019";
-                return false;
-            }
-            if (!ival || ival == $sInput.attr("placeholder")) {
-                return false;
-            }
-            if (oTbS8Pop.$tbOverlay && currentMenuItem.type == 'taobao' && coVal != oTbS8Pop.searchCoVal) {
-                if (!oTbS8Pop.searchFlag) {
-                    oTbS8Pop.$tbOverlay.load();
-                    return false;
-                } else {
-                    oTbS8Pop.searchFlag = false;
-                }
-            }
-            UBT.track("global", "pc", "wd-{0}".format(ival));
-            $vh.val(currentMenuItem.url ? currentMenuItem.url : "");
-        }
-
-        function buildSearchResult(result, sval) {
-            var sb = new StringBuilder();
-            var data = result.data;
-            var len;
-            var temObj;
-            var temDataItem;
-            if (!result.status || data.length == 0) {
-                currentMenuItem = {};
-                return sb.strings;
-            }
-            len = data.length;
-            for (var i = 0; i <= len - 1; ++i) {
-                temObj = {};
-                temDataItem = data[i];
-                temObj.idx = (function () {
-                    return i;
-                })();
-                temObj.id = temDataItem.id;
-                temObj.url = temDataItem.url;
-                temObj.text = temDataItem.name;
-                temObj.val = temDataItem.val;
-                temObj.type = temDataItem.stype;
-                temObj.icon = temDataItem.icon;
-                temObj.benefit = temDataItem.benefit;
-                temObj.isadvise = temDataItem.isadvise;
-                temObj.hasspace = temDataItem.hasspace;
-                sb.append(temObj);
-            }
-            currentMenuItem = sb.strings[0];
-            return sb.strings;
-        }
-    }});
-    $.extend($.flSearch, {defaults: defaults});
-})(jQuery);
-;
-(function ($) {
-    var $topbar = $('#topbar');
-    window.prouserid = 'prouserid'.getCookie();
-    window.prousername = 'prousernameutf'.getCookie(), window.lngmsgcnt = 'lngmsgcnt'.getCookie();
-    window.topbarGetInfo = $.getJSON('http://fun.51fanli.com/topheader/ajaxGetInfoForTopbar?jsoncallback=?', function (json) {
-        var data = json.data;
-        var usercookie = data.usercookie || "";
-        var redirectCookie = 'sign618_redirect';
-        if (prouserid > 0 && redirectCookie.getCookie() != 1 && data.sign618 == 1) {
-            redirectCookie.setCookie('1', ((24 - new Date().getHours()) / 24), quanmama.Utility.rootDomain, '/');
-            window.location.href = 'http://huodong.quanmama.com/sign618?from=20150611tz';
-        }
-        if (data.kefu) {
-            $topbar.data({'kfStatus': data.kefu.kf, 'telStatus': data.kefu.tel});
-        }
-        if (data.crm_mvp) {
-            $topbar.data({'hasCrmMvp': data.crm_mvp});
-        }
-        if (data.timestamp) {
-            $topbar.data({'timestamp': data.timestamp});
-        }
-        if (data.userinfo) {
-            $topbar.data({'bindEmail': data.userinfo.mail_validated, 'lv': data.userinfo.lv || 0});
-        }
-        if ($.isPlainObject(usercookie)) {
-            for (var k in usercookie) {
-                if (usercookie[k]) {
-                    if (!k.getCookie()) {
-                        k.setCookie(usercookie[k], 30, quanmama.Utility.rootDomain, "/");
-                    }
-                }
-            }
-            window.prouserid = 'prouserid'.getCookie();
-            window.prousername = 'prousernameutf'.getCookie();
-            quanmama.Utility.isLogin = "prouserid".getCookie() > 0;
-        }
-    }).done(topbarWrite);
-    window.utmtOps = $.getJSON("http://fun.quanmama.com/topheader/ajaxGetMvpStorys?jsoncallback=?", function (res) {
-        var data = res.data;
-        if (data.story_ids) {
-            $topbar.data({'betatest': data.story_ids});
-        }
-    });
-    function topbarWrite() {
-        var username = decodeURIComponent(decodeURIComponent(prousername));
-        $quickinfo = $('#J_topbar_quick_info'), $chklogin = $('#J_topbar_chklogin'), $menucs = $('#J_topbar_cs_btn'), isShowMsg = $topbar.data("closemsg") != 1, lv = $topbar.data("lv");
-        if (prouserid > 0) {
-            var newS = new StringBuilder();
-            newS.append('<div class="topbar-nav J-topbar-nav">').append('<div class="clearfix menu-hd menu-hd-name"><a class="l menu-name ellipsis" href="{1}/center/welcome" title={0}>{0}</a>'.format(username, passportAppUrl));
-            if (parseInt(lv) && lv > 0) {
-                newS.append('<a href="{2}/center/vip" class="l menu-lv"><img src="http://static2.51fanli.net/common/images/level/icon-small-lv{0}.alpha.png" alt="等级{1}" width="16" height="16"></a>'.format(lv, lv, passportAppUrl));
-            }
-            newS.append('<i class="arrow"></i></div>').append('<div class="menu-bd menu-user">').append('<em class="arrow"></em>').append('<dl>').append('<dd><a href="{0}/center/orders">我的订单</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/center/deposit">我的返利</a></dd>'.format(passportAppUrl)).append('<dd><a href="http://quan{0}/membercenter/buyer/boughtcoupon/index">我的优惠券</a></dd>'.format(quanmama.Utility.rootDomain)).append('<dd><a href="{0}/center/safeuser/safecenter" rel="nofollow">账户设置</a></dd>'.format(passportAppUrl)).append('<dd class="last"><a href="{0}/logout" rel="nofollow">退出</a></dd>'.format(passportAppUrl)).append('</dl>').append('</div>').append('</div>').append('<div id="J_topbar_msg" class="topbar-msg clearfix"><a href="{0}/center/message"><i>消息</i><p class="msg-p"><span class="msg-span"><em>0</em></span></p></a></div>'.format(passportAppUrl));
-            $chklogin.html(newS.toString());
-            if (GeneralValidation.isIe6()) {
-                var $username = $chklogin.find('.menuname');
-                var csswidth = 80;
-                if ($username.width() > csswidth) {
-                    $username.width(csswidth);
-                }
-            }
-            ;
-            if (!lngmsgcnt) {
-                if (isShowMsg) {
-                    $.getJSON('{0}/client/user/getUserMessage?jsoncallback=?'.format(passportAppUrl), function (data) {
-                        if (data.status == 1) {
-                            lngmsgcnt = data.data;
-                            'lngmsgcnt'.setCookie(lngmsgcnt, '0.001', quanmama.Utility.rootDomain, '/');
-                        }
-                        else {
-                            lngmsgcnt = 0;
-                        }
-                        chkmsg(lngmsgcnt);
-                    });
-                }
-                else {
-                    $('#J_topbar_msg').find('.msg-span').remove();
-                }
-            }
-            else {
-                chkmsg(lngmsgcnt);
-            }
-            var crmMvp = $topbar.data('hasCrmMvp') || '';
-            if (crmMvp) {
-                var html = '<div class="topbar-shopvip"><a href="' + crmMvp + 'topbar" class="three">恭喜您获得8%的额外返利资格！</a><i></i></div>';
-                $('#J_topbar_msg').append(html);
-            }
-        }
-        else {
-            var url = encodeURIComponent(document.URL);
-            var nwsb = new StringBuilder();
-            nwsb.append('<div class="topbar-nav J-topbar-nav">').append('<div class="menu-hd"><a href="{0}/login?go_url={1}" rel="nofollow">马上登录</a><i class="arrow"></i></div>'.format(passportAppUrl, url)).append('<div class="menu-bd menu-login">').append('<em class="arrow"></em>').append('<dl>').append('<dd><a href="{0}/login?go_url={1}" rel="nofollow">返利登录</a></dd>'.format(passportAppUrl, url)).append('<dd><a href="{0}/oauth/jumpToUnion/type/taobao/ab/1/cooklogin/1" rel="nofollow">淘宝登录</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/oauth/jumpToUnion/type/qq/ab/1/cooklogin/1" rel="nofollow">QQ登录</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/oauth/jumpToUnion/type/sina/ab/1/cooklogin/1" rel="nofollow">新浪登录</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/oauth/jumpToUnion/type/wechat/ab/1/cooklogin/1" rel="nofollow">微信登录</a></dd>'.format(passportAppUrl)).append('</dl>').append('</div>').append('</div>').append('<div class="topbar-reg"><a target="_blank" href="{1}/reg?action=yes&go_url={0}" rel="nofollow">免费注册</a></div>'.format(url, passportAppUrl));
-            $chklogin.html(nwsb.toString());
-        }
-        $quickinfo.show();
-    }
-
-    function chkmsg(lngmsgcnt) {
-        var $topUserMsg = $('#J_topbar_msg').find('a'), $userMsg = $('.usermsg'), html = '', title = '', klass = '', len = lngmsgcnt.toString().length;
-        if (lngmsgcnt == 0) {
-            title = '\u60a8\u6ca1\u6709\u65b0\u7684\u7ad9\u5185\u4fe1\uff01';
-            $topUserMsg.attr('title', title).addClass('e0');
-            $userMsg.closest('.usermsg-box').hide();
-        } else {
-            if (len == 1) {
-                html = '<em class="e2">' + lngmsgcnt + '</em>';
-                klass = 'e2';
-            } else if (len == 2) {
-                html = '<em class="e3">' + lngmsgcnt + '</em>';
-                klass = 'e3';
-            } else {
-                html = '<em class="e3">...</em>';
-                klass = 'e3';
-            }
-            title = '\u60a8\u8fd8\u6709' + lngmsgcnt + '\u5c01\u65b0\u7684\u7ad9\u5185\u4fe1\u672a\u67e5\u770b\uff01';
-            $topUserMsg.attr('title', title).find('span').prepend(html);
-            setTimeout(function () {
-                $topUserMsg.addClass(klass);
-                $topUserMsg.find('span').animate({'margin-top': '0'}, function () {
-                    $topUserMsg.find('em').eq(1).remove();
-                });
-            }, 500);
-            $userMsg.text(lngmsgcnt).closest('.usermsg-box').show();
-        }
-    }
-})(jQuery);
+//(function ($) {
+//    var defaults = {sInputSelector: "#search-field", apiUrl: "http://fun.quanmama.com/api/search/searchshop", selectedClass: "ui-state-hover", sHiddenSelector: "#J_url", dUrlHiddenSelector: "#J_durl"};
+//    $.extend({flSearch: function (options) {
+//        var settings = $.extend(true, {}, defaults, options);
+//        var $sInput = $(settings.sInputSelector);
+//        var $form = $sInput.closest("form");
+//        var $vh = $(settings.sHiddenSelector);
+//        var $durlh = $(settings.dUrlHiddenSelector);
+//        var currentMenuItem = {};
+//        var isSelectedRedirect = 0;
+//        var $taobaoTips = $("<div class='hp_taobao_71_tips' style='width:{0}px;' id='J_taobao_71_tips'>淘宝/天猫宝贝不能使用链接搜索！请复制宝贝标题进行搜索！</div>".format($sInput.outerWidth(true) - 30 - 2));
+//        var $erOverlay;
+//        var filterKey = $sInput.data("yyg_keyword");
+//        var filterArray = filterKey ? filterKey.split(",") : [];
+//        var oTbS8Pop = {$tbOverlay: null, searchFlag: false, searchCoVal: '11669', searchCoName: 'header-tbs8pop'};
+//        bindBehavior();
+//        function bindBehavior() {
+//            quanmama.Utility.requirejs(['overlay', 'expose'], function () {
+//                bindTbS8Pop();
+//            });
+//            if ($.fn.placeholder) {
+//                $sInput.placeholder({type: 'label', klass: 'search-placeholder'});
+//            }
+//            $sInput.on("input.autocomplete", function () {
+//                currentMenuItem = {};
+//                $sInput.trigger('keydown.autocomplete');
+//            }).autocomplete({source: function (request, response) {
+//                var painVal = $.trim(request.term);
+//                if (!painVal) {
+//                    $(".ui-autocomplete").hide();
+//                    $("#J_taobao_71_tips").hide();
+//                    return;
+//                }
+//                if (/(taobao|tmall){1}\.com/g.test(painVal)) {
+//                    if ($("#J_taobao_71_tips").length == 0) {
+//                        $taobaoTips.appendTo($sInput.parent());
+//                    } else {
+//                        $("#J_taobao_71_tips").show();
+//                    }
+//                    $(".ui-autocomplete").hide();
+//                    return;
+//                } else {
+//                    $("#J_taobao_71_tips").hide();
+//                }
+//                sourceSetting(request, response, painVal);
+//            }, select: function (event, ui) {
+//                selectSetting(event, ui);
+//                return false;
+//            }, focus: function (event, ui) {
+//                focusSetting(event, ui);
+//                return false;
+//            }, position: {offset: "-2 1"}, appendTo: "#suggestmenu", minLength: 1, autoSubmitViaEnter: 1}).data("autocomplete")._renderItem = function (ul, item) {
+//                return renderItem(ul, item);
+//            };
+//            $sInput.on("click", function (ev) {
+//                var kc = ev.keyCode;
+//                if (kc && (kc == 38 || kc == 40)) {
+//                    return;
+//                }
+//                currentMenuItem = {};
+//                $sInput.data("autocomplete")._search($sInput.val());
+//            });
+//            $form.on("submit", submitHandler);
+//            $("#suggestmenu").delegate(".{0}".format(settings.selectedClass), "mousedown", function (event) {
+//                isSelectedRedirect = 1;
+//            });
+//        }
+//
+//        function buildErOverlay() {
+//            if (!$.tools.overlay) {
+//                return false;
+//            }
+//            var erHtml = new StringBuilder();
+//            erHtml.append('<div class="popover">').append('    <div class="pop-header"><h3 class="pop-title">返利网温馨提示</h3><a href="javascript:void(0);" class="close">&times;</a></div>').append('    <div><img src="../images/er.png" alt="" /></div>').append('</div>');
+//            $erOverlay = $(erHtml.toString()).appendTo("body").overlay({top: "20%", api: true, fixed: false, onLoad: function () {
+//                UBT.track("top_serach_er_open", "pc", "wd-{0}".format($.trim($sInput.val())));
+//            }, onClose: function () {
+//                UBT.track("top_serach_er_close", "pc", "wd-{0}".format($.trim($sInput.val())));
+//            }});
+//            $erOverlay.load();
+//        }
+//
+//        function bindTbS8Pop() {
+//            if (!$.tools.overlay) {
+//                return false;
+//            }
+//            var aHtml = [];
+//            aHtml.push('<div id="tb-s8-tips" class="yahei popover common-tb-popover" style="display:none;">');
+//            aHtml.push('<div class="pop-header"><h3 class="pop-title">返利网温馨提示</h3><a href="javascript:void(0);" class="close">&times;</a></div>');
+//            aHtml.push('<div class="pop-content">');
+//            aHtml.push('<p class="tbpop-h2">亲~您将跳到<span style="color:#e22c37;">爱淘宝</span>~</p>');
+//            aHtml.push('<p class="tbpop-h3">淘宝返利升级了！搜索结果都有返利哦~</p>');
+//            aHtml.push('<p class="tb-pop-btndiv"><a href="javascript:void(0);" class="tb-pop-btn J_tb_pop_confirm">确定</a> <label><input type="checkbox" class="confirm-tb-nopop"/>不再提示</label></p>');
+//            aHtml.push('</div>');
+//            aHtml.push('</div>');
+//            var $popTbTips = $(aHtml.join('')).appendTo('body');
+//            oTbS8Pop.$tbOverlay = $popTbTips.overlay({top: '20%', onLoad: function () {
+//                var $overlay = this.getOverlay();
+//                $overlay.find("img.lazy").trigger("appear");
+//            }, api: true});
+//            $popTbTips.find('.J_tb_pop_confirm').click(function (ev) {
+//                ev.preventDefault();
+//                if ($(".confirm-tb-nopop").eq(0).prop("checked")) {
+//                    oTbS8Pop.searchCoName.setCookie(oTbS8Pop.searchCoVal, 365, quanmama.Utility.rootDomain, '/');
+//                } else {
+//                    oTbS8Pop.searchFlag = true;
+//                }
+//                oTbS8Pop.$tbOverlay.close();
+//                $form.submit();
+//            });
+//            $popTbTips.find('.close').click(function (ev) {
+//                ev.preventDefault();
+//                oTbS8Pop.searchFlag = true;
+//                oTbS8Pop.$tbOverlay.close();
+//                $form.submit();
+//            });
+//        }
+//
+//        function sourceSetting(request, response, searchValue) {
+//            $.getCacheJSONP(settings.apiUrl + '?jsoncallback=?', {'keywords': searchValue}, function (result) {
+//                response(buildSearchResult(result, searchValue));
+//            });
+//        }
+//
+//        function focusSetting(event, ui) {
+//            var item = ui.item;
+//            if (item.idx > 0) {
+//                $("#suggestmenu li a:eq(0)").removeClass(settings.selectedClass);
+//            }
+//        }
+//
+//        function selectSetting(event, ui) {
+//            var item = ui.item;
+//            currentMenuItem = item;
+//            $sInput.val(item.val);
+//            $vh.val(item.url);
+//            if (isSelectedRedirect == 1) {
+//                isSelectedRedirect = 0;
+//                $form.trigger("submit");
+//            }
+//        }
+//
+//        function renderItem(ul, item) {
+//            var sb = new StringBuilder();
+//            var $li = !item.isadvise ? $("<li class='stitleli'></li>") : $("<li class='sitemli'></li>");
+//            var $a = $("<a href='javascript:void(0);'></a>");
+//            if (item.hasspace) {
+//                $a.addClass("sitem");
+//            }
+//            if (item.idx == 0) {
+//                $a.addClass(settings.selectedClass);
+//            }
+//            sb.append(item.benefit ? "<span class='hasfl'>{0}</span>".format(item.benefit) : "").append(item.icon ? "<span style='_float:left;vertical-align:middle;margin:-2px 4px 0 0;_margin-top:8px;display:inline-block;width:16px;height:16px;background: transparent url({0}) no-repeat 0 0 scroll;'></span>".format(item.icon) : "").append(item.text);
+//            return $li.data("item.autocomplete", item).append($a.html(sb.toString())).appendTo(ul.addClass('search-suggest'));
+//        }
+//
+//        function submitHandler(ev) {
+//            var ival = $.trim($sInput.val());
+//            var sval = currentMenuItem.val || ival;
+//            var coVal = oTbS8Pop.searchCoName.getCookie();
+//            if (filterArray && $.inArray(ival, filterArray) > -1) {
+//                if ($erOverlay) {
+//                    $erOverlay.load();
+//                } else {
+//                    buildErOverlay();
+//                }
+//                return false;
+//            }
+//            if (!ival && $sInput.attr("placeholder") == "天猫双11红包抢先领") {
+//                window.location.href = "http://zt.quanmama.com/zt/tmall_pc_151019";
+//                return false;
+//            }
+//            if (!ival || ival == $sInput.attr("placeholder")) {
+//                return false;
+//            }
+//            if (oTbS8Pop.$tbOverlay && currentMenuItem.type == 'taobao' && coVal != oTbS8Pop.searchCoVal) {
+//                if (!oTbS8Pop.searchFlag) {
+//                    oTbS8Pop.$tbOverlay.load();
+//                    return false;
+//                } else {
+//                    oTbS8Pop.searchFlag = false;
+//                }
+//            }
+//            UBT.track("global", "pc", "wd-{0}".format(ival));
+//            $vh.val(currentMenuItem.url ? currentMenuItem.url : "");
+//        }
+//
+//        function buildSearchResult(result, sval) {
+//            var sb = new StringBuilder();
+//            var data = result.data;
+//            var len;
+//            var temObj;
+//            var temDataItem;
+//            if (!result.status || data.length == 0) {
+//                currentMenuItem = {};
+//                return sb.strings;
+//            }
+//            len = data.length;
+//            for (var i = 0; i <= len - 1; ++i) {
+//                temObj = {};
+//                temDataItem = data[i];
+//                temObj.idx = (function () {
+//                    return i;
+//                })();
+//                temObj.id = temDataItem.id;
+//                temObj.url = temDataItem.url;
+//                temObj.text = temDataItem.name;
+//                temObj.val = temDataItem.val;
+//                temObj.type = temDataItem.stype;
+//                temObj.icon = temDataItem.icon;
+//                temObj.benefit = temDataItem.benefit;
+//                temObj.isadvise = temDataItem.isadvise;
+//                temObj.hasspace = temDataItem.hasspace;
+//                sb.append(temObj);
+//            }
+//            currentMenuItem = sb.strings[0];
+//            return sb.strings;
+//        }
+//    }});
+//    $.extend($.flSearch, {defaults: defaults});
+//})(jQuery);
+//;
+//(function ($) {
+//    var $topbar = $('#topbar');
+//    window.prouserid = 'prouserid'.getCookie();
+//    window.prousername = 'prousernameutf'.getCookie(), window.lngmsgcnt = 'lngmsgcnt'.getCookie();
+//    // filesystem:http://fun.51fanli.com/temporary/igbjmhit/1446081560885.json
+//    window.topbarGetInfo = $.getJSON('json.json', function (json) {
+//        var data = json.data;
+//        var usercookie = data.usercookie || "";
+//        var redirectCookie = 'sign618_redirect';
+//        if (prouserid > 0 && redirectCookie.getCookie() != 1 && data.sign618 == 1) {
+//            redirectCookie.setCookie('1', ((24 - new Date().getHours()) / 24), quanmama.Utility.rootDomain, '/');
+//            window.location.href = 'http://huodong.quanmama.com/sign618?from=20150611tz';
+//        }
+//        if (data.kefu) {
+//            $topbar.data({'kfStatus': data.kefu.kf, 'telStatus': data.kefu.tel});
+//        }
+//        if (data.crm_mvp) {
+//            $topbar.data({'hasCrmMvp': data.crm_mvp});
+//        }
+//        if (data.timestamp) {
+//            $topbar.data({'timestamp': data.timestamp});
+//        }
+//        if (data.userinfo) {
+//            $topbar.data({'bindEmail': data.userinfo.mail_validated, 'lv': data.userinfo.lv || 0});
+//        }
+//        if ($.isPlainObject(usercookie)) {
+//            for (var k in usercookie) {
+//                if (usercookie[k]) {
+//                    if (!k.getCookie()) {
+//                        k.setCookie(usercookie[k], 30, quanmama.Utility.rootDomain, "/");
+//                    }
+//                }
+//            }
+//            window.prouserid = 'prouserid'.getCookie();
+//            window.prousername = 'prousernameutf'.getCookie();
+//            quanmama.Utility.isLogin = "prouserid".getCookie() > 0;
+//        }
+//    }).done(topbarWrite);
+//    window.utmtOps = $.getJSON("http://fun.quanmama.com/topheader/ajaxGetMvpStorys?jsoncallback=?", function (res) {
+//        var data = res.data;
+//        if (data.story_ids) {
+//            $topbar.data({'betatest': data.story_ids});
+//        }
+//    });
+//    function topbarWrite() {
+//        var username = decodeURIComponent(decodeURIComponent(prousername));
+//        $quickinfo = $('#J_topbar_quick_info'), $chklogin = $('#J_topbar_chklogin'), $menucs = $('#J_topbar_cs_btn'), isShowMsg = $topbar.data("closemsg") != 1, lv = $topbar.data("lv");
+//        if (prouserid > 0) {
+//            var newS = new StringBuilder();
+//            newS.append('<div class="topbar-nav J-topbar-nav">').append('<div class="clearfix menu-hd menu-hd-name"><a class="l menu-name ellipsis" href="{1}/center/welcome" title={0}>{0}</a>'.format(username, passportAppUrl));
+//            if (parseInt(lv) && lv > 0) {
+//                newS.append('<a href="{2}/center/vip" class="l menu-lv"><img src="" alt="等级{1}" width="16" height="16"></a>'.format(lv, lv, passportAppUrl));
+//            }
+//            newS.append('<i class="arrow"></i></div>').append('<div class="menu-bd menu-user">').append('<em class="arrow"></em>').append('<dl>').append('<dd><a href="{0}/center/orders">我的订单</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/center/deposit">我的返利</a></dd>'.format(passportAppUrl)).append('<dd><a href="http://quan{0}/membercenter/buyer/boughtcoupon/index">我的优惠券</a></dd>'.format(quanmama.Utility.rootDomain)).append('<dd><a href="{0}/center/safeuser/safecenter" rel="nofollow">账户设置</a></dd>'.format(passportAppUrl)).append('<dd class="last"><a href="{0}/logout" rel="nofollow">退出</a></dd>'.format(passportAppUrl)).append('</dl>').append('</div>').append('</div>').append('<div id="J_topbar_msg" class="topbar-msg clearfix"><a href="{0}/center/message"><i>消息</i><p class="msg-p"><span class="msg-span"><em>0</em></span></p></a></div>'.format(passportAppUrl));
+//            $chklogin.html(newS.toString());
+//            if (GeneralValidation.isIe6()) {
+//                var $username = $chklogin.find('.menuname');
+//                var csswidth = 80;
+//                if ($username.width() > csswidth) {
+//                    $username.width(csswidth);
+//                }
+//            }
+//            ;
+//            if (!lngmsgcnt) {
+//                if (isShowMsg) {
+//                    $.getJSON('{0}/client/user/getUserMessage?jsoncallback=?'.format(passportAppUrl), function (data) {
+//                        if (data.status == 1) {
+//                            lngmsgcnt = data.data;
+//                            'lngmsgcnt'.setCookie(lngmsgcnt, '0.001', quanmama.Utility.rootDomain, '/');
+//                        }
+//                        else {
+//                            lngmsgcnt = 0;
+//                        }
+//                        chkmsg(lngmsgcnt);
+//                    });
+//                }
+//                else {
+//                    $('#J_topbar_msg').find('.msg-span').remove();
+//                }
+//            }
+//            else {
+//                chkmsg(lngmsgcnt);
+//            }
+//            var crmMvp = $topbar.data('hasCrmMvp') || '';
+//            if (crmMvp) {
+//                var html = '<div class="topbar-shopvip"><a href="' + crmMvp + 'topbar" class="three">恭喜您获得8%的额外返利资格！</a><i></i></div>';
+//                $('#J_topbar_msg').append(html);
+//            }
+//        }
+//        else {
+//            var url = encodeURIComponent(document.URL);
+//            var nwsb = new StringBuilder();
+//            nwsb.append('<div class="topbar-nav J-topbar-nav">').append('<div class="menu-hd"><a href="{0}/login?go_url={1}" rel="nofollow">马上登录</a><i class="arrow"></i></div>'.format(passportAppUrl, url)).append('<div class="menu-bd menu-login">').append('<em class="arrow"></em>').append('<dl>').append('<dd><a href="{0}/login?go_url={1}" rel="nofollow">返利登录</a></dd>'.format(passportAppUrl, url)).append('<dd><a href="{0}/oauth/jumpToUnion/type/taobao/ab/1/cooklogin/1" rel="nofollow">淘宝登录</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/oauth/jumpToUnion/type/qq/ab/1/cooklogin/1" rel="nofollow">QQ登录</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/oauth/jumpToUnion/type/sina/ab/1/cooklogin/1" rel="nofollow">新浪登录</a></dd>'.format(passportAppUrl)).append('<dd><a href="{0}/oauth/jumpToUnion/type/wechat/ab/1/cooklogin/1" rel="nofollow">微信登录</a></dd>'.format(passportAppUrl)).append('</dl>').append('</div>').append('</div>').append('<div class="topbar-reg"><a target="_blank" href="{1}/reg?action=yes&go_url={0}" rel="nofollow">免费注册</a></div>'.format(url, passportAppUrl));
+//            $chklogin.html(nwsb.toString());
+//        }
+//        $quickinfo.show();
+//    }
+//
+//    function chkmsg(lngmsgcnt) {
+//        var $topUserMsg = $('#J_topbar_msg').find('a'), $userMsg = $('.usermsg'), html = '', title = '', klass = '', len = lngmsgcnt.toString().length;
+//        if (lngmsgcnt == 0) {
+//            title = '\u60a8\u6ca1\u6709\u65b0\u7684\u7ad9\u5185\u4fe1\uff01';
+//            $topUserMsg.attr('title', title).addClass('e0');
+//            $userMsg.closest('.usermsg-box').hide();
+//        } else {
+//            if (len == 1) {
+//                html = '<em class="e2">' + lngmsgcnt + '</em>';
+//                klass = 'e2';
+//            } else if (len == 2) {
+//                html = '<em class="e3">' + lngmsgcnt + '</em>';
+//                klass = 'e3';
+//            } else {
+//                html = '<em class="e3">...</em>';
+//                klass = 'e3';
+//            }
+//            title = '\u60a8\u8fd8\u6709' + lngmsgcnt + '\u5c01\u65b0\u7684\u7ad9\u5185\u4fe1\u672a\u67e5\u770b\uff01';
+//            $topUserMsg.attr('title', title).find('span').prepend(html);
+//            setTimeout(function () {
+//                $topUserMsg.addClass(klass);
+//                $topUserMsg.find('span').animate({'margin-top': '0'}, function () {
+//                    $topUserMsg.find('em').eq(1).remove();
+//                });
+//            }, 500);
+//            $userMsg.text(lngmsgcnt).closest('.usermsg-box').show();
+//        }
+//    }
+//})(jQuery);
 $(function () {
     var $topbar = $('#topbar');
     $topbar.on('mouseenter', '.J-topbar-nav', function () {
@@ -3675,335 +3675,335 @@ $(function () {
         });
     }
 });
-$(function () {
-    var ajaxUrl = "{0}/Client/User/isNewbieGiftAvailable".format(passportAppUrl);
-    var logUrl = "{0}/Client/User/ajaxOpenGift".format(passportAppUrl);
-    var overlaySelector = "J-guys-popover";
-    var showAwardCookie = "51fanli_new_guys_8112";
-    var giveupCookieName = "cngflp_8112";
-    var openedCookieName = "cngflp_redb";
-    var docHref = document.location.href;
-    'prouserid'.getCookie() > 0 && init();
-    function init() {
-        $("body").append('<div id="{0}" class="popover popover-awards" style="display:none;"></div>'.format(overlaySelector));
-        buildOverlay();
-        bindLiveEvents();
-    }
-
-    function buildOverlay(reopen) {
-        if (showAwardCookie.getCookie() == "8112" && giveupCookieName.getCookie() != "1") {
-            $.ajax({url: reopen ? "{0}?status=1&location={1}".format(ajaxUrl, encodeURIComponent(docHref)) : "{0}?location={1}".format(ajaxUrl, encodeURIComponent(docHref)), dataType: "JSONP", jsonp: "jsoncallback", success: function (JSON) {
-                if (JSON.status == "1" || JSON.status == "3") {
-                    var $overlay = $("#{0}".format(overlaySelector));
-                    $overlay.append(JSON.data).find('#J_alipay_input').magnifier().placeholder();
-                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "12%", fixed: false, onClose: function () {
-                        setTimeout(function () {
-                            var $popGuide = $('#pop-guide');
-                            if ($popGuide.data('overlay') && !'home-guide'.getCookie()) {
-                                $popGuide.data('overlay').load();
-                            }
-                        }, 250);
-                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
-                    }}).data("overlay").load();
-                    setTimeout(function () {
-                        bindDynamicEvents();
-                    }, 25);
-                }
-                else if (JSON.status == "4" || JSON.status == "5") {
-                    var $overlay = $("#{0}".format(overlaySelector));
-                    if (JSON.status == "5") {
-                        $overlay.addClass('popover-mvpapp9184');
-                        setTimeout(function () {
-                            $('#newbie-app-qrcode').adloader();
-                        }, 20)
-                    }
-                    $overlay.append(JSON.data);
-                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "12%", fixed: false, onClose: function () {
-                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
-                    }}).data("overlay").load();
-                }
-                else if (JSON.status == "8") {
-                    var $overlay = $("#{0}".format(overlaySelector));
-                    $overlay.addClass('popover-nb10605');
-                    $overlay.append(JSON.data);
-                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "20%", fixed: false, onClose: function () {
-                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
-                    }});
-                    setTimeout(function () {
-                        verc();
-                        $overlay.data("overlay").load();
-                        bindPop10605Event();
-                    }, 25);
-                }
-                else if (JSON.status == "7") {
-                    var $overlay = $("#{0}".format(overlaySelector));
-                    $overlay.addClass('popover-awards-9534').append(JSON.data).find('#J_alipay_input').magnifier().placeholder();
-                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "12%", fixed: false, onClose: function () {
-                        setTimeout(function () {
-                            var $popGuide = $('#pop-guide');
-                            if ($popGuide.data('overlay') && !'home-guide'.getCookie()) {
-                                $popGuide.data('overlay').load();
-                            }
-                        }, 250);
-                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
-                    }}).data("overlay").load();
-                    setTimeout(function () {
-                        bindDynamicEvents(true);
-                    }, 25);
-                }
-                else if (JSON.status == 2 && $.fn.sidebar) {
-                    $("body").append(JSON.data);
-                    $(function () {
-                        var $btmpop = $('#J_newbie_btmpop');
-                        var $btmpopCon = $btmpop.find('.J_expand_con');
-                        var $btmpopOpen = $btmpop.find('.J_expand_newbie');
-                        var $btmpopClose = $("#J_newbie_btmpop_close");
-                        var $btmpopClick = $("#J_newbie_btmpop_click");
-                        var isAnimate = false;
-                        $btmpop.sidebar({min: 0, bottom: 0, relative: false});
-                        $btmpopOpen.click(function () {
-                            if (!isAnimate) {
-                                isAnimate = true;
-                                $btmpopCon.show();
-                                $btmpop.css({width: '703px'});
-                                $btmpopCon.animate({width: '596px'}, 500, function () {
-                                    $btmpop.addClass('newbie-btmpop-expand');
-                                    isAnimate = false;
-                                });
-                            }
-                        })
-                        $btmpopClose.click(function () {
-                            if (!isAnimate) {
-                                isAnimate = true;
-                                $btmpopCon.animate({width: 0}, 500, function () {
-                                    $btmpop.removeClass('newbie-btmpop-expand');
-                                    $btmpopCon.hide();
-                                    isAnimate = false;
-                                });
-                            }
-                        });
-                        $btmpopClick.click(function () {
-                            $btmpop.removeClass('newbie-btmpop-expand');
-                            $btmpopCon.hide();
-                        });
-                    });
-                }
-            }});
-        }
-    }
-
-    function bindPop10605Event() {
-        var $form = $('#J_pop10605form');
-        var $int = $form.find('.J_pop10605_nullv');
-        var $submit = $form.find('.J_submit');
-        var $result = $('#J_pop10605result');
-        var $resultJfbAcc = $result.find('.J_jfb_count');
-        $('#newbie-app-qrcode').adloader();
-        $int.inputNullValidation({triggerFocusEvent: false});
-        $submit.submitWithValidation({postUrl: "{0}/Client/User/ajaxRegistNewbeiInfo2?jsoncallback=?".format(passportAppUrl), postDataNameSelector: '.J_pop10605_tov', mustFillSelector: ".J_pop10605_nullv", isJsonpFormat: true, onSubmitSuccess: function () {
-            $form.hide();
-            $resultJfbAcc.text(this.data);
-            $result.show();
-        }});
-    }
-
-    function bindLiveEvents() {
-        var $doc = $(document);
-        var xhr;
-        $doc.on("click", "#J_envelope_open", function () {
-            if (xhr) {
-                xhr.abort();
-            }
-            xhr = $.ajax({url: logUrl, dataType: "JSONP", jsonp: "jsoncallback", success: function (result) {
-                if (result.status == 1) {
-                    $(".J_jfb_count").text(result.data);
-                    $("#J_awards_first_row").hide();
-                    $("#J_awards_second_row").show();
-                }
-            }});
-            return false;
-        });
-    }
-
-    function bindDynamicEvents(secondRowChangeW) {
-        var $inputAlipay = $('#J_alipay_input');
-        var $inputContact = $('#J_contact_input');
-        var $inputAlipayTip = $('#J_alipay_input_tip');
-        var $sbGet = $("#J_sb_get");
-        var mvp = $sbGet.data('mvp') == 1 ? true : false;
-        $(".nullv").inputNullValidation();
-        $sbGet.submitWithValidation({postUrl: "{0}/Client/User/ajaxRegistNewbeiInfo?jsoncallback=?".format(passportAppUrl), isJsonpFormat: true, onSubmitSuccess: function () {
-            if (mvp) {
-                $(".J_jfb_count").text(this.data);
-                $("#J_awards_first_row").hide();
-                if (typeof secondRowChangeW != 'undefined' && secondRowChangeW) {
-                    $("#{0}".format(overlaySelector)).css({'width': 550, 'margin-top': 50});
-                    $(window).trigger('resize');
-                }
-                $("#J_awards_second_row").show();
-            } else {
-                $("#J_push_get_msg_row").remove();
-                $("#J_awards_second_row").hide();
-                $("#J_awards_fourth_row").show();
-            }
-        }, onSubmitError: function () {
-            verc();
-        }});
-        $inputAlipay.blur(function () {
-            var vAli = $.trim($inputAlipay.val());
-            if (InputValidation.isEmail(vAli)) {
-                $inputContact.val('').attr({'placeholder': '请填写您的手机号', 'data-type': 'cellphone'}).placeholder();
-            } else {
-                var val = $inputContact.data('val');
-                if (val) {
-                    $inputContact.val(val);
-                }
-                $inputContact.attr({'placeholder': '请填写您的常用邮箱', 'data-type': 'mail'}).placeholder();
-            }
-        });
-        if ($inputAlipayTip.length > 0) {
-            $inputAlipay.on('blur.hidetip', function () {
-                $inputAlipayTip.hide();
-            });
-            $inputAlipay.on('focus.showtip', function () {
-                $inputAlipayTip.show();
-            });
-        }
-    }
-
-    function verc() {
-        setTimeout(function () {
-            $("#codeimg").attr("src", verifyCodeImageUrl + (new Date()).getTime());
-        }, 25);
-        return false;
-    }
-
-    window.verc = verc;
-});
-(function () {
-    "use strict";
-    var $window = $(window);
-    var contentUrl = "{0}/magicbar/user/customService?jsoncallback=?".format(passportAppUrl);
-    var jsUrl = "http://static2.51fanli.net/static/?f=common/js/module/magicbar/magicbarbase.js,common/js/module/magicbar/customservice.js";
-    var v = parseInt(new Date().getTime() / 300000);
-    var csInstance;
-    var triggerOffsetOriginal;
-    var postData = {};
-    $(document).on("click", ".J-mbar-mod-cs-show", function (ev) {
-        ev.preventDefault();
-        var $this = $(this);
-        triggerOffsetOriginal = $this.offset();
-        postData.klass = $this.data("klass");
-        if (csInstance) {
-            csInstance.trigger = $this;
-            resetModPosition();
-            csInstance.view.show();
-            return;
-        } else {
-            buildDom($this);
-        }
-    }).on('click', '.J-mbar-mod-cs-close', function () {
-        if (csInstance) {
-            csInstance.view.hide();
-        }
-    });
-    function buildDom($trigger) {
-        $.getCacheJSONP(contentUrl, postData).done(function (res) {
-            if (!res.status) {
-                return;
-            }
-            var $view = $(res.data).appendTo("body");
-            setTimeout(function () {
-                $.ajax({url: "{0}&v={1}".format(jsUrl, v), dataType: "script", cache: true}).done(function () {
-                    csInstance = new MagicBarCustomService();
-                    csInstance.view = $view;
-                    csInstance.trigger = $trigger;
-                    resetModPosition();
-                    csInstance.setup();
-                    csInstance.view.show();
-                });
-            }, 0);
-        });
-    }
-
-    function resetModPosition() {
-        var viewWidth = 350;
-        var viewHeight = $('.J-mbar-msg-box-cs').height() || 300;
-        var $view = csInstance.view;
-        var $trigger = csInstance.trigger;
-        var triggerOffset = $trigger.offset().top ? $trigger.offset() : triggerOffsetOriginal;
-        var triggerWidth = $trigger.outerWidth(true);
-        var triggerHeight = $trigger.outerHeight(true);
-        var winScrollTop = $(window).scrollTop();
-        var winScrollLeft = $(window).scrollLeft();
-        var targetLeft;
-        var targetTop;
-        var upDistance = triggerOffset.top - winScrollTop;
-        var downDistance = winScrollTop + $(window).height() - triggerOffset.top - triggerHeight;
-        var leftDistance = triggerOffset.left - winScrollLeft;
-        var rightDistance = winScrollLeft + $(window).width() - triggerOffset.left - triggerWidth;
-        targetTop = upDistance > downDistance ? triggerOffset.top - viewHeight : triggerOffset.top + triggerHeight;
-        targetLeft = leftDistance > rightDistance ? triggerOffset.left - viewWidth : triggerOffset.left;
-        $view.css({"left": targetLeft + "px", 'top': targetTop + "px"});
-    }
-}());
-utmtOps.done(function () {
-    (function ($) {
-        quanmama.ABTest = (function () {
-            var separator = "-";
-            var $topbar = $("#topbar");
-            var abTestCookieName = "__utmt";
-            var abTestCookieValue = abTestCookieName.getCookie();
-            var abTestCookieValueArr = abTestCookieValue ? abTestCookieValue.split(separator) : [];
-            var abTestTopbarValue = $topbar.data("betatest");
-            var hasABTestTopbarValue = $topbar.length > 0 && !!abTestTopbarValue;
-            var abTestTopbarValueArr = hasABTestTopbarValue ? abTestTopbarValue.split(separator) : [];
-
-            function _getMvpCookie(storyId) {
-                var returnValue = "";
-                var tryReg;
-                if (!abTestCookieValue || !storyId) {
-                    return returnValue;
-                }
-                tryReg = abTestCookieValue.match(new RegExp(storyId + "[a-zA-Z]"));
-                if (tryReg) {
-                    returnValue = tryReg[0];
-                }
-                return returnValue;
-            }
-
-            function _clearMvpCookies() {
-                if (hasABTestTopbarValue && abTestTopbarValue == "deleteab") {
-                    abTestCookieName.setCookie("0", -1, quanmama.Utility.rootDomain, "/");
-                    return;
-                }
-                var temObj = {};
-                var finalArr = [];
-                if (abTestCookieValueArr.length == 0 || abTestTopbarValueArr.length == 0) {
-                    return;
-                }
-                for (var i = 0, len = abTestCookieValueArr.length; i < len; ++i) {
-                    var tem = abTestCookieValueArr[i];
-                    var tryReg = tem.match(/^(\d*)([a-zA-Z])$/);
-                    if (tryReg) {
-                        temObj[tryReg[1]] = tem;
-                    }
-                }
-                for (var j = 0, jlen = abTestTopbarValueArr.length; j < jlen; ++j) {
-                    var temp = abTestTopbarValueArr[j];
-                    var tryItem = temObj[temp];
-                    if (tryItem) {
-                        finalArr.push(tryItem);
-                    }
-                }
-                abTestCookieName.setCookie(finalArr.join(separator), 365, quanmama.Utility.rootDomain, "/");
-            }
-
-            return{getMvpCookie: _getMvpCookie, clearMvpCookies: _clearMvpCookies}
-        }());
-    }(jQuery, FLNS.register("quanmama.ABTest")));
-    quanmama.ABTest.clearMvpCookies();
-});
+//$(function () {
+//    var ajaxUrl = "{0}/Client/User/isNewbieGiftAvailable".format(passportAppUrl);
+//    var logUrl = "{0}/Client/User/ajaxOpenGift".format(passportAppUrl);
+//    var overlaySelector = "J-guys-popover";
+//    var showAwardCookie = "51fanli_new_guys_8112";
+//    var giveupCookieName = "cngflp_8112";
+//    var openedCookieName = "cngflp_redb";
+//    var docHref = document.location.href;
+//    'prouserid'.getCookie() > 0 && init();
+//    function init() {
+//        $("body").append('<div id="{0}" class="popover popover-awards" style="display:none;"></div>'.format(overlaySelector));
+//        buildOverlay();
+//        bindLiveEvents();
+//    }
+//
+//    function buildOverlay(reopen) {
+//        if (showAwardCookie.getCookie() == "8112" && giveupCookieName.getCookie() != "1") {
+//            $.ajax({url: reopen ? "{0}?status=1&location={1}".format(ajaxUrl, encodeURIComponent(docHref)) : "{0}?location={1}".format(ajaxUrl, encodeURIComponent(docHref)), dataType: "JSONP", jsonp: "jsoncallback", success: function (JSON) {
+//                if (JSON.status == "1" || JSON.status == "3") {
+//                    var $overlay = $("#{0}".format(overlaySelector));
+//                    $overlay.append(JSON.data).find('#J_alipay_input').magnifier().placeholder();
+//                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "12%", fixed: false, onClose: function () {
+//                        setTimeout(function () {
+//                            var $popGuide = $('#pop-guide');
+//                            if ($popGuide.data('overlay') && !'home-guide'.getCookie()) {
+//                                $popGuide.data('overlay').load();
+//                            }
+//                        }, 250);
+//                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
+//                    }}).data("overlay").load();
+//                    setTimeout(function () {
+//                        bindDynamicEvents();
+//                    }, 25);
+//                }
+//                else if (JSON.status == "4" || JSON.status == "5") {
+//                    var $overlay = $("#{0}".format(overlaySelector));
+//                    if (JSON.status == "5") {
+//                        $overlay.addClass('popover-mvpapp9184');
+//                        setTimeout(function () {
+//                            $('#newbie-app-qrcode').adloader();
+//                        }, 20)
+//                    }
+//                    $overlay.append(JSON.data);
+//                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "12%", fixed: false, onClose: function () {
+//                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
+//                    }}).data("overlay").load();
+//                }
+//                else if (JSON.status == "8") {
+//                    var $overlay = $("#{0}".format(overlaySelector));
+//                    $overlay.addClass('popover-nb10605');
+//                    $overlay.append(JSON.data);
+//                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "20%", fixed: false, onClose: function () {
+//                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
+//                    }});
+//                    setTimeout(function () {
+//                        verc();
+//                        $overlay.data("overlay").load();
+//                        bindPop10605Event();
+//                    }, 25);
+//                }
+//                else if (JSON.status == "7") {
+//                    var $overlay = $("#{0}".format(overlaySelector));
+//                    $overlay.addClass('popover-awards-9534').append(JSON.data).find('#J_alipay_input').magnifier().placeholder();
+//                    $overlay.overlay({fixed: false, closeOnClick: false, closeOnEsc: false, speed: 200, top: "12%", fixed: false, onClose: function () {
+//                        setTimeout(function () {
+//                            var $popGuide = $('#pop-guide');
+//                            if ($popGuide.data('overlay') && !'home-guide'.getCookie()) {
+//                                $popGuide.data('overlay').load();
+//                            }
+//                        }, 250);
+//                        openedCookieName.setCookie("0", 1, quanmama.Utility.rootDomain, "/");
+//                    }}).data("overlay").load();
+//                    setTimeout(function () {
+//                        bindDynamicEvents(true);
+//                    }, 25);
+//                }
+//                else if (JSON.status == 2 && $.fn.sidebar) {
+//                    $("body").append(JSON.data);
+//                    $(function () {
+//                        var $btmpop = $('#J_newbie_btmpop');
+//                        var $btmpopCon = $btmpop.find('.J_expand_con');
+//                        var $btmpopOpen = $btmpop.find('.J_expand_newbie');
+//                        var $btmpopClose = $("#J_newbie_btmpop_close");
+//                        var $btmpopClick = $("#J_newbie_btmpop_click");
+//                        var isAnimate = false;
+//                        $btmpop.sidebar({min: 0, bottom: 0, relative: false});
+//                        $btmpopOpen.click(function () {
+//                            if (!isAnimate) {
+//                                isAnimate = true;
+//                                $btmpopCon.show();
+//                                $btmpop.css({width: '703px'});
+//                                $btmpopCon.animate({width: '596px'}, 500, function () {
+//                                    $btmpop.addClass('newbie-btmpop-expand');
+//                                    isAnimate = false;
+//                                });
+//                            }
+//                        })
+//                        $btmpopClose.click(function () {
+//                            if (!isAnimate) {
+//                                isAnimate = true;
+//                                $btmpopCon.animate({width: 0}, 500, function () {
+//                                    $btmpop.removeClass('newbie-btmpop-expand');
+//                                    $btmpopCon.hide();
+//                                    isAnimate = false;
+//                                });
+//                            }
+//                        });
+//                        $btmpopClick.click(function () {
+//                            $btmpop.removeClass('newbie-btmpop-expand');
+//                            $btmpopCon.hide();
+//                        });
+//                    });
+//                }
+//            }});
+//        }
+//    }
+//
+//    function bindPop10605Event() {
+//        var $form = $('#J_pop10605form');
+//        var $int = $form.find('.J_pop10605_nullv');
+//        var $submit = $form.find('.J_submit');
+//        var $result = $('#J_pop10605result');
+//        var $resultJfbAcc = $result.find('.J_jfb_count');
+//        $('#newbie-app-qrcode').adloader();
+//        $int.inputNullValidation({triggerFocusEvent: false});
+//        $submit.submitWithValidation({postUrl: "{0}/Client/User/ajaxRegistNewbeiInfo2?jsoncallback=?".format(passportAppUrl), postDataNameSelector: '.J_pop10605_tov', mustFillSelector: ".J_pop10605_nullv", isJsonpFormat: true, onSubmitSuccess: function () {
+//            $form.hide();
+//            $resultJfbAcc.text(this.data);
+//            $result.show();
+//        }});
+//    }
+//
+//    function bindLiveEvents() {
+//        var $doc = $(document);
+//        var xhr;
+//        $doc.on("click", "#J_envelope_open", function () {
+//            if (xhr) {
+//                xhr.abort();
+//            }
+//            xhr = $.ajax({url: logUrl, dataType: "JSONP", jsonp: "jsoncallback", success: function (result) {
+//                if (result.status == 1) {
+//                    $(".J_jfb_count").text(result.data);
+//                    $("#J_awards_first_row").hide();
+//                    $("#J_awards_second_row").show();
+//                }
+//            }});
+//            return false;
+//        });
+//    }
+//
+//    function bindDynamicEvents(secondRowChangeW) {
+//        var $inputAlipay = $('#J_alipay_input');
+//        var $inputContact = $('#J_contact_input');
+//        var $inputAlipayTip = $('#J_alipay_input_tip');
+//        var $sbGet = $("#J_sb_get");
+//        var mvp = $sbGet.data('mvp') == 1 ? true : false;
+//        $(".nullv").inputNullValidation();
+//        $sbGet.submitWithValidation({postUrl: "{0}/Client/User/ajaxRegistNewbeiInfo?jsoncallback=?".format(passportAppUrl), isJsonpFormat: true, onSubmitSuccess: function () {
+//            if (mvp) {
+//                $(".J_jfb_count").text(this.data);
+//                $("#J_awards_first_row").hide();
+//                if (typeof secondRowChangeW != 'undefined' && secondRowChangeW) {
+//                    $("#{0}".format(overlaySelector)).css({'width': 550, 'margin-top': 50});
+//                    $(window).trigger('resize');
+//                }
+//                $("#J_awards_second_row").show();
+//            } else {
+//                $("#J_push_get_msg_row").remove();
+//                $("#J_awards_second_row").hide();
+//                $("#J_awards_fourth_row").show();
+//            }
+//        }, onSubmitError: function () {
+//            verc();
+//        }});
+//        $inputAlipay.blur(function () {
+//            var vAli = $.trim($inputAlipay.val());
+//            if (InputValidation.isEmail(vAli)) {
+//                $inputContact.val('').attr({'placeholder': '请填写您的手机号', 'data-type': 'cellphone'}).placeholder();
+//            } else {
+//                var val = $inputContact.data('val');
+//                if (val) {
+//                    $inputContact.val(val);
+//                }
+//                $inputContact.attr({'placeholder': '请填写您的常用邮箱', 'data-type': 'mail'}).placeholder();
+//            }
+//        });
+//        if ($inputAlipayTip.length > 0) {
+//            $inputAlipay.on('blur.hidetip', function () {
+//                $inputAlipayTip.hide();
+//            });
+//            $inputAlipay.on('focus.showtip', function () {
+//                $inputAlipayTip.show();
+//            });
+//        }
+//    }
+//
+//    function verc() {
+//        setTimeout(function () {
+//            $("#codeimg").attr("src", verifyCodeImageUrl + (new Date()).getTime());
+//        }, 25);
+//        return false;
+//    }
+//
+//    window.verc = verc;
+//});
+//(function () {
+//    "use strict";
+//    var $window = $(window);
+//    var contentUrl = "{0}/magicbar/user/customService?jsoncallback=?".format(passportAppUrl);
+//    var jsUrl = "customservice.js";
+//    var v = parseInt(new Date().getTime() / 300000);
+//    var csInstance;
+//    var triggerOffsetOriginal;
+//    var postData = {};
+//    $(document).on("click", ".J-mbar-mod-cs-show", function (ev) {
+//        ev.preventDefault();
+//        var $this = $(this);
+//        triggerOffsetOriginal = $this.offset();
+//        postData.klass = $this.data("klass");
+//        if (csInstance) {
+//            csInstance.trigger = $this;
+//            resetModPosition();
+//            csInstance.view.show();
+//            return;
+//        } else {
+//            buildDom($this);
+//        }
+//    }).on('click', '.J-mbar-mod-cs-close', function () {
+//        if (csInstance) {
+//            csInstance.view.hide();
+//        }
+//    });
+//    function buildDom($trigger) {
+//        $.getCacheJSONP(contentUrl, postData).done(function (res) {
+//            if (!res.status) {
+//                return;
+//            }
+//            var $view = $(res.data).appendTo("body");
+//            setTimeout(function () {
+//                $.ajax({url: "{0}&v={1}".format(jsUrl, v), dataType: "script", cache: true}).done(function () {
+//                    csInstance = new MagicBarCustomService();
+//                    csInstance.view = $view;
+//                    csInstance.trigger = $trigger;
+//                    resetModPosition();
+//                    csInstance.setup();
+//                    csInstance.view.show();
+//                });
+//            }, 0);
+//        });
+//    }
+//
+//    function resetModPosition() {
+//        var viewWidth = 350;
+//        var viewHeight = $('.J-mbar-msg-box-cs').height() || 300;
+//        var $view = csInstance.view;
+//        var $trigger = csInstance.trigger;
+//        var triggerOffset = $trigger.offset().top ? $trigger.offset() : triggerOffsetOriginal;
+//        var triggerWidth = $trigger.outerWidth(true);
+//        var triggerHeight = $trigger.outerHeight(true);
+//        var winScrollTop = $(window).scrollTop();
+//        var winScrollLeft = $(window).scrollLeft();
+//        var targetLeft;
+//        var targetTop;
+//        var upDistance = triggerOffset.top - winScrollTop;
+//        var downDistance = winScrollTop + $(window).height() - triggerOffset.top - triggerHeight;
+//        var leftDistance = triggerOffset.left - winScrollLeft;
+//        var rightDistance = winScrollLeft + $(window).width() - triggerOffset.left - triggerWidth;
+//        targetTop = upDistance > downDistance ? triggerOffset.top - viewHeight : triggerOffset.top + triggerHeight;
+//        targetLeft = leftDistance > rightDistance ? triggerOffset.left - viewWidth : triggerOffset.left;
+//        $view.css({"left": targetLeft + "px", 'top': targetTop + "px"});
+//    }
+//}());
+//utmtOps.done(function () {
+//    (function ($) {
+//        quanmama.ABTest = (function () {
+//            var separator = "-";
+//            var $topbar = $("#topbar");
+//            var abTestCookieName = "__utmt";
+//            var abTestCookieValue = abTestCookieName.getCookie();
+//            var abTestCookieValueArr = abTestCookieValue ? abTestCookieValue.split(separator) : [];
+//            var abTestTopbarValue = $topbar.data("betatest");
+//            var hasABTestTopbarValue = $topbar.length > 0 && !!abTestTopbarValue;
+//            var abTestTopbarValueArr = hasABTestTopbarValue ? abTestTopbarValue.split(separator) : [];
+//
+//            function _getMvpCookie(storyId) {
+//                var returnValue = "";
+//                var tryReg;
+//                if (!abTestCookieValue || !storyId) {
+//                    return returnValue;
+//                }
+//                tryReg = abTestCookieValue.match(new RegExp(storyId + "[a-zA-Z]"));
+//                if (tryReg) {
+//                    returnValue = tryReg[0];
+//                }
+//                return returnValue;
+//            }
+//
+//            function _clearMvpCookies() {
+//                if (hasABTestTopbarValue && abTestTopbarValue == "deleteab") {
+//                    abTestCookieName.setCookie("0", -1, quanmama.Utility.rootDomain, "/");
+//                    return;
+//                }
+//                var temObj = {};
+//                var finalArr = [];
+//                if (abTestCookieValueArr.length == 0 || abTestTopbarValueArr.length == 0) {
+//                    return;
+//                }
+//                for (var i = 0, len = abTestCookieValueArr.length; i < len; ++i) {
+//                    var tem = abTestCookieValueArr[i];
+//                    var tryReg = tem.match(/^(\d*)([a-zA-Z])$/);
+//                    if (tryReg) {
+//                        temObj[tryReg[1]] = tem;
+//                    }
+//                }
+//                for (var j = 0, jlen = abTestTopbarValueArr.length; j < jlen; ++j) {
+//                    var temp = abTestTopbarValueArr[j];
+//                    var tryItem = temObj[temp];
+//                    if (tryItem) {
+//                        finalArr.push(tryItem);
+//                    }
+//                }
+//                abTestCookieName.setCookie(finalArr.join(separator), 365, quanmama.Utility.rootDomain, "/");
+//            }
+//
+//            return{getMvpCookie: _getMvpCookie, clearMvpCookies: _clearMvpCookies}
+//        }());
+//    }(jQuery, FLNS.register("quanmama.ABTest")));
+//    quanmama.ABTest.clearMvpCookies();
+//});
 (function () {
     quanmama.Common.add("ServiceOnline", function () {
         var $document = $(document);
@@ -4092,72 +4092,72 @@ utmtOps.done(function () {
     }).ServiceOnline();
 })(FLNS.register("quanmama.Common"));
 ;
-$(function () {
-    if ($('#search-form').length > 0) {
-        $.flSearch();
-    }
-});
-;
-(function ($) {
-    var stepsConfig = {login: {contentUrl: "http://passport{0}/light/user/lightlogin".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_login_js.js", ns: "Login"}, bindCellphone: {contentUrl: "http://passport{0}/light/user/lightbindphone".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindcellphone_js.js", ns: "BindCellphone"}, verPhone: {contentUrl: "http://passport{0}/light/user/lightverphone".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_verphone_js.js", ns: "VerPhone"}, bindEmail: {contentUrl: "http://passport{0}/light/user/lightbindmail".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindemail_js.js", ns: "BindEmail"}, bindSafeQuestion: {contentUrl: "http://passport{0}/light/user/lightBindSafeQuestion".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindsafequestion_js.js", ns: "BindSafeQuestion"}, checkSafeQuestion: {contentUrl: "http://passport{0}/light/user/lightchecksafequestion".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_checksafequestion_js.js", ns: "CheckSafeQuestion"}, checkVerifyCode: {contentUrl: "http://passport{0}/light/user/lightcheckverifycode".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_checkverifycode_js.js", ns: "checkVerifyCode"}, inviteRegister: {contentUrl: "http://passport{0}/light/user/lightinviteregister".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_invite_register_js.js", ns: "InviteRegister"}, inviteRegisterForLanding: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding2: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding2".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding3: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding3".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding4: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding4".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding6: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding6".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding10: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding10".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding11: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding11".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding12: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding12".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding13: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding13".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding14: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding14".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding15: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding15".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding16: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding16".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding17: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisnewlanding".format(quanmama.Utility.rootDomain), js: "", ns: ""}, bindIdentify: {contentUrl: "http://passport{0}/light/user/lightBindIdentify".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindidentify_js.js", ns: "BindIdentify"}, verIdentify: {contentUrl: "http://passport{0}/light/user/lightVerIdentify".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_veridentify_js.js", ns: "VerIdentify"}, verPayAccount: {contentUrl: "http://passport{0}/light/user/lightVerPayAccount".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_verpayaccount_js.js", ns: "VerPayAccount"}, bindIdentifyAndName: {contentUrl: "http://passport{0}/light/user/lightBindIdentifyAndName".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindidentifyandname_js.js", ns: "BindIdentifyAndName"}};
-    var defaults = {step: "login", overlaySelector: "lightpopup", popWidth: 370, popTop: '15%', onSubmitSuccess: $.noop, onSubmitError: $.noop, postData: {}};
-    $.extend({light: function (options) {
-        var settings = $.extend(true, {}, defaults, options);
-        var os = settings.overlaySelector;
-        var lightNamespace = "Light";
-        var onSubmitSuccess = settings.onSubmitSuccess;
-        var onSubmitError = settings.onSubmitError;
-        var postData = settings.postData;
-        setup();
-        function setup() {
-            var $overlay = $("#{0}".format(os));
-            $overlay.length > 0 ? $overlay.data("overlay").load() : buildOverlay();
-        }
-
-        function buildOverlay() {
-            var $overlay = $("<div id='{0}' style='width:{1}px; zoom:1;background:url(http://static2.51fanli.net/common/images/loading/circle-32.gif) no-repeat #fff center center; height:auto;'></div>".format(os, settings.popWidth)).appendTo("body");
-            $overlay.overlay({closeOnClick: false, closeOnEsc: false, top: settings.popTop, mask: {bgiframe: true}, onBeforeLoad: function () {
-                var $overlay = this.getOverlay();
-                var currentStep = settings.step;
-                var currntObj = stepsConfig[currentStep];
-                $.ajax({url: currntObj.contentUrl, type: "POST", dataType: "jsonp", cache: true, data: postData, jsonp: "jsoncallback", scriptCharset: "utf-8", success: function (result) {
-                    if (result.status = "1") {
-                        $overlay.html(result.data);
-                        if (currntObj.js && currntObj.js != "") {
-                            setTimeout(function () {
-                                if (window[lightNamespace] && window[lightNamespace][currntObj.ns]) {
-                                    onSubmitSuccess.call($overlay);
-                                }
-                                else {
-                                    $.ajax({url: currntObj.js + '?v=' + parseInt(new Date().getTime() / 300000), dataType: 'script', cache: true, scriptCharset: "utf-8", success: function () {
-                                        onSubmitSuccess.call($overlay);
-                                    }});
-                                }
-                            }, 0);
-                        }
-                        else {
-                            onSubmitSuccess.call($overlay);
-                        }
-                    }
-                }, error: function (xhr, ts, et) {
-                    xhr = null;
-                    onSubmitError();
-                }});
-            }, onLoad: function () {
-                var $overlay = this.getOverlay();
-                $overlay.on("click", ".close", function () {
-                    $(this).attr("data-autoload") == "1" ? window.location.reload() : $overlay.data("overlay").close();
-                });
-            }, onClose: function () {
-                var $overlay = this.getOverlay();
-                $overlay.off("click", ".close");
-                $overlay.html('').remove();
-            }}).data("overlay").load();
-        }
-    }});
-    $.extend($.light, {defaults: defaults});
-})(jQuery);
-;
+//$(function () {
+//    if ($('#search-form').length > 0) {
+//        $.flSearch();
+//    }
+//});
+//;
+//(function ($) {
+//    var stepsConfig = {login: {contentUrl: "http://passport{0}/light/user/lightlogin".format(quanmama.Utility.rootDomain), js: "http://json..net/static/passport_light_login_js.js", ns: "Login"}, bindCellphone: {contentUrl: "http://passport{0}/light/user/lightbindphone".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindcellphone_js.js", ns: "BindCellphone"}, verPhone: {contentUrl: "http://passport{0}/light/user/lightverphone".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_verphone_js.js", ns: "VerPhone"}, bindEmail: {contentUrl: "http://passport{0}/light/user/lightbindmail".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindemail_js.js", ns: "BindEmail"}, bindSafeQuestion: {contentUrl: "http://passport{0}/light/user/lightBindSafeQuestion".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindsafequestion_js.js", ns: "BindSafeQuestion"}, checkSafeQuestion: {contentUrl: "http://passport{0}/light/user/lightchecksafequestion".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_checksafequestion_js.js", ns: "CheckSafeQuestion"}, checkVerifyCode: {contentUrl: "http://passport{0}/light/user/lightcheckverifycode".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_checkverifycode_js.js", ns: "checkVerifyCode"}, inviteRegister: {contentUrl: "http://passport{0}/light/user/lightinviteregister".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_invite_register_js.js", ns: "InviteRegister"}, inviteRegisterForLanding: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding2: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding2".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding3: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding3".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding4: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding4".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding6: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding6".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding10: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding10".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding11: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding11".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding12: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding12".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding13: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding13".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding14: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding14".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding15: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding15".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding16: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisterforlanding16".format(quanmama.Utility.rootDomain), js: "", ns: ""}, inviteRegisterForLanding17: {contentUrl: "http://passport{0}/light/user/lightinviteregister?type=lightinviteregisnewlanding".format(quanmama.Utility.rootDomain), js: "", ns: ""}, bindIdentify: {contentUrl: "http://passport{0}/light/user/lightBindIdentify".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindidentify_js.js", ns: "BindIdentify"}, verIdentify: {contentUrl: "http://passport{0}/light/user/lightVerIdentify".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_veridentify_js.js", ns: "VerIdentify"}, verPayAccount: {contentUrl: "http://passport{0}/light/user/lightVerPayAccount".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_verpayaccount_js.js", ns: "VerPayAccount"}, bindIdentifyAndName: {contentUrl: "http://passport{0}/light/user/lightBindIdentifyAndName".format(quanmama.Utility.rootDomain), js: "http://static2.51fanli.net/static/passport_light_bindidentifyandname_js.js", ns: "BindIdentifyAndName"}};
+//    var defaults = {step: "login", overlaySelector: "lightpopup", popWidth: 370, popTop: '15%', onSubmitSuccess: $.noop, onSubmitError: $.noop, postData: {}};
+//    $.extend({light: function (options) {
+//        var settings = $.extend(true, {}, defaults, options);
+//        var os = settings.overlaySelector;
+//        var lightNamespace = "Light";
+//        var onSubmitSuccess = settings.onSubmitSuccess;
+//        var onSubmitError = settings.onSubmitError;
+//        var postData = settings.postData;
+//        setup();
+//        function setup() {
+//            var $overlay = $("#{0}".format(os));
+//            $overlay.length > 0 ? $overlay.data("overlay").load() : buildOverlay();
+//        }
+//
+//        function buildOverlay() {
+//            var $overlay = $("<div id='{0}' style='width:{1}px; zoom:1;background:url(http://static2.51fanli.net/common/images/loading/circle-32.gif) no-repeat #fff center center; height:auto;'></div>".format(os, settings.popWidth)).appendTo("body");
+//            $overlay.overlay({closeOnClick: false, closeOnEsc: false, top: settings.popTop, mask: {bgiframe: true}, onBeforeLoad: function () {
+//                var $overlay = this.getOverlay();
+//                var currentStep = settings.step;
+//                var currntObj = stepsConfig[currentStep];
+//                $.ajax({url: currntObj.contentUrl, type: "POST", dataType: "jsonp", cache: true, data: postData, jsonp: "jsoncallback", scriptCharset: "utf-8", success: function (result) {
+//                    if (result.status = "1") {
+//                        $overlay.html(result.data);
+//                        if (currntObj.js && currntObj.js != "") {
+//                            setTimeout(function () {
+//                                if (window[lightNamespace] && window[lightNamespace][currntObj.ns]) {
+//                                    onSubmitSuccess.call($overlay);
+//                                }
+//                                else {
+//                                    $.ajax({url: currntObj.js + '?v=' + parseInt(new Date().getTime() / 300000), dataType: 'script', cache: true, scriptCharset: "utf-8", success: function () {
+//                                        onSubmitSuccess.call($overlay);
+//                                    }});
+//                                }
+//                            }, 0);
+//                        }
+//                        else {
+//                            onSubmitSuccess.call($overlay);
+//                        }
+//                    }
+//                }, error: function (xhr, ts, et) {
+//                    xhr = null;
+//                    onSubmitError();
+//                }});
+//            }, onLoad: function () {
+//                var $overlay = this.getOverlay();
+//                $overlay.on("click", ".close", function () {
+//                    $(this).attr("data-autoload") == "1" ? window.location.reload() : $overlay.data("overlay").close();
+//                });
+//            }, onClose: function () {
+//                var $overlay = this.getOverlay();
+//                $overlay.off("click", ".close");
+//                $overlay.html('').remove();
+//            }}).data("overlay").load();
+//        }
+//    }});
+//    $.extend($.light, {defaults: defaults});
+//})(jQuery);
+//;
 (function ($) {
     "use strict";
     FLNS.register("Light.Utility");
