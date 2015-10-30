@@ -2,9 +2,31 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 240px;
+  width: 227px;
   height: 100%;
   z-index: 991;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  /* Firefox 4 */
+  -webkit-transition-timing-function: ease-in-out;
+  /* Safari 和 Chrome */
+  -o-transition-timing-function: ease-in-out;
+  /* Opera */
+}
+#aj-fixed-right-bar .aj-hide {
+  display: none;
+}
+#aj-fixed-right-bar .abody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 #aj-fixed-right-bar .aleft {
   position: absolute;
@@ -48,15 +70,62 @@
   background-repeat: no-repeat;
   background-position: right bottom;
 }
+#aj-fixed-right-bar .aleft .left-ul li {
+  -webkit-user-select: none;
+}
 #aj-fixed-right-bar .aright {
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
+  width: 187px;
   height: 100%;
-  overflow: auto;
   background-color: #333;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #aj-fixed-right-bar .aright .aj-hide {
   display: none;
+}
+#aj-fixed-right-bar .aright .aj-quan-ul .aj-li .aj-info {
+  display: block;
+}
+#aj-fixed-right-bar .aright .aj-quan-ul .aj-li .aj-get {
+  display: none;
+}
+#aj-fixed-right-bar .aright .aj-quan-ul .aj-li .aj-get .aj-btn {
+  display: inline-block;
+  width: 58px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  /* padding-left:40px; */
+  background-color: #f04848;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+#aj-fixed-right-bar .aright .aj-quan-ul .aj-li:hover .aj-info {
+  display: none;
+}
+#aj-fixed-right-bar .aright .aj-quan-ul .aj-li:hover .aj-get {
+  display: block;
+}
+#aj-fixed-right-bar .aright .aj-wait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#aj-fixed-right-bar .aright .aj-wait img {
+  margin-top: 100px;
 }

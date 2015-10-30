@@ -3282,29 +3282,5 @@
 </div>
 
 
-
-<div id="aj-fixed-right-bar" ng-controller="rightBar">
-    <div class="abody">
-        <div class="aleft">
-            <ul class="left-ul">
-                <li style="width:100%;height:32px;"></li>
-                <li class="logo-bg"></li>
-                <li class="atab{{select === $index ? ' aj-select' : ''}}{{$last ? ' no-border' : ''}}" ng-repeat="item in items" ng-click="load(item.url, $index)">
-                    <div class="inside">
-                        <i class="{{item.icon}}" style="{{fontSize}}"></i>
-                        <span ng-bind="item.name" style="line-height: 1.3"></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="aright">
-            <div ng-repeat="item in items" class="acontainer aj-hide {{'container' + $index}}" style="display: {{select === $index ? 'block' : 'none'}};">
-                <span ng-bind-html="item.content"></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 </body>
 </html>

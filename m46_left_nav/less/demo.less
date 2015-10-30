@@ -1,13 +1,33 @@
 #aj-fixed-right-bar{
     position: fixed;
     top:0;right:0;
-    width:240px;height: 100%;
+    @l_w : 40px;
+    @r_w : 187px;
+    width:@l_w + @r_w;height: 100%;
     z-index: 991;
-
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out; /* Firefox 4 */
+    -webkit-transition-timing-function: ease-in-out; /* Safari 和 Chrome */
+    -o-transition-timing-function: ease-in-out; /* Opera */
+    .aj-hide{
+        display: none;
+    }
+    .abody{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     .aleft{
         position: absolute;
         top: 0;left: 0;
-        width: 40px;height: 100%;
+        width: @l_w;height: 100%;
         overflow: hidden;
 
         .logo-bg{
@@ -44,19 +64,71 @@
             background-image: url(../images/i-logo.png);
             background-repeat: no-repeat;
             background-position: right bottom;
+            li{
+                -webkit-user-select:none;
+            }
         }
     }
     .aright{
         position: absolute;
         top:0;right: 0;
-        width: 200px;height: 100%;
-        overflow: auto;
+        width: @r_w;height: 100%;
+
         background-color: #333;
+        overflow-x: hidden;
+        overflow-y: auto;
 
         .aj-hide{
             display: none;
         }
+        .aj-quan-ul{
+            .aj-li{
+                .aj-info{
+                    display: block;
+                }
+                .aj-get{
+                    display: none;
+                    .aj-btn{
+                        display: inline-block;
+                        width: 58px;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 10px;
+                        /* padding-left:40px; */
+                        background-color:#f04848;
+                        color:#fff;
+                        -webkit-border-radius:2px;
+                        -moz-border-radius:2px;
+                        -ms-border-radius:2px;
+                        -o-border-radius:2px;
+                        border-radius:2px;
+                        font-size: 12px;
+                    }
+                }
+                &:hover{
+                    .aj-info{
+                        display: none;
+                    }
+                    .aj-get{
+                        display: block;
+                    }
+                }
+            }
+        }
 
-
+        .aj-wait{
+            position: absolute;
+            top: 0;left: 0;
+            z-index: 9;
+            width:100%;
+            height: 100%;
+            text-align: center;
+            background-color: white;
+            opacity: 0.5;
+            filter:alpha(opacity=50);
+            img{
+                margin-top: 100px;
+            }
+        }
     }
 }
