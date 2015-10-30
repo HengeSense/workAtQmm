@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 <body>
+
+<div id="aj-container" ng-controller="words">
+    <ul>
+        <li ng-repeat="w in words">
+            <span ng-bind="w.word" data-url="{{w.url}}"></span>
+        </li>
+    </ul>
+</div>
+
+<script src="js/demo.js"></script>
 
 </body>
 </html>
