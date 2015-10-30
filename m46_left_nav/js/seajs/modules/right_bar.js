@@ -11,21 +11,21 @@ define(function (require, exports, module) {
             $(document.body).append(temp_view);
         },
         bootstrap: function () {
-            var app = angular.module("rightBar", ['ngSanitize']),
+            var app = angular.module("rightBar", ['ngSanitize']), //
                 div = $('#aj-fixed-right-bar'),
                 wrap = div.find('.aright');
             app.controller("rightBar", function ($scope, $http) {
-                $scope.fontSize = "20px";
-                $scope.root = "/html/1111/";
-                $scope.container = null;
-                $scope.select = 0;
-                $scope.isShow = false;
-                $scope.rightWidth = 187;
-                $scope.isLoad = false;
-                $scope.logoHeight = 304; // 235 ~ 304
-                $scope.isVisible = true;
+                $scope.fontSize = "20px";       // font字体大小
+                $scope.root = "/html/1111/";    // 加载html的目录
+//                $scope.container = null;
+                $scope.select = -1;             // 选中哪一个tab (默认不选中)
+                $scope.isShow = false;          // 是否展示右侧
+                $scope.rightWidth = 187;        // 右侧宽度
+                $scope.isLoad = false;          // 是否正在加载中
+                $scope.logoHeight = 304;        // 235 ~ 304
+                $scope.isVisible = true;        // 当前模块是否可见
 
-                $scope.items = [
+                $scope.items = [    // Tabs
                     {
                         icon: 'qmm-icon-view_quilt',
                         name: '会场导航',
@@ -46,10 +46,8 @@ define(function (require, exports, module) {
                     }
                 ];
 
-
-
-                $scope.load = function (url, index) {
-                    url = url || $scope.items[$scope.select].url;
+                $scope.load = function (url, index) {   // 加载相应tab的html
+                    url = url || $scope.items[index].url;
                     if ($scope.items[index].content === "") {
                         $scope.isLoad = true;
                         $http.get(this.root + url).success(function (res) {
@@ -67,22 +65,22 @@ define(function (require, exports, module) {
                         $scope.isShow = true;
                     }
                     $scope.select = index;
-                };
+                };// 控制tabs的切换样式
+
                 $scope.mustShow = function () {
                     if ($scope.select === -1) {
                         $scope.select = 0;
-                        $scope.load("", 0);
+                        $scope.load(null, 0);
                     }
                     $scope.isShow = true;
                 };
 
                 $scope.resizeLogoheight = function () {
-
-                };
-
-                $(window).onresize = function () {
-                    $scope.resizeLogoheight();
-                }
+                    if ($(window).height() < 828) {
+                        $scope.logoHeight = 235;
+                    }
+                }; // 调整Logo高度,适应小屏幕电脑
+                $scope.resizeLogoheight();
 
             });
             angular.bootstrap(div, ['rightBar']);
