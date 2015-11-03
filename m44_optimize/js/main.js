@@ -142,8 +142,6 @@ Youhui.common = {
             return true;
         }
     }, //user end
-
-
     marquee: {
         init: function () {
             if ($('.sidebar_f').length > 0) {
@@ -178,7 +176,6 @@ Youhui.common = {
             }
         }
     },
-
     error: {
         init: function (url, title) {
             var content = "<div id='test'><div class='d_content d_c_s'><ul class='clear'>";
@@ -312,8 +309,7 @@ Youhui.common = {
                 $(".search_hot_coupon").hide();
             }
             else {
-                //                $("#searchform").attr("action", "/search/");
-                $("#searchform").attr("action", "/zhisearch/");
+                $("#searchform").attr("action", "/search/");
 
                 $search_input.attr("pre", $(".searchtype_coupon").attr("keywords"));
                 if ($search_input.val().length == 0) {
@@ -321,18 +317,18 @@ Youhui.common = {
                 }
             }
 
-            //            //点击搜索框
-            //            $search_input.on('click', function () {
-            //                if ($(this).attr("pre") == $(this).val()) {
-            //                    $(this).css("color", "#000000");
-            //                    $(this).val('');
-            //                }
-            //            }).on("blur", function () {
-            //                if ($(this).val() == '') {
-            //                    $(this).css("color", "#cccccc");
-            //                    $(this).val($(this).attr("pre"));
-            //                }
-            //            });
+            //点击搜索框
+            $search_input.on('click', function () {
+                if ($(this).attr("pre") == $(this).val()) {
+                    $(this).css("color", "#000000");
+                    $(this).val('');
+                }
+            }).on("blur", function () {
+                if ($(this).val() == '') {
+                    $(this).css("color", "#cccccc");
+                    $(this).val($(this).attr("pre"));
+                }
+            });
 
             //查找
             $("#search_button").click(function () {
@@ -351,60 +347,60 @@ Youhui.common = {
                 }
             });
 
-            //            $(".search_container").on("mouseover", function () {
-            //                $(".search_container").addClass("search_container-over");
-            //            }).mouseout(function () {
-            //                $(".search_container").removeClass("search_container-over");
-            //            });
+            $(".search_container").on("mouseover", function () {
+                $(".search_container").addClass("search_container-over");
+            }).mouseout(function () {
+                $(".search_container").removeClass("search_container-over");
+            });
 
-            //            $(".searchtype_coupon,.searchtype_zdm").on("click", function () {
-            //                $this = $(this);
-            //                if ($this.attr("rel") == "zdm") {
-            //                    if ($this.hasClass("searchbox_tab-current")) {
-            //                        return;
-            //                    }
-            //
-            //                    //从优惠券转换为zdm搜索
-            //                    $("#searchform").attr("action", "/zhisearch/");
-            //
-            //                    if ($search_input.attr("pre") == $search_input.val()) {
-            //                        $search_input.val($this.attr("keywords"));
-            //                    }
-            //
-            //                    $search_input.attr("pre", $this.attr("keywords"));
-            //
-            //                    var tmp = $this.clone();
-            //                    var pre = $this.prev();
-            //                    $this.remove();
-            //                    pre.removeClass("searchbox_tab-current").before(tmp.addClass("searchbox_tab-current"));
-            //
-            //                    $(".search_hot_zdm").show();
-            //                    $(".search_hot_coupon").hide();
-            //
-            //                } else {
-            //                    if ($this.hasClass("searchbox_tab-current")) {
-            //                        return;
-            //                    }
-            //
-            //                    $("#searchform").attr("action", "/search/");
-            //
-            //                    if ($search_input.attr("pre") == $search_input.val()) {
-            //                        $search_input.val($this.attr("keywords"));
-            //                    }
-            //
-            //                    $search_input.attr("pre", $this.attr("keywords"));
-            //
-            //                    var tmp = $this.clone();
-            //                    var pre = $this.prev();
-            //                    $this.remove();
-            //                    pre.removeClass("searchbox_tab-current").before(tmp.addClass("searchbox_tab-current"));
-            //
-            //                    $(".search_hot_zdm").hide();
-            //                    $(".search_hot_coupon").show();
-            //                }
-            //
-            //                $(".search_container").removeClass("search_container-over");
-            //            });
+            $(".searchtype_coupon,.searchtype_zdm").on("click", function () {
+                $this = $(this);
+                if ($this.attr("rel") == "zdm") {
+                    if ($this.hasClass("searchbox_tab-current")) {
+                        return;
+                    }
+
+                    //从优惠券转换为zdm搜索
+                    $("#searchform").attr("action", "/zhisearch/");
+
+                    if ($search_input.attr("pre") == $search_input.val()) {
+                        $search_input.val($this.attr("keywords"));
+                    }
+
+                    $search_input.attr("pre", $this.attr("keywords"));
+
+                    var tmp = $this.clone();
+                    var pre = $this.prev();
+                    $this.remove();
+                    pre.removeClass("searchbox_tab-current").before(tmp.addClass("searchbox_tab-current"));
+
+                    $(".search_hot_zdm").show();
+                    $(".search_hot_coupon").hide();
+
+                } else {
+                    if ($this.hasClass("searchbox_tab-current")) {
+                        return;
+                    }
+
+                    $("#searchform").attr("action", "/search/");
+
+                    if ($search_input.attr("pre") == $search_input.val()) {
+                        $search_input.val($this.attr("keywords"));
+                    }
+
+                    $search_input.attr("pre", $this.attr("keywords"));
+
+                    var tmp = $this.clone();
+                    var pre = $this.prev();
+                    $this.remove();
+                    pre.removeClass("searchbox_tab-current").before(tmp.addClass("searchbox_tab-current"));
+
+                    $(".search_hot_zdm").hide();
+                    $(".search_hot_coupon").show();
+                }
+
+                $(".search_container").removeClass("search_container-over");
+            });
 
             if ($search_input.val().length > 0 && $search_input.attr("pre") != $search_input.val()) {
                 $search_input.css("color", "#000000");
@@ -1253,8 +1249,7 @@ Youhui.common = {
 
             //setTimeout(arguments.callee.bind(this), 20000);
         } //check end
-    }//note end
-    ,
+    },//note end
     autocomplete: {
         init: function () {
             $("#search_input").autocomplete("/ajax/search.ashx", {
@@ -1308,16 +1303,16 @@ function homeTab_switch(id, switch_type) {
     }
 }
 
-//今日加载好了，看看是否可以自动切换
-function hometab_load_callback() {
-    var lastchoice_hometab_id = Youhui.tools.cookie("lastchoice_hometab_id");
-
-    if (lastchoice_hometab_id == "2") {
-        if ($(window).scrollTop() <= $(".J_coupon_block").offset().top + 40) {
-            homeTab_switch(2, 1);
-        }
-    }
-}
+////今日加载好了，看看是否可以自动切换
+//function hometab_load_callback() {
+//    var lastchoice_hometab_id = Youhui.tools.cookie("lastchoice_hometab_id");
+//
+//    if (lastchoice_hometab_id == "2") {
+//        if ($(window).scrollTop() <= $(".J_coupon_block").offset().top + 40) {
+//            homeTab_switch(2, 1);
+//        }
+//    }
+//}
 
 $(function () {
     //搜索初始化
@@ -1552,11 +1547,11 @@ $(function () {
     var is_zhihome = (Youhui.PageType === 'zdm');
     var is_haitao = (Youhui.PageType === 'haitao');
 
-    if (is_home) {
-
-        hometab_load_callback();
-
-    }
+//    if (is_home) {
+//
+//        hometab_load_callback();
+//
+//    }
 
     //独立商城，天猫和海淘商家切换
     $(document).on("click", ".slide-nav li", function () {
@@ -1643,20 +1638,20 @@ $(function () {
             var e = ev || window.event,
                 target = e.target || e.srcElement,
                 obj;
-            //bug1
-            if (obj = ajIsParentLi(target)) {
-                var $this = $(obj);
-                $this.addClass("hover");
-                var $ops = $this.find(".ops");
-                if ($ops.attr("load") != "1") {
-                    $ops.attr("load", "1");
-                    var goTemplate = '<a href="' + $this.attr("outlink") + '" target="_blank" class="go-shopping" hidefocus="true">去购物</a>'
-                        + '<a href="' + $this.attr("quanlink") + '" target="_blank"  class="go-detail" hidefocus="true">优惠券</a>';
-
-                    $ops.html(goTemplate);
-                }
-                $ops.attr("style", "bottom: 2px;");
-            }
+//            //bug1
+//            if (obj = ajIsParentLi(target)) {
+//                var $this = $(obj);
+//                $this.addClass("hover");
+//                var $ops = $this.find(".ops");
+//                if ($ops.attr("load") != "1") {
+//                    $ops.attr("load", "1");
+//                    var goTemplate = '<a href="' + $this.attr("outlink") + '" target="_blank" class="go-shopping" hidefocus="true">去购物</a>'
+//                        + '<a href="' + $this.attr("quanlink") + '" target="_blank"  class="go-detail" hidefocus="true">优惠券</a>';
+//
+//                    $ops.html(goTemplate);
+//                }
+//                $ops.attr("style", "bottom: 2px;");
+//            }
             //bug2
             if (obj = ajIsParentPoptipInfo(target)) {
                 $(obj).addClass("hover");
@@ -1666,23 +1661,23 @@ $(function () {
             var e = ev || window.event,
                 target = e.target || e.srcElement,
                 obj;
-            if (obj = ajIsParentLi(target)) {
-                var $this = $(this);
-                $this.removeClass("hover");
-                $this.find(".ops").attr("style", "bottom: -25px;");
-            }
+//            if (obj = ajIsParentLi(target)) {
+//                var $this = $(this);
+//                $this.removeClass("hover");
+//                $this.find(".ops").attr("style", "bottom: -25px;");
+//            }
             if (obj = ajIsParentPoptipInfo(target)) {
                 $(obj).removeClass("hover")
             }
         });
-
-        function ajIsParentLi(target) {
-            var parent = target;
-            while (!$(parent).hasClass('hover-ops') && parent !== document) {
-                parent = parent.parentNode;
-            }
-            return $(parent).hasClass('hover-ops') ? parent : false;
-        }
+//
+//        function ajIsParentLi(target) {
+//            var parent = target;
+//            while (!$(parent).hasClass('hover-ops') && parent !== document) {
+//                parent = parent.parentNode;
+//            }
+//            return $(parent).hasClass('hover-ops') ? parent : false;
+//        }
 
         function ajIsParentPoptipInfo(target) {
             var parent = target;
@@ -1691,7 +1686,6 @@ $(function () {
             }
             return $(parent).hasClass('poptip-info') ? parent : false;
         }
-
 
     }
 
@@ -3317,12 +3311,12 @@ function noMoreList() {
 
 function youhuiListLoad() {
     // 以下url的滚动加载 不在此触发
-    //    var black = ['danpin'];
-    //    for (var i = 0; i < black.length; i++) {
-    //        if (location.pathname.indexOf(black[i]) !== -1) {
-    //            return false;
-    //        }
-    //    }
+//    var black = ['danpin'];
+//    for (var i = 0; i < black.length; i++) {
+//        if (location.pathname.indexOf(black[i]) !== -1) {
+//            return false;
+//        }
+//    }
     // END
     $(".loadingPic").css("display", "block");
 
@@ -3518,12 +3512,12 @@ _gaq.push(['_trackPageview']);
         vars: {
             'locale': 'zh-cn'
         },
-        alias: {
-            'CategoryNavBar': 'CategoryNavBar/index-nav.js',
-            'ninePicRoll': 'ninePic/index.js',
-            'imgsRollX': 'imgsRollX/index.js',
-            'triRanksMostClick': 'triRanksMostClick/index.js',
-            'rightSideFloatFixed': 'rightSideFloatFixed/index.js'
+        alias : {
+            'CategoryNavBar' : 'CategoryNavBar/index-nav.js',
+            'ninePicRoll' : 'ninePic/index.js',
+            'imgsRollX' : 'imgsRollX/index.js',
+            'triRanksMostClick' : 'triRanksMostClick/index.js',
+            'rightSideFloatFixed' : 'rightSideFloatFixed/index.js'
         },
         base: '/js/seajs/module/',
         charset: 'utf-8'
