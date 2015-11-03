@@ -471,7 +471,7 @@ var Youhui = {
     template: function (tplname, data) {	//模板
         return $("#_" + tplname.toUpperCase() + "_TPL_").html().process(data);
     },
-//    dialog: {	//模态框
+    dialog: {	//模态框
 //        init: function (options) {
 //            this.opt = $.extend({
 //                    title: "",
@@ -1036,33 +1036,33 @@ var Youhui = {
 //            _this.show();
 //            return _this;
 //        },
-//        iframe: function (title, options) { //以iframe形式
-//            var _this = this.init();
-//            if (options.url) {
-//                var options = options || {};
-//                if (title) {
-//                    this.opt.title = title;
-//                }
-//                _this.opt.close = {};
-//                _this.opt.mask = true;
-//                _this.opt.content = _this._config.loaddingHtml;
-//                _this.opt.buttons = options.buttons || [];
-//                _this._optionsExtend(_this.opt, options);
-//                _this._init();
-//                _this.show();
-//                $(_this._config.loaddingHtml, _this.dialogBox).remove();
-//                _this.setHtml($('<iframe />', {
-//                    "class": "Iframe_Content",
-//                    "src": options.url,
-//                    "css": {
-//                        "border": "none",
-//                        "width": "100%"
-//                    },
-//                    "frameborder": "0"
-//                }).clone());
-//            }
-//            return _this;
-//        },
+        iframe: function (title, options) { //以iframe形式
+            var _this = this.init();
+            if (options.url) {
+                var options = options || {};
+                if (title) {
+                    this.opt.title = title;
+                }
+                _this.opt.close = {};
+                _this.opt.mask = true;
+                _this.opt.content = _this._config.loaddingHtml;
+                _this.opt.buttons = options.buttons || [];
+                _this._optionsExtend(_this.opt, options);
+                _this._init();
+                _this.show();
+                $(_this._config.loaddingHtml, _this.dialogBox).remove();
+                _this.setHtml($('<iframe />', {
+                    "class": "Iframe_Content",
+                    "src": options.url,
+                    "css": {
+                        "border": "none",
+                        "width": "100%"
+                    },
+                    "frameborder": "0"
+                }).clone());
+            }
+            return _this;
+        },
 //        tooltip: function (tiptype, title, options) {  //提示框
 //            options = $.extend({
 //                mask: false,
@@ -1103,7 +1103,7 @@ var Youhui = {
 //            } .bind(_this));
 //            return _this;
 //        }
-//    },
+    },
     tabs: {	//选项卡
         bind: function (obj, cobj) {
             //普通选项卡切换

@@ -1268,40 +1268,40 @@ Youhui.common = {
     }
 };
 
-function daily_sign() {
-    if (!Youhui.common.user.checklogin()) return false;
+//function daily_sign() {
+//    if (!Youhui.common.user.checklogin()) return false;
+//
+//    $.get("/checkin", function (content) {
+//        Youhui.dialog.iframe("券妈妈每日签到！", { url: "/checkin", width: 600, height: 300, close: {
+//            callback: function () {
+//                window.location.reload();
+//            }
+//        }
+//        });
+//    });
+//}
 
-    $.get("/checkin", function (content) {
-        Youhui.dialog.iframe("券妈妈每日签到！", { url: "/checkin", width: 600, height: 300, close: {
-            callback: function () {
-                window.location.reload();
-            }
-        }
-        });
-    });
-}
-
-//首页今日值得买和热门优惠券切换
-function homeTab_switch(id, switch_type) {
-    var obj = $(".J_HomeTab" + id);
-
-    if (obj.hasClass("current")) {
-        return;
-    } else {
-        $(".J_tab_switch li").removeClass("current");
-        obj.addClass("current");
-
-        $(".hometab").hide();
-
-        $(".hometab" + id).show();
-
-        if (switch_type == 0) {
-            $("html,body").animate({
-                scrollTop: $(".tabDiv").offset().top - 32
-            }, 500);
-        }
-    }
-}
+////首页今日值得买和热门优惠券切换
+//function homeTab_switch(id, switch_type) {
+//    var obj = $(".J_HomeTab" + id);
+//
+//    if (obj.hasClass("current")) {
+//        return;
+//    } else {
+//        $(".J_tab_switch li").removeClass("current");
+//        obj.addClass("current");
+//
+//        $(".hometab").hide();
+//
+//        $(".hometab" + id).show();
+//
+//        if (switch_type == 0) {
+//            $("html,body").animate({
+//                scrollTop: $(".tabDiv").offset().top - 32
+//            }, 500);
+//        }
+//    }
+//}
 
 ////今日加载好了，看看是否可以自动切换
 //function hometab_load_callback() {
@@ -1314,20 +1314,26 @@ function homeTab_switch(id, switch_type) {
 //    }
 //}
 
+// AJ ADD-UNKNOWN
+$(function () {
+
+
+});
+// AJ END
 $(function () {
     //搜索初始化
     Youhui.common.search.init();
 
-    //是否登陆检查
-    $(".J_Login").click(function () {
-        if (!Youhui.common.user.checklogin()) return false;
-    });
+//    //是否登陆检查
+//    $(".J_Login").click(function () {
+//        if (!Youhui.common.user.checklogin()) return false;
+//    });
 
-    //签到按钮
-    $(".J_Sign").click(function () {
-        daily_sign();
-        return false;
-    });
+//    //签到按钮
+//    $(".J_Sign").click(function () {
+//        daily_sign();
+//        return false;
+//    });
 
     //ajax自动加载
     $(".JMyAjax").each(function () {
@@ -1399,6 +1405,7 @@ $(function () {
         });
     }
 
+    // search
     $(document).on('click', "#search_input", function () {
         var $this = $(this);
         if ($this.attr("pre") == $this.val() || $this.val() == '') {
@@ -1419,13 +1426,13 @@ $(function () {
             }, true);
         }
     });
-
     $(document).on('keyup', "#search_input", function () {
         var $this = $(this);
         if ($this.attr("pre") != $this.val() && $this.val().length > 0) {
             $("#search-hot-stores").hide();
         }
     });
+    // search END
 
 
     $("#_QMM_ALLSORT").load("/staticfiles/CategoryGuide.html"); //load("/html/category.html");
@@ -1470,7 +1477,6 @@ $(function () {
                 }
             }
         }
-
         return true;
     });
 
@@ -1520,16 +1526,16 @@ $(function () {
         }
     });
 
-    //今日值得买和热门优惠券切换
-    $(".J_HomeTab1,.J_HomeTab2").click(function () {
-        Youhui.tools.cookie("lastchoice_hometab_id", $(this).attr("data-id"), {
-            path: '/',
-            domain: Youhui.CookieDomain,
-            expires: 1
-        });
-
-        homeTab_switch($(this).attr("data-id"), 0);
-    });
+//    //今日值得买和热门优惠券切换
+//    $(".J_HomeTab1,.J_HomeTab2").click(function () {
+//        Youhui.tools.cookie("lastchoice_hometab_id", $(this).attr("data-id"), {
+//            path: '/',
+//            domain: Youhui.CookieDomain,
+//            expires: 1
+//        });
+//
+//        homeTab_switch($(this).attr("data-id"), 0);
+//    });
 
     if ($(".J_coupon_block").length > 0) {
         $(window).bind("scroll.gotop", function () {
@@ -1543,9 +1549,9 @@ $(function () {
         });
     }
 
-    var is_home = (Youhui.PageType === 'homepage');
-    var is_zhihome = (Youhui.PageType === 'zdm');
-    var is_haitao = (Youhui.PageType === 'haitao');
+//    var is_home = (Youhui.PageType === 'homepage');
+//    var is_zhihome = (Youhui.PageType === 'zdm');
+//    var is_haitao = (Youhui.PageType === 'haitao');
 
 //    if (is_home) {
 //
@@ -1627,12 +1633,12 @@ $(function () {
             $(this).removeClass("item-hover")
         });
 
-        g.find(".list-mall li").on("mouseover", function () {
-            $(this).addClass("hover")
-        }).on("mouseout", function () {
-            g.find(".list-mall").css("z-index", 1);
-            $(this).removeClass("hover")
-        });
+//        g.find(".list-mall li").on("mouseover", function () {
+//            $(this).addClass("hover")
+//        }).on("mouseout", function () {
+//            g.find(".list-mall").css("z-index", 1);
+//            $(this).removeClass("hover")
+//        });
 
         $("#J_nav_site .con").on("mouseover", function (ev) {
             var e = ev || window.event,
@@ -1696,7 +1702,7 @@ $(function () {
         $("." + $selected_nav.attr("id")).show();
     }
 
-
+    // 导航用户登录区域
     $(".cui_myctrip").mouseover(function () {
         $(".cui_account").show();
         $(".cui_myctrip b").addClass("b_h");
@@ -1707,7 +1713,7 @@ $(function () {
         $(".cui_myctrip b").removeClass("b_h");
     });
 
-
+    // NOT FOUND USE
     $(document).on("mouseover", ".rightTabs .tabs li", function () {
         $(this).closest('.rightTabs').find(".tabs li").removeClass("current");
         $(this).addClass("current");
@@ -1724,20 +1730,33 @@ $(function () {
             }
         });
     });
-
-
-
-
     $(".share_box").hover(function () {
         $(this).find(".more_share").show();
     }, function () {
         $(this).find(".more_share").hide();
     });
 
-
     $(document).on("click", ".rightTabs li a", function () {
         _gaq.push(["_trackEvent", "今日值得买", "值得买榜单", jQuery(this).text()]);
     });
+    $(document).on("click", ".bannerclick", function () {
+        var $this = $(this);
+
+        var cookie_key = $this.attr("key");
+        if (cookie_key && cookie_key.length > 0) {
+            Youhui.tools.cookie(cookie_key, "1", {
+                path: '/',
+                domain: Youhui.CookieDomain,
+                expires: 259200
+            });
+        }
+
+        $this.hide();
+
+        return true;
+    });
+    // NOT FOUND USE END
+
 
     $(".logoimg").each(function () {
         $(this).bind("error", function () {
@@ -1750,7 +1769,6 @@ $(function () {
             this.src = "http://www.quanmama.com/ImageUpload/2013725192533347.jpg";
         });
     });
-
 
     if ($.browser.msie) {
         if ($.browser.version == '6.0') {
@@ -1780,22 +1798,6 @@ $(function () {
         }
     });
 
-    $(document).on("click", ".bannerclick", function () {
-        var $this = $(this);
-
-        var cookie_key = $this.attr("key");
-        if (cookie_key && cookie_key.length > 0) {
-            Youhui.tools.cookie(cookie_key, "1", {
-                path: '/',
-                domain: Youhui.CookieDomain,
-                expires: 259200
-            });
-        }
-
-        $this.hide();
-
-        return true;
-    });
 
     $(".clickhide").on("click", function () {
         $(this).hide();
