@@ -1,0 +1,9 @@
+#p{
+    font-weight: bold;
+    color: lightblue;
+    font-size: 30px;
+    /* font-weight: bold; */
+    display: inline-block;
+    background-color: lightcyan;
+    border-radius: 2px;
+}
