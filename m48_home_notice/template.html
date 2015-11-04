@@ -13,38 +13,35 @@
         position:fixed;
         z-index:999;
         bottom:140px;left:10px;
-        border : 2px solid #aaa;
-        background-color:White;
-        width:80px;
-        transition:all 0.3s;
-        max-height:300px;
-        overflow-y:auto;
     }
     #aj-home-impor-mess.aj-hide{display:none;}
     #aj-home-impor-mess .aj-hide{display:none;}
-    #aj-home-impor-mess.hide{width:80px;}
-    #aj-home-impor-mess.show{width:170px;}
-    #aj-home-impor-mess .top{height:20px;background-color:#ccc;text-align:center;}
-    #aj-home-impor-mess .foot{height:20px;background-color:#ccc;}
-    #aj-home-impor-mess .ul{padding:10px;}
-    #aj-home-impor-mess .ul .li{line-height:20px;}
+    .aj-home-impor-mess
+    {
+        border : 2px solid #aaa;
+        background-color:White;
+        width:200px;
+        transition:all 0.3s;
+        max-height:300px;
+        overflow-y:auto;
+        margin:5px 0;
+    }
+    .aj-home-impor-mess .aj-hide{display:none;}
+    .aj-home-impor-mess .top{height:20px;background-color:#ccc;text-align:center;}
+    .aj-home-impor-mess .top a:hover{text-decoration:underline;}
+    .aj-home-impor-mess .foot{height:20px;background-color:#ccc;}
+    .aj-home-impor-mess .ul{padding:10px;}
+    .aj-home-impor-mess .ul .li{line-height:20px;}
+    .aj-home-impor-mess .mid .content{word-wrap:break-word;word-break:break-all;display:block;padding:5px;}
 </style>
-
-<div id="aj-home-impor-mess" ng-controller="impMess" class='aj-hide' ng-class="(isShowUl) ? 'show' : 'hide'" ng-style="{display: (lists.length > 0) ? 'block' : 'none'}">
-    <div class="top" ng-click="isShowUl = !isShowUl">
-        重要消息
-        (<span ng-bind="lists.length"></span>)
-    </div>
-    <div class="mid">
-        <ul class="ul" ng-style="{display : (isShowUl ? 'block' : 'none')}">
-            <li class="li" ng-repeat="one in lists">
-                <span ng-bind="$index + 1 + '.'"></span>
-                <a ng-bind-html="one.title" ng-href="{{one.href}}" target="_blank"></a>
-            </li>
-        </ul>
-    </div>
-    <div class="foot aj-hide" ng-style="{display: (isShowUl ? 'block' : 'none')}">
-        <a target="_blank" href="/messagebox?type=notice&importance=important">去通知面板</a>
+<div id="aj-home-impor-mess" ng-controller="impMess" class='aj-hide' ng-style="{display: (lists.length > 0) ? 'block' : 'none'}">
+    <div class="aj-home-impor-mess" ng-repeat="one in lists">
+        <div class="top">
+            <a ng-bind-html="one.title" ng-href="{{one.detail_url}}" target="_blank"></a>
+        </div>
+        <div class="mid">
+            <span class="content" ng-bind-html="one.content"></span>
+        </div>
     </div>
 </div>
 
