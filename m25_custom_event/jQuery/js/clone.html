@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<button>
+    <span>Clone Me!</span>
+</button>
+
+<script src="jquery.js"></script>
+<script>
+    $("button").click(function(){
+        $(this).clone().insertAfter(this);
+    });
+</script>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
-/**
- * 券妈妈公共扩展
- *
- * @author  quanmama
- * @url     http://www.quanmama.com/
- * @name    common.js
- * @since   2011-12-7 21:34:45
- */
+﻿/**
+* 券妈妈公共扩展
+*
+* @author  quanmama
+* @url     http://www.quanmama.com/
+* @name    common.js
+* @since   2011-12-7 21:34:45
+*/
 if (!Array.indexOf) {
     Array.prototype.indexOf = function (obj) {
         for (var i = 0; i < this.length; i++) {
@@ -142,6 +142,8 @@ Youhui.common = {
             return true;
         }
     }, //user end
+
+
     marquee: {
         init: function () {
             if ($('.sidebar_f').length > 0) {
@@ -176,6 +178,7 @@ Youhui.common = {
             }
         }
     },
+
     error: {
         init: function (url, title) {
             var content = "<div id='test'><div class='d_content d_c_s'><ul class='clear'>";
@@ -369,10 +372,9 @@ Youhui.common = {
 
                     $search_input.attr("pre", $this.attr("keywords"));
 
-                    var tmp = $this.clone();
                     var pre = $this.prev();
-                    $this.remove();
-                    pre.removeClass("searchbox_tab-current").before(tmp.addClass("searchbox_tab-current"));
+
+                    pre.removeClass("searchbox_tab-current").before($this.addClass("searchbox_tab-current"));
 
                     $(".search_hot_zdm").show();
                     $(".search_hot_coupon").hide();
@@ -390,10 +392,9 @@ Youhui.common = {
 
                     $search_input.attr("pre", $this.attr("keywords"));
 
-                    var tmp = $this.clone();
                     var pre = $this.prev();
-                    $this.remove();
-                    pre.removeClass("searchbox_tab-current").before(tmp.addClass("searchbox_tab-current"));
+
+                    pre.removeClass("searchbox_tab-current").before($this.addClass("searchbox_tab-current"));
 
                     $(".search_hot_zdm").hide();
                     $(".search_hot_coupon").show();
@@ -1249,7 +1250,7 @@ Youhui.common = {
 
             //setTimeout(arguments.callee.bind(this), 20000);
         } //check end
-    },//note end
+    }, //note end
     autocomplete: {
         init: function () {
             $("#search_input").autocomplete("/ajax/search.ashx", {
@@ -1324,16 +1325,16 @@ $(function () {
     //搜索初始化
     Youhui.common.search.init();
 
-//    //是否登陆检查
-//    $(".J_Login").click(function () {
-//        if (!Youhui.common.user.checklogin()) return false;
-//    });
+    //    //是否登陆检查
+    //    $(".J_Login").click(function () {
+    //        if (!Youhui.common.user.checklogin()) return false;
+    //    });
 
-//    //签到按钮
-//    $(".J_Sign").click(function () {
-//        daily_sign();
-//        return false;
-//    });
+    //    //签到按钮
+    //    $(".J_Sign").click(function () {
+    //        daily_sign();
+    //        return false;
+    //    });
 
     //ajax自动加载
     $(".JMyAjax").each(function () {
@@ -1526,16 +1527,16 @@ $(function () {
         }
     });
 
-//    //今日值得买和热门优惠券切换
-//    $(".J_HomeTab1,.J_HomeTab2").click(function () {
-//        Youhui.tools.cookie("lastchoice_hometab_id", $(this).attr("data-id"), {
-//            path: '/',
-//            domain: Youhui.CookieDomain,
-//            expires: 1
-//        });
-//
-//        homeTab_switch($(this).attr("data-id"), 0);
-//    });
+    //    //今日值得买和热门优惠券切换
+    //    $(".J_HomeTab1,.J_HomeTab2").click(function () {
+    //        Youhui.tools.cookie("lastchoice_hometab_id", $(this).attr("data-id"), {
+    //            path: '/',
+    //            domain: Youhui.CookieDomain,
+    //            expires: 1
+    //        });
+    //
+    //        homeTab_switch($(this).attr("data-id"), 0);
+    //    });
 
     if ($(".J_coupon_block").length > 0) {
         $(window).bind("scroll.gotop", function () {
@@ -1549,15 +1550,15 @@ $(function () {
         });
     }
 
-//    var is_home = (Youhui.PageType === 'homepage');
-//    var is_zhihome = (Youhui.PageType === 'zdm');
-//    var is_haitao = (Youhui.PageType === 'haitao');
+    //    var is_home = (Youhui.PageType === 'homepage');
+    //    var is_zhihome = (Youhui.PageType === 'zdm');
+    //    var is_haitao = (Youhui.PageType === 'haitao');
 
-//    if (is_home) {
-//
-//        hometab_load_callback();
-//
-//    }
+    //    if (is_home) {
+    //
+    //        hometab_load_callback();
+    //
+    //    }
 
     //独立商城，天猫和海淘商家切换
     $(document).on("click", ".slide-nav li", function () {
@@ -1633,31 +1634,31 @@ $(function () {
             $(this).removeClass("item-hover")
         });
 
-//        g.find(".list-mall li").on("mouseover", function () {
-//            $(this).addClass("hover")
-//        }).on("mouseout", function () {
-//            g.find(".list-mall").css("z-index", 1);
-//            $(this).removeClass("hover")
-//        });
+        //        g.find(".list-mall li").on("mouseover", function () {
+        //            $(this).addClass("hover")
+        //        }).on("mouseout", function () {
+        //            g.find(".list-mall").css("z-index", 1);
+        //            $(this).removeClass("hover")
+        //        });
 
         $("#J_nav_site .con").on("mouseover", function (ev) {
             var e = ev || window.event,
                 target = e.target || e.srcElement,
                 obj;
-//            //bug1
-//            if (obj = ajIsParentLi(target)) {
-//                var $this = $(obj);
-//                $this.addClass("hover");
-//                var $ops = $this.find(".ops");
-//                if ($ops.attr("load") != "1") {
-//                    $ops.attr("load", "1");
-//                    var goTemplate = '<a href="' + $this.attr("outlink") + '" target="_blank" class="go-shopping" hidefocus="true">去购物</a>'
-//                        + '<a href="' + $this.attr("quanlink") + '" target="_blank"  class="go-detail" hidefocus="true">优惠券</a>';
-//
-//                    $ops.html(goTemplate);
-//                }
-//                $ops.attr("style", "bottom: 2px;");
-//            }
+            //            //bug1
+            //            if (obj = ajIsParentLi(target)) {
+            //                var $this = $(obj);
+            //                $this.addClass("hover");
+            //                var $ops = $this.find(".ops");
+            //                if ($ops.attr("load") != "1") {
+            //                    $ops.attr("load", "1");
+            //                    var goTemplate = '<a href="' + $this.attr("outlink") + '" target="_blank" class="go-shopping" hidefocus="true">去购物</a>'
+            //                        + '<a href="' + $this.attr("quanlink") + '" target="_blank"  class="go-detail" hidefocus="true">优惠券</a>';
+            //
+            //                    $ops.html(goTemplate);
+            //                }
+            //                $ops.attr("style", "bottom: 2px;");
+            //            }
             //bug2
             if (obj = ajIsParentPoptipInfo(target)) {
                 $(obj).addClass("hover");
@@ -1667,23 +1668,23 @@ $(function () {
             var e = ev || window.event,
                 target = e.target || e.srcElement,
                 obj;
-//            if (obj = ajIsParentLi(target)) {
-//                var $this = $(this);
-//                $this.removeClass("hover");
-//                $this.find(".ops").attr("style", "bottom: -25px;");
-//            }
+            //            if (obj = ajIsParentLi(target)) {
+            //                var $this = $(this);
+            //                $this.removeClass("hover");
+            //                $this.find(".ops").attr("style", "bottom: -25px;");
+            //            }
             if (obj = ajIsParentPoptipInfo(target)) {
                 $(obj).removeClass("hover")
             }
         });
-//
-//        function ajIsParentLi(target) {
-//            var parent = target;
-//            while (!$(parent).hasClass('hover-ops') && parent !== document) {
-//                parent = parent.parentNode;
-//            }
-//            return $(parent).hasClass('hover-ops') ? parent : false;
-//        }
+        //
+        //        function ajIsParentLi(target) {
+        //            var parent = target;
+        //            while (!$(parent).hasClass('hover-ops') && parent !== document) {
+        //                parent = parent.parentNode;
+        //            }
+        //            return $(parent).hasClass('hover-ops') ? parent : false;
+        //        }
 
         function ajIsParentPoptipInfo(target) {
             var parent = target;
@@ -3313,12 +3314,12 @@ function noMoreList() {
 
 function youhuiListLoad() {
     // 以下url的滚动加载 不在此触发
-//    var black = ['danpin'];
-//    for (var i = 0; i < black.length; i++) {
-//        if (location.pathname.indexOf(black[i]) !== -1) {
-//            return false;
-//        }
-//    }
+    //    var black = ['danpin'];
+    //    for (var i = 0; i < black.length; i++) {
+    //        if (location.pathname.indexOf(black[i]) !== -1) {
+    //            return false;
+    //        }
+    //    }
     // END
     $(".loadingPic").css("display", "block");
 
@@ -3514,12 +3515,12 @@ _gaq.push(['_trackPageview']);
         vars: {
             'locale': 'zh-cn'
         },
-        alias : {
-            'CategoryNavBar' : 'CategoryNavBar/index-nav.js',
-            'ninePicRoll' : 'ninePic/index.js',
-            'imgsRollX' : 'imgsRollX/index.js',
-            'triRanksMostClick' : 'triRanksMostClick/index.js',
-            'rightSideFloatFixed' : 'rightSideFloatFixed/index.js'
+        alias: {
+            'CategoryNavBar': 'CategoryNavBar/index-nav.js',
+            'ninePicRoll': 'ninePic/index.js',
+            'imgsRollX': 'imgsRollX/index.js',
+            'triRanksMostClick': 'triRanksMostClick/index.js',
+            'rightSideFloatFixed': 'rightSideFloatFixed/index.js'
         },
         base: '/js/seajs/module/',
         charset: 'utf-8'
@@ -3735,11 +3736,11 @@ $(function () {
 
 
 /*
- * ajax 获取更多列表项
- * 该模块控制页面ajax加载post list
- * 触发条件 : 页面包含 prop.container 标签
- * PPS : main.js还有另一个加载list的模块"youhuiListLoad", 它的触发条件是 $("#channel").length > 0
- * */
+* ajax 获取更多列表项
+* 该模块控制页面ajax加载post list
+* 触发条件 : 页面包含 prop.container 标签
+* PPS : main.js还有另一个加载list的模块"youhuiListLoad", 它的触发条件是 $("#channel").length > 0
+* */
 $(function () {
     var is_inited = 0,
         zdmListForDuplicateCheck = [],
