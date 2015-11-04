@@ -34,6 +34,17 @@ define(function (require, exports, module) {
         $.extend(this.params, params);
         $.extend(this.small, small);
 
+        var clientWidth = $(window).width() - 20;
+        var clientHeight = $(window).height() - 80;
+        if (this.params.width > clientWidth) {
+            this.params.height = clientWidth * this.params.height / this.params.width;
+            this.params.width = clientWidth;
+        }
+        if (this.params.height > clientHeight) {
+            this.params.width = clientHeight * this.params.width / this.params.height;
+            this.params.height = clientHeight;
+        }
+
         this.addComponents();
         this.event();
     }
