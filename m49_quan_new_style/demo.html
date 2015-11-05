@@ -1,0 +1,2096 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="dns-prefetch" href="//image1.quanmama.com">
+    <link rel="dns-prefetch" href="//image2.quanmama.com">
+    <link rel="dns-prefetch" href="//image3.quanmama.com">
+    <link rel="dns-prefetch" href="//www.juanlaoda.com">
+    <link rel="dns-prefetch" href="//image1.juanlaoda.com">
+    <link rel="dns-prefetch" href="//image2.juanlaoda.com">
+    <link rel="dns-prefetch" href="//image3.juanlaoda.com">
+
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.quanmama.com/images/qmm.ico" />
+    <link rel="stylesheet" href="http://localhost:8080/css2/newstyle.css?v=20150291"
+          type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://localhost:8080/css2/bestdeal.css?v=20150291"
+          type="text/css" charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/css2/home.css?v=20150705154711111" />
+    <link rel="stylesheet" type="text/css" href="less/demo.css"/>
+    <meta name="mobile-agent" content="format=html5;url=http://m.quanmama.com/" />
+    <title>券妈妈优惠券网:京东优惠券,什么值得买,肯德基优惠券,优惠券领取网站,聚美优品优惠券,苏宁易购优惠券,麦当劳优惠券,1号店优惠券,天猫超市优惠券领取
+    </title>
+    <meta name="keywords" content="优惠券,优惠券网,优惠券网站,什么值得买,发现值得买,值得买,今日聚超值,超值分享汇,1号店优惠券,京东优惠券,6pm优惠码,聚美优品优惠券,券老大,苏宁易购优惠券,肯德基优惠券,麦当劳优惠券" />
+    <meta name="description" content="券妈妈优惠券网是一家免费领取京东优惠券,聚美优品优惠券,乐蜂网优惠券,1号店优惠券,6pm优惠码,苏宁易购优惠券的优惠券网站，也是提供高性价比推荐的什么值得买和发现值得买优惠网站。" />
+    <!-- quanmama is ok -->
+
+</head>
+<body>
+<!--页面顶部-->
+<div class="header">
+    <!--navBarWrap-->
+
+    <div class="navBarWrap">
+        <!--navBar-->
+        <div class="navBar">
+            <div class="nav">
+                <a href="http://www.quanmama.com/">首页</a>
+                <div class="moreNav" style="padding-right: 16px; margin-left: 2px;">
+                    <a href="http://www.quanmama.com/new">优惠券</a> <i></i>
+                    <ul class="more_moreNav" style="width: 90px;">
+                        <li><a href="http://www.quanmama.com/new">优惠券大全</a></li>
+                        <li><a href="http://www.quanmama.com/coupon">优惠券活动</a></li>
+                        <li><a href="http://www.quanmama.com/newkfc">肯德基优惠券</a></li>
+                        <li><a href="http://www.quanmama.com/youhuima">海淘优惠码</a></li>
+                        <li><a href="http://www.quanmama.com/licai">P2P理财券</a></li>
+                    </ul>
+                </div>
+                <a style="margin-right: 24px;" href="http://www.quanmama.com/zhidemai">今日值得买<span
+                        class="hot"> Hot</span></a>
+                <div class="moreNav" style="padding-right: 16px; margin-left: 2px;">
+                    <a href="http://www.quanmama.com/haitao">海淘</a> <i></i>
+                    <ul class="more_moreNav" style="width: 90px;">
+                        <li><a href="http://www.quanmama.com/haitao">海淘值得买</a></li>
+                        <li><a href="http://www.quanmama.com/youhuima">海淘优惠码</a></li>
+                        <li><a href="http://www.quanmama.com/haitaodaohang">海淘导航</a></li>
+                        <li><a href="http://www.quanmama.com/haitaogonglue">海淘攻略</a></li>
+                    </ul>
+                </div>
+                <a href="http://www.quanmama.com/faxian">发现</a> <a href="http://www.quanmama.com/news">
+                资讯</a>
+                <div class="moreNav">
+                    <a href="#">更多</a> <i></i>
+                    <ul class="more_moreNav">
+                        <li><a href="http://www.quanmama.com/wanggou">商家大全</a></li>
+                        <li><a href="http://www.quanmama.com/category">类别导航</a></li>
+                        <li><a href="http://www.quanmama.com/huodong">打折促销</a></li>
+                        <li><a href="http://www.quanmama.com/danpin">优惠单品</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--loginArea-->
+            <script type="text/javascript">
+                // 获取用户收到待处理回复的数目
+                window.onload = function () {
+                    var nav;
+                    if (Youhui.common.user.info.userid !== '') {
+                        nav = $('#navBar_login_Info');
+                        $.ajax({
+                            url: "/ajax/UnreadGotCommentsNumber.ashx",
+                            type: "GET",
+                            dataType: "JSON",
+                            success: function (res) {
+                                var num = res.num;
+                                if (parseInt(res.num) > 0) {
+                                    nav.find(".tongzhi_number").html(num);
+                                    nav.find(".tongzhi_number_parent").css({
+                                        'display': 'inline-block'
+                                    }).show();
+                                    $('#notice_comment').trigger('aj.getnum');
+                                }
+                            },
+                            error: function () {
+
+                            }
+                        });
+
+                    }
+                }
+            </script>
+            <div class="loginArea">
+
+                <div id="navBar_login_Info" class="login_Info" style="display: block;">
+                    <a class="nickName" target="_blank" href="http://www.quanmama.com/user/coupons/">
+                        心跳，红桃J
+                    </a><i></i>
+                    <ul class="more_login_Info">
+                        <li><a target="_blank" href="http://www.quanmama.com/user/coupons/" rel="nofollow">
+                            我领取的优惠券</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/user/boughtcoupons" rel="nofollow">
+                            我购买的优惠券</a></li>
+                        <li id="user_menu_comment"><a target="_blank" href="http://www.quanmama.com/user/myGotComments"
+                                                      rel="nofollow">
+                            我的评论
+                        <span class='tongzhi_number_parent' style='display:none;position:static;background:none;color:#666;'>
+                            (<span style='position:static;background:none;display:inline-block;color:#666;' class='tongzhi_number'>0</span>)
+                        </span>
+
+                        </a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/user/myfav/" rel="nofollow">我的收藏</a></li>
+                        <li id="user_menu_message"><a target="_blank" href="http://www.quanmama.com/messagebox"
+                                                      rel="nofollow">站内信</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/user/chongzhi/" rel="nofollow">
+                            账号充值</a></li>
+                        <li><a href="http://www.quanmama.com/user/logoff?returl=http%3a%2f%2fwww.quanmama.com%2f">
+                            退出登录</a></li>
+                    </ul>
+                </div>
+
+                <a rel="nofollow" style="float: right;" onclick="trackEvent3('顶部', '官方微信','' );"
+                   href="javascript:;" class="weixinlink">券妈妈微信</a>
+                <div id="weixinimg" style="top: 32px; position: absolute; display: none; border: solid 1px gray">
+                    <img alt="sd" src="http://www.juanlaoda.com/AdminImageUpload/265824weixin_副本.jpg" />
+                </div>
+                <div class="submission">
+                    <a href="http://www.quanmama.com/faq" target="_blank">帮助中心</a> <i></i>
+                    <ul class="more_submission">
+                        <li><a target="_blank" href="http://www.quanmama.com/LoginHelp">如何注册</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/DrawCouponHelp">如何领券</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/usage">如何用券</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/help/HowToViewDrawedCoupons">查领的券</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/BuyCouponHelp">如何买券</a></li>
+                        <li><a target="_blank" href="http://www.quanmama.com/faq">更多问题</a></li>
+                    </ul>
+                </div>
+
+                <div id="chief_notice" class="more_user_news">
+                    <i class="icon-cross-lighter close"></i>
+                    <a href="#" id="notice_message" style='display:none;'><em></em>条新消息</a>
+                    <a href="http://www.quanmama.com/user/myGotComments" id="notice_comment" style='display:none;'><em></em>条新评论</a>
+                </div>
+
+
+
+            </div>
+            <!--loginArea end-->
+            <div class="clear">
+            </div>
+        </div>
+        <!--navBar end-->
+    </div>
+
+    <!--navBarWrap end-->
+</div>
+
+
+
+
+<!--logo & search-->
+<div class="clear" style="width: 100%; padding-top: 32px; background-color: #FFFFFF;">
+    <div style="text-align:center;" >
+        <a href="http://s.click.taobao.com/HkMDNmx" target="_blank"><img src="http://image1.juanlaoda.com/AdminImageUpload/4738121111hongbao.png"/></a>
+    </div>
+    <div class="w990 clear">
+        <div id="logosearch">
+            <div class="top">
+                <div class="logo" style="padding-top: 12px;">
+                    <a href="http://www.quanmama.com/" title="券妈妈 - 中国最大的网购优惠券网，已有9851828个注册会员">
+                        <img class="logoimg" src="http://www.juanlaoda.com/ImageUpload/4247quanmama_副本.jpg"
+                             style="width: 300px; height: 66px;" alt="券妈妈" /></a></div>
+                <div class="search">
+                    <div>
+                        <form name="searchform" id="searchform" method="get" action="http://www.quanmama.com/search/">
+                            <div class="search_container">
+                                <span class="tri"></span>
+                                <ul class="J-searchbox_tabs searchbox_tabs">
+                                    <li class="searchtype_coupon searchbox_tab searchbox_tab-current" rel="coupon" keywords="输入京东或jd.com等搜索券">
+                                        优惠券</li>
+                                    <li class="searchtype_zdm searchbox_tab" rel="zdm" keywords="输入您要搜的值得买关键词">值得买</li>
+                                </ul>
+                            </div>
+                            <div class="mysearchinput">
+                                <input type="text" name="keyword" id="search_input" pre="" autocomplete="off" value="" />
+                                <div onselectstart="return false;" class="g-toggle" id="search-hotword">
+                                </div>
+                                <div data-expires="24" id="search-hotword-update" style="display: none;">
+                                    0</div>
+                            </div>
+                            <input type="submit" value="搜索" hidefocus="true" style="display: list-item" id="search_button" />
+                        </form>
+                    </div>
+                    <div class="search_hot">
+                        <div class="search_hot_coupon">
+
+                            <a href="http://www.quanmama.com/quan_xiaojukeji">滴滴打车优惠券</a>
+                            <a href="http://www.quanmama.com/quan_vipshop">唯品会优惠券</a>
+                            <a href="http://www.quanmama.com/quan_360buy">京东优惠券</a>
+                            <a href="http://www.quanmama.com/quan_ele_me">饿了么优惠券</a>
+                            <a href="http://www.quanmama.com/quan_waimai_meituan">美团外卖优惠券</a>
+                            <a href="http://www.quanmama.com/quan_tmall">天猫优惠券</a>
+
+                        </div>
+                        <div class="search_hot_zdm" style="display: none">
+                            <a href="/store_360buy">京东</a>
+                            <a href="/store_suning">苏宁</a>
+                            <a href="/store_51buy">易迅</a>
+                            <a href="/store_gome">国美</a>
+                            <a href="/store_amazon">亚马逊</a>
+                            <a href="/store_yihaodian">1号店</a>
+                            |
+                            <a href="/brand/2">苹果</a>
+                            <a href="http://www.quanmama.com/category/167">电脑</a>
+                            <a href="/category/571">手机</a>
+                            <a href="/category/168">笔记本</a>
+                            <a href="/category/592">相机</a>
+                            <a href="/category/78">电视</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="headeract">
+                    <a title="券妈妈手机版" href="http://www.quanmama.com/QuanMamaApp" target="_blank">
+                        <img src="http://www.juanlaoda.com/AdminImageUpload/20141123223946419.jpg" alt="券妈妈手机版" /></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo & search-->
+<div id="nav-2013" class="cui_nav_single w990">
+
+    <div class="w990" style="position: relative; padding-left: 40px; width: 1010px;">
+        <div id="categorys-2013" class="categorys-2014">
+            <div class="mt ld">
+                <h2>
+                    <a href="/category" title="全部优惠分类"><b></b></a>
+                </h2>
+            </div>
+            <div class="mc" id="_QMM_ALLSORT" load="2">
+            </div>
+        </div>
+        <ul class="cui_nav" id="cui_nav_ul">
+            <li id="cui_nav_home" class="nav_li"><a class="cui_nav_non" href='http://www.quanmama.com/'>
+                <span>&nbsp;首页&nbsp;</span></a> </li>
+            <li class="sep"></li>
+            <li id="cui_nav_yhq" class=""><a href="http://www.quanmama.com/new"
+                                             class="cui_nav_has"><span>&nbsp;优惠券&nbsp;</span></a> </li>
+            <li class="sep"></li>
+            <li id="cui_nav_zdm" class=""><a href="http://www.quanmama.com/zhidemai"
+                                             class=" cui_nav_has"><span>&nbsp;今日值得买&nbsp;</span></a> </li>
+
+            <li class="sep"></li>
+            <li id="cui_nav_dyq" class=""><a class="cui_nav_has"
+                                             href='http://www.quanmama.com/newkfc'><span>肯德基优惠券</span></a> </li>
+
+            <li class="cui_myctrip">
+
+                <div>
+                    <a class="cui_myctrip_status" href="http://www.quanmama.com/user/coupons" rel="nofollow">
+                        我的券妈妈</a><div title="心跳，红桃J" class="cui_myctrip_username">
+                    心跳，红桃J</div>
+                    <b class=""></b><a class="cui_links_exit" href="http://www.quanmama.com/user/logoff?returl=http%3a%2f%2fwww.quanmama.com%2f"
+                                       rel="nofollow">退出</a></div>
+                <div style="display: none;" id="notLoginDiv" class="cui_account">
+                    <div>
+                        <a href="http://www.quanmama.com/user/coupons" rel="nofollow">我的券妈妈首页</a></div>
+                    <div class="cui_account_info">
+                        <a href="http://www.quanmama.com/user/coupons/" rel="nofollow">我领取的优惠券</a> <a href="http://www.quanmama.com/user/boughtcoupons"
+                                                                                                      rel="nofollow">我购买的优惠券</a>
+                    </div>
+                    <div class="cui_account_info">
+                        <a href="http://www.quanmama.com/user/chongzhi/" rel="nofollow">账号充值</a><a href="http://www.quanmama.com/messagebox"
+                                                                                                   rel="nofollow">站内信</a><a href="http://www.quanmama.com/user/myfav/" rel="nofollow">我的收藏</a><a
+                            href="http://www.quanmama.com/user/myGotComments" rel="nofollow">我的评论</a>
+                    </div>
+                </div>
+
+            </li>
+
+            <li class="sep"></li>
+            <li id="cui_nav_shangjia" class=""><a class="cui_nav_has"
+                                                  href='http://www.quanmama.com/wanggou'><span>&nbsp;商家大全&nbsp;&nbsp;</span></a>
+            </li>
+            <li class="sep"></li>
+            <li><a id="cui_nav_fuli" class="cui_nav_has" href='http://www.quanmama.com/fuli'><span>
+            &nbsp;福利大全&nbsp;&nbsp;</span></a> </li>
+        </ul>
+    </div>
+
+    <div class="cui_subnav_wrap">
+        <div class="cui_sub_nav cui_nav_yhq">
+            <a class="" href="http://www.quanmama.com/coupon" title="优惠券">
+                优惠券</a> |<a class="" href="http://www.quanmama.com/youhuima"
+                            title="优惠码">海淘优惠码</a>|<a href="http://www.quanmama.com/newkfc" title="肯德基等优惠券">肯德基优惠券</a>|<a
+                href="http://www.quanmama.com/licai" title="p2p优惠券">P2P理财优惠券</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_zdm">
+            <a class="" href="http://www.quanmama.com/faxian"
+               title="发现优惠">发现优惠</a>&nbsp; |&nbsp;<a class=""
+                                                     href="http://www.quanmama.com/haitao" title="海淘值得买+优惠券">海淘</a>&nbsp;|&nbsp;<a class=""
+                                                                                                                                   href="http://www.quanmama.com/zhidemai" title="今日值得买">今日值得买</a>|&nbsp;<a
+                class="" href="http://www.quanmama.com/news" title="新闻资讯">新闻资讯</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_faxian">
+            <a class="" href="http://www.quanmama.com/zhidemai"
+               title="今日值得买">今日值得买</a>&nbsp;|&nbsp;<a class="" href="http://www.quanmama.com/faxian"
+                                                      title="发现优惠">发现优惠</a> &nbsp;|&nbsp;<a class=""
+                                                                                            href="http://www.quanmama.com/haitao" title="海淘值得买">海淘</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_haitao">
+            <a class="" href="http://www.quanmama.com/youhuima"
+               title="海淘优惠码">海淘优惠码</a>&nbsp; |&nbsp;<a class=""
+                                                       href="http://www.quanmama.com/haitao" title="海淘值得买">海淘值得买</a>&nbsp;|&nbsp;<a class=""
+                                                                                                                                    href="/haitaogonglue" title="海淘攻略">海淘攻略</a> &nbsp;|&nbsp;<a href="/haitaodaquan"
+                                                                                                                                                                                                class="" title="海淘导航">海淘导航</a>
+            &nbsp;
+        </div>
+        <div class="cui_sub_nav cui_nav_dyq">
+            <a href="http://www.quanmama.com/kfc" title="肯德基优惠券">肯德基优惠券</a>| <a href="http://www.quanmama.com/mdl"
+                                                                                title="麦当劳优惠券">麦当劳优惠券</a>| <a href="http://www.quanmama.com/xiabu" title="呷哺呷哺优惠券">
+            呷哺呷哺优惠券</a>| <a href="http://www.quanmama.com/zhengongfu" title="真功夫优惠券">真功夫优惠券</a>|
+            <a href="http://www.quanmama.com/jiyejia" title="吉野家优惠券">吉野家优惠券</a>| <a href="http://www.quanmama.com/bsk"
+                                                                                    title="必胜客优惠券">必胜客优惠券</a>
+        </div>
+        <div class="cui_sub_nav cui_nav_shangjia">
+            <a class="" href="http://www.quanmama.com/wanggou"
+               title="网购网站大全">网购网站大全</a>| <a class="" href="http://www.quanmama.com/taobaodianpu"
+                                             title="淘宝店铺大全">淘宝店铺大全</a>| <a class="" href="http://www.quanmama.com/haitaodaquan"
+                                                                           title="海淘网站大全">海淘网站大全</a>| <a href="http://www.quanmama.com/print" title="肯德基、麦当劳等">
+            肯德基等</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var se_keywords = '';
+    var se_type = '';
+</script>
+
+
+
+<!--内容主体-->
+<div class="clearfix" id="pagecontent" style="padding-bottom: 15px; margin-right: auto;
+        margin-left: auto;">
+<div class="clear">
+
+<div class="w990 clear" id="aj-ajaxdata">
+<div class="spacing20">
+</div>
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/css2/ie7.css" />
+<![endif]-->
+<div id="J_nav_site" class="box-nav-site clearfix service-panel">
+<div class="J_Store1 JStore">
+<!-- 1级导航 -->
+<div class="tit  JCategoryChange">
+    <ul>
+        <li class="cur" data-id="1"><i class="qmm-icon-fire"></i><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','热门商家' );">
+            热门商家</a></li>
+        <li data-id="89" class=""><i class="qmm-icon-clock"></i><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','最潮最新' );">
+            最潮最新</a></li>
+        <li data-id="88" class=""><i class="qmm-icon-coin-yen"></i><a href="javascript:;"
+                                                                      onclick="javascript:trackEvent3('首页', '导航','P2P理财' );">P2P理财</a></li>
+        <li data-id="90" class=""><i class="qmm-icon-local_taxi"></i><a href="javascript:;"
+                                                                        onclick="javascript:trackEvent3('首页', '导航','打车o2o' );">打车o2o</a></li>
+        <li data-id="113" class=""><i class="qmm-icon-happy2"></i><a href="javascript:;"
+                                                                     onclick="javascript:trackEvent3('首页', '导航','海外淘' );">海外淘</a></li>
+    </ul>
+</div>
+<div class="aj-tit-more JCategoryChange">
+    <div style="display: block;" aj-from-data-id="1" class="aj-one">
+        <ul class="aj-ul">
+
+            <li data-id="3"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_服饰鞋包' );">
+                服饰鞋包</a></li>
+
+            <li data-id="4"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_数码图书' );">
+                数码图书</a></li>
+
+            <li data-id="5"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_美妆个护' );">
+                美妆个护</a></li>
+
+            <li data-id="6"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_名品折扣' );">
+                名品折扣</a></li>
+
+            <li data-id="8"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_旅行票务' );">
+                旅行票务</a></li>
+
+            <li data-id="10"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_食品酒水' );">
+                食品酒水</a></li>
+
+            <li data-id="80"><a href="javascript:;" onclick="javascript:trackEvent3('首页', '导航','类别_日用百货' );">
+                日用百货</a></li>
+
+        </ul>
+    </div>
+</div>
+<!-- 右侧 -->
+<div class="con ">
+<!-- mall-pane 分类列表 -->
+
+<div  style="display: block;"  class="mall-pane JPanel1">
+<!-- list-mall 商城 -->
+<div class="list-mall  brands-bd" style="z-index: 1;">
+<ul class="list-main list-main-adj aj-homepage-shops clearfix">
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_360buy" target="_blank" title='京东'>
+    <img class="img" alt="京东" src="http://image1.juanlaoda.com/QMMImg/2014/11/28/32057703.gif">
+    <span class="sp1">京东优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=jd.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_360buy' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_51jiecai" target="_blank" title='今日捷财'>
+    <img class="img" alt="今日捷财" src="http://www.quanmama.com/AdminImageUpload/ueditor/image/20150615/6356998674560160818442056.png">
+    <span class="sp1">今日捷财优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=51jiecai.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_51jiecai' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_vipshop" target="_blank" title='唯品会'>
+    <img class="img" alt="唯品会" src="http://image1.juanlaoda.com/QMMImg/2014/7/1/138592.jpg">
+    <span class="sp1">唯品会优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=vip.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_vipshop' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_jinronggongchang" target="_blank" title='金融工场'>
+    <img class="img" alt="金融工场" src="http://www.juanlaoda.com/AdminImageUpload/02319160-80.jpg">
+    <span class="sp1">金融工场优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=9888.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_jinronggongchang' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_jumei" target="_blank" title='聚美优品'>
+    <img class="img" alt="聚美优品" src="http://image1.juanlaoda.com/QMMImg/2014/11/11/04916345.jpg">
+    <span class="sp1">聚美优品优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=jumei.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_jumei' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_suning" target="_blank" title='苏宁易购'>
+    <img class="img" alt="苏宁易购" src="http://image2.juanlaoda.com/QMMImg/2015/5/7/92722907.jpg">
+    <span class="sp1">苏宁易购优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=suning.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_suning' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_51buy" target="_blank" title='易迅网'>
+    <img class="img" alt="易迅网" src="http://image3.juanlaoda.com/QMMImg/2015/2/10/105619389.gif">
+    <span class="sp1">易迅网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=yixun.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_51buy' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_gome" target="_blank" title='国美在线'>
+    <img class="img" alt="国美在线" src="http://image1.juanlaoda.com/QMMImg/2014/11/17/95133634.jpg">
+    <span class="sp1">国美在线优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=gome.com.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_gome' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_lafaso" target="_blank" title='乐蜂网'>
+    <img class="img" alt="乐蜂网" src="http://image1.juanlaoda.com/QMMImg/2014/11/18/143823349.jpg">
+    <span class="sp1">乐蜂网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=lefeng.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_lafaso' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_niwodai" target="_blank" title='你我贷'>
+    <img class="img" alt="你我贷" src="http://www.juanlaoda.com/AdminImageUpload/474719617547935.jpg">
+    <span class="sp1">你我贷优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=niwodai.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_niwodai' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_wowodai_cn" target="_blank" title='握握贷'>
+    <img class="img" alt="握握贷" src="http://image2.juanlaoda.com/AdminImageUpload/4752753QQ截图20151010094935_副本.png">
+    <span class="sp1">握握贷优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=wowodai.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_wowodai_cn' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_xiaoniu88" target="_blank" title='小牛在线'>
+    <img class="img" alt="小牛在线" src="http://image1.juanlaoda.com/AdminImageUpload/023648logo=16080.jpg">
+    <span class="sp1">小牛在线优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=xiaoniu88.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_xiaoniu88' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_miyabaobei" target="_blank" title='蜜芽'>
+    <img class="img" alt="蜜芽" src="http://image1.juanlaoda.com/AdminImageUpload/4050343miyabaobei.jpg">
+    <span class="sp1">蜜芽优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=mia.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_miyabaobei' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_fengqu" target="_blank" title='丰趣海淘'>
+    <img class="img" alt="丰趣海淘" src="http://image3.juanlaoda.com/AdminImageUpload/5541476QQ截图20151017095710.png">
+    <span class="sp1">丰趣海淘优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=fengqu.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_fengqu' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_beibei" target="_blank" title='贝贝网'>
+    <img class="img" alt="贝贝网" src="http://image1.juanlaoda.com/AdminImageUpload/30551982.png">
+    <span class="sp1">贝贝网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=beibei.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_beibei' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_kaola" target="_blank" title='网易考拉海购'>
+    <img class="img" alt="网易考拉海购" src="http://image2.juanlaoda.com/AdminImageUpload/3150774kaola.png">
+    <span class="sp1">网易考拉海购优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=kaola.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_kaola' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_wutong" target="_blank" title='梧桐理财网'>
+    <img class="img" alt="梧桐理财网" src="http://image3.juanlaoda.com/QMMImg/2014/11/23/233753598.jpg">
+    <span class="sp1">梧桐理财网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=91wutong.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_wutong' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_yoho" target="_blank" title='yoho'>
+    <img class="img" alt="yoho" src="http://image1.juanlaoda.com/AdminImageUpload/4444335有货.jpg">
+    <span class="sp1">yoho优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=yohobuy.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_yoho' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_mljr" target="_blank" title='美利金融'>
+    <img class="img" alt="美利金融" src="http://image1.juanlaoda.com/AdminImageUpload/3548938120-60-2.jpg">
+    <span class="sp1">美利金融优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=mljr.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_mljr' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_yougou" target="_blank" title='优购网'>
+    <img class="img" alt="优购网" src="http://www.quanmama.com/AdminImageUpload/0306020150728145907.png">
+    <span class="sp1">优购网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=yougou.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_yougou' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_touna" target="_blank" title='投哪网'>
+    <img class="img" alt="投哪网" src="http://image1.juanlaoda.com/QMMImg/2014/5/15/175130310.jpg">
+    <span class="sp1">投哪网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=touna.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_touna' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_ppmoney" target="_blank" title='ppmoney'>
+    <img class="img" alt="ppmoney" src="http://www.juanlaoda.com/AdminImageUpload/057541ppmoney.jpg">
+    <span class="sp1">ppmoney优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=ppmoney.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_ppmoney' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_keede" target="_blank" title='可得网'>
+    <img class="img" alt="可得网" src="http://image4.juanlaoda.com/AdminImageUpload/2014717141814810.jpg">
+    <span class="sp1">可得网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=keede.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_keede' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_ctrip" target="_blank" title='携程'>
+    <img class="img" alt="携程" src="http://image4.juanlaoda.com/AdminImageUpload/2014717141715727.jpg">
+    <span class="sp1">携程优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=ctrip.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_ctrip' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_xinrong" target="_blank" title='信融财富'>
+    <img class="img" alt="信融财富" src="http://www.juanlaoda.com/AdminImageUpload/951470xrcf.png">
+    <span class="sp1">信融财富优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=xinrong.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_xinrong' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_tmall" target="_blank" title='天猫'>
+    <img class="img" alt="天猫" src="http://www.juanlaoda.com/QMMImg/2014/11/8/21388110.jpg">
+    <span class="sp1">天猫优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=tmall.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_tmall' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_tootoo" target="_blank" title='沱沱工社'>
+    <img class="img" alt="沱沱工社" src="http://image1.juanlaoda.com/QMMImg/2014/8/5/113754952.jpg">
+    <span class="sp1">沱沱工社优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=tootoo.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_tootoo' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_6pm" target="_blank" title='6PM'>
+    <img class="img" alt="6PM" src="http://www.juanlaoda.com/AdminImageUpload/7557026pm.jpg">
+    <span class="sp1">6PM优惠码</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=6pm.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_6pm' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/kfc" target="_blank" title='肯德基'>
+    <img class="img" alt="肯德基" src="http://image4.juanlaoda.com/AdminImageUpload/4848933kfc.jpg">
+    <span class="sp1">肯德基优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=kfc.com.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/kfc' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_lmf9" target="_blank" title='利魔方'>
+    <img class="img" alt="利魔方" src="http://image2.juanlaoda.com/AdminImageUpload/405895160x80.jpg">
+    <span class="sp1">利魔方优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=lmf9.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_lmf9' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_yihaodian" target="_blank" title='1号店'>
+    <img class="img" alt="1号店" src="http://image1.juanlaoda.com/QMMImg/2014/12/10/113721751.gif">
+    <span class="sp1">1号店优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=yhd.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_yihaodian' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_qunar" target="_blank" title='去哪儿'>
+    <img class="img" alt="去哪儿" src="http://image4.juanlaoda.com/AdminImageUpload/2014717141636252.jpg">
+    <span class="sp1">去哪儿优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=qunar.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_qunar' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_dangdang" target="_blank" title='当当'>
+    <img class="img" alt="当当" src="http://www.juanlaoda.com/AdminImageUpload/201411419528309.jpg">
+    <span class="sp1">当当优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=dangdang.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_dangdang' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_eytou" target="_blank" title='优投在线'>
+    <img class="img" alt="优投在线" src="http://www.quanmama.com/AdminImageUpload/5251702QQ图片20150729135417.png">
+    <span class="sp1">优投在线优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=eytou.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_eytou' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_unfae" target="_blank" title='金联所'>
+    <img class="img" alt="金联所" src="http://image2.juanlaoda.com/AdminImageUpload/234936520150911112526.png">
+    <span class="sp1">金联所优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=unfae.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_unfae' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_tmallchaoshi" target="_blank" title='天猫超市'>
+    <img class="img" alt="天猫超市" src="http://www.juanlaoda.com/AdminImageUpload/54454tmcs.jpg">
+    <span class="sp1">天猫超市优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=chaoshi.tmall.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_tmallchaoshi' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_xiaojukeji" target="_blank" title='滴滴打车'>
+    <img class="img" alt="滴滴打车" src="http://image3.juanlaoda.com/AdminImageUpload/16263734142546didi.png">
+    <span class="sp1">滴滴打车优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=xiaojukeji.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_xiaojukeji' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_ele_me" target="_blank" title='饿了么'>
+    <img class="img" alt="饿了么" src="http://www.juanlaoda.com/AdminImageUpload/5513934ele.jpg">
+    <span class="sp1">饿了么优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=ele.me' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_ele_me' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_wepiao" target="_blank" title='微信电影票'>
+    <img class="img" alt="微信电影票" src="http://www.juanlaoda.com/AdminImageUpload/291267114070811212031.jpg">
+    <span class="sp1">微信电影票优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=wepiao.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_wepiao' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_uber" target="_blank" title='uber'>
+    <img class="img" alt="uber" src="http://image1.juanlaoda.com/AdminImageUpload/201489114070811212031.jpg">
+    <span class="sp1">uber优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=uber.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_uber' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_waimai_meituan" target="_blank" title='美团外卖'>
+    <img class="img" alt="美团外卖" src="http://image1.juanlaoda.com/AdminImageUpload/58252091.jpg">
+    <span class="sp1">美团外卖优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=waimai.meituan.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_waimai_meituan' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_10086" target="_blank" title='中国移动'>
+    <img class="img" alt="中国移动" src="http://www.quanmama.com/AdminImageUpload/36289320150824163646.png">
+    <span class="sp1">中国移动优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=10086.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_10086' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_yintai" target="_blank" title='银泰网'>
+    <img class="img" alt="银泰网" src="http://www.quanmama.com/AdminImageUpload/155039yintailogo-134x60.jpg">
+    <span class="sp1">银泰网优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=yintai.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_yintai' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_amazon" target="_blank" title='亚马逊'>
+    <img class="img" alt="亚马逊" src="http://image2.juanlaoda.com/QMMImg/2015/6/29/14264446.gif">
+    <span class="sp1">亚马逊优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=amazon.cn' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_amazon' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+
+<li class="shop"><a class="a1" href="http://www.quanmama.com/quan_htinns" target="_blank" title='汉庭'>
+    <img class="img" alt="汉庭" src="http://www.juanlaoda.com/ImageUpload/201342184520584.jpg">
+    <span class="sp1">汉庭优惠券</span> </a><span class="zujian">
+                                <div class="a2-wrap">
+                                    <a href='http://www.quanmama.com/t/out.aspx?site=htinns.com' class="a2 buy" target="_blank">去购物</a>
+                                    <a href='http://www.quanmama.com/quan_htinns' class="a2 quan" target="_blank">优惠券</a>
+                                </div>
+                            </span></li>
+
+
+
+</ul>
+</div>
+
+</div>
+
+<div class="JMyAjax" data-url="/staticfiles/HomeMallPanel.html">
+</div>
+<div class="newLoading" style="display: none">
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container " style="padding-top: 3px;">
+<div class="left_side">
+<div class="main_l_c_c" style="clear: both;">
+<div class="coupon_block tabs J_coupon_block">
+<div class="body">
+
+<div class="topZdm clear">
+
+    <div class="leftNotice out_current_top">
+        <div class="contentBg">
+            <div class="con_title">
+                <span class='zhiding'>置顶</span><a href="http://www.quanmama.com/zhidemai/308189.html" onclick="trackEvent3('今日值得买', '置顶','今日捷财豪送，' );"
+                                                  target="_blank" title="【置顶】今日捷财豪送，">
+                今日捷财豪送，<span class="red">电影票+1000元红包！ 而你，无可奈何……</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="leftNotice out_current_top">
+        <div class="contentBg">
+            <div class="con_title">
+                <span class='zhiding'>置顶</span><a href="http://www.quanmama.com/zhidemai/242805.html" onclick="trackEvent3('今日值得买', '置顶','投哪网3年无逾期，投资过百亿！' );"
+                                                  target="_blank" title="【置顶】投哪网3年无逾期，投资过百亿！">
+                投哪网3年无逾期，投资过百亿！<span class="red">注册有10000元体验金和专享满返券（30天起用）</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="leftNotice out_current_top">
+        <div class="contentBg">
+            <div class="con_title">
+                <span class='zhiding'>置顶</span><a href="http://www.quanmama.com/zhidemai/319541.html" onclick="trackEvent3('今日值得买', '置顶','美利金融暖心活动，' );"
+                                                  target="_blank" title="【置顶】美利金融暖心活动，">
+                美利金融暖心活动，<span class="red">急速放送500万，限时加息1%！！！</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="leftNotice out_current_top">
+        <div class="contentBg">
+            <div class="con_title">
+                <span class='zhiding'>置顶</span><a href="http://www.quanmama.com/zhidemai/272065.html" onclick="trackEvent3('今日值得买', '置顶','金融工场上线3周年，' );"
+                                                  target="_blank" title="【置顶】金融工场上线3周年，">
+                金融工场上线3周年，<span class="red">备千万奖励等你拿！千万红包+返现券+海量抽奖</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="leftNotice out_current_top">
+        <div class="contentBg">
+            <div class="con_title">
+                <span class='zhiding'>置顶</span><a href="http://www.quanmama.com/zhidemai/1279542.html" onclick="trackEvent3('今日值得买', '置顶','多多米送现金 省钱+赚钱，' );"
+                                                  target="_blank" title="【置顶】多多米送现金 省钱+赚钱，">
+                多多米送现金 省钱+赚钱，<span class="red">1000元现金1秒到账，更有14%收益等着你</span></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class='aj-delay-area'>
+<div class="aj-pc-nav-o-o">
+    <div class="aj-pc-nav-o">
+        <div class="aj-pc-nav">
+            <div class="inside">
+                <ul class="ul ul-js">
+                    <li class="li li-js j_load aj-select" data-params="category=0;posttype=0;page=1;sort=1;">
+                        <a href="javascript:;">最新</a></li>
+                    <li class="li li-js j_load" data-params="category=0;posttype=0;page=1;sort=2;"><a
+                            href="javascript:;">最热</a></li>
+                    <li class="li li-js j_load" data-params="category=0;posttype=3;page=1;sort=2;"><a
+                            href="javascript:;">优惠券</a></li>
+                    <li class="li li-js j_load" data-params="category=0;posttype=14;page=1;sort=2;"><a
+                            href="javascript:;">促销</a></li>
+                    <li class="li li-js j_load" data-params="category=0;posttype=15;page=1;sort=1;"><a
+                            href="javascript:;">单品</a></li>
+
+                    <li class="li li-js j_load" data-params="posttype=0;category=1257;page=1;">
+                        打车</li>
+
+                    <li class="li li-js j_load" data-params="posttype=0;category=3936;page=1;">
+                        外卖</li>
+
+                    <li class="li li-js j_load" data-params="posttype=0;category=1186;page=1;">
+                        电影票</li>
+
+                    <li class="li li-js j_load" data-params="posttype=0;category=5441;page=1;">
+                        流量话费</li>
+
+                    <li class="li li-js j_load" data-params="posttype=0;category=5416;page=1;">
+                        理财</li>
+
+                </ul>
+                <ul class="ul ul-right">
+                    <li class="li li-more"><a class="wrap" href="javascript:;"><span class="span">更多</span>
+                        <em class="em qmm-icon-circle-down"></em></a>
+                        <ul class="ul-wrap">
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=1156;page=1;">
+                                <a href="javascript:;">
+                                    本地生活</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=5417;page=1;">
+                                <a href="javascript:;">
+                                    旅游酒店</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=569;page=1;">
+                                <a href="javascript:;">
+                                    手机相机</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=5420;page=1;">
+                                <a href="javascript:;">
+                                    家用电器</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=166;page=1;">
+                                <a href="javascript:;">
+                                    电脑办公</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=1;page=1;">
+                                <a href="javascript:;">
+                                    图书音像</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=252;page=1;">
+                                <a href="javascript:;">
+                                    美妆个护</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=763;page=1;">
+                                <a href="javascript:;">
+                                    服饰鞋包</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=5416;page=1;">
+                                <a href="javascript:;">
+                                    投资理财</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=647;page=1;">
+                                <a href="javascript:;">
+                                    家居家装</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=299;page=1;">
+                                <a href="javascript:;">
+                                    母婴玩具</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=1045;page=1;">
+                                <a href="javascript:;">
+                                    运动户外</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=381;page=1;">
+                                <a href="javascript:;">
+                                    食品饮料</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=441;page=1;">
+                                <a href="javascript:;">
+                                    汽车用品</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=879;page=1;">
+                                <a href="javascript:;">
+                                    礼品钟表</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=1316;page=1;">
+                                <a href="javascript:;">
+                                    医药保健</a></li>
+
+                            <li class="ul-w-li j_load " data-params="posttype=0;category=1248;page=1;">
+                                <a href="javascript:;">
+                                    其他分类</a></li>
+
+                            <div class="clear">
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 列表展示开始 -->
+    <div style="height: 10px"></div>
+<div class="clearfix">
+    <div class="aj-quan-new-230">
+        <div class="aj-top">
+            <img class="aj-img" src="images/2.png" />
+        </div>
+        <div class="aj-mid">
+            <div class="aj-img-wrap">
+                <img class="aj-img" src="images/1.jpg" />
+            </div>
+            <div class="mid-bot">
+                <span>家电全品类</span>
+            </div>
+            <div class="aj-desc">
+                <span>满</span>
+                <em>100</em>
+                <span>减</span>
+                <em>40</em>
+            </div>
+        </div>
+        <div class="aj-bot">
+            <div class="aj-line">
+                <span class="aj-btn">立即领取</span>
+            </div>
+        </div>
+    </div>
+    <div class="aj-quan-new-230">
+        <div class="aj-top">
+            <img class="aj-img" src="images/2.png" />
+        </div>
+        <div class="aj-mid">
+            <div class="aj-img-wrap">
+                <img class="aj-img" src="images/1.jpg" />
+            </div>
+            <div class="mid-bot">
+                <span>家电全品类</span>
+            </div>
+            <div class="aj-desc">
+                <span>满</span>
+                <em>100</em>
+                <span>减</span>
+                <em>40</em>
+            </div>
+        </div>
+        <div class="aj-bot">
+            <div class="aj-line">
+                <span class="aj-btn">立即领取</span>
+            </div>
+        </div>
+    </div>
+    <div class="aj-quan-new-230">
+        <div class="aj-top">
+            <img class="aj-img" src="images/2.png" />
+        </div>
+        <div class="aj-mid">
+            <div class="aj-img-wrap">
+                <img class="aj-img" src="images/1.jpg" />
+            </div>
+            <div class="mid-bot">
+                <span>家电全品类</span>
+            </div>
+            <div class="aj-desc">
+                <span>满</span>
+                <em>100</em>
+                <span>减</span>
+                <em>40</em>
+            </div>
+        </div>
+        <div class="aj-bot">
+            <div class="aj-line">
+                <span class="aj-btn">立即领取</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="clearfix">
+    <div class="aj-quan-new-320">
+        <div class="aj-mid">
+            <div class="aj-img-wrap">
+                <img class="aj-img" src="images/3.png" />
+            </div>
+            <div class="mid-bot">
+                <span>家电全品类</span>
+            </div>
+            <div class="aj-desc">
+                <span>满</span>
+                <em>100</em>
+                <span>减</span>
+                <em>40</em>
+            </div>
+        </div>
+        <div class="aj-right">
+            <div class="aj-top">
+                <img class="aj-img" src="images/2.png" />
+            </div>
+            <div class="aj-bot">
+                <div class="aj-line">
+                    <span class="aj-btn">立即领取</span>
+                </div>
+                <div class="aj-small-line">
+                    还剩26天 已领:255373
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aj-quan-new-320">
+        <div class="aj-mid">
+            <div class="aj-img-wrap">
+                <img class="aj-img" src="http://image1.quanmama.com/QMMImg/2015/11/5/ys135328382.jpg" />
+            </div>
+            <div class="mid-bot">
+                <span>家电全品类</span>
+            </div>
+            <div class="aj-desc">
+                <span>满</span>
+                <em>100</em>
+                <span>减</span>
+                <em>40</em>
+            </div>
+        </div>
+        <div class="aj-right">
+            <div class="aj-top">
+                <img class="aj-img" src="images/2.png" />
+            </div>
+            <div class="aj-bot">
+                <div class="aj-line">
+                    <span class="aj-btn">立即领取</span>
+                </div>
+                <div class="aj-small-line">
+                    还剩26天 已领:255373
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 列表展示结束 -->
+<div class="clear">
+</div>
+</div>
+</div>
+<div class="newclear">
+</div>
+</div>
+</div>
+</div>
+<!--left end-->
+<!--right begin-->
+<div class="right_side">
+<div class="rightPanel ">
+    <a rel='nofollow' target="_blank"  onclick="javascript:trackEvent3('首页', 'rightTopBanner','绿能宝ad' );" href="http://cps.51jiecai.com/t.html?source=4_200dyp-quanmama_cps&targetUrl=http://www.51jiecai.com/s/event/quanmama200/index.html"><img src="http://image3.juanlaoda.com/AdminImageUpload/1916900300X300(1).jpg"/></a>
+</div>
+
+<div class="rightPanel" id="J-aside-hot">
+    <h2 class="panelTitle">
+        热门优惠券 <a class="more green" href="/new" target="_blank">更多</a>
+    </h2>
+    <div class="rightHotExp">
+        <ul class="new_hot_coupon">
+
+            <li><a class="new_img_wrap" href="http://www.quanmama.com/quan_51jiecai">
+                <img alt="今日捷财优惠券" src="/images/b.gif" drc="http://www.quanmama.com/AdminImageUpload/ueditor/image/20150615/6356998674560160818442056.png" />
+            </a>
+                <div class="new_img_detail">
+                    <p class="name">
+                        <a href="http://www.quanmama.com/quan/1259936.html" title="今日捷财优惠券，今日捷财50元现金券">
+                            今日捷财优惠券，今日捷财50元现金券</a></p>
+                    <p class="btn_wrap">
+                        <a href="http://www.quanmama.com/quan/1259936.html" class="btn" title="今日捷财优惠券，今日捷财50元现金券"><span>立即领取</span></a></p>
+
+                    <p class="score_old">
+                        <em>50元</em>无限制券
+                    </p>
+                </div>
+            </li>
+
+            <li><a class="new_img_wrap" href="http://www.quanmama.com/quan_360buy">
+                <img alt="京东优惠券" src="/images/b.gif" drc="http://image1.juanlaoda.com/QMMImg/2014/11/28/32057703.gif" />
+            </a>
+                <div class="new_img_detail">
+                    <p class="name">
+                        <a href="http://www.quanmama.com/zhidemai/320737.html" title="全品类京东优惠券收藏篇！">
+                            全品类京东优惠券收藏篇！</a></p>
+                    <p class="btn_wrap">
+                        <a href="http://www.quanmama.com/zhidemai/320737.html" class="btn" title="全品类京东优惠券收藏篇！"><span>立即领取</span></a></p>
+
+                    <p class="score_old">
+                        <em class="size12">免邮+全品类10-20元券</em>
+                    </p>
+                </div>
+            </li>
+
+            <li><a class="new_img_wrap" href="http://www.quanmama.com/quan_jumei">
+                <img alt="聚美优品优惠券" src="/images/b.gif" drc="http://image1.juanlaoda.com/QMMImg/2014/11/11/04916345.jpg" />
+            </a>
+                <div class="new_img_detail">
+                    <p class="name">
+                        <a href="http://www.quanmama.com/zhidemai/1233339.html" title="聚美优品优惠券，160元聚美优品现金券领取">
+                            聚美优品优惠券，160元聚美优品现金券领取</a></p>
+                    <p class="btn_wrap">
+                        <a href="http://www.quanmama.com/zhidemai/1233339.html" class="btn" title="聚美优品优惠券，160元聚美优品现金券领取"><span>立即领取</span></a></p>
+
+                    <p class="score_old">
+                        <em class="size12">160元组合优惠券</em>
+                    </p>
+                </div>
+            </li>
+
+            <li><a class="new_img_wrap" href="http://www.quanmama.com/quan_vipshop">
+                <img alt="唯品会优惠券" src="/images/b.gif" drc="http://image1.juanlaoda.com/QMMImg/2014/7/1/138592.jpg" />
+            </a>
+                <div class="new_img_detail">
+                    <p class="name">
+                        <a href="http://www.quanmama.com/zhidemai/1279786.html" title="唯品会优惠券，满250元减25元唯品会优惠券">
+                            唯品会优惠券，满250元减25元唯品会优惠券</a></p>
+                    <p class="btn_wrap">
+                        <a href="http://www.quanmama.com/zhidemai/1279786.html" class="btn" title="唯品会优惠券，满250元减25元唯品会优惠券"><span>立即领取</span></a></p>
+
+                    <p class="score_old">
+                        满<em>250</em>减<em>25</em>
+                    </p>
+                </div>
+            </li>
+
+            <li><a class="new_img_wrap" href="http://www.quanmama.com/quan_lafaso">
+                <img alt="乐蜂网优惠券" src="/images/b.gif" drc="http://image1.juanlaoda.com/QMMImg/2014/11/18/143823349.jpg" />
+            </a>
+                <div class="new_img_detail">
+                    <p class="name">
+                        <a href="http://www.quanmama.com/quan/1287634.html" title="乐蜂网优惠券，15元乐蜂网全场通用券">
+                            乐蜂网优惠券，15元乐蜂网全场通用券</a></p>
+                    <p class="btn_wrap">
+                        <a href="http://www.quanmama.com/quan/1287634.html" class="btn" title="乐蜂网优惠券，15元乐蜂网全场通用券"><span>立即领取</span></a></p>
+
+                    <p class="score_old">
+                        <em class="size12">15元全场通用券</em>
+                    </p>
+                </div>
+            </li>
+
+            <li><a class="new_img_wrap" href="http://www.quanmama.com/quan_touna">
+                <img alt="投哪网优惠券" src="/images/b.gif" drc="http://image1.juanlaoda.com/QMMImg/2014/5/15/175130310.jpg" />
+            </a>
+                <div class="new_img_detail">
+                    <p class="name">
+                        <a href="http://www.quanmama.com/zhidemai/1228142.html" title="投哪网送现金，【新人送钱】10+30元">
+                            投哪网送现金，【新人送钱】10+30元</a></p>
+                    <p class="btn_wrap">
+                        <a href="http://www.quanmama.com/zhidemai/1228142.html" class="btn" title="投哪网送现金，【新人送钱】10+30元"><span>立即领取</span></a></p>
+
+                    <p class="score_old">
+                        <em class="size12">40元现金</em>
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="rightPanel">
+    <a rel='nofollow' target="_blank" href="http://www.9888.cn/activity/new-user-guide/?qd=QMM&ucfu_source=QMM&ucfu_uid=DH"><img src="http://www.juanlaoda.com/AdminImageUpload/15559300-600.jpg"/></a>
+</div>
+
+<div class="rightPanel" id="J-aside-hot">
+    <h2 class="panelTitle">
+        肯德基等手机优惠券<a href="/newkfc" target="_blank">更多</a>
+    </h2>
+    <div class="rightHotExp">
+        <ul class="storelist clear">
+            <li><a href="http://www.quanmama.com/kfc" title="肯德基优惠券">
+                <img style="width: 38px; height: 38px;" alt="肯德基优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013129141958.jpg" /></a><br />
+                <a href="http://www.quanmama.com/kfc" title="肯德基优惠券">肯德基优惠券</a></li>
+            <li><a href="http://www.quanmama.com/mdl" title="麦当劳优惠券">
+                <img style="width: 38px; height: 38px;" alt="麦当劳优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013129193743.jpg" /></a><br />
+                <a href="http://www.quanmama.com/mdl" title="麦当劳优惠券">麦当劳优惠券</a></li>
+            <li><a href="http://www.quanmama.com/dfjb" title="东方既白优惠券">
+                <img style="width: 38px; height: 38px;" alt="东方既白优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013130152622.jpg" /></a><br />
+                <a href="http://www.quanmama.com/dfjb" title="东方既白优惠券">东方既白优惠券</a></li>
+            <li><a href="http://www.quanmama.com/bsk" title="必胜客优惠券">
+                <img style="width: 38px; height: 38px;" alt="必胜客优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/201313003537.jpg" /></a><br />
+                <a href="http://www.quanmama.com/bsk" title="必胜客优惠券">必胜客优惠券</a></li>
+            <li><a href="http://www.quanmama.com/jiyejia" title="吉野家优惠券">
+                <img style="width: 38px; height: 38px;" alt="吉野家优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/201331021152858.jpg" /></a><br />
+                <a href="http://www.quanmama.com/jiyejia" title="吉野家优惠券">吉野家优惠券</a></li>
+            <li><a href="http://www.quanmama.com/zhengongfu" title="真功夫优惠券">
+                <img style="width: 38px; height: 38px;" alt="真功夫优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013130153757.jpg" /></a><br />
+                <a href="http://www.quanmama.com/zhengongfu" title="真功夫优惠券">真功夫优惠券</a></li>
+            <li><a href="http://www.quanmama.com/hanbaowang" title="汉堡王优惠券">
+                <img style="width: 38px; height: 38px;" alt="汉堡王优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013211194025.jpg" /></a><br />
+                <a href="http://www.quanmama.com/hanbaowang" title="汉堡王优惠券">汉堡王优惠券</a></li>
+            <li><a href="http://www.quanmama.com/byh" title="棒约翰优惠券">
+                <img style="width: 38px; height: 38px;" alt="棒约翰优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013310212049161.jpg" /></a><br />
+                <a href="http://www.quanmama.com/byh" title="棒约翰优惠券">棒约翰优惠券</a></li>
+            <li><a href="http://www.quanmama.com/dks" title="德克士优惠券">
+                <img style="width: 38px; height: 38px;" alt="德克士优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013129194121.jpg" /></a><br />
+                <a href="http://www.quanmama.com/dks" title="德克士优惠券">德克士优惠券</a></li>
+            <li><a href="http://www.quanmama.com/hkl" title="豪客来优惠券">
+                <img style="width: 38px; height: 38px;" alt="豪客来优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013130151812.jpg" /></a><br />
+                <a href="http://www.quanmama.com/hkl" title="豪客来优惠券">豪客来优惠券</a></li>
+            <li><a href="http://www.quanmama.com/xiabu" title="呷哺呷哺优惠券">
+                <img style="width: 38px; height: 38px;" alt="呷哺呷哺优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013129194442.jpg" /></a><br />
+                <a href="http://www.quanmama.com/xiabu" title="呷哺呷哺优惠券">呷哺呷哺优惠券</a></li>
+            <li><a href="http://www.quanmama.com/yonghedawang" title="永和大王优惠券">
+                <img style="width: 38px; height: 38px;" alt="永和大王优惠券" src="/images/b.gif" drc="http://www.juanlaoda.com/ImageUpload/2013211194241.jpg" /></a><br />
+                <a href="http://www.quanmama.com/yonghedawang" title="永和大王优惠券">永和大王优惠券</a></li>
+        </ul>
+    </div>
+</div>
+<div class="rightPanel " >
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:300px;height:600px"
+         data-ad-client="ca-pub-2779426299774699"
+         data-ad-slot="9038746892"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<div class="rightPanel" id="J-aside-hot">
+    <h2 class="panelTitle">
+        海淘优惠码<a class="more green" href="/youhuima" target="_blank">更多</a>
+    </h2>
+    <div class="rightHotExp ">
+        <ul class="storelist clear">
+
+            <li><a href="http://www.quanmama.com/quan_6pm" title="6PM优惠码">
+                <img style="width: 70px; height: 35px;" alt="6PM优惠码" src="/images/b.gif"
+                     drc="http://www.juanlaoda.com/AdminImageUpload/7557026pm.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_6pm" title="6PM优惠码">
+                    6PM</a></li>
+            <li><a href="http://www.quanmama.com/quan_shopbop" title="shopbop优惠码">
+                <img style="width: 70px; height: 35px;" alt="shopbop优惠码" src="/images/b.gif"
+                     drc="http://www.juanlaoda.com/AdminImageUpload/820194shopbop.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_shopbop" title="shopbop优惠码">
+                    shopbop</a></li>
+            <li><a href="http://www.quanmama.com/quan_rakuten" title="Rakuten优惠码">
+                <img style="width: 70px; height: 35px;" alt="Rakuten优惠码" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/QMMImg/2014/12/1/225456301.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_rakuten" title="Rakuten优惠码">
+                    Rakuten</a></li>
+            <li><a href="http://www.quanmama.com/quan_amazonusa" title="Amazon优惠码">
+                <img style="width: 70px; height: 35px;" alt="Amazon优惠码" src="/images/b.gif"
+                     drc="http://www.juanlaoda.com/ImageUpload/20131225232427661.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_amazonusa" title="Amazon优惠码">
+                    美国Amazon</a></li>
+            <li><a href="http://www.quanmama.com/quan_caomeiwang" title="草莓网优惠码">
+                <img style="width: 70px; height: 35px;" alt="草莓网优惠码" src="/images/b.gif"
+                     drc="http://www.quanmama.com/AdminImageUpload/58511cm.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_caomeiwang" title="草莓网优惠码">
+                    草莓网</a></li>
+            <li><a href="http://www.quanmama.com/quan_ebay" title="ebay优惠码">
+                <img style="width: 70px; height: 35px;" alt="ebay优惠码" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/AdminImageUpload/2048418ebay.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_ebay" title="ebay优惠码">
+                    ebay</a></li>
+            <li><a href="http://www.quanmama.com/quan_sephora_usa" title="Sephora优惠码">
+                <img style="width: 70px; height: 35px;" alt="Sephora优惠码" src="/images/b.gif"
+                     drc="http://image1.juanlaoda.com/QMMImg/2014/6/17/16399831.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_sephora_usa" title="Sephora优惠码">
+                    Sephora</a></li>
+            <li><a href="http://www.quanmama.com/quan_godiva" title="Godiva优惠码">
+                <img style="width: 70px; height: 35px;" alt="Godiva优惠码" src="/images/b.gif"
+                     drc="http://image3.juanlaoda.com/QMMImg/2014/6/17/163828820.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_godiva" title="Godiva优惠码">
+                    Godiva</a></li>
+            <li><a href="http://www.quanmama.com/quan_kidsroom_de" title="kidsroom优惠码">
+                <img style="width: 70px; height: 35px;" alt="kidsroom优惠码" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/QMMImg/2015/3/25/16647224.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_kidsroom_de" title="kidsroom优惠码">
+                    kidsroom</a></li>
+            <li><a href="http://www.quanmama.com/quan_fragrancex" title="FragranceX优惠码">
+                <img style="width: 70px; height: 35px;" alt="FragranceX优惠码" src="/images/b.gif"
+                     drc="http://image1.juanlaoda.com/QMMImg/2014/12/4/194013559.gif" /></a><br />
+                <a href="http://www.quanmama.com/quan_fragrancex" title="FragranceX优惠码">
+                    FragranceX</a></li>
+            <li><a href="http://www.quanmama.com/quan_biotherm-usa" title="Biotherm优惠码">
+                <img style="width: 70px; height: 35px;" alt="Biotherm优惠码" src="/images/b.gif"
+                     drc="http://image3.juanlaoda.com/QMMImg/2014/6/20/153739465.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_biotherm-usa" title="Biotherm优惠码">
+                    Biotherm</a></li>
+            <li><a href="http://www.quanmama.com/quan_joesnewbalance" title="Joes New Balance Outlet优惠码">
+                <img style="width: 70px; height: 35px;" alt="Joes New Balance Outlet优惠码" src="/images/b.gif"
+                     drc="http://image3.juanlaoda.com/QMMImg/2014/6/4/141617873.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_joesnewbalance" title="Joes New Balance Outlet优惠码">
+                    Joes New Balance Outlet</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="JMyAjax" data-url="/myajax/hotzdm">
+</div>
+
+<div class="rightPanel" id="J-aside-hot">
+    <h2 class="panelTitle">
+        最新优惠券商家 <a class="more green" href="/shoplist" target="_blank">更多</a>
+    </h2>
+    <div class="rightHotExp">
+        <ul class="storelist clear">
+
+            <li><a href="http://www.quanmama.com/quan_hotemall" title="豪猫官网优惠券">
+                <img style="width: 70px; height: 35px;" alt="豪猫官网优惠券" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/AdminImageUpload/27795QQ截图20151105120337_副本.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_hotemall" title="豪猫官网优惠券">
+                    豪猫官网</a></li>
+            <li><a href="http://www.quanmama.com/quan_shangdai_yixin" title="商通贷优惠券">
+                <img style="width: 70px; height: 35px;" alt="商通贷优惠券" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/AdminImageUpload/4618385QQ截图20151104154827.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_shangdai_yixin" title="商通贷优惠券">
+                    商通贷</a></li>
+            <li><a href="http://www.quanmama.com/quan_goldtogold_cn" title="金鼎和优惠券">
+                <img style="width: 70px; height: 35px;" alt="金鼎和优惠券" src="/images/b.gif"
+                     drc="http://image1.juanlaoda.com/AdminImageUpload/3354357QQ截图20151104153604.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_goldtogold_cn" title="金鼎和优惠券">
+                    金鼎和</a></li>
+            <li><a href="http://www.quanmama.com/quan_fullgoal_cn" title="富国基金优惠券">
+                <img style="width: 70px; height: 35px;" alt="富国基金优惠券" src="/images/b.gif"
+                     drc="http://image1.juanlaoda.com/AdminImageUpload/2635794QQ截图20151104152800.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_fullgoal_cn" title="富国基金优惠券">
+                    富国基金</a></li>
+            <li><a href="http://www.quanmama.com/quan_jucaicat" title="聚财猫优惠券">
+                <img style="width: 70px; height: 35px;" alt="聚财猫优惠券" src="/images/b.gif"
+                     drc="http://image3.juanlaoda.com/AdminImageUpload/5533650QQ截图20151104145721.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_jucaicat" title="聚财猫优惠券">
+                    聚财猫</a></li>
+            <li><a href="http://www.quanmama.com/quan_mafengwo_cn" title="蚂蜂窝优惠券">
+                <img style="width: 70px; height: 35px;" alt="蚂蜂窝优惠券" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/AdminImageUpload/474776QQ截图20151103154945.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_mafengwo_cn" title="蚂蜂窝优惠券">
+                    蚂蜂窝</a></li>
+            <li><a href="http://www.quanmama.com/quan_tuanche" title="团车网优惠券">
+                <img style="width: 70px; height: 35px;" alt="团车网优惠券" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/AdminImageUpload/411488QQ截图20151103154353.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_tuanche" title="团车网优惠券">
+                    团车网</a></li>
+            <li><a href="http://www.quanmama.com/quan_rainbowway_cn" title="彩虹拼车优惠券">
+                <img style="width: 70px; height: 35px;" alt="彩虹拼车优惠券" src="/images/b.gif"
+                     drc="http://image1.juanlaoda.com/AdminImageUpload/2952679QQ截图20151103153233.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_rainbowway_cn" title="彩虹拼车优惠券">
+                    彩虹拼车</a></li>
+            <li><a href="http://www.quanmama.com/quan_xiujiadian" title="啄木鸟修家电优惠券">
+                <img style="width: 70px; height: 35px;" alt="啄木鸟修家电优惠券" src="/images/b.gif"
+                     drc="http://image3.juanlaoda.com/AdminImageUpload/2621563QQ截图20151103152901.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_xiujiadian" title="啄木鸟修家电优惠券">
+                    啄木鸟修家电</a></li>
+            <li><a href="http://www.quanmama.com/quan_haoche51" title="好车无忧优惠券">
+                <img style="width: 70px; height: 35px;" alt="好车无忧优惠券" src="/images/b.gif"
+                     drc="http://image2.juanlaoda.com/AdminImageUpload/114991QQ截图20151103150352.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_haoche51" title="好车无忧优惠券">
+                    好车无忧</a></li>
+            <li><a href="http://www.quanmama.com/quan_cn_memebox" title="MEMEBOX美美箱优惠券">
+                <img style="width: 70px; height: 35px;" alt="MEMEBOX美美箱优惠券" src="/images/b.gif"
+                     drc="http://image1.quanmama.com/QMMImg/2015/11/3/143432289.jpg" /></a><br />
+                <a href="http://www.quanmama.com/quan_cn_memebox" title="MEMEBOX美美箱优惠券">
+                    MEMEBOX美美箱</a></li>
+            <li><a href="http://www.quanmama.com/quan_eightlc" title="星期八金融优惠券">
+                <img style="width: 70px; height: 35px;" alt="星期八金融优惠券" src="/images/b.gif"
+                     drc="http://image3.juanlaoda.com/AdminImageUpload/4544654QQ截图20151102164750.png" /></a><br />
+                <a href="http://www.quanmama.com/quan_eightlc" title="星期八金融优惠券">
+                    星期八金融</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--微信,weibo,app分享-->
+
+</div>
+</div>
+</div>
+
+</div>
+<div id="content_ft_div">
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='/js/jquery.min-1.10.2.js'>\x3C/script>")
+</script>
+<script type="text/javascript" src="/js/base.js?v=20150723"></script>
+<script type="text/javascript">
+    redirectForMobile();
+
+    Youhui.PageType = 'homepage';
+
+    Youhui.PageID = 'homepage';
+
+
+    Youhui.CookieDomain = '.quanmama.com';
+
+    Youhui.isadmin = 0;
+
+    function trackEvent3(category, action, opt_label) {
+        if (_gaq && typeof(_gaq)!='undefined') {
+            _gaq.push(["_trackEvent", category, action, opt_label]);
+        }
+    }
+    function trackEvent4(category, action, opt_label, opt_value) {
+        if (_gaq && typeof(_gaq)!='undefined') {
+            _gaq.push(["_trackEvent", category, action, opt_label, option_value]);
+        }
+    }
+
+    var sea_module_name = {
+        'CategoryNavBar' : 'CategoryNavBar/index-nav.js',
+        'ninePicRoll' : 'ninePic/index.js',
+        'imgsRollX' : 'imgsRollX/index.js',
+        'triRanksMostClick' : 'triRanksMostClick/index.js',
+        'rightSideFloatFixed' : 'rightSideFloatFixed/index.js'
+    };
+
+</script>
+<script type="text/javascript" src="/js/main.js?v=20150291"></script>
+
+<script type="text/javascript">
+    Youhui.common.user.info = {
+        'userid': '2B4ADD094C6406B665B003940C379B5D@qq.cn',
+        'sina': 0
+    };
+    Youhui = $.extend(Youhui, {
+        SITENAME: "券妈妈",
+        SITEURL: "http://www.quanmama.com/",
+        RESOURCEURL: "",
+        SERVICEURL: "",
+        NOTEFREQUENCY: 60000
+    });
+</script>
+
+
+
+
+
+<script>
+    // 显示浮层
+    seajs.use("/js/seajs/module/layer/layer.js", function (LY) {
+        if(LY){var ly = new LY({
+            width : 620,
+            height : 484,
+            img : "/images/smile/indexshow2.png",
+            link : "http://s.click.taobao.com/2iSyimx"
+        }, {
+            width : 70,
+            height : 70,
+            img : "/images/smile/small_layer.png",
+        });
+            ly.show();
+        }
+    });
+    //双十一右侧导航
+    seajs.use("/js/seajs/module/rightBar/RB1111.js", function (RB) {
+        if (RB) {
+            var rb = new RB();
+            rb.init();
+        }
+    });
+</script>
+
+
+<style>
+    #aj-home-impor-mess{position:fixed;z-index:999;bottom:140px;left:10px}#aj-home-impor-mess.aj-hide{display:none}#aj-home-impor-mess .aj-hide{display:none}.aj-home-impor-mess{border:2px solid #aaa;background-color:White;width:200px;transition:all .3s;max-height:300px;overflow-y:auto;margin:5px 0}.aj-home-impor-mess .aj-hide{display:none}.aj-home-impor-mess .top{height:20px;background-color:#ccc;text-align:center}.aj-home-impor-mess .top a:hover{text-decoration:underline}.aj-home-impor-mess .foot{height:20px;background-color:#ccc}.aj-home-impor-mess .ul{padding:10px}.aj-home-impor-mess .ul .li{line-height:20px}.aj-home-impor-mess .mid .content{word-wrap:break-word;word-break:break-all;display:block;padding:5px}
+</style>
+<div id="aj-home-impor-mess" ng-controller="impMess" class='aj-hide' ng-style="{display: (lists.length > 0) ? 'block' : 'none'}">
+    <div class="aj-home-impor-mess" ng-repeat="one in lists">
+        <div class="top">
+            <a ng-bind-html="one.title" ng-href="{{one.detail_url}}" target="_blank"></a>
+        </div>
+        <div class="mid">
+            <span class="content" ng-bind-html="one.content"></span>
+        </div>
+    </div>
+</div>
+<script>
+    // 重要消息 显示给券妈妈成员 (只有登录用户是券妈妈成员才加载下面这段脚本)
+    seajs.use("/js/seajs/module/importantMessage/impMess.js", function (IM) {
+        var im = new IM();
+        im.init();
+    });
+</script>
+
+<script type="text/javascript">
+    var Qmm_config = Qmm_config || {};
+    Qmm_config.youhuiInfo = {
+        page : 2,     //current_page
+        pagesize : 16,
+        category : 0,
+        sort : 0,
+        site : '',
+        area : 0,
+        time : 0,
+        status : 10000,
+        pagetype : 1,
+        posttype : 2,
+        promotype : 0,
+        keyword : '',
+        categoryname : '',
+        postname : '精选',
+        match : 0,
+        rankindex:20
+    };
+
+
+    if (window.location.href.indexOf('type=coupon') > -1) {
+        $(".hometab").hide();
+        $(".coupontab").show();
+
+        $(".J_HomeTab1").removeClass("current");
+        $(".J_HomeTab2").addClass("current");
+    }
+</script>
+
+
+<script type="text/javascript">
+    // 获取用户收到待处理回复的数目
+    $('#notice_comment').on('aj.getnum', function () {
+        var div = $('#notice_comment'),
+                parent = $('#chief_notice'),
+                num,
+                nav = $('#navBar_login_Info');
+        if (div.length > 0) {
+            num = $.trim(nav.find('.tongzhi_number').html());
+            div.find('em').html(num);
+            div.show();
+            div.parents('#chief_notice').show();
+        }
+        if (parent.length > 0) {
+            parent.on('click', '.close', function () {
+                parent.hide();
+            });
+        }
+        if (nav.length > 0) {
+            nav.on('mouseenter mouseleave', function (e) {
+                if (e.type == "mouseenter") {
+                    parent.hide();
+                } else if (e.type == 'mouseleave') {
+                    parent.show();
+                }
+            });
+        }
+    });
+</script>
+
+
+
+
+<!--页面底部-->
+<div id="pagefooter">
+<div class="pagefooter_ad">
+</div>
+
+
+<div id="footerTab">
+    <div class="bordiv">
+        <div class="footer_txt">
+            <span class="on" data-id="0">优惠券免费领取</span><span data-id="1">热门导航</span>
+        </div>
+        <p class="on footer_msg p0" data-id="0">
+            券妈妈优惠券网-中国最大的优惠券网站，已有<font color="red">9851828</font>个用户。京东优惠券领取,唯品会优惠券免费领取和聚美优品红包,6PM优惠码,1号店抵用券,美团代金券,肯德基优惠券
+
+            <br />
+            友情链接：
+
+            <a target="_blank" href="http://www.ixingmei.com">
+                星美电影团购</a>
+            <a target="_blank" href="http://www.juanpi.com">
+                卷皮网</a>
+            <a target="_blank" href="http://www.mizhe.com">
+                米折网</a>
+            <a target="_blank" href="http://www.paixie.net">
+                拍鞋网</a>
+            <a target="_blank" href="http://item.yhd.com">
+                一号店</a>
+            <a target="_blank" href="http://www.55haitao.com">
+                55海淘网</a>
+            <a target="_blank" href="http://m.quanmama.com">
+                券妈妈手机版</a>
+            <a target="_blank" href="http://m.quanmama.com/mshop/kfc">
+                肯德基手机优惠券</a>
+            <a target="_blank" href="http://quanmama.quanmama.com">
+                券妈妈</a>
+            <a target="_blank" href="http://www.quanmama.com/quan_vipshop">
+                唯品会优惠券免费领取</a>
+            <a target="_blank" href="http://www.quanmama.com/quan_tmallchaoshi">
+                天猫超市优惠券领取</a>
+            <a target="_blank" href="http://www.quanmama.com/quan_6pm">
+                6pm优惠码</a>
+            <a target="_blank" href="http://www.quanmama.com/quan_gome">
+                国美在线优惠券</a>
+            <a target="_blank" href="http://www.quanmama.com/kfc">
+                肯德基优惠券</a>
+            <a target="_blank" href="http://www.quanmama.com/mdl">
+                麦当劳优惠券</a>
+            <a target="_blank" href="http://www.quanmama.com/quan_tmall">
+                天猫优惠券</a>
+        </p>
+        <p class=" p1" data-id="1">
+            <a href="http://m.quanmama.com">券妈妈手机版</a>
+            <a href="http://www.quanmama.com/quan_wepiao" title="微信电影票优惠券">微信电影票优惠券</a>
+            <a href="http://dididache.quanmama.com">滴滴打车代金券</a>
+            <a href="http://www.quanmama.com/quan_didapinche">嘀嗒拼车优惠券</a>
+            <a href="http://www.quanmama.com/quan_didishunfengche">滴滴顺风车优惠券</a>
+            <a href="http://www.quanmama.com/quan_didizhuanche">滴滴专车优惠券</a>
+            <a href="http://www.quanmama.com/quan_didikuaiche">滴滴快车优惠券</a>
+            <a href="http://www.quanmama.com/quan_xiaojukeji">滴滴打车优惠券</a>
+            <a href="http://www.quanmama.com/quan_uber">优步优惠码</a>
+            <a href="http://www.quanmama.com/quan_maoyan">猫眼电影优惠券</a>
+            <a href="http://www.quanmama.com/quan_niwodai/">你我贷优惠券</a>
+            <a href="http://www.quanmama.com/youhuima">优惠码</a>
+            <a href="http://www.quanmama.com/quan_aliyun">阿里云优惠券</a>
+            <a href="http://www.quanmama.com/quan_xiji">西集网优惠券</a>
+            <a href="http://www.quanmama.com/new">电子优惠券</a>
+            <a href="http://www.quanmama.com/quan_taodiandian">淘点点优惠券</a>
+            <a href="http://www.quanmama.com/quan_yoho/">有货优惠券</a>
+            <a href="http://www.quanmama.com/quan_touna">投哪网体验金</a>
+            <a href="http://www.quanmama.com/quan_kidsroom_de">kidsroom优惠码</a>
+            <a href="http://www.quanmama.com/quan_gome">国美在线优惠券</a>
+            <a href="http://www.quanmama.com/shidapinpai">十大品牌</a>
+            <a href="http://jiyejia.quanmama.com">吉野家优惠券</a>
+            <a href="http://www.quanmama.com/quan_yintai">银泰网优惠券</a>
+            <a href="http://www.quanmama.com/quan_ctrip">携程优惠券</a>
+            <a href="http://www.quanmama.com/quan_vipshop">唯品会优惠券免费领取</a>
+            <a href="http://www.quanmama.com/quan_360buy">京东优惠券领取</a>
+            <a href="http://www.quanmama.com/quan_tmallchaoshi">天猫超市优惠券</a>
+            <a href="http://www.quanmama.com/quan_yihaodian">1号店优惠券</a>
+            <a href="http://www.quanmama.com/lipinka_vipshop">唯品会礼品卡</a>
+            <a href="http://www.quanmama.com/quan_jiuxian">酒仙网优惠券</a>
+            <a href="http://www.quanmama.com/quan_jumei">聚美红包</a>
+            <a href="http://www.quanmama.com/quan_tmallchaoshi/10">天猫超市10元优惠券</a>
+            <a href="http://www.quanmama.com/quan_shopbop">shopbop优惠码</a>
+            <a href="http://www.quanmama.com/quan_tmall">天猫优惠券</a>
+            <a href="http://www.quanmama.com/quan_ashford">Ashford优惠码</a>
+            <a href="http://www.quanmama.com/quan_nuomi">糯米网优惠券</a>
+            <a href="http://www.quanmama.com/quan_meituan">美团代金券</a>
+            <a href="http://www.quanmama.com/quan_taobao">淘宝优惠券</a>
+            <a href="http://www.quanmama.com/quan_qunar">去哪儿优惠券</a>
+            <a href="http://www.quanmama.com/quan_suning">苏宁易购优惠券</a>
+            <a href="http://www.quanmama.com/quan_kuaidi">快的打车优惠券</a>
+            <a href="http://www.quanmama.com/quan_nuoxin">诺心蛋糕优惠券</a>
+            <a href="http://ctrip.quanmama.com">携程网优惠券</a>
+            <a href="http://www.quanmama.com/quan_yongche">易到用车优惠券</a>
+            <a href="http://www.quanmama.com/quan_lafaso">乐蜂网优惠券</a>
+            <a href="http://www.quanmama.com/kfc">肯德基优惠券</a>
+            <a href="http://www.quanmama.com">券老大</a>
+            <a href="http://www.quanmama.com/mdl">麦当劳优惠券</a>
+
+
+            <a target="_blank" href="http://www.dionly.com">
+                戴欧妮钻石</a>
+            <a target="_blank" href="http://www.hzins.com">
+                慧择网</a>
+            <a target="_blank" href="http://www.chinapp.com">
+                中国品牌网</a>
+            <a target="_blank" href="http://www.17ugo.com">
+                优购物</a>
+            <a target="_blank" href="http://www.1zw.com">
+                淘牛品</a>
+            <a target="_blank" href="http://www.zgzcw.com">
+                彩票</a>
+            <a target="_blank" href="http://www.niwodai.com">
+                P2P</a>
+            <a target="_blank" href="http://www.taofen8.com">
+                返利网首页</a>
+            <a target="_blank" href="http://www.fandongxi.com">
+                翻东西</a>
+            <a target="_blank" href="http://www.spider.com.cn/">
+                杂志订阅</a>
+            <a target="_blank" href="http://www.wbiao.cn">
+                手表网</a>
+            <a target="_blank" href="http://www.jiukuaiyou.com">
+                9.9元包邮</a>
+            <a target="_blank" href="http://www.jiameng.com">
+                加盟</a>
+            <a target="_blank" href="http://www.78.cn">
+                招商加盟</a>
+            <a target="_blank" href="http://bbs.gome.com.cn">
+                国美在线社区</a>
+            <a target="_blank" href="http://www.smarter.com.cn">
+                网上购物</a>
+            <a target="_blank" href="http://www.staples.cn">
+                办公用品</a>
+            <a target="_blank" href="http://www.ganji.com/wu/">
+                二手货</a>
+            <a target="_blank" href="http://www.shhbm.com">
+                上海特卖会</a>
+            <a target="_blank" href="http://www.goupuzi.com">
+                宠物狗</a>
+            <a target="_blank" href="http://www.hitao.com/">
+                嗨淘官网</a>
+            <a target="_blank" href="http://www.mmall.com">
+                家居网</a>
+            <a target="_blank" href="http://esf.sz.fang.com">
+                深圳二手房</a>
+            <a target="_blank" href="http://www.j1.com/">
+                网上药店</a>
+            <a target="_blank" href="http://www.zhe800.com/">
+                折800</a>
+            <a target="_blank" href="http://www.eelly.com">
+                服装批发</a>
+            <a target="_blank" href="http://www.ef43.com.cn">
+                中国丽人网</a>
+            <a target="_blank" href="http://www.51bi.com">
+                返利网</a>
+            <a target="_blank" href="http://www.1000tuan.com">
+                千团团购网</a>
+            <a target="_blank" href="http://www.lejj.com">
+                装修网</a>
+            <a target="_blank" href="http://www.ttpet.com">
+                天天宠物网</a>
+            <a target="_blank" href="http://www.s.cn">
+                鞋子</a>
+            <a target="_blank" href="http://www.zbird.com">
+                钻石小鸟</a>
+            <a target="_blank" href="http://www.liebiao.com">
+                列表网</a>
+            <a target="_blank" href="http://www.egouz.com/">
+                国外网站</a>
+            <a target="_blank" href="http://www.xbiao.com">
+                手表品牌排行榜</a>
+            <a target="_blank" href="http://www.1000tuan.com ">
+                千团网</a>
+            <a target="_blank" href="http://www.aitaocui.cn">
+                淘翠网</a>
+            <a target="_blank" href="http://www.pintour.com">
+                驴友网</a>
+            <a target="_blank" href="http://www.jiuxian.com/">
+                四大名酒</a>
+        </p>
+    </div>
+</div>
+
+<p class="pagefooter_link">
+    <a rel="nofollow" href="http://www.quanmama.com/about" target="_blank">关于券妈妈</a><span>-</span><a
+        href="http://www.quanmama.com/quanmamaApp">手机客户端</a><span>-</span><a rel="nofollow"
+                                                                             rel="nofollow" href="http://www.quanmama.com/contact">联系我们</a><span>-</span><a rel="nofollow"
+                                                                                                                                                            rel="nofollow" href="http://www.quanmama.com/joinus">人才招聘</a><span>-</span><a rel="nofollow"
+                                                                                                                                                                                                                                          href="http://www.quanmama.com/drawcouponhelp">优惠券免费领取</a><span>-</span><a rel="nofollow"
+                                                                                                                                                                                                                                                                                                                    href="http://www.quanmama.com/LoginHelp">如何注册和登陆</a><span>-</span><a rel="nofollow"
+                                                                                                                                                                                                                                                                                                                                                                                         href="http://www.quanmama.com/chongzhihelp">如何充值买劵</a><span>-</span>
+    <a href="http://www.quanmama.com/usage">优惠券怎么用</a><span>-</span> <a rel="nofollow"
+                                                                        href="http://www.quanmama.com/faq">帮助中心</a> <span>-</span><a href="http://www.quanmama.com/links">友情链接</a>
+</p>
+<p class="pagefooter_copyright">
+    券妈妈 - 优惠券免费领取，是中国最大的优惠券网,
+
+    2010-2015，All Rights Reserved 皖ICP备12015864号-1
+
+</p>
+
+<div style="border-style: solid; border-width: 1px; border-color: red">
+</div>
+<script type="text/javascript">
+    function admin_hide() {
+        Youhui.tools.cookie('closeadmin', 1, {
+            path: '/',
+            domain: Youhui.CookieDomain,
+            expires: 86400
+        });
+
+        $(".adminManageArea").hide();
+        $(".adminManageArea2").show();
+        $(".adminArea").hide();
+    }
+
+    function admin_show() {
+        Youhui.tools.cookie('closeadmin', 0, {
+            path: '/',
+            domain: Youhui.CookieDomain,
+            expires: 86400
+        });
+
+        $(".adminManageArea").show();
+        $(".adminManageArea2").hide();
+
+        $(".adminArea").show();
+    }
+</script>
+
+<div style="border-style: solid; border-width: 2px; padding: 10px; border-color: black;
+            display: none; width: 120px; left: 10px; bottom: 40px; position: fixed; text-align: left;
+            padding-left: 4px;" class="adminManageArea">
+    <a target="_blank" href="/shouzhaoliu/guide.aspx">管理中心</a>&nbsp;<a target="_blank"
+                                                                       href="/shouzhaoliu/editor.aspx"> 编辑中心</a>&nbsp;<a onclick="admin_hide();" href="javascript:;">X关闭</a><br />
+    <hr />
+
+</div>
+<div style="border-style: solid; border-width: 2px; padding: 10px; border-color: black;
+            display: none; left: 10px; bottom: 10px; position: fixed; text-align: left; padding-left: 4px;"
+     class="adminManageArea2">
+    <a onclick="admin_show();" href="javascript:;">显示管理后台</a>
+</div>
+<script type="text/javascript">
+    if (Youhui.tools.cookie('closeadmin') != 1) {
+        $(".adminManageArea").show();
+        $(".adminArea").show();
+    } else {
+        $(".adminManageArea2").show();
+        $(".adminArea").hide();
+    }
+
+    $(".adminManageArea").css('width', ($(window).width() - 1100) / 2.0 - 30);
+</script>
+
+</div>
+<div class="cartTop J_floatright" style="right: 50px;">
+    <a href="javascript:;" class="J_totop item hideitem" style="display: none;"><span
+            class="icon top"></span><span class="text">返回顶部</span> </a><a target="_blank" href="http://www.quanmama.com/faq?utm_source=floatright"
+                                                                          class="item csbox J_floatright J_open_kefu" data-show="true" style="display: block;">
+    <span class="icon cs"></span><span class="text">客服帮助</span></a></div>
+<div id="note_tips" style="top: 28px; right: 222.5px; display: none;">
+    <a target="_blank" title="查看收件箱" href="/adminNotice"><em class="note_num">0</em>&nbsp;条新消息</a>
+    <div id="note_list">
+        <ul>
+        </ul>
+        <div id="note_act">
+            <a href="/adminNotice">查看收件箱</a></div>
+    </div>
+</div>
+<div class="JMyAjax" data-url="/html/AutoCompleteHotStores.html">
+</div>
+<div class="statics">
+
+
+</div>
+<div class="clear adminArea" style="text-align: center; width: 100%">
+
+</div>
+<div id="userweibo" style="display: none;">
+
+
+    <a onclick="return window.open('http://www.quanmama.com/t/qq.aspx?action=go&returl=http%3a%2f%2fwww.quanmama.com%2ft%2flogin_jump.htm%3faj_is_from_login%3d1%26from%3d', 'oauth2Login_10909', 'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes')" href="javascript:;">
+        <img title="用QQ账号登录" alt="用QQ账号登录" src="http://www.quanmama.com/images/tencent_logo_big.png" /></a>
+
+    <!--
+ <a href="http://www.quanmama.com/t/qq.aspx?action=go&returl=http%3a%2f%2fwww.quanmama.com%2f">
+     <img title="用QQ账号登录" alt="用QQ账号登录" src="http://www.quanmama.com/images/tencent_logo_big.png" /></a>
+  -->
+    <a href="http://www.quanmama.com/t/gotosinaweibo.aspx?action=go&returl=http%3a%2f%2fwww.quanmama.com%2f">
+        <img  style="padding-left: 8px;"
+              title="用新浪微博账号登录" alt="用新浪微博账号登录" src="http://www.quanmama.com/images/sina_logo_big.gif"
+              class="sina_login_image" /></a>
+</div>
+</body>
+</html>
