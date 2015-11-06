@@ -119,18 +119,20 @@
 
 
 .aj-quan-new-320{
-    @left : 200px;
-    @right : 150px;
+    @left : 170px;
+    @left_w : 200px;
+    @right : 140px;
 
-    @w : 350px;
+    @w : @left_w + @right;
     @top_h :50px;
-    @mid_h : 200px;
-    @mid_img_w : 130px;
+    @mid_h : @left;
+    @mid_img_w : 100px;
     @mid_bot_h : 25px;
     @bot_line_h : 25px;
     @mar : 5px;
     @right_line_h : 40px;
     @right_small_line_h : 20px;
+    @right_top : 30px;
     position: relative;
     width:@w - 2;height: auto;
     float: left;
@@ -138,6 +140,10 @@
     border: 1px solid #ccc;
     overflow: hidden;
     margin:@mar;
+    font-family: "Helvetica","Hiragino Sans GB","Microsoft Yahei",sans-serif;
+    a{
+        color: #333;
+    }
     &:hover{
         box-shadow: 0 2px 10px #dcdcdc;
         background-color: #fff;
@@ -145,7 +151,7 @@
     .aj-mid{
         position: relative;
         text-align: center;
-        width:@left;
+        width:@left_w;
         height: @mid_h;
         padding-right: @right;
         .aj-img-wrap{
@@ -203,7 +209,7 @@
     }
     .aj-right{
         position: absolute;
-        right: 0;top: 50px;
+        right: 0;top: @right_top;
         width: @right;
 
         .aj-top{

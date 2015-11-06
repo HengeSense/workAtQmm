@@ -108,13 +108,17 @@
 }
 .aj-quan-new-320 {
   position: relative;
-  width: 348px;
+  width: 338px;
   height: auto;
   float: left;
   background-color: white;
   border: 1px solid #ccc;
   overflow: hidden;
   margin: 5px;
+  font-family: "Helvetica", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+.aj-quan-new-320 a {
+  color: #333;
 }
 .aj-quan-new-320:hover {
   box-shadow: 0 2px 10px #dcdcdc;
@@ -124,13 +128,13 @@
   position: relative;
   text-align: center;
   width: 200px;
-  height: 200px;
-  padding-right: 150px;
+  height: 170px;
+  padding-right: 140px;
 }
 .aj-quan-new-320 .aj-mid .aj-img-wrap {
   display: block;
   width: 100%;
-  height: 130px;
+  height: 100px;
   text-align: center;
   font-size: 0px;
 }
@@ -142,8 +146,8 @@
   vertical-align: middle;
 }
 .aj-quan-new-320 .aj-mid .aj-img-wrap .aj-img {
-  max-width: 130px;
-  max-height: 130px;
+  max-width: 100px;
+  max-height: 100px;
   font-size: 0;
   vertical-align: middle;
 }
@@ -184,8 +188,8 @@
 .aj-quan-new-320 .aj-right {
   position: absolute;
   right: 0;
-  top: 50px;
-  width: 150px;
+  top: 30px;
+  width: 140px;
 }
 .aj-quan-new-320 .aj-right .aj-top {
   height: 50px;

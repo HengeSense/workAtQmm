@@ -1,0 +1,10 @@
+document.write ('<a href="http://www.51.la/?3943066" title="51.La &#x7F51;&#x7AD9;&#x6D41;&#x91CF;&#x7EDF;&#x8BA1;&#x7CFB;&#x7EDF; VIP &#x7528;&#x6237;" target="_blank"><img alt="51.La &#x7F51;&#x7AD9;&#x6D41;&#x91CF;&#x7EDF;&#x8BA1;&#x7CFB;&#x7EDF; VIP &#x7528;&#x6237;" src="icon_1.gif"/*tpa=http://icon.51.la/icon_1.gif*/ style="border:none" /></a>\n');
+var a3066tf="51la";var a3066pu="";var a3066pf="51la";var a3066su=window.location;var a3066sf=document.referrer;var a3066of="";var a3066op="";var a3066ops=1;var a3066ot=1;var a3066d=new Date();var a3066color="";if (navigator.appName=="Netscape"){a3066color=screen.pixelDepth;} else {a3066color=screen.colorDepth;}
+try{a3066tf=top.document.referrer;}catch(e){}
+try{a3066pu =window.parent.location;}catch(e){}
+try{a3066pf=window.parent.document.referrer;}catch(e){}
+try{a3066ops=document.cookie.match(new RegExp("(^| )AJSTAT_ok_pages=([^;]*)(;|$)"));a3066ops=(a3066ops==null)?1: (parseInt(unescape((a3066ops)[2]))+1);var a3066oe =new Date();a3066oe.setTime(a3066oe.getTime()+60*60*1000);document.cookie="AJSTAT_ok_pages="+a3066ops+ ";path=/;expires="+a3066oe.toGMTString();a3066ot=document.cookie.match(new RegExp("(^| )AJSTAT_ok_times=([^;]*)(;|$)"));if(a3066ot==null){a3066ot=1;}else{a3066ot=parseInt(unescape((a3066ot)[2])); a3066ot=(a3066ops==1)?(a3066ot+1):(a3066ot);}a3066oe.setTime(a3066oe.getTime()+365*24*60*60*1000);document.cookie="AJSTAT_ok_times="+a3066ot+";path=/;expires="+a3066oe.toGMTString();}catch(e){}
+try{if(document.cookie==""){a3066ops=-1;a3066ot=-1;}}catch(e){}
+a3066of=a3066sf;if(a3066pf!=="51la"){a3066of=a3066pf;}if(a3066tf!=="51la"){a3066of=a3066tf;}a3066op=a3066pu;try{lainframe}catch(e){a3066op=a3066su;}
+a3066src='http://vip.51.la:82/go.asp?svid=6&id=3943066&tpages='+a3066ops+'&ttimes='+a3066ot+'&tzone='+(0-a3066d.getTimezoneOffset()/60)+'&tcolor='+a3066color+'&sSize='+screen.width+','+screen.height+'&referrer='+escape(a3066of)+'&vpage='+escape(a3066op)+'&vvtime='+a3066d.getTime();
+setTimeout('a3066img = new Image;a3066img.src=a3066src;',0);
