@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="animate.min.css"/>
+</head>
+<body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/angular.min.js"></script>
+
+<style>
+    .div {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 20px;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-weight: bold;
+    }
+    .blocks.slow-slow .div{
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+    }
+    .blocks.slow .div{
+        -webkit-animation-duration: 4s;
+        animation-duration: 4s;
+    }
+    .blocks.default .div{
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+    }
+    .blocks.fast .div{
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+    .blocks.fast-fast .div{
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+    }
+    ul{
+        list-style: none;
+    }
+</style>
+
+
+<div id="blocks" class="blocks" ng-class="speed" ng-controller="animation">
+    <header>
+        <h3>选择一个你喜欢的速度</h3>
+        <select id="select" ng-model="speed">
+            <option value="default">默认</option>
+            <option value="fast-fast">超快</option>
+            <option value="fast">快</option>
+            <option value="default">适中</option>
+            <option value="slow">慢</option>
+            <option value="slow-slow">超慢</option>
+        </select>
+    </header>
+
+    <ul>
+        <li ng-repeat="slider in sliders">
+            <div class='div animated infinite' ng-class="slider" ng-bind="slider"></div>
+        </li>
+    </ul>
+</div>
+
+
+<script src="js/demo.js"></script>
+</body>
+</html>
