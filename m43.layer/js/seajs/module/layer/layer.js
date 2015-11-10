@@ -18,7 +18,8 @@ define(function (require, exports, module) {
             img: "",
             link: "",
             zIndex: 1000,
-            expires: 1 / 24
+            expires: 1 / 24,
+            effect : "fade"
         };
         this.small = {
             width: 0,
@@ -26,11 +27,13 @@ define(function (require, exports, module) {
             img: "",
             bottom: 190,
             right: $(window).width() / 2 - 1050 / 2,
-            offset: -5
+            offset: -5,
+            zIndex : 999
         };
 
         this.shadowDiv = null;
         this.container = null;
+        this.smallWrap = null;
         $.extend(this.params, params);
         $.extend(this.small, small);
 
@@ -82,7 +85,8 @@ define(function (require, exports, module) {
                     width: this.small.width + 'px',
                     height: this.small.height + 'px',
                     textAlign: 'center',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    zIndex : this.small.zIndex
                 });
                 div.html("<img style='max-width:100%;max-height:100%;' src='" + img + "' >");
                 $(document.body).append(div);
@@ -94,6 +98,7 @@ define(function (require, exports, module) {
                 div.on("click", function () {
                     that.show(true)
                 });
+                that.smallWrap = div;
             }
         },
         addShadow: function () {
@@ -134,8 +139,27 @@ define(function (require, exports, module) {
             this.container.fadeIn("0.3s");
         },
         close: function () {
-            this.container.fadeOut();
-            this.shadowDiv.fadeOut();
+            var that = this;
+            if (this.params.effect === "fade") {
+                this.container.fadeOut();
+                this.shadowDiv.fadeOut();
+            } else if (this.params.effect === "slide") {
+                this.shadowDiv.fadeOut();
+                var style = this.container.clone().hide().attr("style");
+                this.container.animate({
+                    top : $(window).height() - that.small.bottom - that.small.height,
+                    //top : $(window).height() - parseInt(that.smallWrap.css("bottom")) - parseInt(that.small.height),
+                    left : $(window).width() - (this.small.right + this.small.offset),
+                    //left : $(window).width() - (parseInt(this.smallWrap.css("right")) + this.small.offset),
+                    width : that.small.width,
+                    height : that.small.height,
+                    marginTop : 0,
+                    marginLeft : 0,
+                    opacity : 0.5
+                }, "slow").fadeOut(function () {
+                    that.container.attr("style", style);
+                });
+            }
             Youhui.tools.cookie("aj.hide.layer", "1", {
                 path: '/',
                 doamin: Youhui.CookieDomain,
@@ -146,3 +170,5 @@ define(function (require, exports, module) {
 
     module.exports = LY;
 });
+
+
