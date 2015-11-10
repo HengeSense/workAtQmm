@@ -185,6 +185,9 @@
   color: #5188a6;
   font-size: 12px;
 }
+.aj-quan-new-320 .aj-mid .aj-desc em.size12 {
+  font-size: 16px;
+}
 .aj-quan-new-320 .aj-right {
   position: absolute;
   right: 0;
@@ -194,7 +197,6 @@
 .aj-quan-new-320 .aj-right .aj-top {
   height: 50px;
   text-align: center;
-  border-bottom: 1px dashed #eee;
 }
 .aj-quan-new-320 .aj-right .aj-top .aj-img {
   max-height: 100%;
