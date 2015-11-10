@@ -10,6 +10,9 @@
 <script src="js/angular.min.js"></script>
 
 <style>
+    body{
+        font-family: "Helvetica", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    }
     .div {
         float: left;
         width: 100px;
@@ -44,6 +47,9 @@
     ul{
         list-style: none;
     }
+    .blocks header{
+        border-bottom: 1px solid #ccc;
+    }
 </style>
 
 
@@ -62,7 +68,8 @@
 
     <ul>
         <li ng-repeat="slider in sliders">
-            <div class='div animated infinite' ng-class="slider" ng-bind="slider"></div>
+            <div class='div animated infinite' ng-class="slider" ng-bind="slider"
+                 ng-style="{'background-color' : colors[$index]}"></div>
         </li>
     </ul>
 </div>
