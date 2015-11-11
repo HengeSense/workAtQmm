@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+</head>
+<body>
+
+
+<div id="div" style="width:100px;height:100px;background-color: lightblue;">
+
+</div>
+
+<script src="hammer.js"></script>
+<script>
+    var hammertime = new Hammer(document.getElementById("div"), {});
+    hammertime.on('press', function(ev) {
+        ev.preventDefault();
+        console.log(1);
+    });
+</script>
+
+
+</body>
+</html>
