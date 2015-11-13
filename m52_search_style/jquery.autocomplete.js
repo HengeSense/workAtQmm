@@ -35,11 +35,9 @@ $.fn.autocomplete = function (url, option) {
     ac.hide();
 
     $(me).on('keyup', function (e) {
-
         keysearch(e.keyCode);
     });
     $(me).on('keydown', function (e) {
-
         LineSelect(e.keyCode);
     });
     $(me).bind("blur", function () {
@@ -47,6 +45,11 @@ $.fn.autocomplete = function (url, option) {
         if (strKeyBak.length > 0 && strKeyBak != $(me).val()) {
             filldata(me);
         };
+    });
+    $(me).on("click", function (e) {
+        e.stopPropagation();
+    });
+    $(document).on("click", function () {
         floorHide();
     });
     var encode = function (v) {//如果包含中文就escape,避免重复escape)
@@ -66,7 +69,7 @@ $.fn.autocomplete = function (url, option) {
             'z-index:': doption.zIndex,
             width: w,
             top: parseInt(p.top + $(me).outerHeight()) + "px",
-            left: parseInt(p.left) + "px"
+            left: parseInt(p.left) - 2 + "px"
         }).show();
         strKey = "";
         isShow = true;
@@ -90,37 +93,47 @@ $.fn.autocomplete = function (url, option) {
                 url: url,
                 data: strPara != "" ? strData : "",
                 success: function (html) {
-                    if (html.length > 0) {
-                        var results = [];
-                        results.push("<div class='aj-title'>搜索'" + strData.keyword + "'相关的商城</div>");
-                        results.push(html);
-                        results.push("<div class='aj-title'>搜索'" + strData.keyword + "'相关优惠券</div>");
-                        results.push("<div class='aj-title'>搜索'" + strData.keyword + "'相关值得买</div>");
-                        ac.html(results.join(""));
+                    //                    if (html.length > 0) {
+                    var results = [],
+                        dom = $(html),
+                        lis = dom.find("li"),
+                        keywordShow = strData.keyword;
+                    results.push("<div class='aj-title'>搜索 \"<span style=\'color:#f60;font-weight:bold;\'>" + keywordShow + "</span>\" 相关的商城</div>");
+                    results.push("<li class='aj-title keyinfo'><a target='_blank' href=\'/search/?keyword=" + encodeURIComponent(keywordShow) + "\'>搜索 \"<span style=\'color:#f60;font-weight:bold;\'>" + keywordShow + "</span>\" 相关优惠券</a><span class='keyname' style='display:none;'>" + keywordShow + "</span></li>");
+                    results.push("<li class='aj-title keyinfo'><a target='_blank' href=\'/zhisearch/?keyword=" + encodeURIComponent(keywordShow) + "\'>搜索 \"<span style=\'color:#f60;font-weight:bold;\'>" + keywordShow + "</span>\" 相关值得买</a><span class='keyname' style='display:none;'>" + keywordShow + "</span></li>");
 
-                        $(".keyinfo", ac).mouseover(function () {
-                            $(".selected", ac).removeClass("selected");
-                            $(this).removeClass("unselected").addClass("selected");
-                        }).mouseout(function () {
-                            $(this).removeClass("selected").addClass("unselected");
-                        }).click(function () {
-                            if (strKeyBak.length() > 0) {
-                                filldata(me);
-                            }
-                        });
-                        floorShow();
+                    if (lis.length > 0) {
+                        $(results[0]).insertBefore(lis.eq(0));
+                        $(results[1]).insertAfter(lis.eq(lis.length - 1));
+                        $(results[2]).insertAfter(lis.eq(lis.length - 1));
+                        ac.html(dom);
                     } else {
-                        //没有搜索数据
-                        floorHide();
-                        return;
+                        ac.html($(document.createElement("ul")).append(results.join("")));
                     }
+
+                    $(".keyinfo", ac).mouseover(function () {
+                        $(".selected", ac).removeClass("selected");
+                        $(this).removeClass("unselected").addClass("selected");
+                    }).mouseout(function () {
+                        $(this).removeClass("selected").addClass("unselected");
+                    }).click(function () {
+                        if (strKeyBak.length() > 0) {
+                            filldata(me);
+                        }
+                    });
+                    floorShow();
+                    //                    } else {
+                    //                        //没有搜索数据
+                    //                        floorHide();
+                    //                        return;
+                    //                    }
                 }
             });
             strKey = $(me).val();
         }
         if (strKey.length == 0 || strKey.length <= iLengthLower || strKey.length >= iLengthUpper) floorHide();
     }
-    function filldata(obj) {
+    function filldata(obj, jumpUrl) {
         var kw = $("ul .selected .keyname", ac).text();
         var ke = $("ul .selected .keyextend", ac).text();
         var kr = $("ul .selected", ac).attr('rel');
@@ -131,6 +144,9 @@ $.fn.autocomplete = function (url, option) {
                 'keyextend': ke,
                 'keyrel': kr
             };
+            if (jumpUrl) {
+                data.jumpUrl = jumpUrl;
+            }
             doption.success(data);
         } else {
             doption.error($(obj).val());
@@ -141,15 +157,16 @@ $.fn.autocomplete = function (url, option) {
             floorHide();
         };
         if (code == 13) {//回车键
-            filldata(me); //主要是为了进行回调函数,好给前台一个提交的事件
+            var jumpUrl = ac.find("li.selected a").attr("href");
+            filldata(me, jumpUrl); //主要是为了进行回调函数,好给前台一个提交的事件
             floorHide();
         }
         if (!isShow) return;
         var sel = $("ul .selected", ac);
         if (sel.length > 0) {	//如果已经有选定
             if (code == 38) {	//向上键
-                if (sel.prev().text() != "") {	//如果不是第一个数据
-                    sel.removeClass("selected").addClass("unselected").prev().removeClass("unselected").addClass("selected");
+                if (sel.prev(".keyinfo").text() != "") {	//如果不是第一个数据
+                    sel.removeClass("selected").addClass("unselected").prev(".keyinfo").removeClass("unselected").addClass("selected");
                     $(me).val($("ul .selected .keyname", ac).text());
                 } else {
                     sel.removeClass("selected").addClass("unselected");
@@ -158,7 +175,7 @@ $.fn.autocomplete = function (url, option) {
                 }
             } else if (code == 40) {	//向下键
                 if (sel.next().text() != "") {	//如果不是第一个数据
-                    sel.removeClass("selected").addClass("unselected").next().removeClass("unselected").addClass("selected");
+                    sel.removeClass("selected").addClass("unselected").next(".keyinfo").removeClass("unselected").addClass("selected");
                     $(me).val($("ul .selected .keyname", ac).text());
                 } else {
                     sel.removeClass("selected").addClass("unselected");
