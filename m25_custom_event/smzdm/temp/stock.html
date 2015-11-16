@@ -1,0 +1,7 @@
+<!-- 库存 -->
+<ul id="panel_stock" ms-controller="stockRange" class="row">
+    <li ms-repeat-val="collect" ms-class-voidtips="val.S === '无货'" ms-class-warningtips="!(val.S === '有货'|| val.S === '无货')">
+    	{{ val.A }}<span>{{ val.S }}</span>--{{ val.P }}
+    </li>
+</ul>
+<!-- 库存 -->
