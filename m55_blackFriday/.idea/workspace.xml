@@ -21,26 +21,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="blackFriday.view.aspx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="blackFriday.view.aspx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blackFriday.view.aspx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6939597">
-              <caret line="1062" column="4" selection-start-line="1062" selection-start-column="4" selection-end-line="1062" selection-end-column="4" />
+            <state vertical-scroll-proportion="-21.857143">
+              <caret line="1067" column="11" selection-start-line="1017" selection-start-column="8" selection-end-line="1067" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1448266944629" expanded="true" signature="43922:44084" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="44261:44423" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="44580:44738" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="44894:45097" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="45162:45365" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="45430:45588" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="45744:45947" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="46012:46215" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="46280:46442" placeholder="..." />
-                <marker date="1448266944629" expanded="true" signature="46599:46761" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="43922:44084" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="44261:44423" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="44580:44738" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="44894:45097" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="45162:45365" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="45430:45588" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="45744:45947" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="46012:46215" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="46280:46442" placeholder="..." />
+                <marker date="1448267183778" expanded="true" signature="46599:46761" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.snippet.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts.snippet.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.52476573">
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,6 +61,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/blackFriday.view.aspx" />
+        <option value="$PROJECT_DIR$/scripts.snippet.js" />
       </list>
     </option>
   </component>
@@ -200,23 +211,31 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blackFriday.view.aspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6939597">
-          <caret line="1062" column="4" selection-start-line="1062" selection-start-column="4" selection-end-line="1062" selection-end-column="4" />
+        <state vertical-scroll-proportion="-21.857143">
+          <caret line="1067" column="11" selection-start-line="1017" selection-start-column="8" selection-end-line="1067" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1448266944629" expanded="true" signature="43922:44084" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="44261:44423" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="44580:44738" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="44894:45097" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="45162:45365" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="45430:45588" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="45744:45947" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="46012:46215" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="46280:46442" placeholder="..." />
-            <marker date="1448266944629" expanded="true" signature="46599:46761" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="43922:44084" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="44261:44423" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="44580:44738" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="44894:45097" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="45162:45365" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="45430:45588" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="45744:45947" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="46012:46215" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="46280:46442" placeholder="..." />
+            <marker date="1448267183778" expanded="true" signature="46599:46761" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts.snippet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52476573">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
