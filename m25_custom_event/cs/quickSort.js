@@ -32,8 +32,8 @@
                 (function (begin, end) {
                     while(begin <= end) {
                         /*
-                        * ÕâµØ·½²»ÄÜÓÃ <=  ·ñÔòÔÚÂÖµ½midÊ±½øÈëËÀÑ­»·
-                        * */
+                         * è¿™åœ°æ–¹ä¸èƒ½ç”¨ <=  å¦åˆ™åœ¨è½®åˆ°midæ—¶è¿›å…¥æ­»å¾ªçŽ¯
+                         * */
                         while(arr[begin] < mid) {
                             begin ++ ;
                         }
@@ -42,7 +42,7 @@
                         }
                         if (begin <= end) {
                             if (begin !== end) {
-                                // ÕâÀïÒªÅÐ¶ÏÒ»ÏÂ, ÒòÎªbegin Óë endÏàµÈ¾Í±ä³É ±äÁ¿Óë×Ô¼ºÒì»ò, ×îºóÖµ±äÎª0
+                                // è¿™é‡Œè¦åˆ¤æ–­ä¸€ä¸‹, å› ä¸ºbegin ä¸Ž endç›¸ç­‰å°±å˜æˆ å˜é‡ä¸Žè‡ªå·±å¼‚æˆ–, æœ€åŽå€¼å˜ä¸º0
                                 arr[begin] = arr[begin] ^ arr[end];
                                 arr[end] = arr[begin] ^ arr[end];
                                 arr[begin] = arr[begin] ^ arr[end];
