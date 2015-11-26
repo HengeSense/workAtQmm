@@ -34,6 +34,19 @@
     <meta property="og:type" content="" />
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" tppabs="http://www.quanmama.com/resources/public/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/html/qmm1111/module.js" tppabs="http://www.quanmama.com/resources/js/module.js"></script>
+    <script>
+        $(function () {
+            $(".dealout a").each(function () {
+                var obj = $(this);
+                var thislink = obj.attr("href");
+
+                if (thislink && thislink.length > 0 && thislink.indexOf("quanmama") == -1
+            && thislink.indexOf("localhost") == -1 && thislink.indexOf("http") != -1) {
+                    obj.attr("target", "_blank").attr("href", "http://www.quanmama.com/t/goto.aspx?from=deal&url=" + thislink);
+                }
+            });
+        });
+    </script>
     <!--form-->
     <style>
         .banner
@@ -93,56 +106,56 @@
         #module_2378 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56387d10ebb3d2682.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56387d10ebb3d2682.jpg*/ top center;
+            background: url("/html/qmm1111/56387d10ebb3d2682.jpg")  top center;
         }
         #module_2380 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56387ea87359a1945.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56387ea87359a1945.jpg*/ top center;
+            background: url("/html/qmm1111/56387ea87359a1945.jpg")  top center;
             margin-bottom: 20px;
         }
         #module_2410 > h2
         {
             display: none;
-            background: url("/html/qmm1111/5638840566b743621.jpg") /*tpa=http://eimg.quanmama.com/201511/03/5638840566b743621.jpg*/ no-repeat top center;
+            background: url("/html/qmm1111/5638840566b743621.jpg")  no-repeat top center;
             margin-bottom: 20px;
             height: 23px;
         }
         #module_2382 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56388bc43cc192964.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56388bc43cc192964.jpg*/ top center;
+            background: url("/html/qmm1111/56388bc43cc192964.jpg")  top center;
             margin-bottom: 20px;
         }
         #module_2412 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56388c35ee9222341.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56388c35ee9222341.jpg*/ no-repeat top center;
+            background: url("/html/qmm1111/56388c35ee9222341.jpg")  no-repeat top center;
             margin-bottom: 20px;
             height: 23px;
         }
         #module_2404 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56388d1d2c9fc148.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56388d1d2c9fc148.jpg*/ top center;
+            background: url("/html/qmm1111/56388d1d2c9fc148.jpg")  top center;
             margin-bottom: 20px;
         }
         #module_2414 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56388dda2dc193858.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56388dda2dc193858.jpg*/ no-repeat top center;
+            background: url("/html/qmm1111/56388dda2dc193858.jpg")  no-repeat top center;
             margin-bottom: 20px;
             height: 23px;
         }
         #module_2418 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56388ed6969814323.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56388ed6969814323.jpg*/ top center;
+            background: url("/html/qmm1111/56388ed6969814323.jpg")  top center;
         }
         #module_2420 > h2
         {
             display: none;
-            background: url("/html/qmm1111/56388fb2aaada9062.jpg") /*tpa=http://eimg.quanmama.com/201511/03/56388fb2aaada9062.jpg*/ top center;
+            background: url("/html/qmm1111/56388fb2aaada9062.jpg")  top center;
         }
         #module_2378
         {
@@ -162,7 +175,7 @@
         }
         .lucky
         {
-            background: url("5638910a4830e1964.jpg") /*tpa=http://eimg.quanmama.com/201511/03/5638910a4830e1964.jpg*/ top center;
+            background: url("5638910a4830e1964.jpg")  top center;
             max-width: 1050px;
             margin: 0 auto 20px;
         }
@@ -417,7 +430,7 @@
         {
             margin: 6px auto;
         }
-
+        
         .aj-item-a
         {
             padding: 20px;
@@ -564,13 +577,13 @@
         </style>
         <div class="navBar">
             <nav class="nav">
-                <a class="aj-nav-a" target="_blank" href="http://www.quanmama.com">券妈妈首页</a>
+                <a class="aj-nav-a" target="_blank" href="http://www.quanmama.com">券妈妈首页</a> 
                 <a class="aj-nav-a" target="_blank" href="http://www.quanmama.com/new">
-                    优惠券</a>
-                <a class="aj-nav-a" target="_blank" href="http://zhi.quanmama.com/">今日值得买</a>
-                <a class="aj-nav-a" target="_blank" href="http://faxian.quanmama.com/">发现</a>
+                    优惠券</a> 
+                <a class="aj-nav-a" target="_blank" href="http://zhi.quanmama.com/">今日值得买</a> 
+                <a class="aj-nav-a" target="_blank" href="http://faxian.quanmama.com/">发现</a> 
                 <a class="aj-nav-a" target="_blank" href="http://www.quanmama.com/haitao">
-                            海淘</a>
+                            海淘</a> 
                 <a class="aj-nav-a" target="_blank" href="http://www.quanmama.com/newkfc">肯德基优惠券</a>
                 <a class="aj-nav-a" target="_blank" href="http://www.quanmama.com/user/coupons">我的券妈妈</a>
             </nav>
@@ -584,18 +597,6 @@
 </header>
         <div id="nav-lift">
             <ul>
-                <%--<li scrollto=""><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP"
-                    target="_blank">天猫主会场</a></li>
-                <li scrollto=""><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html"
-                    target="_blank">京东主会场</a></li>
-                <li scrollto=""><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://cuxiao.suning.com/city/9017/zh00090.htm"
-                    target="_blank">苏宁主会场</a></li>
-                <li scrollto=""><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://prom.gome.com.cn/html/prodhtml/topics/201510/chb/11party.html"
-                    target="_blank">国美主会场</a></li>
-                <li scrollto=""><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111"
-                    target="_blank">可得主会场</a></li>
-                <li scrollto=""><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071"
-                    target="_blank">亚马逊主会场</a></li>--%>
                 <li scrollto="#"><a class="return-top" href="#" _hover-ignore="1">返回顶部</a></li>
             </ul>
         </div>
@@ -603,152 +604,76 @@
             <div class="row">
                 <div class="col-md-12 wrap">
                     <section>
-                <div id="module_2372" class="banner items" style="background:url('/html/blackFriday/564431e0247336416.png') no-repeat 0 0;background-size: cover;background-position: center;"><h1><img src="/html/blackFriday/5644397cafcd01907.png" tppabs="http://eimg.quanmama.com/201510/28/56302f0ea9db92333.png" alt="" title=""></h1></div>
+                <div id="module_2372" class="banner items" style="background:url('/html/blackFriday/564431e0247336416.png') no-repeat 0 0;background-size: cover;background-position: center;"><h1><img src="/html/blackFriday/5644397cafcd01907_v2.png" tppabs="http://eimg.quanmama.com/201510/28/56302f0ea9db92333.png" alt="" title=""></h1></div>
                 <div id="module_2374" class="hotlist items" style="background:url('') no-repeat 0 0;background-size: cover;background-position: center;">
-                    <ul class="clearfix">
-                <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"><img src="http://www.quanmama.com/html/qmm1111/5638c481ed58a1990.png.jpg" tppabs="http://eimg.quanmama.com/201511/05/563b3c735f4a18519.png"></a>
-                            <h3><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP" target="_blank">直达链接</a></span>
-                        </div>
-                    </li><li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');">
-                            <img src="http://www.quanmama.com/html/qmm1111/5638c498e166c6713.jpg" tppabs="http://eimg.quanmama.com/201511/03/5638b16fde0dc1085.png"></a>
-                            <h3><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html" target="_blank">直达链接</a></span>
-                        </div>
-                    </li>
-                    <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111"
-                             target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');">
-                             <img src="http://www.juanlaoda.com/qmmimg/kede.jpg" ></a>
-                            <h3><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111"
-                              target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a
-                            href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111" target="_blank">直达链接</a></span>
-                        </div>
-                    </li>
-
-                    <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071" target="_blank"
-                            onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');">
-                            <img src="http://www.quanmama.com/html/qmm1111/5638c1c331e9c1576.png" tppabs="http://eimg.quanmama.com/201511/03/5638b1f17dbb33643.png"></a>
-                            <h3><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071"
-                             target="_blank">直达链接</a></span>
-                        </div>
-                    </li>
-                    </ul>
-                    <ul>
-                <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"><img src="http://www.quanmama.com/html/qmm1111/5638c481ed58a1990.png.jpg" tppabs="http://eimg.quanmama.com/201511/05/563b3c735f4a18519.png"></a>
-                            <h3><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DlCR1yQzQBYocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRPFqV%2B7Oyy0J1gyddu7kN9dXAz4qgLnmH44T6dYPHtWAmCr0AZwlhryv2xhn6FLuKUuZxIcp9pfUIgVEmFmgnbDX0%2BHH2IEVaX4VWt66S4EJPwiig1bxLP9BvYCQR6XAr%2BKQ71wHNCAqP8YyUoZZlq4cXg3ii9waXPs9Sj9Qli1np4c65at3FeX3cwyLTlAhj2l4PysJx%2FP" target="_blank">直达链接</a></span>
-                        </div>
-                    </li><li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');">
-                            <img src="http://www.quanmama.com/html/qmm1111/5638c498e166c6713.jpg" tppabs="http://eimg.quanmama.com/201511/03/5638b16fde0dc1085.png"></a>
-                            <h3><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://sale.jd.com/act/M7J62hoy1vugS.html" target="_blank">直达链接</a></span>
-                        </div>
-                    </li>
-                    <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111"
-                             target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');">
-                             <img src="http://www.juanlaoda.com/qmmimg/kede.jpg" ></a>
-                            <h3><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111"
-                              target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a
-                            href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.keede.com/event/kd20151111" target="_blank">直达链接</a></span>
-                        </div>
-                    </li>
-
-                    <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                        <div>
-                            <a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071" target="_blank"
-                            onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');">
-                            <img src="http://www.quanmama.com/html/qmm1111/5638c1c331e9c1576.png" tppabs="http://eimg.quanmama.com/201511/03/5638b1f17dbb33643.png"></a>
-                            <h3><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071" target="_blank" onclick="ga('send', 'event','专题','http://www.quanmama.com/zhuanti/1111/2015/quanmama.com','/zhuanti/1111/2015/');"></a></h3>
-                            <span class="price"></span>
-                            <p></p>
-                            <span class="col-sm-12" direct_link="1"><a href="http://www.quanmama.com/t/goto.aspx?union=smzdm&tag=1111&url=http://www.amazon.cn/%E5%85%89%E6%A3%8D%E8%8A%82/b/ref=amb_link_101691512_2?ie=UTF8&node=361165071"
-                             target="_blank">直达链接</a></span>
-                        </div>
-                    </li>
-                    </ul>
-
+                    <%=Banner.GetBanner("blackFriday2015_head").Content %>
+                    
                     </div>
-
-
-
-
-
-
-
-
 <!--hongbao-->
 
                     <div id="module_2378" class="hotlist items" style="background:url('') no-repeat 0 0;background-size: cover;background-position: center;"><h2><img src="/html/qmm1111/56387d10ebb3d2682.jpg" tppabs="http://eimg.quanmama.com/201511/03/56387d10ebb3d2682.jpg" alt="网购攻略" title="网购攻略"></h2>
                     <ul>
                         <%
-                            int index = 0;
-                            foreach (var item in Model)
+                            Tags tags_gl = Tags.GetTagsByTagsName("黑五攻略");
+                            Tags tags_cx = Tags.GetTagsByTagsName("黑五促销");
+                            Tags tags_hd = Tags.GetTagsByTagsName("黑五活动");
+                                                        
+                            List<Post> list_gl = new List<Post>();
+                            List<Post> list_cx = new List<Post>();
+                            List<Post> list_hd = new List<Post>();
+
+                            if (tags_gl != null)
                             {
-                                if (index % 8 == 0) {
-                                    %>
-                                    <li class="aj-separator"></li>
-                                    <%
-                                }
-                                Html.RenderPartial("~/Views/Shared/shuang1111.ascx", item);
-                                index++;
+                                list_gl = Post.GetListByTags(tags_gl.SysNo, 8);
                             }
+                            if (tags_cx != null) {
+                                list_cx = Post.GetListByTags(tags_cx.SysNo, 8);
+                            }
+                            //if (tags_hd != null) {
+                            //    list_hd = Post.GetListByTags(tags_hd.SysNo, 12);
+                            //}
+
+                            YouhuiQueryParams param = new YouhuiQueryParams(PageTypes.HaitaoZhidemai, PostTypes.Smzdm, PromotionTypes.Default, "", 0, 0, 0, 0, Country._Haitao.CountryCode, 1, 12);
+
+                            list_hd = Post.GetZdmList(param);
+
+                            %>
+                            <li class="aj-separator"></li>
+                            <%
+                            foreach (var item in list_gl)
+                            {
+                                Html.RenderPartial("~/Views/Shared/shuang1111.ascx", item);
+                            }
+                                
+                            %>
+                            <li class="aj-separator"></li>
+                            <%
+                            foreach (var item in list_cx)
+                            {
+                                Html.RenderPartial("~/Views/Shared/shuang1111.ascx", item);
+                            }
+                            
+                            %>
+                            <li class="aj-separator"></li>
+                            <%
+                            foreach (var item in list_hd)
+                            {
+                                Html.RenderPartial("~/Views/Shared/shuang1111.ascx", item);
+                            }    
+                            
                         %>
                     </ul><input type="hidden" name="elevator" value="网购攻略"></div>
-
+                    
                     <div id="module_2536" class="pure_code"><div class="mall-title"></div>
-                    <div class="aj-separator"><img src="/html/blackFriday/564477ea0b593300.png" /></div>
-<ul>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e93e2ce0733719.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e945a69aaf359.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e9488ce2418864.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e94e0442497307.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e95002d9b79070.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e950e69c541106.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e952f8e5ce5406.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e9542c24753870.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e955e5b9037975.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e956abab559383.png"></a></li>
-    <li><a href="" target="_blank" rel="nofollow"><img src="/html/blackFriday/564e958a4c1c74606.png"></a></li>
-    <li><a href="" target="_blank"><img src="/html/blackFriday/5652849b2a7cc878.png"></a></li>
-</ul>
-<div class="lucky"><a href="" target="_blank"><img src="/html/blackFriday/5638912149b4a5827.png"></a></div>
-<div class="others">
+                    <div class="aj-separator"><img src="/html/blackFriday/564477ea0b593300_v2.png" /></div>
+    <%=Banner.GetBanner("blackFriday2015_bottom").Content %>
+<%--<div class="lucky"><a href="" target="_blank"><img src="/html/blackFriday/5638912149b4a5827.png"></a></div>--%>
+<%--<div class="others">
     <div class="review"><a href="" target="_blank"><img src="/html/blackFriday/564eb8e7e02e96159.png"></a></div>
     <div class="more-act"><a href="" target="_blank"><img src="/html/blackFriday/564eb9af5c7d72501.png"></a></div>
-</div><input type="hidden" name="elevator" value="会场直达"></div>
-
-
+</div>--%><input type="hidden" name="elevator" value="会场直达"></div>
+                   
+                    
                     </section>
                     <footer></footer>
                     <!-- pop login -->
@@ -838,68 +763,15 @@
             }
         })
     </script>
-    <%--    <script>
-        $('.banner h1').append('<img class="banner-logo" style="width:200px;" src="563037b0cbdbb8272.png" /><div class="countdowm" style="max-width: 750px; width: 100%; margin-left: -375px;"><img src="http://image1.juanlaoda.com/AdminImageUpload/2015111103737137.jpg" style="position: relative;bottom: 0;width: 100%"></div></div>');
-        $('#module_2380>h2').after('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;"><img src="563886f482c8a8904.jpg"/*tpa=http://eimg.quanmama.com/201511/03/563886f482c8a8904.jpg*/ /></div>');
-        $('#module_2382>h2').after('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;"><img src="56388cd3d8f106492.jpg"/*tpa=http://eimg.quanmama.com/201511/03/56388cd3d8f106492.jpg*/ /></div>');
-        $('#module_2404>h2').after('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;"><img src="56388d9a9e946237.jpg"/*tpa=http://eimg.quanmama.com/201511/03/56388d9a9e946237.jpg*/ /></div>');
-        $('#nav-lift').prepend('<img src="/html/qmm1111/5630a9bcb31f71046.png"/*tpa=http://eimg.quanmama.com/201510/28/5630a9bcb31f71046.png*/ />').append('<li scrollto="#"><a class="return-top" href="#">返回顶部</a></li>');
-        $('.hotlist>h2').find('img').remove();
-        $('#module_2410 .more span').html('更多活动');
-        $('#module_2412 .more span').html('更多券码');
-        $('#module_2404 .more span').html('更多国内精选');
-        $('#module_2414 .more span').html('更多海淘精选');
-        $('#module_2418 .more span').html('更多达人分享');
-
-        var ddt = 0, dds = 0; hht = 0; hhs = 0; mmt = 0; mms = 0;
-        function timer() {
-            var ts = (new Date(2015, 10, 11, 0, 0, 0)) - (new Date());
-            var dd = parseInt(ts / 1000 / 60 / 60 / 24, 10);
-            var hh = parseInt(ts / 1000 / 60 / 60 % 24, 10);
-            var mm = parseInt(ts / 1000 / 60 % 60, 10);
-            var ss = parseInt(ts / 1000 % 60, 10);
-            checkTime(dd, 'day');
-            checkTime(hh, 'hour');
-            checkTime(mm, 'minute');
-            $('.time-day-tens').html(ddt);
-            $('.time-day-single').html(dds);
-            $('.time-hour-tens').html(hht);
-            $('.time-hour-single').html(hhs);
-            $('.time-minute-tens').html(mmt);
-            $('.time-minute-single').html(mms);
-        }
-        function checkTime(num, type) {
-            var numt = 0, nums = 0;
-            if (num / 10 > 0) {
-                numt = parseInt(num / 10);
-                nums = num % 10;
-            } else {
-                numt = 0;
-                nums = num;
-            }
-            if (type == 'day') {
-                ddt = numt;
-                dds = nums;
-            } else if (type == 'hour') {
-                hht = numt;
-                hhs = nums;
-            } else {
-                mmt = numt;
-                mms = nums;
-            }
-        }
-        setInterval(timer, 1000);
-
-    </script>--%>
     <script>
-        $('.banner h1').append('<img class="banner-logo" src="5644484be67ae5685.png"/*tpa=http://eimg.smzdm.com/201511/12/5644484be67ae5685.png*/ /><div class="countdowm"><h3>距离黑五开始还有</h3><div><span class="time time-day-tens"></span><span class="time time-day-single"></span><span class="time-type time-type-day">天</span><span class="time time-hour-tens"></span><span class="time time-hour-single"></span><span class="time-type time-type-hour">小时</span><span class="time time-minute-tens"></span><span class="time time-minute-single"></span><span class="time-type time-type-minute">分钟</span></div></div>');
+        $('.banner h1').append('<img class="banner-logo" src="5644484be67ae5685.png" /><div class="countdowm"><h3>距离黑五开始还有</h3><div><span class="time time-day-tens"></span><span class="time time-day-single"></span><span class="time-type time-type-day">天</span><span class="time time-hour-tens"></span><span class="time time-hour-single"></span><span class="time-type time-type-hour">小时</span><span class="time time-minute-tens"></span><span class="time time-minute-single"></span><span class="time-type time-type-minute">分钟</span></div></div>');
         var ddt = 0, dds = 0; hht = 0; hhs = 0; mmt = 0; mms = 0;
         function timer() {
             var ts = (new Date(2015, 10, 28, 13, 0, 0)) - (new Date());
             if (ts < 0) {
                 clearInterval(tim);
                 $('.countdowm').children().remove();
-                $('.countdowm').css({ 'max-width': '750px', 'width': '100%' }).css({ 'margin-left': -($('.countdowm').width() / 2) }).append('<img src="564167db96da51277.png"/*tpa=http://eimg.smzdm.com/201511/10/564167db96da51277.png*/ style="position: relative;bottom: 0;width: 100%">');
+                $('.countdowm').css({ 'max-width': '750px', 'width': '100%' }).css({ 'margin-left': -($('.countdowm').width() / 2) }).append('<img src="564167db96da51277.png" style="position: relative;bottom: 0;width: 100%">');
             } else {
                 var dd = parseInt(ts / 1000 / 60 / 60 / 24, 10);
                 var hh = parseInt(ts / 1000 / 60 / 60 % 24, 10);
@@ -938,23 +810,8 @@
         }
         var tim = setInterval(timer, 1000);
 
-        $('#module_2568 .more span').html('更多海淘精选');
-        $('#module_2530 .more span').html('更多活动');
-        $('#module_2532 .more span').html('更多众测');
-        $('#module_2534 .more span').html('更多达人分享');
-
-        $('#module_2518>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;background:url(http://eimg.smzdm.com/201511/12/56445d1bddb6e9868.png) top center"><img src="56445d37e301b5662.png"/*tpa=http://eimg.smzdm.com/201511/12/56445d37e301b5662.png*/ style="max-width:1" /></div>');
-        $('#module_2520>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;background:url(http://eimg.smzdm.com/201511/12/56445d1bddb6e9868.png) top center"><img src="56445ea98c5e28517.png"/*tpa=http://eimg.smzdm.com/201511/12/56445ea98c5e28517.png*/ /></div>');
-        $('#module_2522>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom:0;background:url(http://eimg.smzdm.com/201511/12/56445d1bddb6e9868.png) top center"><img src="56446253ac71c1146.png"/*tpa=http://eimg.smzdm.com/201511/12/56446253ac71c1146.png*/ /></div>');
-        $('#module_2522>h2').after('<div style="margin:0 auto;max-width:569px;width: 100%;text-align: center;margin-bottom: 30px;background:url(http://eimg.smzdm.com/201511/12/5644639dd92c8299.png) no-repeat top center;font-size:30px;line-height:30px;">值友专享</div>');
-        $('#module_2568>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom:30px;background:url(http://eimg.smzdm.com/201511/12/5644639dd92c8299.png) no-repeat top center;font-size:30px;line-height:30px;">海淘精选</div>');
-        $('#module_2526>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom:0;background:url(http://eimg.smzdm.com/201511/12/56445d1bddb6e9868.png) top center"><img src="56446a9c5191e5223.png"/*tpa=http://eimg.smzdm.com/201511/12/56446a9c5191e5223.png*/ /></div>');
-        $('#module_2526>h2').after('<div style="margin:0 auto;max-width:569px;width: 100%;text-align: center;margin-bottom: 30px;background:url(http://eimg.smzdm.com/201511/12/5644639dd92c8299.png) no-repeat top center;font-size:30px;line-height:30px;">最热活动</div>');
-        $('#module_2530>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom:30px;background:url(http://eimg.smzdm.com/201511/12/5644639dd92c8299.png) no-repeat top center;font-size:30px;line-height:30px;">最新活动</div>');
-        $('#module_2532>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;background:url(http://eimg.smzdm.com/201511/12/56445d1bddb6e9868.png) top center"><img src="564473a84b6187340.png"/*tpa=http://eimg.smzdm.com/201511/12/564473a84b6187340.png*/ /></div>');
-        $('#module_2534>h2').append('<div style="margin:0 auto;max-width:1050px;width: 100%;text-align: center;margin-bottom: 20px;background:url(http://eimg.smzdm.com/201511/12/56445d1bddb6e9868.png) top center"><img src="564474b81c3ad8819.png"/*tpa=http://eimg.smzdm.com/201511/12/564474b81c3ad8819.png*/ /></div>');
-
-        $('#nav-lift').prepend('<img src="/html/blackFriday/5645adbb06d883388.png"/*tpa=http://eimg.smzdm.com/201511/13/5645adbb06d883388.png*/ style="position: absolute;left: -28px;top:-40px;width:165px;" />').append('<a class="return-top" href="#"><img src="/html/qmm1111/5645b3383f03c3983.png"/*tpa=http://eimg.smzdm.com/201511/13/5645b3383f03c3983.png*/ style="position: absolute;left: 58px;bottom: -62px;" /></a>');
+        
+        $('#nav-lift').prepend('<img src="/html/blackFriday/5645adbb06d883388_v2.png"/*tpa=http://eimg.smzdm.com/201511/13/5645adbb06d883388.png*/ style="position: absolute;left: -28px;top:-40px;width:165px;" />').append('<a class="return-top" href="#"><img src="/html/qmm1111/5645b3383f03c3983.png"/*tpa=http://eimg.smzdm.com/201511/13/5645b3383f03c3983.png*/ style="position: absolute;left: 58px;bottom: -62px;" /></a>');
 
         var ua = navigator.userAgent.toLowerCase();
         if (/iphone/.test(ua) && /smzdmapp/.test(ua)) {
@@ -1020,15 +877,15 @@
             var config = {
                 list: [
                     {
-                        src: "/html/blackFriday/56445d37e301b5662.png",
+                        src: "/html/blackFriday/56445d37e301b5662_v2.png",
                         title: "海淘攻略"
                     },
                     {
-                        src: "/html/blackFriday/56446253ac71c1146.png",
+                        src: "/html/blackFriday/56446253ac71c1146_v2.png",
                         title: "必看促销"
                     },
                     {
-                        src: "/html/blackFriday/56446a9c5191e5223.png",
+                        src: "/html/blackFriday/56446a9c5191e5223_v3.png",
                         title: "必看活动"
                     }
                 ],
@@ -1049,6 +906,7 @@
                 $.each(config.list, function () {
                     domNew.append("<li class='aj-jump'><a data-href='#" + this.id + "' >" + this.title + "</a></li>");
                 });
+                domNew.append("<li class='aj-jump'><a data-href='#module_2536' >会场直达</a></li>");
                 nav.find("ul").before(domNew);
 
             } catch (ex) { }
