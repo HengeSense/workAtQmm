@@ -1,0 +1,12 @@
+public ActionResult MarketingEvent(string eventName)
+{
+    return View(eventName, null);
+}
+
+
+// route  config
+routes.MapRoute(
+    "HuodongCoupon", // Route name
+    "huodong/{sysno}.html", // URL with parameters
+    new { controller = "PrintCoupon", action = "PrintCouponDetail", sysNo = UrlParameter.Optional } // Parameter defaults
+);

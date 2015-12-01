@@ -14,5 +14,9 @@ $(function () {
         // form
         var paytypes = $(this).attr("paytypes");
         form["paytypes"].value = paytypes;
+
+        // submit button
+        var fee = $(this).attr("fee");
+        $('#buynow').attr("fee", fee);
     });
 });
